@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-05-08
+Last Update: 2018-09
 
 ----------
 
@@ -7,16 +7,70 @@ Last Update: 2018-05-08
 
 ## Table of Contents
 - [Updates](#updates)
-- [Colorless Green Ideas]()
-- [TJO]()
-- [QTL](#qtl)
 - [r-markdown](#r-markdown)
+- [QTL](#qtl)
 - [stock](#stock)
 - [Finance](#finance)
 
 ----------
 
 ## Updates
+
+----------
+
+## r-markdown
+
+2018-02-22
+http://hosho.ees.hokudai.ac.jp/~kubo/ce/RmarkDown.html
+生態学データ解析 - R Markdown
+
+Jul 13, 2017
+https://www.slideshare.net/YoshihikoKunisato/ss-77835559
+統計解析の再現可能性を高める取り組み
+
+### kohske
+
+2018年05月11日
+http://www.kyoritsu-pub.co.jp/bookdetail/9784320112438
+再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― / 高橋 康介　著
+
+2018/3/12 高橋康介
+https://www.slideshare.net/kohske/rrstudior-markdown
+再現可能性ベストプラクティス 　解析方法とレポート作成方法の再現可能性 　RとRStudioとR Markdownを通して
+
+2015年8月14日：高橋康介
+http://gihyo.jp/admin/serial/01/r-markdown
+R Markdownで楽々レポートづくり：連載｜gihyo.jp … 技術評論社
+
+### kazutan
+https://kazutan.github.io/HijiyamaR6/rmd_de_github_site.html#/
+R Markdown + Githubでモダンな個人Webサイト構築
+
+https://github.com/kazutan/RmdSite_tuto
+R MarkdownでWebサイトを作成するチュートリアル
+https://kazutan.github.io/RmdSite_tuto/
+R MarkdownでWebサイト生成しよう
+Kazutan
+2017-03-25
+
+"2017年2月17日"
+https://kazutan.github.io/kazutanR/Rmd_intro.html
+R Markdown入門
+
+2016/10/15
+https://kazutan.github.io/HijiyamaR5/rmd_intro.html#/
+R Markdown入門
+Hijiyama.R #5
+
+----------
+## require-library
+
+http://justdoit.hatenablog.jp/entry/2015/01/11/231208
+R関連(1) requireとlibraryの違い -パッケージのインポート
+
+2012-09-29
+https://blog.recyclebin.jp/archives/2879
+R のスクリプトでパッケージをロードするときは require を使う
 
 ----------
 
@@ -79,39 +133,6 @@ http://www.okadajp.org/RWiki/?Rでベイズ統計学
 
 https://www.biostars.org/p/47725/
 Gwas Vs. Qtl Mapping?
-
-----------
-
-## r-markdown
-
-2018年05月11日
-http://www.kyoritsu-pub.co.jp/bookdetail/9784320112438
-再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― / 高橋 康介　著
-
-2018-02-22
-http://hosho.ees.hokudai.ac.jp/~kubo/ce/RmarkDown.html
-生態学データ解析 - R Markdown
-
-2018/3/12 高橋康介
-https://www.slideshare.net/kohske/rrstudior-markdown
-再現可能性ベストプラクティス 　解析方法とレポート作成方法の再現可能性 　RとRStudioとR Markdownを通して
-
-Jul 13, 2017
-https://www.slideshare.net/YoshihikoKunisato/ss-77835559
-統計解析の再現可能性を高める取り組み
-
-"2017年2月17日"
-https://kazutan.github.io/kazutanR/Rmd_intro.html
-R Markdown入門
-
-2016/10/15
-https://kazutan.github.io/HijiyamaR5/rmd_intro.html#/
-R Markdown入門
-Hijiyama.R #5
-
-2015年8月14日：高橋康介
-http://gihyo.jp/admin/serial/01/r-markdown
-R Markdownで楽々レポートづくり：連載｜gihyo.jp … 技術評論社
 
 ----------
 
