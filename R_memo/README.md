@@ -7,6 +7,8 @@ Last Update: 2018-09
 
 ## Table of Contents
 - [Updates](#updates)
+- [RStudio](#rstudio)
+- [git](#git)
 - [r-markdown](#r-markdown)
 - [QTL](#qtl)
 - [stock](#stock)
@@ -17,6 +19,13 @@ Last Update: 2018-09
 ## Updates
 
 ----------
+
+## RStudio
+## git
+
+2017年12月19日
+https://qiita.com/uri/items/6b94609f156173ed43ed
+RStudioではじめるGitによるバージョン管理
 
 ## r-markdown
 
