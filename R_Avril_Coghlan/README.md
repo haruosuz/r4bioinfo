@@ -24,6 +24,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+- [R | R の使い方、グラフの書き方、ggplot の使い方](https://stats.biopapyrus.jp/r/)
 
 ### [Installing R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r)
 
@@ -32,8 +33,8 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 ### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
 
-- [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 - [08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
+- [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
 #### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
 
@@ -90,11 +91,11 @@ Rを終了:
 	# To view the contents of any R object, just type its name
 	x
 
-データ型：文字列(character)、実数(numeric)、論理値(logical)など
-[09. データの型](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
-[25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
+データ型：文字列(character)、実数(numeric)、論理値(logical)など  
+[09. データの型](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)  
+[25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)  
 
-[ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
+[ベクトル | R のベクトル操作と演算](https://stats.biopapyrus.jp/r/basic/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
 
 	# create a vector called myvector that has elements with values 8, 6, 9, 10, and 5:
@@ -103,13 +104,13 @@ Rを終了:
 	# see the contents of the variable myvector:
 	myvector
 
-[ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
+[13. ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
 インデックス（添字）  
 
 	# get the value of the 4th element in the vector myvector
 	myvector[4]
 
-[リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)  
+[23. リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)  
 リストは異なる型（数値や文字列）のデータをまとめられる。
 リストの作成は関数`list()`を用いる。
 
@@ -166,8 +167,7 @@ Rを終了:
 	# calculate the average of the values in the vector myvector
 	mean(myvector)
 
-[関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
-[関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
+[31. 関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 
 	# create a function to calculate the value of 20 plus square of some input number:
 	myfunction <- function(x) { return(20 + (x*x)) }
@@ -308,8 +308,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
 	dengueseq <- dengue[[1]]
 
-変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
-変数`dengueseq`は塩基配列を含む[ベクトル](https://stats.biopapyrus.jp/r/basic/vector.html)
+変数`dengue`はリスト。リストの1番目の要素を代入した変数`dengueseq`は塩基配列を含むベクトル
 
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
@@ -354,17 +353,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	denguetable[[3]]
 	denguetable[["g"]]
 
-[Dutta C, Paul S. (2012) Microbial lifestyle and genome signatures.](https://www.ncbi.nlm.nih.gov/pubmed/23024607)
-
-[西田洋巳 (2012) ゲノム塩基配列の偏りと生物機能](http://www.iu.a.u-tokyo.ac.jp/~hnishida/tokuron4.htm)
-
 遺伝子水平伝播を推定
 [Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
-
-ゲノムサイズとGC含量との関係
-[Relationship between genome size and GC content for sequenced Bacterial and Archaeal genomes.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/figure/pgen-1000565-g001/)
-
-![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/bin/pgen.1000565.g001.jpg)
 
 1998年4月 [自然界を渡り歩く細菌のDNA | 日経サイエンス](http://www.nikkei-science.com/page/magazine/9804/DNA.html)
 親から子へ遺伝情報が受け継がれるという遺伝学の基本原理では説明できない遺伝情報のやりとり「水平伝播」の発見のきっかけとその後の展開。
@@ -440,7 +430,6 @@ for による繰り返し
 	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2", type="b")
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
-[関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
 
 	# create our own functions
 	myfunction <- function(x) { return(20 + (x*x)) }
@@ -1146,9 +1135,6 @@ http://molevol.cmima.csic.es/castresana/Gblocks.html
 - [論文の紹介： 生物多様性を進化系統学的な尺度で測る (情報：農業と環境 No.83 2007.3)](http://www.naro.affrc.go.jp/archive/niaes/magazine/083/mgzn08304.html)
 - [系統的多様性 - Draft of Pediatric Surgery](https://sites.google.com/site/noteofpaediatricsurgery/in-silico/meta16s/figtree/keitouteki)
 
-http://www.saitou-naruya-laboratory.org/meetings/NJ50000_jpn.html
-斎藤・根井(1987)近隣結合法論文の引用件数５万件越えを祝う特別シンポジウム
-
 http://www.geocities.jp/ancientfishtree/R_JI.html
 R - 井上 潤
 ape: BS 値付き NJ tree を求める
@@ -1208,7 +1194,7 @@ boot.phylo
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
 
-    write.tree(mytree, file="myNewick.tre")
+    write.tree(mytree, file="mytree.newick")
 
 - [Newick形式のファイルを修正して多分岐の系統樹を作成する - kiliwave](http://kiliwave.hatenablog.com/entry/2016/11/16/205345)
 - [Newick書式から系統樹を描く - ryamadaの遺伝学・遺伝統計学メモ (id:ryamada22)](http://d.hatena.ne.jp/ryamada22/20050513/1115948852)
@@ -1279,22 +1265,9 @@ boot.phylo
 
 ----------
 
-- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
-- [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
-- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
-- [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
-- 仲田崇志
-  - はじけじゅ [プログラムのダウンロード](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html#programs)
-  - [SeaView を用いたアラインメント編集](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
-
-https://www.fifthdimension.jp/wiki.cgi
-田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法", 2010年度日本計量生物学会特別セッション『農学・生態学・進化学でのベイズ統計手法の応用に関する諸問題』. Preprint PDF: 20100522BiometricsJapanPreprint.pdf(5955)
-https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
-
-----------
-
 # Acknowledgements
 
 I am grateful to Drs. Simon Penel and Jean R. Lobry for their advice on SeqinR.
 
 ----------
+
