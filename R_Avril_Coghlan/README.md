@@ -293,10 +293,9 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     query2 <- query("query2","AC=NC_001477")
     dengueseq <- getSequence(query2$req[[1]])
 
+以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
-
-    #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
-    #dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
+	dengueseq[1:50]
 
 ### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
@@ -310,13 +309,10 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	library("seqinr")
 	dengue <- read.fasta(file = "den1.fasta")
+    #dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
 	dengueseq <- dengue[[1]]
 
 変数`dengue`はリスト。リストの1番目の要素を代入した変数`dengueseq`は塩基配列を含むベクトル
-
-以下のコマンドは、塩基配列の最初の50塩基を出力する:  
-
-	dengueseq[1:50]
 
 ### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
 **DNA配列の長さ**
@@ -348,12 +344,12 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
     # Count oligomers (monomer/dimer/trimer/etc)
     help(count)
-    count(s2c("atg"), 2)
+    count(s2c("atg"), wordsize = 2)
 
-	count(dengueseq, 1)
-	count(dengueseq, 2)
+    count(dengueseq, wordsize = 1)
+    count(dengueseq, wordsize = 2)
 
-	denguetable <- count(dengueseq,1)
+    denguetable <- count(dengueseq, wordsize = 1)
 	denguetable[[3]]
 	denguetable[["g"]]
 
