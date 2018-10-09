@@ -306,6 +306,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	library("seqinr")
 	dengue <- read.fasta(file = "den1.fasta")
     #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
+    #dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
 	dengueseq <- dengue[[1]]
 
 変数`dengue`はリスト。リストの1番目の要素を代入した変数`dengueseq`は塩基配列を含むベクトル
