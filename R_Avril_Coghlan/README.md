@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-06-26
+Last Update: 2018-10
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -419,7 +419,7 @@ for による繰り返し
 
 	for (i in seq(1, 10, by = 2)) { print (i*i) }
 
-[48. とりあえず plot()](R-Source)
+[48. とりあえず plot()](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/48.html)
 
     par(family="mono")
 
