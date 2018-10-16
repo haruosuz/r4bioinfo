@@ -451,6 +451,7 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 	library("seqinr")                           # Load the SeqinR package.
 	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
     #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
+    #dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
 	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
     # obtain nucleotides 452-535 of DNA sequence stored in the vector `dengueseq`
