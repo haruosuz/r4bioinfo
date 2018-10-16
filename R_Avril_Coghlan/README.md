@@ -426,8 +426,8 @@ for による繰り返し
 	# plot a scatterplot of the values in myvector1 against the values in myvector2
 	myvector1 <- c(10, 15, 22, 35, 43)
 	myvector2 <- c(3, 3.2, 3.9, 4.1, 5.2)
-	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2")
-	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2", type="b")
+    plot(myvector1, myvector2, xlab="x", ylab="y")
+    plot(myvector1, myvector2, xlab="x", ylab="y", type="b")
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 
@@ -450,7 +450,6 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 
 	library("seqinr")                           # Load the SeqinR package.
 	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
-    #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
     #dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
 	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
@@ -529,10 +528,10 @@ GC含量の移動プロット
 
 2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
 
-    ( af1 <- count(dengueseq, 1) ) # absolute frequencies of 1-mer
-    ( rf1 <- af1 / sum(af1) )      # relative frequencies of 1-mer
-    ( af2 <- count(dengueseq, 2) ) # absolute frequencies of 2-mer
-    ( rf2 <- af2 / sum(af2) )      # relative frequencies of 2-mer
+    ( af1 <- count(dengueseq, wordsize = 1) ) # absolute frequencies of 1-mer
+    ( rf1 <- af1 / sum(af1) )                 # relative frequencies of 1-mer
+    ( af2 <- count(dengueseq, wordsize = 2) ) # absolute frequencies of 2-mer
+    ( rf2 <- af2 / sum(af2) )                 # relative frequencies of 2-mer
     ( oe.2 <- rf2 / apply(expand.grid(rf1, rf1), 1, prod) ) # observed / expected
 
 `rho`関数を使う:  
