@@ -483,6 +483,8 @@ GC含量の移動プロット
 [ウェブサイト](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)から
 `slidingwindowplot`関数をコピペして、以下の通り実行:  
 
+    par(family="mono")
+
 	slidingwindowplot(3000, dengueseq)
 
 	slidingwindowplot(300, dengueseq)
