@@ -9,7 +9,7 @@ Last Update: 2018-09
 - [Updates](#updates)
 - [RStudio](#rstudio)
 - [git](#git)
-- [r-markdown](#r-markdown)
+- [rmarkdown](#rmarkdown)
 - [QTL](#qtl)
 - [stock](#stock)
 - [Finance](#finance)
@@ -27,7 +27,9 @@ Last Update: 2018-09
 https://qiita.com/uri/items/6b94609f156173ed43ed
 RStudioではじめるGitによるバージョン管理
 
-## r-markdown
+## rmarkdown
+https://rmarkdown.rstudio.com/
+R Markdown
 
 2018-02-22
 http://hosho.ees.hokudai.ac.jp/~kubo/ce/RmarkDown.html
