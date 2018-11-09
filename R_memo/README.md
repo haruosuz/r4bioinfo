@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-09
+Last Update: 2018-11
 
 ----------
 
@@ -17,6 +17,13 @@ Last Update: 2018-09
 ----------
 
 ## Updates
+
+
+https://twitter.com/hoxom_inc/status/1060694252924092416
+HOXOM Inc. on Twitter: "ggplot2 で facet ごとのヒストグラムに平均値の線を引く https://t.co/R6IY0YKcFM"
+7:43 PM - 8 Nov 2018
+![](https://pbs.twimg.com/card_img/1060694259718860801/fScf8Ta5?format=jpg&name=600x314)
+
 
 ----------
 
