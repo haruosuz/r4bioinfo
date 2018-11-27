@@ -804,10 +804,11 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 テストデータで確認する:  
 
+    par(family="mono")
+
     # Create tests
     x <- s2c("atgc")
     par(mfrow=c(2,2))
-    par(family="mono")
     dotPlot(x,x)
     dotPlot(x,rev(x))
     dotPlot(x,rep(x,2))
@@ -861,6 +862,8 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 *scoring matrix (substitution matrix)*
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
+
+[Bioconductorパッケージ`Biostrings`のインストール](#how-to-install-a-bioconductor-r-package)
 
 Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
 
