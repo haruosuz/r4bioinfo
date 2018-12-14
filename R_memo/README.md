@@ -23,7 +23,45 @@ Last Update: 2018-12
 
 ## enrichment
 
+Nov 21, 2018
+https://www.subioplatform.com/ja/info_technical/152/enrichment-analysis-tool
+Enrichment Analysis Tool の使い方 | Subio
+
+https://home.hiroshima-u.ac.jp/naka/wiki/wiki.cgi?GSEA_%28Gene_Set_Enrichment_Analysis%29%A4%CB%A4%C4%A4%A4%A4%C6
+GSEA_(Gene_Set_Enrichment_Analysis)について -
+GSEA に近い方法には様々なバリエーションがある。新しい方法もさらに開発されている。　　　http://www.riken.jp/pr/press/2016/20160510_1/　　　「遺伝子発現から転写因子を予測」では、理化学研究所の川上英良特別研究員らのグループによって、従来のGene Set Enrichment解析に確率的な制御関係を考慮したwPGSA法（weighted Parametric Gene Set Analysis）　という方法が開発されたことが紹介されている。
+
 http://amp.pharm.mssm.edu/Enrichr/
+https://www.ncbi.nlm.nih.gov/pubmed/27141961
+Nucleic Acids Res. 2016 Jul 8;44(W1):W90-7. doi: 10.1093/nar/gkw377. Epub 2016 May 3.
+Enrichr: a comprehensive gene set enrichment analysis web server 2016 update.
+
+2012年12月20日
+http://array.cell-innovator.com/?p=1452
+Gene Set Enrichment Analysis (GSEA) – 遺伝子発現解析（マイクロアレイ解析, RNA-seq）
+
+### PAGE
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1183189/
+PAGE: Parametric Analysis of Gene Set Enrichment
+PAGE was statistically more sensitive and required much less computational effort than GSEA, 
+, we set the minimal gene set size as 10.
+
+PAGEは正規分布（normal distribution）を仮定したパラメトリックなテストで、ノンパラメトリックテストのGSEAと比較して、計算が速く、検出感度が高い（統計的に有意な遺伝子が多い）。GOカテゴリの構成遺伝子数が最低10は必要です。
+
+2018/11/21
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
+(Rで)マイクロアレイデータ解析
+解析 | 機能解析（GSEA周辺）について(以下は再編予定)(last modified 2014/06/01)
+
+2009/11/19
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html#page_go
+解析 | 機能解析 | PAGE法(Kim_2005;統計量の変換なし)を用いてGene Ontology解析
+
+https://www.t-kagaku.co.jp/seimeiken/top/xmlSupport.php?id=21004
+PAGE解析(Parametric Analysis of Gene set Enrichment)とは
+
+### R4GSEA
 
 Ege Ulgen
 2018-11-20
@@ -37,6 +75,11 @@ pathfindR - An R Package for Pathway Enrichment Analysis Utilizing Active Subnet
 https://qiita.com/nakachiy/items/b40bd0a8f233c380986b
 R/BioconductorのGOstats packageをもちいたGene Ontology(GO)やKEGGのenrichment解析 - Qiita
 
+Dong Li
+April 25, 2017
+https://www.cs.bham.ac.uk/~dxl466/st/GFEA.html
+A Practical Tutorial on Gene Set Functional Enrichment Analysis
+
 2017.04.15
 https://bi.biopapyrus.jp/pathway/go/
 GO 解析 | 遺伝子オントロジーエンリッチメント解析
@@ -44,12 +87,48 @@ GO 解析 | 遺伝子オントロジーエンリッチメント解析
 http://amphipod.hatenablog.com/entry/2017/01/28/121307
 非モデル生物のGO enrichment analysisをGOseqでおこなう - 備忘録 a record of inner life
 
+https://www.biostars.org/p/97836/
+GO Term Enrichment Tutorial/Guide?
+http://mengnote.blogspot.com/2012/12/calculate-correct-hypergeometric-p.html
+Meng's Notes: Simple Enrichment Test -- calculate hypergeometric p-values in R
+
+
 https://heavywatal.github.io/rstats/topgo.html
 topGO: Bioconductor でenrichment解析 - Heavy Watal
 
 http://www.nibb.ac.jp/training/2009/nakai/R_GO_2.7.2.html
 RでGO!
 topGO（工事中）
+
+### coRdon
+![](https://raw.githubusercontent.com/Bioconductor/BiocStickers/master/coRdon/coRdon.png)
+
+Elek A, Kuzman M, Vlahovicek K (2018). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. R package version 1.0.1, https://github.com/BioinfoHR/coRdon.
+
+https://www.bioconductor.org/packages/release/bioc/html/coRdon.html
+Bioconductor - coRdon
+
+https://www.bioconductor.org/packages/devel/bioc/html/coRdon.html
+Bioconductor - coRdon (development version)
+
+Dec. 5, 2018
+https://rdrr.io/bioc/coRdon/
+coRdon: Codon Usage Analysis and Prediction of Gene Expressivity version 1.0.1 from Bioconductor
+
+Anamaria Elek
+2018-12-04
+https://www.bioconductor.org/packages/devel/bioc/vignettes/coRdon/inst/doc/coRdon.html
+Codon usage (CU) analysis in R
+
+Anamaria Elek (2018) MASTER'S THESIS
+https://zir.nsk.hr/en/islandora/object/pmf%3A4815
+https://repozitorij.unizg.hr/en/islandora/object/pmf%3A4815
+coRdon: an R package for codon usage analysis and prediction of gene expressivity
+
+https://www.ncbi.nlm.nih.gov/pubmed/27115650
+Methods Mol Biol. 2016;1415:509-31. doi: 10.1007/978-1-4939-3572-7_26.
+Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
+Fabijanić M1, Vlahoviček K2.
 
 ----------
 
