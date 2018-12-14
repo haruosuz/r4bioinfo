@@ -1,12 +1,13 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-11
+Last Update: 2018-12
 
 ----------
 
 # R_memo
 
 ## Table of Contents
-- [Updates](#updates)
+- [updates](#updates)
+- [enrichment](#enrichment)
 - [RStudio](#rstudio)
 - [git](#git)
 - [rmarkdown](#rmarkdown)
@@ -16,14 +17,39 @@ Last Update: 2018-11
 
 ----------
 
-## Updates
+## updates
 
+----------
 
-https://twitter.com/hoxom_inc/status/1060694252924092416
-HOXOM Inc. on Twitter: "ggplot2 で facet ごとのヒストグラムに平均値の線を引く https://t.co/R6IY0YKcFM"
-7:43 PM - 8 Nov 2018
-![](https://pbs.twimg.com/card_img/1060694259718860801/fScf8Ta5?format=jpg&name=600x314)
+## enrichment
 
+http://amp.pharm.mssm.edu/Enrichr/
+
+Ege Ulgen
+2018-11-20
+https://cran.r-project.org/web/packages/pathfindR/index.html
+pathfindR: Pathway Enrichment Analysis Utilizing Active Subnetworks
+Vignettes:
+pathfindR - Step-by-Step (Manual) Execution of the pathfindR Workflow
+pathfindR - An R Package for Pathway Enrichment Analysis Utilizing Active Subnetworks
+
+2018年05月03日
+https://qiita.com/nakachiy/items/b40bd0a8f233c380986b
+R/BioconductorのGOstats packageをもちいたGene Ontology(GO)やKEGGのenrichment解析 - Qiita
+
+2017.04.15
+https://bi.biopapyrus.jp/pathway/go/
+GO 解析 | 遺伝子オントロジーエンリッチメント解析
+
+http://amphipod.hatenablog.com/entry/2017/01/28/121307
+非モデル生物のGO enrichment analysisをGOseqでおこなう - 備忘録 a record of inner life
+
+https://heavywatal.github.io/rstats/topgo.html
+topGO: Bioconductor でenrichment解析 - Heavy Watal
+
+http://www.nibb.ac.jp/training/2009/nakai/R_GO_2.7.2.html
+RでGO!
+topGO（工事中）
 
 ----------
 
