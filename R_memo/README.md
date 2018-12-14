@@ -101,8 +101,6 @@ RでGO!
 topGO（工事中）
 
 ### coRdon
-![](https://raw.githubusercontent.com/Bioconductor/BiocStickers/master/coRdon/coRdon.png)
-
 Elek A, Kuzman M, Vlahovicek K (2018). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. R package version 1.0.1, https://github.com/BioinfoHR/coRdon.
 
 https://www.bioconductor.org/packages/release/bioc/html/coRdon.html
@@ -114,6 +112,10 @@ Bioconductor - coRdon (development version)
 Dec. 5, 2018
 https://rdrr.io/bioc/coRdon/
 coRdon: Codon Usage Analysis and Prediction of Gene Expressivity version 1.0.1 from Bioconductor
+https://rdrr.io/bioc/coRdon/man/enrichment.html
+enrichment: Enrichment analysis for codon usage (CU) data.
+https://rdrr.io/bioc/coRdon/man/LD94_PATHWAYS.html
+LD94_PATHWAYS: Codon usage based KEGG Pathway enrichment analysis results...
 
 Anamaria Elek
 2018-12-04
