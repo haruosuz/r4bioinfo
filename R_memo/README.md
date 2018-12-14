@@ -29,7 +29,7 @@ Enrichment Analysis Tool の使い方 | Subio
 
 https://home.hiroshima-u.ac.jp/naka/wiki/wiki.cgi?GSEA_%28Gene_Set_Enrichment_Analysis%29%A4%CB%A4%C4%A4%A4%A4%C6
 GSEA_(Gene_Set_Enrichment_Analysis)について -
-GSEA に近い方法には様々なバリエーションがある。新しい方法もさらに開発されている。　　　http://www.riken.jp/pr/press/2016/20160510_1/　　　「遺伝子発現から転写因子を予測」では、理化学研究所の川上英良特別研究員らのグループによって、従来のGene Set Enrichment解析に確率的な制御関係を考慮したwPGSA法（weighted Parametric Gene Set Analysis）　という方法が開発されたことが紹介されている。
+http://www.riken.jp/pr/press/2016/20160510_1/ wPGSA法（weighted Parametric Gene Set Analysis）
 
 http://amp.pharm.mssm.edu/Enrichr/
 https://www.ncbi.nlm.nih.gov/pubmed/27141961
@@ -101,6 +101,7 @@ RでGO!
 topGO（工事中）
 
 ### coRdon
+
 Elek A, Kuzman M, Vlahovicek K (2018). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. R package version 1.0.1, https://github.com/BioinfoHR/coRdon.
 
 https://www.bioconductor.org/packages/release/bioc/html/coRdon.html
