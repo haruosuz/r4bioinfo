@@ -93,6 +93,14 @@ https://www.ohmsha.co.jp/book/9784274068225/
 5.6　個体の家系図、アレルの系図――同一種の中のグラフ
 p.101
 
+http://www.statgenet.med.kyoto-u.ac.jp/StatGenet/ryamada_bon/SaikouPDFs/GNMT_CH05.pdf
+サンプルを個別に捉える
+5.6 個体の家系図、アレルの系図――同一種の中のグラフ
+
+http://www.statgenet.med.kyoto-u.ac.jp/StatGenet/ryamada_bon/20100519PartII/Q20100519.pdf
+ゲノムのための統計学教室
+5.6 個体の家系図・アレルの系図 同一種の中のグ ラフ
+
 ----------
 
 ## enrichment
