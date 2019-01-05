@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-12
+Last Update: 2019-01-05
 
 ----------
 
@@ -13,11 +13,78 @@ Last Update: 2018-12
 - [rmarkdown](#rmarkdown)
 - [QTL](#qtl)
 - [stock](#stock)
-- [Finance](#finance)
+- [finance](#finance)
+- [kinship](#kinship) 家系図
 
 ----------
 
 ## updates
+
+https://twitter.com/search?q=gggenes
+
+https://cran.r-project.org/web/packages/gggenes/readme/README.html
+
+![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
+
+https://twitter.com/search?q=ggtree
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+
+![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
+
+----------
+
+## kinship
+家系図
+
+https://www.kunihikokaneko.com/free/r/pedigree.html
+R を用いた家系図の作成
+
+![](https://www.kunihikokaneko.com/free/r/381.png)
+
+2015/08/06
+https://www.karada-good.net/analyticsr/r-183
+Rで解析：家系図の作成もお任せ！利用範囲は広い「kinship2」パッケージの紹介
+
+![](https://www.karada-good.net/wp/wp-content/uploads/2015/08/kinship.png)
+
+http://ryamada22.hatenablog.jp/category/家系図
+2016-03-13
+■
+R 家系図 メンデル遺伝 単一遺伝子病 R 家系図 メンデル遺伝 単一遺伝子病
+
+2014-10-07
+http://ryamada22.hatenablog.jp/entry/20141007/1412659596
+家系図　再
+
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/r/ryamada22/20141007/20141007142600.jpg)
+
+2014-02-11
+http://ryamada22.hatenablog.jp/entry/20140211/1392007778
+少し真面目に家系図と家系データ
+
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/r/ryamada22/20140210/20140210191308.jpg)
+
+2014-02-10
+http://ryamada22.hatenablog.jp/entry/20140210/1392007778
+なんちゃって家系図と家系データ
+
+![](https://cdn-ak.f.st-hatena.com/images/fotolife/r/ryamada22/20140210/20140210134921.jpg)
+
+http://staffblog.amelieff.jp/entry/2013/10/03/150908
+Rで家系図描画 - アメリエフのブログ
+
+![](http://blog.image.s3.amazonaws.com/kinship.png)
+
+http://catway.jp/bioinformatics/index.html
+次世代DNAシーケンサーのデータ解析技術 (2013/02/01)
+二階堂愛, Ph.D
+http://catway.jp/bioinformatics/vis/familytree.html
+R で家系図を書く | Tips for NGS Data Analysis
+
+http://d.hatena.ne.jp/MikuHatsune/20110423/1303471763
+Rで家系図 - 驚異のアニヲタ社会復帰への道
 
 ----------
 
@@ -141,6 +208,10 @@ Fabijanić M1, Vlahoviček K2.
 ## RStudio
 ## git
 
+https://twitter.com/u_ribo/status/1074813042007756800
+Uryu Shinya on Twitter: "RStudioから離れられない理由にこのGit連携機能がある。書いたコード、出力した図やデータをすぐにバージョン管理できるのは嬉しい。 gitは奥が深いけど、まずは難しく考えずに “update" とか適当なコメントでやるのもオススメ（徐々に慣れてく戦略）。何もやらないことから脱出するのが大きな第一歩。… https://t.co/deSFZVZaGn"
+6:46 PM - 17 Dec 2018
+
 2017年12月19日
 https://qiita.com/uri/items/6b94609f156173ed43ed
 RStudioではじめるGitによるバージョン管理
@@ -162,6 +233,10 @@ https://www.slideshare.net/YoshihikoKunisato/ss-77835559
 2018年05月11日
 http://www.kyoritsu-pub.co.jp/bookdetail/9784320112438
 再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― / 高橋 康介　著
+
+2018-05-07
+https://ksmzn.hatenablog.com/entry/Wonderful-R-03
+『再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― 』を読みました
 
 2018/3/12 高橋康介
 https://www.slideshare.net/kohske/rrstudior-markdown
