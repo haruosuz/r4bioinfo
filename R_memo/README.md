@@ -75,7 +75,7 @@ http://ryamada22.hatenablog.jp/entry/20140210/1392007778
 http://staffblog.amelieff.jp/entry/2013/10/03/150908
 Rで家系図描画 - アメリエフのブログ
 
-![](http://blog.image.s3.amazonaws.com/kinship.png)
+![png](http://blog.image.s3.amazonaws.com/kinship.png "png")
 
 http://catway.jp/bioinformatics/index.html
 次世代DNAシーケンサーのデータ解析技術 (2013/02/01)
