@@ -33,6 +33,25 @@ Phylogenetic trees in R using ggtree
 
 ![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
 
+
+https://www.biorxiv.org/content/10.1101/545665v1
+hilldiv: an R package for the integral analysis of diversity based on Hill numbers | bioRxiv
+, microbial community profiling or
+
+
+問い合わせ先：資源環境部浅海環境グループ　高田宜武
+2018年2月23日
+http://jsnfri.fra.affrc.go.jp/gunshu/index.html
+Rによる群集組成の解析
+
+![](http://jsnfri.fra.affrc.go.jp/gunshu/files/Comchr1.jpg)
+
+http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html
+多様度指数の比較
+Chao A, Gotelli NJ, Hsieh TC, Sander EL, Ma KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84: 45-67.
+
+![](http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html)
+
 ----------
 
 ## kinship
