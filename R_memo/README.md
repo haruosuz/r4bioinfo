@@ -20,20 +20,17 @@ Last Update: 2019-01-05
 
 ## updates
 
-https://twitter.com/search?q=gggenes
+https://twitter.com/Alex_Washburne/status/1100057770844286977
+Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
+10:39 AM - 25 Feb 2019
 
-https://cran.r-project.org/web/packages/gggenes/readme/README.html
+![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
 
-![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
+Posted February 18, 2019.
+https://www.biorxiv.org/content/10.1101/553057v1
+rSeqTU — a machine-learning based R package for prediction of bacterial transcription units
 
-https://twitter.com/search?q=ggtree
-
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
-
-![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
-
-
+Posted February 10, 2019.
 https://www.biorxiv.org/content/10.1101/545665v1
 hilldiv: an R package for the integral analysis of diversity based on Hill numbers | bioRxiv
 , microbial community profiling or
@@ -51,6 +48,28 @@ http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html
 Chao A, Gotelli NJ, Hsieh TC, Sander EL, Ma KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84: 45-67.
 
 ![](http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html)
+
+
+https://twitter.com/search?q=gggenes
+
+https://cran.r-project.org/web/packages/gggenes/readme/README.html
+‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
+
+![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
+
+https://twitter.com/search?q=ggtree
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+
+![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
+
+### 2017
+
+https://www.ncbi.nlm.nih.gov/pubmed/28302051
+BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
+microclass: an R-package for 16S taxonomy classification.
+Liland KH1,2, Vinje H1, Snipen L3.
 
 ----------
 
