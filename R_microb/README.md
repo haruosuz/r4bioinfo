@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-06-20
+Last Update: 2019-02
 
 ----------
 
@@ -29,6 +29,8 @@ Rによる微生物データ解析
 
 ----------
 
+
+
 http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
 Some bacterial genome analysis using R
 
@@ -36,6 +38,9 @@ Some bacterial genome analysis using R
 ## Updates
 
 ## 2018
+
+https://grunwaldlab.github.io/analysis_of_microbiome_community_data_in_r/index.html
+ZSL Foster and NJ Grünwald. 2018. Analysis of Microbiome Community Data in R. DOI: XXX.
 
 https://twitter.com/aquabolina/status/978657686911938560
 Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
