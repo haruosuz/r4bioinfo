@@ -34,7 +34,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 ### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
 
 - [08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
-- [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+- [パッケージ | R のパッケージのインストール方法と呼び出し方](https://stats.biopapyrus.jp/r/basic/package.html)
 
 #### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
 
@@ -353,16 +353,16 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	denguetable[[3]]
 	denguetable[["g"]]
 
-遺伝子水平伝播を推定
+[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)
+
 [Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
+
+[細菌の遺伝子交換，ずっと頻繁～日経サイエンス2011年6月号より | 日経サイエンス](http://www.nikkei-science.com/?p=14437)
 
 1998年4月 [自然界を渡り歩く細菌のDNA | 日経サイエンス](http://www.nikkei-science.com/page/magazine/9804/DNA.html)
 親から子へ遺伝情報が受け継がれるという遺伝学の基本原理では説明できない遺伝情報のやりとり「水平伝播」の発見のきっかけとその後の展開。
 
-![](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
-
-http://www.nikkei-science.com/?p=14437
-細菌の遺伝子交換，ずっと頻繁～日経サイエンス2011年6月号より | 日経サイエンス
+![https://twitter.com/NikkeiScience/status/899926732106498048](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
 
