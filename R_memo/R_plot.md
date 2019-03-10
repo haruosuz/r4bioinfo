@@ -8,7 +8,7 @@ Last Update: 2019-03-10
 ## Table of Contents
 - [updates](#updates)
 - [ggplot2](#ggplot2)
-- [pairs.panels](#pairs.panels)
+- [pairs.panels](#pairspanels)
 - [violinplot](#violinplot)
 - [references](#references)
 
