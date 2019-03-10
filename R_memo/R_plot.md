@@ -46,10 +46,14 @@ library(psych)
 example(pairs.panels)
 ```
 
+2018/9/10
+https://blogs.yahoo.co.jp/kesow969/22231554.html
+新・医学と統計：Power BIによる多変量相関行列(２) ( その他自然科学 ) - スタットのブログ - Yahoo!ブログ
+●  ヒストグラムと相関係数を加えた相関行列散布図の作成（図２）
+
 2018年04月01日
 https://qiita.com/nozma/items/15afb87b4344341a4e14
 統計の教科書の練習問題を解きながらRの使い方を学ぶ - Qiita
-psychパッケージのpairs.panels()関数が比較的手軽(順位相関係数だと対角部分のヒストグラムが余分だけど消す方法がわからなかった)。
 
 2017年07月05日
 https://ameblo.jp/oyasai10/entry-12289995127.html
@@ -74,7 +78,6 @@ https://qiita.com/h_kobayashi1125/items/46bc28a26f888d03cee3
 http://langstat.hatenablog.com/entry/20150807/1438904525
 対散布図を描く - langstat blog
 
-
 http://kusanagi.hatenablog.jp/entry/2014/07/23/220951
 多変数の相関を可視化する方法メモ - 草薙の研究ログ
 
@@ -88,7 +91,6 @@ NagoyaR #10 散布図行列とpsychパッケージ
 2012/09/02
 https://cis-jp.blogspot.com/2012/09/blog-post_2.html
 色々と考えてみる: 文系のための「数の可視化」（８）
-
 psych の散布図行列を用いると、対角線にはヒストグラムが配置され、
 下側には散布図、上側には相関係数が配置される。
 
