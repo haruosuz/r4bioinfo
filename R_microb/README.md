@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-02
+Last Update: 2019-03
 
 ----------
 
@@ -37,10 +37,16 @@ Some bacterial genome analysis using R
 ----------
 ## Updates
 
+
 ## 2018
 
 https://grunwaldlab.github.io/analysis_of_microbiome_community_data_in_r/index.html
 ZSL Foster and NJ Grünwald. 2018. Analysis of Microbiome Community Data in R. DOI: XXX.
+
+https://www.ncbi.nlm.nih.gov/pubmed/29211828
+Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
+ASAR: visual analysis of metagenomes in R.
+Orakov AN1,2, Sakenova NK1,2, Sorokin A3,4, Goryanin II1,5,6.
 
 https://twitter.com/aquabolina/status/978657686911938560
 Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
@@ -49,6 +55,16 @@ Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R
 2018-02-14
 http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
 microbiomeSeq: An R package for microbial community analysis in an environmental context
+
+
+## 2016
+
+https://www.ncbi.nlm.nih.gov/pubmed/26776185
+Pac Symp Biocomput. 2016;21:183-94.
+REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
+Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
+using R packages dada2, knitr, and phyloseq.
+
 
 ----------
 ## MLSTar
