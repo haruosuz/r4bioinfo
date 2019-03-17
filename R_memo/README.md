@@ -19,6 +19,7 @@ Last Update: 2019-01-05
 ----------
 
 ## updates
+### 2019
 
 https://twitter.com/Alex_Washburne/status/1100057770844286977
 Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
@@ -34,6 +35,49 @@ Posted February 10, 2019.
 https://www.biorxiv.org/content/10.1101/545665v1
 hilldiv: an R package for the integral analysis of diversity based on Hill numbers | bioRxiv
 , microbial community profiling or
+
+https://twitter.com/XavierDidelot/status/1039083946913529856
+BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
+Dating of PMEN1, before and after accounting for recombination
+5:31 AM - 10 Sep 2018
+https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky783/5089898
+Bayesian inference of ancestral dates on bacterial phylogenetic trees | Nucleic Acids Research | Oxford Academic
+Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
+
+### 2018
+
+https://twitter.com/strnr/status/1030176659322888192
+Stephen Turner on Twitter: "FastqCleaner: an interactive Bioconductor application for quality-control, filtering and trimming of FASTQ files https://t.co/WcPUarN6ho"
+3:37 PM - 16 Aug 2018
+
+https://twitter.com/JEFworks/status/1028741712896843778
+Jean Fan on Twitter: "Too many #singlecell points in your figures? Crashing Illustrator? Check out ggrastr for #ggplot2 #rstats by @PetukhovViktor to rasterize just the points layer. Maintain vectorized text for publication quality. Ideal for >10000 points. https://t.co/6iR7qYw1ap #dataviz #bigdata… https://t.co/9QDDmfua6w"
+4:35 PM - 12 Aug 2018
+
+https://twitter.com/strnr/status/1022451016736927745
+
+Stop using biocLite(). Instead:
+
+1. Install BiocManager from CRAN. https://cran.r-project.org/package=BiocManager …
+
+2. Install Bioconductor or CRAN packages with one command:
+BiocManager::install(c("limma", "knitr"))
+
+More info: https://cran.r-project.org/web/packages/BiocManager/vignettes/BiocManager.html …
+
+#Bioconductor #Rstats #bioc2018
+
+7:58 AM - 26 Jul 2018
+
+https://www.ncbi.nlm.nih.gov/pubmed/30002984
+PeerJ. 2018 Jul 3;6:e5179. doi: 10.7717/peerj.5179. eCollection 2018.
+AnnotationBustR: an R package to extract subsequences from GenBank annotations.
+Borstein SR1, O'Meara BC1.
+
+https://www.ncbi.nlm.nih.gov/pubmed/29874797
+Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
+phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
+Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
 
 
 問い合わせ先：資源環境部浅海環境グループ　高田宜武
