@@ -293,7 +293,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     query2 <- query("query2","AC=NC_001477")
     dengueseq <- getSequence(query2$req[[1]])
 
-[TogoWS: REST](http://togows.dbcls.jp/site/ja/rest.html)
+[TogoWS: REST](http://togows.dbcls.jp/site/ja/rest.html) | 
 [TogoWS RESTサービスを使い倒す 2011](https://doi.org/10.7875/togotv.2011.058)
 
     library("seqinr")
