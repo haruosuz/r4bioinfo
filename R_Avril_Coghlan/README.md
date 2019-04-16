@@ -91,9 +91,12 @@ Rを終了:
 	# To view the contents of any R object, just type its name
 	x
 
-データ型：文字列(character)、実数(numeric)、論理値(logical)など  
+データ型：文字列(character)、複素数(complex)、実数(numeric)、論理値(logical)など  
 [09. データの型](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)  
-[25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)  
+[25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html) character > complex > numeric > logical > NULL  
+[データ型 | R のデータ型・モード・クラス](https://stats.biopapyrus.jp/r/basic/data-type.html)  
+[R:データ型](http://www.f.waseda.jp/sakas/R/Rdata.html) データ型の自動変換 logical < integer < double < complex < character  
+
 
 [ベクトル | R のベクトル操作と演算](https://stats.biopapyrus.jp/r/basic/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
@@ -293,7 +296,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     query2 <- query("query2","AC=NC_001477")
     dengueseq <- getSequence(query2$req[[1]])
 
-[TogoWS: REST](http://togows.dbcls.jp/site/ja/rest.html) | 
+[TogoWS: REST](http://togows.dbcls.jp/site/ja/rest.html)  
 [TogoWS RESTサービスを使い倒す 2011](https://doi.org/10.7875/togotv.2011.058)
 
     library("seqinr")
