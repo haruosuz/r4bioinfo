@@ -293,6 +293,13 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     query2 <- query("query2","AC=NC_001477")
     dengueseq <- getSequence(query2$req[[1]])
 
+[TogoWS: REST](http://togows.dbcls.jp/site/ja/rest.html)
+[TogoWS RESTサービスを使い倒す 2011](https://doi.org/10.7875/togotv.2011.058)
+
+    library("seqinr")
+    dengue <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")
+    dengueseq <- dengue[[1]]
+
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
 	dengueseq[1:50]
@@ -309,7 +316,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	library("seqinr")
 	dengue <- read.fasta(file = "den1.fasta")
-    # dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
 	dengueseq <- dengue[[1]]
 
 変数`dengue`はリスト。リストの1番目の要素を代入した変数`dengueseq`は塩基配列を含むベクトル
