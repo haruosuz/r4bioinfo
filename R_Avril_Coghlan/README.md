@@ -352,9 +352,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 `count`関数で連続塩基のカウント
 
     # Count oligomers (monomer/dimer/trimer/etc)
-    help(count)
-    count(s2c("atg"), wordsize = 2)
-
     count(dengueseq, wordsize = 1)
     count(dengueseq, wordsize = 2)
 
@@ -387,7 +384,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     length(x)
     table(x)
     GC(x)
-    count(x, 2)
+    count(x, wordsize = 2)
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#links-and-further-reading)
 
