@@ -1,4 +1,4 @@
-# Usage: Rscript --vanilla scripts/my_analysis_intror.R >& log.$(date +%F).txt
+# Usage: Rscript --vanilla scripts/my_analysis_chapter0_intror.R >& log.$(date +%F).txt
 
 # https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html
 

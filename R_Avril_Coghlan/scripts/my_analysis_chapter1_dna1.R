@@ -1,4 +1,4 @@
-# Usage: Rscript --vanilla scripts/my_analysis_dna1.R >& log.$(date +%F).txt
+# Usage: Rscript --vanilla scripts/my_analysis_chapter1_dna1.R >& log.$(date +%F).txt
 
 # https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md#dna-sequence-statistics-1
 
