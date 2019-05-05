@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-02-11
+Last Update: 2019-05-05
 
 ----------
 # [R for Data Science](http://r4ds.had.co.nz)
@@ -92,6 +92,20 @@ ggplotの作成
 
 https://www.oreilly.co.jp/books/9784873118147/#toc
 目次
+
+
+----------
+# 
+
+----------
+# [21 Iteration | R for Data Science](https://r4ds.had.co.nz/iteration.html)
+
+## 21.1 Introduction
+
+## 21.2 For loops
+
+Every for loop has three components:
+
 
 ----------
 # References
