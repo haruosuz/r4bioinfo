@@ -30,7 +30,7 @@ III Program
 18 Pipes
 19 Functions
 20 Vectors
-21 Iteration
+[21 Iteration](#21-iteration)
 IV Model
 22 Introduction
 23 Model basics
@@ -98,7 +98,7 @@ https://www.oreilly.co.jp/books/9784873118147/#toc
 # 
 
 ----------
-# [21 Iteration | R for Data Science](https://r4ds.had.co.nz/iteration.html)
+# [21 Iteration](https://r4ds.had.co.nz/iteration.html)
 
 ## 21.1 Introduction
 
