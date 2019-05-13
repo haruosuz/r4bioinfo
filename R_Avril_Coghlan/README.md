@@ -533,6 +533,7 @@ GC含量の移動プロット
 
 ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
+    library("seqinr")
     # Create tests
     testseq <- s2c("aatgc")
 
