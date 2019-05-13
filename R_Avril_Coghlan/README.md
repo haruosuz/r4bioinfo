@@ -56,6 +56,11 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
     source("https://bioconductor.org/biocLite.R")
     biocLite("Biostrings")
 
+[Bioconductor: Genomicデータ解析ツール群 - Heavy Watal](https://heavywatal.github.io/rstats/bioconductor.html)
+
+    #install.packages("BiocManager")
+    BiocManager::install("Biostrings")
+
 `Biostrings`パッケージの呼び出し:  
 
     # load the "Biostrings" package into R
@@ -511,6 +516,9 @@ GC含量の移動プロット
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/K-mer-example.png/440px-K-mer-example.png)
 
+ゲノムの2連続塩基組成
+[Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
+
 	count(dengueseq, 2)
 
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
@@ -525,30 +533,29 @@ GC含量の移動プロット
 
 ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
-	count(dengueseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
-	2770/(3426+2240+2770+2299) # Get fG
-	2240/(3426+2240+2770+2299) # Get fC
-	count(dengueseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
-	500/(1108+720+890+708+901+523+261+555+976+500+787+507+440+497+832+529) # Get fGC
-	0.04658096/(0.2580345*0.2086633) # Get rho(GC)
+    # Create tests
+    testseq <- s2c("aatgc")
+
+    count(testseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
+    1/(2+1+1+1) # Get fG
+    1/(2+1+1+1) # Get fC
+    count(testseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
+    1/(0+0+0+1+1+0+0+0+0+1+0+0+0+0+1+0) # Get fGC
+    0.25/(0.2*0.2) # Get rho(GC)
 
 2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
 
-    ( af1 <- count(dengueseq, wordsize = 1) ) # absolute frequencies of 1-mer
+    ( af1 <- count(testseq, wordsize = 1) ) # absolute frequencies of 1-mer
     ( rf1 <- af1 / sum(af1) )                 # relative frequencies of 1-mer
-    ( af2 <- count(dengueseq, wordsize = 2) ) # absolute frequencies of 2-mer
+    ( af2 <- count(testseq, wordsize = 2) ) # absolute frequencies of 2-mer
     ( rf2 <- af2 / sum(af2) )                 # relative frequencies of 2-mer
     ( oe.2 <- rf2 / apply(expand.grid(rf1, rf1), 1, prod) ) # observed / expected
 
 `rho`関数を使う:  
 
+    rho(testseq, wordsize = 2)
+
     rho(dengueseq, wordsize = 2)
-
-    # Create tests
-    x <- s2c("atgc"); rho(x, wordsize = 2)
-
-ゲノムの2連続塩基組成
-[Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
 
