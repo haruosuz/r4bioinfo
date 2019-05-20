@@ -547,9 +547,9 @@ GC含量の移動プロット
 2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
 
     ( af1 <- count(testseq, wordsize = 1) ) # absolute frequencies of 1-mer
-    ( rf1 <- af1 / sum(af1) )                 # relative frequencies of 1-mer
+    ( rf1 <- af1 / sum(af1) )               # relative frequencies of 1-mer
     ( af2 <- count(testseq, wordsize = 2) ) # absolute frequencies of 2-mer
-    ( rf2 <- af2 / sum(af2) )                 # relative frequencies of 2-mer
+    ( rf2 <- af2 / sum(af2) )               # relative frequencies of 2-mer
     ( oe.2 <- rf2 / apply(expand.grid(rf1, rf1), 1, prod) ) # observed / expected
 
 `rho`関数を使う:  
