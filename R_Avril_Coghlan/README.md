@@ -821,13 +821,19 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     par(family="mono")
 
     # Create tests
+    library("seqinr")
     x <- s2c("atgc")
+
     par(mfrow=c(2,2))
     dotPlot(x,x)
     dotPlot(x,rev(x))
     dotPlot(x,rep(x,2))
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
+
+    library("seqinr")
+    lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+    ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 
 	dotPlot(lepraeseq, ulceransseq)
 
