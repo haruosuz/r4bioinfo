@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-02-25
+Last Update: 2019-09-07
 
 ----------
 
@@ -9,13 +9,14 @@ Last Update: 2018-02-25
 ----------
 
 ## Table of Contents
+- [updates](#updates)
+- [pic](#pic) Phylogenetically Independent Contrasts
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
   - [GettingStarted](#gettingstarted)
   - [Basics](#basics)
   - [DataTreeManipulation](#DataTreeManipulation)
-- [Jun Inoue](#jun-inoue)
-  - [R_JI](#r_ji) R - 井上 潤
+- [R_JI](#r_ji) R - 井上 潤
 - [biopapyrus](#biopapyrus)
   - [2017-12-29](#2017-12-29) 系統樹 ape ade4 | Rで系統樹を作成する方法
 - [JIN'S PAGE](#jins-page)
@@ -23,8 +24,7 @@ Last Update: 2018-02-25
   - [Chap_43](#chap_43) Rと系統樹(2)
 
 ----------
-
-## Updates
+## updates
 
 https://twitter.com/phy_papers/status/968162251151622144
 phypapers on Twitter: "babette: BEAUti 2, BEAST2 and Tracer for R https://t.co/92QqtXY8lM"
@@ -51,6 +51,39 @@ Erik S. Wright
 
 2011/07/20
 http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
+
+----------
+## pic
+
+https://rdrr.io/cran/ape/man/pic.html
+pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
+
+31 July 2017
+http://www.phytools.org/Cordoba2017/ex/3/PICs.html
+Exercise 3: Phylogenetically independent contrasts
+
+https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
+Phylogenetically independent contrasts – Comparative methods in R - Ilhabela
+
+8 August 2008
+https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts
+HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
+
+6 February 2008
+https://informatics.nescent.org/wiki/R_Hackathon_1/Phylogenetic_Independent_Contrasts
+R Hackathon 1/Phylogenetic Independent Contrasts - Phyloinformatics
+
+
+http://www.jbon.org/wp/wp-content/uploads/2009/04/e8a995e4bea1e4ba88e6b8ac2_ootani.pdf
+系統関係を考慮した解析法
+Phylogenetically independent contrast
+(PIC; Felsenstein 1985)
+- 系統樹の枝先の姉妹群(ペア)の対比，ノードの平均値の対比のみを使う方法
+- 非独立性を過剰評価してしまうことがある
+
+https://www.ikushimo.com/news/2009/03/23.html
+系統的に近い生物は互いに似ているという系統自己相関も存在します。これをちゃんと考慮に入れてやろうというのが、
+「系統的独立比較」(Phylogenetic Independent Contrast)です。
 
 ----------
 
@@ -292,10 +325,10 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 	branching.times(geotree)
 
 ----------
-## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
-### [R_JI](http://www.geocities.jp/ancientfishtree/R_JI.html)
-**R - 井上 潤**
-2015 年 6 月 8 日　改訂
+## R_JI
+http://www.fish-evol.org/R_JI.html
+R - 井上 潤
+2019 年 2 月 23 日　改訂
 
 #### ape: newick tree を描く
 
@@ -389,6 +422,10 @@ regHeatmap
 ### 2017-12-29
 [系統樹 ape ade4 | R を利用した系統樹の描き方](https://stats.biopapyrus.jp/r/graph/phylogenetic-tree.html)
 
+#### ファイルフォーマット
+##### newick フォーマット
+##### nexus フォーマット
+
 #### ade4
 
 	library(ade4)
@@ -420,12 +457,15 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 ----------
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
 
-### [Chap_42](http://mjin.doshisha.ac.jp/R/Chap_42/42.html)
+### Chap_42
 **Rと系統樹(1)**
 
-1．系統樹
+- http://mjin.doshisha.ac.jp/R/Chap_42/42.html
+- https://www.cis.doshisha.ac.jp/mjin/R/42/42.html
 
-2．系統樹の推定 (距離法)
+#### 1．系統樹
+
+#### 2．系統樹の推定 (距離法)
 
 (1)　距離
 
@@ -470,10 +510,13 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 
     example(mst)
 
-### [Chap_43](http://mjin.doshisha.ac.jp/R/Chap_43/43.html)
+### Chap_43
 **Rと系統樹(2)**
 
-1．系統樹のデザインと操作
+- http://mjin.doshisha.ac.jp/R/Chap_43/43.html
+- https://www.cis.doshisha.ac.jp/mjin/R/43/43.html
+
+#### 1．系統樹のデザインと操作
 
 (1)　先端のデザイン
 
@@ -516,7 +559,7 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 	zoom.p<- list(grep("Plecotus", chiroptera$tip.label),　grep("Dobsonia", chiroptera$tip.label))
 	zoom(chiroptera, zoom.p, cex=1.5)
 
-2. パッケージ ade4
+#### 2. パッケージ ade4
 
 	library(ade4); data(tithonia)
 	class(tithonia); length(tithonia)
@@ -529,7 +572,7 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 	plot(tith.phy,clabel.n= 0.6, f = 0.75)	#図7を作成
 	radial.phylog(tith.phy)	#図8を作成
 
-3．データの形式と利用
+#### 3．データの形式と利用
 
 (1)　結果のオブジェクトのクラス
 
@@ -549,12 +592,6 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 ----------
 
 ## References
-
-http://www.cis.doshisha.ac.jp/mjin/R/42/42.html
-Rと系統樹(1)
-
-http://www.cis.doshisha.ac.jp/mjin/R/43/43.html
-Rと系統樹(2)
 
 ### ape
 https://sites.google.com/site/adversariaoftekijima/r/ape
