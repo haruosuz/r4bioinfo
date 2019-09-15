@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-03
+Last Update: 2019-09
 
 ----------
 
@@ -7,7 +7,8 @@ Last Update: 2019-03
 Rによる微生物データ解析
 
 ## Table of Contents
-- [Updates](#updates)
+- [updates](#updates)
+  - [2019](#2019)
   - [2018](#2018)
 - [MLSTar](#mlstar)
 - [Biomartr](#biomartr)
@@ -28,15 +29,20 @@ Rによる微生物データ解析
 - [mcaGUI](#mcaGUI)
 
 ----------
+## updates
 
+## 2019
 
+https://www.ncbi.nlm.nih.gov/pubmed/29211828
+Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
+ASAR: visual analysis of metagenomes in R.
+Orakov AN1,2, Sakenova NK1,2, Sorokin A3,4, Goryanin II1,5,6.
 
-http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
-Some bacterial genome analysis using R
-
-----------
-## Updates
-
+https://www.ncbi.nlm.nih.gov/pubmed/30929407
+Genomics Inform. 2019 Mar;17(1):e6. doi: 10.5808/GI.2019.17.1.e6. Epub 2019 Mar 31.
+Statistical Analysis of Metagenomics Data.
+Calle ML1.
+In this review we outline some of the procedures that are most commonly used for microbiome analysis and that are implemented in R packages. We place particular emphasis on the compositional structure of microbiome data.
 
 ## 2018
 
@@ -56,6 +62,12 @@ Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R
 http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
 microbiomeSeq: An R package for microbial community analysis in an environmental context
 
+### 2017
+
+https://www.ncbi.nlm.nih.gov/pubmed/28302051
+BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
+microclass: an R-package for 16S taxonomy classification.
+Liland KH1,2, Vinje H1, Snipen L3.
 
 ## 2016
 
@@ -64,7 +76,6 @@ Pac Symp Biocomput. 2016;21:183-94.
 REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
 Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
 using R packages dada2, knitr, and phyloseq.
-
 
 ----------
 ## MLSTar
@@ -87,7 +98,6 @@ x <- doMLST(
 ##### take forever...
 
 	(time Rscript --vanilla scripts/my_MLSTar.R &) >& log.MLSTar.$(date +%F).txt
-
 
 ----------
 ## Biomartr
