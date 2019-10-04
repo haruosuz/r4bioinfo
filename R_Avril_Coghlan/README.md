@@ -458,10 +458,11 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 	dengueseq[452:535]
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
-GC含量の局所変動は、遺伝子の[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
 
     # GC content of DNA sequence stored in the vector `dengueseq`
 	GC(dengueseq)
+
+GC含量の局所変動は、遺伝子の[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
 
 [Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
 
