@@ -304,14 +304,9 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
-**RパッケージSeqinRを用いて、ゲノム配列データを取得**
+**RパッケージSeqinRを用いて、ゲノム配列データを取得する**
 
-    require("seqinr")
-    choosebank("refseqViruses")
-    query2 <- query("query2","AC=NC_001477")
-    dengueseq <- getSequence(query2$req[[1]])
-
-[TogoWS: REST](http://togows.dbcls.jp/site/ja/rest.html)  
+[TogoWS: REST](http://togows.dbcls.jp/site/en/index.html)  
 [TogoWS RESTサービスを使い倒す 2011](https://doi.org/10.7875/togotv.2011.058)
 
     library("seqinr")
@@ -449,10 +444,11 @@ Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.
 
 DEN-1デング熱ウイルスのゲノム配列を取得する:  
 
-	library("seqinr")                           # Load the SeqinR package.
-	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
-    # dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta")
-	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
+    # reading the sequence for the DEN-1 Dengue virus genome (NCBI accession: NC_001477)
+	library("seqinr")                          # Load the SeqinR package.
+	#dengue <- read.fasta(file = "den1.fasta") # Read in the file "den1.fasta".
+    dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta") # http://togows.dbcls.jp/site/en/rest.html
+	dengueseq <- dengue[[1]]                   # Put the sequence in a vector called "dengueseq".
 
     # obtain nucleotides 452-535 of DNA sequence stored in the vector `dengueseq`
 	dengueseq[452:535]
@@ -481,26 +477,16 @@ GC含量の移動解析
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 GC含量の移動プロット
 
-`for`ループを使う。異なる範囲（windowsize: 2000, 3000, 300 塩基）のプロットを作成する。
+`zoo`パッケージを用いて、異なる範囲（windowsize: 2000, 3000, 300 塩基）で移動プロットを作成する。
 
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P2_image3.png)
-
-[ウェブサイト](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)から
-`slidingwindowplot`関数をコピペして、以下の通り実行:  
-
-    par(family="mono")
-
-	slidingwindowplot(3000, dengueseq)
-
-	slidingwindowplot(300, dengueseq)
-
-`zoo`パッケージを使う:  
-
-    # install.packages('zoo')
+    #install.packages('zoo')
     library(zoo)
-    windowsize <- 300
+    windowsize <- 2000
+    #windowsize <- 3000
+    #windowsize <- 300
     x <- seq(from = 1, to = length(dengueseq)-windowsize, by = windowsize)
     y <- rollapply(data = dengueseq, width = windowsize, by = windowsize, FUN = GC)
+    par(family="mono")
     plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 
 - [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
