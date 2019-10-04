@@ -374,17 +374,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	denguetable[[3]]
 	denguetable[["g"]]
 
-[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)
-
-[Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
-
-[細菌の遺伝子交換，ずっと頻繁～日経サイエンス2011年6月号より | 日経サイエンス](http://www.nikkei-science.com/?p=14437)
-
-1998年4月 [自然界を渡り歩く細菌のDNA | 日経サイエンス](http://www.nikkei-science.com/page/magazine/9804/DNA.html)
-親から子へ遺伝情報が受け継がれるという遺伝学の基本原理では説明できない遺伝情報のやりとり「水平伝播」の発見のきっかけとその後の展開。
-
-![https://twitter.com/NikkeiScience/status/899926732106498048](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
-
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
 
 	length()
@@ -469,10 +458,14 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 	dengueseq[452:535]
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
-GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
+GC含量の局所変動は、遺伝子の[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
 
     # GC content of DNA sequence stored in the vector `dengueseq`
 	GC(dengueseq)
+
+[Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
+
+![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/882px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 GC含量の移動解析
