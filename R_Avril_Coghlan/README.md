@@ -465,7 +465,7 @@ GC含量の局所変動は、遺伝子の[水平伝播](https://ja.wikipedia.org
 
 [Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
 
-![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/882px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
+![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/441px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 GC含量の移動解析
