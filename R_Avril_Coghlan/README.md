@@ -228,6 +228,16 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
+テスト用の配列データを作成する:
+
+    # Create tests
+    library("seqinr")
+    testseq <- s2c("acgt")
+    length(testseq)
+    table(testseq)
+    GC(testseq)
+    count(testseq, wordsize = 2)
+
 ### [Using R for Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#using-r-for-bioinformatics)
 **R言語を用いたバイオインフォマティクス**
 
@@ -382,15 +392,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	GC()
 	count()
 
-テストデータで確認する:  
-
-    # Create tests
-    x <- s2c("atgc")
-    length(x)
-    table(x)
-    GC(x)
-    count(x, wordsize = 2)
-
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#links-and-further-reading)
 
 Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinformatics using R" by Krijnen (https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
@@ -533,10 +534,11 @@ GC含量の移動プロット
 
 ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
-    library("seqinr")
-    # Create tests
-    testseq <- s2c("aatgc")
+テスト用の配列データを作成する:
 
+    # Create tests
+    library("seqinr")
+    testseq <- s2c("aatgc")
     count(testseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
     1/(2+1+1+1) # Get fG
     1/(2+1+1+1) # Get fC
@@ -816,18 +818,15 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 とは、2本の配列を比較するためのグラフである。
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
 
-テストデータで確認する:  
-
-    par(family="mono")
+テスト用の配列データを作成する:
 
     # Create tests
     library("seqinr")
-    x <- s2c("atgc")
-
-    par(mfrow=c(2,2))
-    dotPlot(x,x)
-    dotPlot(x,rev(x))
-    dotPlot(x,rep(x,2))
+    testseq <- s2c("acgt")
+    par(mfrow=c(2,2)); par(family="mono")
+    dotPlot(testseq, testseq)
+    dotPlot(testseq, rev(testseq))
+    dotPlot(testseq, rep(testseq,2))
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 
