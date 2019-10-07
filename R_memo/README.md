@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-01-05
+Last Update: 2019-09
 
 ----------
 
@@ -7,7 +7,9 @@ Last Update: 2019-01-05
 
 ## Table of Contents
 - [updates](#updates)
-- [enrichment](#enrichment)
+  - [2018-02](#2018-02)
+  - [2018-01](#2018-01)
+  - [2018-01-04](#2018-01-04)
 - [RStudio](#rstudio)
 - [git](#git)
 - [rmarkdown](#rmarkdown)
@@ -15,110 +17,254 @@ Last Update: 2019-01-05
 - [stock](#stock)
 - [finance](#finance)
 - [kinship](#kinship) 家系図
+- [moralizing gods](#moralizing-gods) 神論文
+
+----------
+
+
+http://r-beginner.hatenadiary.jp/entry/2018/03/11/081150
+DiagrammeR　〜RでGraphvizを使う~ - Ｒ言語による電子カルテデータの二次利用
+
+http://r-beginner.hatenadiary.jp/entry/2016/02/11/140155
+DiagrammeRでフローチャート作成 - Ｒ言語による電子カルテデータの二次利用
+
+2014 年 2 月 3 日
+http://www.ec.kansai-u.ac.jp/user/arakit/documents/diagram_vignette.pdf
+R パッケージ diagram：グラフ，フローチャート，ウェブの簡単な可視化
+
+Nov 22, 2009
+https://www.slideshare.net/yag_ays/diagram-2557036
+Diagramパッケージを使ってみる
+
+
+
+
+https://notchained.hatenablog.com/entry/2016/11/08/220222
+Rから国土数値情報ダウンロードサービス Web APIを使うパッケージkokudosuuchiをCRANで公開しました - Technically, technophobic.
+```
+# install.packages("kokudosuuchi")
+library(kokudosuuchi)
+
+d <- getKSJData("http://nlftp.mlit.go.jp/ksj/gml/data/A03/A03-03/A03-03_SYUTO-tky_GML.zip")
+```
+
+2018-12-15
+https://oku.edu.mie-u.ac.jp/~okumura/stat/shape.html
+シェープファイルを読む
+シェープファイル（Shapefile）は，地図を表すベクトルデータ形式である。
+
+e-Stat の「地図で見る」→「境界データダウンロード」→「小地域」→「国勢調査」→「小地域」→「世界測地系緯度経度・Shape形式」などで入手できる。
+
+https://www.e-stat.go.jp/
+地図で見る統計(統計GIS)
+https://www.e-stat.go.jp/gis
+境界データダウンロード
+https://www.e-stat.go.jp/gis/statmap-search?type=2
+
+```
+# install.packages("sf")
+library(sf)
+
+options(stringsAsFactors=FALSE)
+mie = st_read("N03-180101_24_GML/", options="ENCODING=CP932")
+mie
+```
+
+国土数値情報の N03-180101_GML.zip をいただいてきて展開する。
+
+*URL不明*
+
+
+2018-08-03
+https://oku.edu.mie-u.ac.jp/~okumura/stat/nippon.html
+日本地図
+```
+install.packages(c("Nippon","NipponMap"))
+
+library(Nippon)
+
+> library(Nippon)
+Error in library(Nippon) : there is no package called ‘Nippon’
+
+library(NipponMap)
+data(prefectures)
+
+> data(prefectures)
+Warning message:
+In data(prefectures) : data set ‘prefectures’ not found
+
+> data(package = "NipponMap")
+no data sets found
+```
+
+*パッケージが存在しない*
+
+
+2017-01-03
+https://at-noda.com/econwiki/index.php?Rで地図作成
+Rで地図作成 - Akihiko NODA
+
+2017年12月28日
+https://qiita.com/mitama/items/d53b6b33a071381ff9b3
+RでGIS：塗り分け地図（コロプレス図）を作る - Qiita
+
+2015/06/27 
+https://www.karada-good.net/analyticsr/r-125
+Rで解析：日本語や日本地図などの操作にオススメ！「Nippon」パッケージの紹介
+
+http://sudillap.hatenablog.com/entry/2013/03/26/210202
+Rの基本グラフィックス機能またはggplot2を使って地図を描くには - verum ipsum factum
+
+*いまここ*
+
+----------
+
+- https://business.nikkeibp.co.jp/atcl/report/16/122700258/010900004/
+統計言語 「R」の神はなぜ無償で貢献したのか：日経ビジネスオンライン
+
+https://kazutan.github.io/kazutanR/Rmd_intro.html
+R Markdown入門
+
+https://twitter.com/yutakashino/status/1033359517398925312
+Yuta Kashino on Twitter: "価格が高いですけれど，確実に内容にその価値がありますし，邦訳は悪くありません．あと，何度か紹介していますが，この本についてビデオ講義があります．https://t.co/2b3rp8NfwE はい，学習環境も整備されてますので，今はこのくらいの知識が最低限必要となってます．… https://t.co/fz1yB5Eb7b"
+10:24 AM - 25 Aug 2018
+
+
+https://twitter.com/yishii_0207/status/1012957517369036800
+Yutaka Ishii (石井雄隆) on Twitter: "Rはいいぞ！むしろなぜ使わないのか！！ https://t.co/yNdbHYoGjV 統計解析の再現可能性を高める取り組み https://t.co/bc3RENuOyi ggplot2用例集　入門編 https://t.co/kDJrHbyf4h #bayesWS3rd"
+3:14 AM - 30 Jun 2018
+
 
 ----------
 
 ## updates
+
+https://twitter.com/Rbloggers
+
 ### 2019
 
-https://twitter.com/Alex_Washburne/status/1100057770844286977
-Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
-10:39 AM - 25 Feb 2019
+https://twitter.com/Rbloggers/status/1122843202241945604
+R-bloggers on Twitter: "How to perform merges (joins) on two or more data frames with base R, tidyverse and data.table https://t.co/s6CeaA8Hc0 #rstats #DataScience"
+8:40 AM - 29 Apr 2019
 
-![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
-
-Posted February 18, 2019.
-https://www.biorxiv.org/content/10.1101/553057v1
-rSeqTU — a machine-learning based R package for prediction of bacterial transcription units
-
-Posted February 10, 2019.
-https://www.biorxiv.org/content/10.1101/545665v1
-hilldiv: an R package for the integral analysis of diversity based on Hill numbers | bioRxiv
-, microbial community profiling or
-
-https://twitter.com/XavierDidelot/status/1039083946913529856
-BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
-Dating of PMEN1, before and after accounting for recombination
-5:31 AM - 10 Sep 2018
-https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky783/5089898
-Bayesian inference of ancestral dates on bacterial phylogenetic trees | Nucleic Acids Research | Oxford Academic
-Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
+October 27, 2018
+https://www.r-bloggers.com/how-to-perform-merges-joins-on-two-or-more-data-frames-with-base-r-tidyverse-and-data-table-2/
+How to perform merges (joins) on two or more data frames with base R, tidyverse and data.table | R-bloggers
 
 ### 2018
 
-https://twitter.com/strnr/status/1030176659322888192
-Stephen Turner on Twitter: "FastqCleaner: an interactive Bioconductor application for quality-control, filtering and trimming of FASTQ files https://t.co/WcPUarN6ho"
-3:37 PM - 16 Aug 2018
+https://kosugitti.github.io/kosugitti10/2018/12/04/2018m1judges/
+『M-1グランプリ』上沼恵美子さんの採点は本当に偏っていたのかを検証する · Kosugitti Labo ver.10
 
-https://twitter.com/JEFworks/status/1028741712896843778
-Jean Fan on Twitter: "Too many #singlecell points in your figures? Crashing Illustrator? Check out ggrastr for #ggplot2 #rstats by @PetukhovViktor to rasterize just the points layer. Maintain vectorized text for publication quality. Ideal for >10000 points. https://t.co/6iR7qYw1ap #dataviz #bigdata… https://t.co/9QDDmfua6w"
-4:35 PM - 12 Aug 2018
+----------
 
-https://twitter.com/strnr/status/1022451016736927745
+### 2018-07
 
-Stop using biocLite(). Instead:
+[2018-07-16 追記] 
+https://oku.edu.mie-u.ac.jp/~okumura/stat/150809.html
+猛暑日の増加
 
-1. Install BiocManager from CRAN. https://cran.r-project.org/package=BiocManager …
+https://twitter.com/RLangTip
+One R Tip a Day (@RLangTip) | Twitter
 
-2. Install Bioconductor or CRAN packages with one command:
-BiocManager::install(c("limma", "knitr"))
+https://twitter.com/RLangTip/status/1014539336308715520
 
-More info: https://cran.r-project.org/web/packages/BiocManager/vignettes/BiocManager.html …
+Draw a map of the United States with R: 
 
-#Bioconductor #Rstats #bioc2018
-
-7:58 AM - 26 Jul 2018
-
-https://www.ncbi.nlm.nih.gov/pubmed/30002984
-PeerJ. 2018 Jul 3;6:e5179. doi: 10.7717/peerj.5179. eCollection 2018.
-AnnotationBustR: an R package to extract subsequences from GenBank annotations.
-Borstein SR1, O'Meara BC1.
-
-https://www.ncbi.nlm.nih.gov/pubmed/29874797
-Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
-phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
-Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
+	library(maps)
+	map('usa') 
 
 
-問い合わせ先：資源環境部浅海環境グループ　高田宜武
-2018年2月23日
-http://jsnfri.fra.affrc.go.jp/gunshu/index.html
-Rによる群集組成の解析
+### 2018-06
 
-![](http://jsnfri.fra.affrc.go.jp/gunshu/files/Comchr1.jpg)
+https://twitter.com/Atsushi776/status/1007093278951530496
+Atsushi (Atusy) on Twitter: "iris %>% select(-Species) と 同じことが iris %>% mutate(Species = NULL) でもできるのは覚えておくと便利かも？"
+10:52 PM - 13 Jun 2018
 
-http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html
-多様度指数の比較
-Chao A, Gotelli NJ, Hsieh TC, Sander EL, Ma KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84: 45-67.
+    library(tidyverse)
+	iris %>% select(-Species)
+	iris %>% mutate(Species = NULL)
 
-![](http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html)
+http://togotv.dbcls.jp/ja/20180408.html
+2018-04-08 統計解析ソフト「R」の使い方 〜Rの導入・パッケージの導入・作図・統計解析の基本編〜
+
+http://togotv.dbcls.jp/ja/20180125.html
+2018-01-25 RStudioを使って階層的クラスタリングを行う 2018
+
+----------
+
+### 2018-05-13
+
+https://tomizonor.wordpress.com/2018/05/13/tips-for-ellipse-summary-plot/
+Tips for Ellipse Summary Plot | R-bloggers
+
+    install.packages("elliplot")
+    library(elliplot)
+	# 1. How to specify size
+	ellipseplot(iris[,c("Species", "Sepal.Length")], iris[,c("Species", "Sepal.Width")], xlim=c(4,8), ylim=c(2,5))
+
+----------
+January 24, 2018
+https://www.r-bloggers.com/dec-2017-top-40-new-package-picks/
+Dec 2017: "Top 40" New Package Picks | R-bloggers
+
+theseus v0.1.0: Provides analysis and visualization tools for the interpretation of microbial community composition data, especially those originating from amplicon sequencing. The vignette describes how to use the package.
 
 
-https://twitter.com/search?q=gggenes
+----------
 
-https://cran.r-project.org/web/packages/gggenes/readme/README.html
-‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
+### 2018-01-07
 
-![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
+January 7, 2018
+https://www.r-bloggers.com/anscombes-quartet-1980s-edition/
+Anscombe's Quartet: 1980's Edition | R-bloggers
 
-https://twitter.com/search?q=ggtree
+    #install.packages("showtext")
+	library(showtext)
+	font.add.google("Press Start 2P", "start2p")
+    png("Anscombe_80s.png", width=11,height=8, units='in', res=600)
+    showtext_begin()
+	#snip#
+    showtext_end()
 
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
+	dev.off()
 
-![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
+https://ja.wikipedia.org/wiki/アンスコムの例
 
-### 2017
+26 Apr 2015
+https://twitter.com/leeswijzer/status/592302113725755393
+MINAKA Nobuhiro on Twitter: "@leeswijzer この論文の「記述統計量を計算する前に生データを見よ」というメッセージは，有名な〈Anscombe’s quartet〉 http://t.co/A5oiHZt9Dj [Wikipedia] を連想させる．"
 
-https://www.ncbi.nlm.nih.gov/pubmed/28302051
-BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
-microclass: an R-package for 16S taxonomy classification.
-Liland KH1,2, Vinje H1, Snipen L3.
+22 Apr 2015
+https://twitter.com/neubig/status/591079565939748864
+Graham Neubig on Twitter: "「データを表示する時に、棒グラフと線グラフで平均を見せる代わりに、散布図で各データ点を見せましょう」という論文： http://t.co/T1d5aPZ9k8 。確かに紙面の大きさが同じでも、散布図でデータの分布がよく分かる。 http://t.co/YLOPbXiwBC"
+
+https://www.ncbi.nlm.nih.gov/pubmed/25901488
+PLoS Biol. 2015 Apr 22;13(4):e1002128. doi: 10.1371/journal.pbio.1002128. eCollection 2015 Apr.
+Beyond bar and line graphs: time for a new data presentation paradigm.
+
+http://d.hatena.ne.jp/hoxo_m/20120214/p1
+統計を学びたい人へ贈る、統計解析に使えるデータセットまとめ - ほくそ笑む
+
+	example(anscombe)
+
+2012年1月25日
+http://id.fnshr.info/2012/01/25/whycharts/
+統計分析におけるグラフの有用性｜Colorless Green Ideas
+- Anscombe, F. J. (1973). Graphs in Statistical Analysis. American Statistician, 27(1), 17–21.
+
+April 9, 2007
+http://jcb.rupress.org/content/177/1/7
+Error bars in experimental biology | JCB
+実験生物学におけるエラーバー（SD, SE, CI）の考え方 
 
 ----------
 
 ## kinship
 家系図
+
+https://togotv.dbcls.jp/20151004.html
+f-treeを使って家系図を描く 統合TV(togotv)｜生命科学系DB・ツール使い倒し系チャンネル
 
 https://www.kunihikokaneko.com/free/r/pedigree.html
 R を用いた家系図の作成
@@ -182,123 +328,6 @@ http://www.statgenet.med.kyoto-u.ac.jp/StatGenet/ryamada_bon/SaikouPDFs/GNMT_CH0
 http://www.statgenet.med.kyoto-u.ac.jp/StatGenet/ryamada_bon/20100519PartII/Q20100519.pdf
 ゲノムのための統計学教室
 5.6 個体の家系図・アレルの系図 同一種の中のグ ラフ
-
-----------
-
-## enrichment
-
-Nov 21, 2018
-https://www.subioplatform.com/ja/info_technical/152/enrichment-analysis-tool
-Enrichment Analysis Tool の使い方 | Subio
-
-https://home.hiroshima-u.ac.jp/naka/wiki/wiki.cgi?GSEA_%28Gene_Set_Enrichment_Analysis%29%A4%CB%A4%C4%A4%A4%A4%C6
-GSEA_(Gene_Set_Enrichment_Analysis)について -
-http://www.riken.jp/pr/press/2016/20160510_1/ wPGSA法（weighted Parametric Gene Set Analysis）
-
-https://www.ncbi.nlm.nih.gov/pubmed/27141961
-Nucleic Acids Res. 2016 Jul 8;44(W1):W90-7. doi: 10.1093/nar/gkw377. Epub 2016 May 3.
-Enrichr: a comprehensive gene set enrichment analysis web server 2016 update.
-http://amp.pharm.mssm.edu/Enrichr
-
-2012年12月20日
-http://array.cell-innovator.com/?p=1452
-Gene Set Enrichment Analysis (GSEA) – 遺伝子発現解析（マイクロアレイ解析, RNA-seq）
-
-### PAGE
-PAGEは正規分布（normal distribution）を仮定したパラメトリックなテストで、ノンパラメトリックテストのGSEAと比較して、計算が速く、検出感度が高い（統計的に有意な遺伝子が多い）。遺伝子セットの構成遺伝子数は最低10個
-
-https://www.ncbi.nlm.nih.gov/pubmed/15941488
-BMC Bioinformatics. 2005 Jun 8;6:144.
-PAGE: parametric analysis of gene set enrichment.
-Kim SY1, Volsky DJ.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1183189/
-PAGE: Parametric Analysis of Gene Set Enrichment
-PAGE was statistically more sensitive and required much less computational effort than GSEA, 
-, we set the minimal gene set size as 10.
-
-2018/11/21
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
-(Rで)マイクロアレイデータ解析
-解析 | 機能解析（GSEA周辺）について(以下は再編予定)(last modified 2014/06/01)
-
-2009/11/19
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html#page_go
-解析 | 機能解析 | PAGE法(Kim_2005;統計量の変換なし)を用いてGene Ontology解析
-
-https://www.t-kagaku.co.jp/seimeiken/top/xmlSupport.php?id=21004
-PAGE解析(Parametric Analysis of Gene set Enrichment)とは
-
-### R GSEA
-
-Ege Ulgen
-2018-11-20
-https://cran.r-project.org/web/packages/pathfindR/index.html
-pathfindR: Pathway Enrichment Analysis Utilizing Active Subnetworks
-Vignettes:
-pathfindR - Step-by-Step (Manual) Execution of the pathfindR Workflow
-pathfindR - An R Package for Pathway Enrichment Analysis Utilizing Active Subnetworks
-
-2018年05月03日
-https://qiita.com/nakachiy/items/b40bd0a8f233c380986b
-R/BioconductorのGOstats packageをもちいたGene Ontology(GO)やKEGGのenrichment解析 - Qiita
-
-Dong Li
-April 25, 2017
-https://www.cs.bham.ac.uk/~dxl466/st/GFEA.html
-A Practical Tutorial on Gene Set Functional Enrichment Analysis
-
-2017.04.15
-https://bi.biopapyrus.jp/pathway/go/
-GO 解析 | 遺伝子オントロジーエンリッチメント解析
-
-http://amphipod.hatenablog.com/entry/2017/01/28/121307
-非モデル生物のGO enrichment analysisをGOseqでおこなう - 備忘録 a record of inner life
-
-https://www.biostars.org/p/97836/
-GO Term Enrichment Tutorial/Guide?
-http://mengnote.blogspot.com/2012/12/calculate-correct-hypergeometric-p.html
-Meng's Notes: Simple Enrichment Test -- calculate hypergeometric p-values in R
-
-
-https://heavywatal.github.io/rstats/topgo.html
-topGO: Bioconductor でenrichment解析 - Heavy Watal
-
-http://www.nibb.ac.jp/training/2009/nakai/R_GO_2.7.2.html
-RでGO!
-topGO（工事中）
-
-### coRdon
-
-Elek A, Kuzman M, Vlahovicek K (2018). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. R package version 1.0.1, https://github.com/BioinfoHR/coRdon.
-
-https://www.bioconductor.org/packages/release/bioc/html/coRdon.html
-Bioconductor - coRdon
-
-https://www.bioconductor.org/packages/devel/bioc/html/coRdon.html
-Bioconductor - coRdon (development version)
-
-Dec. 5, 2018
-https://rdrr.io/bioc/coRdon/
-coRdon: Codon Usage Analysis and Prediction of Gene Expressivity version 1.0.1 from Bioconductor
-https://rdrr.io/bioc/coRdon/man/enrichment.html
-enrichment: Enrichment analysis for codon usage (CU) data.
-https://rdrr.io/bioc/coRdon/man/LD94_PATHWAYS.html
-LD94_PATHWAYS: Codon usage based KEGG Pathway enrichment analysis results...
-
-Anamaria Elek
-2018-12-04
-https://www.bioconductor.org/packages/devel/bioc/vignettes/coRdon/inst/doc/coRdon.html
-Codon usage (CU) analysis in R
-
-Anamaria Elek (2018) MASTER'S THESIS
-https://zir.nsk.hr/en/islandora/object/pmf%3A4815
-https://repozitorij.unizg.hr/en/islandora/object/pmf%3A4815
-coRdon: an R package for codon usage analysis and prediction of gene expressivity
-
-https://www.ncbi.nlm.nih.gov/pubmed/27115650
-Methods Mol Biol. 2016;1415:509-31. doi: 10.1007/978-1-4939-3572-7_26.
-Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
-Fabijanić M1, Vlahoviček K2.
 
 ----------
 
@@ -652,12 +681,34 @@ http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html
 
 ----------
 
-## 
+## moralizing gods
+https://twitter.com/search?q=神論文
 
+https://twitter.com/PatrickESavage/status/1125194308045303808
+Pat Savage on Twitter: "As previously mentioned, I will not be able to continue engaging much on Twitter for some time, but before I step back I'd like to emphasize three points I hope we can all agree upon:"
+8:23 PM - 5 May 2019
 
-----------
+https://twitter.com/babeheim/status/1123961132622827520
+Bret Beheim on Twitter: "Our reply to Whitehouse, et al.'s recent paper on the timing of moralizing gods in world history is up: https://t.co/6LEryoonqG @Peter_Turchin @PatrickESavage @TomCurrieEvo… https://t.co/pRYIFDlTtK"
+10:43 AM - 2 May 2019
 
-## 
+https://twitter.com/yutakashino/status/1124324242705666048
+Yuta Kashino on Twitter: "（´-`）.｡oO( 神論文の反論 https://t.co/gLkHiXZs5h がでたので，まずは反論を見る前に，神論文 https://t.co/PpMnC8poHS とコード https://t.co/mxD5tGlTei を高橋さんの手ほどき https://t.co/pjQyEnPPHY で，環境設定して読み始めましたが，結構骨ですね，これ…．片手間じゃ追えなさそう… )"
+10:46 AM - 3 May 2019
+
+2019/3/26
+http://rpubs.com/kohske/479704
+RPubs - Nature神論文データ解析のメモ書
+
+2019.03.22
+https://research-er.jp/articles/view/78282
+【プレスリリース】社会の複雑性の進化によって「神」が生まれた？－ビッグデータ解析により世界の宗教の歴史的起源を科学的に解明－ | 日本の研究.com
+
+2019年3月21日
+https://www.natureasia.com/ja-jp/nature/pr-highlights/12889
+https://www.natureasia.com/ja-jp/research/highlight/12889
+【社会科学】道徳を説く神への信仰は複雑社会の出現後に始まった | Nature | Nature Research
+
 
 ----------
 
