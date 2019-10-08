@@ -306,12 +306,13 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
 **RパッケージSeqinRを用いて、ゲノム配列データを取得する**
 
-[TogoWS: REST](http://togows.dbcls.jp/site/en/index.html)  
+[TogoWS: REST](http://togows.dbcls.jp/site/en/rest.html)  
 [TogoWS RESTサービスを使い倒す 2011](https://doi.org/10.7875/togotv.2011.058)
 
     library("seqinr")
-    dengue <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")
-    dengueseq <- dengue[[1]]
+
+    # TogoWS REST service http://togows.dbcls.jp/site/en/rest.html
+    dengueseq <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")[[1]]
 
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
@@ -321,6 +322,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
+
+    system("open .")
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
 **配列データをRに読み込む**
@@ -446,8 +449,9 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 
     # reading the sequence for the DEN-1 Dengue virus genome (NCBI accession: NC_001477)
 	library("seqinr")                          # Load the SeqinR package.
+    # TogoWS REST service http://togows.dbcls.jp/site/en/rest.html
+    dengue <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")
 	#dengue <- read.fasta(file = "den1.fasta") # Read in the file "den1.fasta".
-    dengue <- read.fasta(file = "http://togows.org/entry/nucleotide/NC_001477.fasta") # http://togows.dbcls.jp/site/en/rest.html
 	dengueseq <- dengue[[1]]                   # Put the sequence in a vector called "dengueseq".
 
     # obtain nucleotides 452-535 of DNA sequence stored in the vector `dengueseq`
