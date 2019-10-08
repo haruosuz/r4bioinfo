@@ -228,16 +228,6 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
-テスト用の配列データを作成する:
-
-    # Create tests
-    library("seqinr")
-    testseq <- s2c("acgt")
-    length(testseq)
-    table(testseq)
-    GC(testseq)
-    count(testseq, wordsize = 2)
-
 ### [Using R for Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#using-r-for-bioinformatics)
 **R言語を用いたバイオインフォマティクス**
 
@@ -365,8 +355,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 `count`関数で連続塩基のカウント
 
     # Count oligomers (monomer/dimer/trimer/etc)
-    count(dengueseq, wordsize = 1)
-    count(dengueseq, wordsize = 2)
+    count(seq = dengueseq, wordsize = 1)
+    count(seq = dengueseq, wordsize = 2)
 
     denguetable <- count(dengueseq, wordsize = 1)
 	denguetable[[3]]
@@ -378,6 +368,16 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	table()
 	GC()
 	count()
+
+テスト用の配列データを作成する:
+
+    # Create tests
+    library("seqinr")
+    testseq <- s2c("acgt")
+    length(testseq)
+    table(testseq)
+    GC(testseq)
+    count(testseq, wordsize = 2)
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#links-and-further-reading)
 
