@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-10
+Last Update: 2019-10
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -404,8 +404,9 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
 
 	# create a sequence of numbers
-	seq(1, 100, by = 1)
-	seq(1, 100, by = 2)
+    seq(from = 1, to = 100, by = 1)
+    seq(from = 1, to = 100, by = 2)
+
 
 [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
 for による繰り返し
@@ -420,6 +421,7 @@ for による繰り返し
 
 [48. とりあえず plot()](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/48.html)
 
+    # setting font in plots
     par(family="mono")
 
 	# plot a scatterplot of the values in myvector1 against the values in myvector2
