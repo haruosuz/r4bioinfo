@@ -519,7 +519,7 @@ GC含量の移動プロット
 
     # Statistical over- and under- representation of oligonucleotides in a sequence
     # The rho statistic can be computed on each of oligonucleotides
-    rho(dengueseq, wordsize = 2)
+    rho(sequence = dengueseq, wordsize = 2)
 
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
 
@@ -555,7 +555,7 @@ GC含量の移動プロット
 
 `rho`関数を使う:  
 
-    rho(testseq, wordsize = 2)
+    rho(sequence = testseq, wordsize = 2)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
 
