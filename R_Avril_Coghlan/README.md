@@ -514,7 +514,8 @@ GC含量の移動プロット
 ゲノムの2連続塩基組成
 [Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
-	count(dengueseq, 2)
+    # Count oligomers (monomer/dimer/trimer/etc)
+    count(seq = dengueseq, wordsize = 2)
 
     # Statistical over- and under- representation of oligonucleotides in a sequence
     # The rho statistic can be computed on each of oligonucleotides
