@@ -397,16 +397,16 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 
 	x <- 100
 	log10(x)
-	myvector <- c(30,16,303,99,11,111)
+    myvector <- c(1,3,5,7,9)
 	mean(myvector)
 	myvector[3]
 
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
 
 	# create a sequence of numbers
-    seq(from = 1, to = 100, by = 1)
-    seq(from = 1, to = 100, by = 2)
-
+    seq(from=1, to=10, by=1)
+    1:10
+    seq(from=1, to=10, by=2)
 
 [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
 for による繰り返し
@@ -414,29 +414,31 @@ for による繰り返し
 	# for loop to carry out the same command several times
 	for (i in 1:10) { print (i*i) }
 
-	avector <- c(2, 9, 100, 133)
-	for (i in avector) { print (i*i) }
+    myvector <- c(1,3,5,7,9)
+    for (i in myvector) { print (i*i) }
 
-	for (i in seq(1, 10, by = 2)) { print (i*i) }
+    for (i in seq(from=1, to=10, by=2)) { print (i*i) }
 
 [48. とりあえず plot()](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/48.html)
 
     # setting font in plots
     par(family="mono")
 
-	# plot a scatterplot of the values in myvector1 against the values in myvector2
-	myvector1 <- c(10, 15, 22, 35, 43)
-	myvector2 <- c(3, 3.2, 3.9, 4.1, 5.2)
-    plot(myvector1, myvector2, xlab="x", ylab="y")
-    plot(myvector1, myvector2, xlab="x", ylab="y", type="b")
+	# plot a scatterplot of the values in v1 against the values in v2
+	v1 <- 1:5
+	v2 <- 5:1
+    plot(x=v1, y=v2, xlab="x", ylab="y")
+
+    # type: "p" for points, "l" for lines, "b" for both,
+    plot(x=v1, y=v2, xlab="x", ylab="y", type="b")
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 
 	# create our own functions
 	myfunction <- function(x) { return(20 + (x*x)) }
-	myfunction(10)
-	myfunction(25)
 	myfunction
+	myfunction(2)
+	myfunction(3)
 
 `＃`の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
 
@@ -508,6 +510,10 @@ GC含量の移動プロット
 
 	count(dengueseq, 2)
 
+    # Statistical over- and under- representation of oligonucleotides in a sequence
+    # The rho statistic can be computed on each of oligonucleotides
+    rho(dengueseq, wordsize = 2)
+
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
 
 ρ(xy) = fxy/(fx*fy),
@@ -543,8 +549,6 @@ GC含量の移動プロット
 `rho`関数を使う:  
 
     rho(testseq, wordsize = 2)
-
-    rho(dengueseq, wordsize = 2)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
 
