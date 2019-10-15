@@ -395,10 +395,16 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 ### [A little more introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-little-more-introduction-to-r)
 **続・R言語入門**
 
+
+	# log10() function to calculate the log to the base 10 of a scalar variable x
 	x <- 100
 	log10(x)
+
+	# mean() function to calculate the average of the values in a vector variable myvector:
     myvector <- c(1,3,5,7,9)
 	mean(myvector)
+
+	# get the value of the 3rd element in the vector myvector
 	myvector[3]
 
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
