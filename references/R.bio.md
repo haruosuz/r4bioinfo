@@ -1,7 +1,6 @@
 # R.bio
 
 ## Table of Contents
-
 - [updates](#updates)
 [2019](#2019)
 [2018](#2018)
@@ -30,13 +29,20 @@ KEGGREST パッケージは R を利用して、KEGG ウェブサイトにある
 
 ## 2019
 
-https://twitter.com/OUPBioinfo/status/1171057199004737536
-hypeR: An R Package for Geneset Enrichment Workflows https://ift.tt/2HYJ21I #bioinformatics
-10:46 PM · Sep 9, 2019
+https://www.ncbi.nlm.nih.gov/pubmed/31584605
+Bioinformatics. 2019 Oct 4. pii: btz735. doi: 10.1093/bioinformatics/btz735. [Epub ahead of print]
+simurg: simulate bacterial pangenomes in R.
+Ferrés I1, Fresia P1,2, Iraola G1,3,4.
 
-https://twitter.com/razoralign/status/1153114651057541120
-antisense. on Twitter: "RepViz: a replicate-driven R tool for visualizing genomic regions https://t.co/cQAJ1kDgIz https://t.co/ZMYlU9G0qO" / Twitter
-10:28 AM · Jul 22, 2019
+https://www.ncbi.nlm.nih.gov/pubmed/31498385
+Bioinformatics. 2019 Sep 9. pii: btz700. doi: 10.1093/bioinformatics/btz700. [Epub ahead of print]
+hypeR: An R Package for Geneset Enrichment Workflows.
+Federico A1,2, Monti S1,2.
+
+https://www.ncbi.nlm.nih.gov/pubmed/31324268
+BMC Res Notes. 2019 Jul 19;12(1):441. doi: 10.1186/s13104-019-4473-z.
+RepViz: a replicate-driven R tool for visualizing genomic regions.
+Faux T1, Rytkönen KT2,3, Laiho A2, Elo LL4.
 
 https://twitter.com/Alex_Washburne/status/1100057770844286977
 Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
@@ -102,15 +108,6 @@ Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
 phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
 Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
 
-![](http://jsnfri.fra.affrc.go.jp/gunshu/files/Comchr1.jpg)
-
-http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html
-多様度指数の比較
-Chao A, Gotelli NJ, Hsieh TC, Sander EL, Ma KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84: 45-67.
-
-![](http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html)
-
-
 https://twitter.com/search?q=gggenes
 
 https://cran.r-project.org/web/packages/gggenes/readme/README.html
@@ -127,11 +124,30 @@ Phylogenetic trees in R using ggtree
 
 ### 2018-02
 
-
+水産研究・教育機構「日本海区水産研究所」
 資源環境部浅海環境グループ　高田宜武
 2018年2月23日
 http://jsnfri.fra.affrc.go.jp/gunshu/index.html
-Rによる群集組成の解析｜水産研究・教育機構「日本海区水産研究所」
+Rによる群集組成の解析
+
+サンプルデータのダウンロード
+```
+curl -O http://jsnfri.fra.affrc.go.jp/gunshu/files/spcdat.csv
+curl -O http://jsnfri.fra.affrc.go.jp/gunshu/files/envdat.csv
+```
+
+http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html
+多様度指数の比較
+Chao A, Gotelli NJ, Hsieh TC, Sander EL, Ma KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84: 45-67.
+
+http://jsnfri.fra.affrc.go.jp/gunshu/2nmds.html
+群集組成による配置図：間接傾度分析
+
+http://jsnfri.fra.affrc.go.jp/gunshu/3dbrda.html
+群集組成と環境変数の関係：直接傾度分析
+
+http://jsnfri.fra.affrc.go.jp/gunshu/4clust.html
+群集の類別と指標種
 
 ### 2018-01
 
@@ -157,12 +173,6 @@ Rで解析：Entrezの操作が楽々です！「rentrez」パッケージ
 	str(r_search)
 	GeneResult <- entrez_summary(db = "gene", id = r_search$ids)
 	GeneResult
-
-
-
-----------
-
-
 
 ----------
 
