@@ -92,16 +92,20 @@ HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
 https://informatics.nescent.org/wiki/R_Hackathon_1/Phylogenetic_Independent_Contrasts
 R Hackathon 1/Phylogenetic Independent Contrasts - Phyloinformatics
 
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC549432/
-Variation in the strength of selected codon usage bias among bacteria
-- Phylogeny-independent correlations among species characters were estimated using the generalized least squares approach implemented in Continuous (39).
-- The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
-
 統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
 FIG.2.データ点が独立 FIG.3. データ点が非独立
 https://www.jstor.org/stable/2461605
 Joseph Felsenstein (1985)
 Phylogenies and the Comparative Method
+
+https://www.ncbi.nlm.nih.gov/pubmed/15728743
+Nucleic Acids Res. 2005 Feb 23;33(4):1141-53. Print 2005.
+Variation in the strength of selected codon usage bias among bacteria.
+Sharp PM1, Bailes E, Grocock RJ, Peden JF, Sockett RE.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC549432/
+Variation in the strength of selected codon usage bias among bacteria
+- Phylogeny-independent correlations among species characters were estimated using the generalized least squares approach implemented in Continuous (39).
+- The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
 
 ----------
 
