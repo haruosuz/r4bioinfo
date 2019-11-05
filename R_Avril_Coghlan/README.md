@@ -745,19 +745,9 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
 **2つの配列間でのアラインメント**
 
-**[ペアワイズ配列アラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
+**[ペアワイズ配列アラインメント]https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
-
-2009年4月 [多様性の源　複雑な生物を生む力 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/0904/200904_036.html)
-
-[変異](https://ja.wikipedia.org/wiki/突然変異)
-
-[Single gene mutations](http://www.bbc.co.uk/education/guides/zc499j6/revision/2)
-
-塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
-
-![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
 
 ### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
@@ -855,10 +845,21 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     myseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q2V0S3.fasta")[[1]]
     dotPlot(myseq, myseq)
 
+
+2009年4月 [多様性の源　複雑な生物を生む力 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/0904/200904_036.html)
+
+[変異](https://ja.wikipedia.org/wiki/突然変異)
+
+[Single gene mutations](http://www.bbc.co.uk/education/guides/zc499j6/revision/2)
+
+塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
+
+![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
+
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
 
-[**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
+[**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
