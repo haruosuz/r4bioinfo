@@ -313,7 +313,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
 
-    system("open .")
+    getwd()
+    #system("open .")
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
 **配列データをRに読み込む**
