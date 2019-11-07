@@ -801,8 +801,12 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
 **ドットプロットで2つの配列を比較**
 
-タンパク質のアミノ酸配列や核酸の塩基配列の[相同性 (homology)](https://ja.wikipedia.org/wiki/相同)（共通の祖先に由来すること）は、配列類似性に基づいて判断される。
+タンパク質のアミノ酸配列や核酸の塩基配列の
+[相同性](https://ja.wikipedia.org/wiki/相同)
+[homology](https://en.wikipedia.org/wiki/Homology_%28biology%29)
+（共通の祖先に由来すること）は、配列類似性に基づいて判断される。  
 [ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)
+[Dot plot](https://en.wikipedia.org/wiki/Dot_plot_%28bioinformatics%29)
 とは、2本の配列を比較するためのグラフである。
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
 
