@@ -780,22 +780,16 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 	ulcerans <- read.fasta(file = "A0PQ23.fasta")
 	lepraeseq <- leprae[[1]]
 	ulceransseq <- ulcerans[[1]]
-    # lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-    # ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 	lepraeseq # Display the contents of the vector "lepraeseq"
-
-- [How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
 **SeqinRでUniProtのタンパク質配列を取得**
 
-	library("seqinr")
-	choosebank("swissprot")
-    leprae <- query("leprae", "AC=Q9CD83")
-	lepraeseq <- getSequence(leprae$req[[1]])
-    ulcerans <- query("ulcerans", "AC=A0PQ23")
-	ulceransseq <- getSequence(ulcerans$req[[1]])
-	closebank()
+[How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
+
+    library("seqinr")
+    lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+    ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 	lepraeseq # Display the contents of "lepraeseq"
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
@@ -815,16 +809,12 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     # Create tests
     library("seqinr")
     testseq <- s2c("acgt")
-    par(mfrow=c(2,2)); par(family="mono")
+    par(family="mono"); par(mfrow=c(2,2))
     dotPlot(testseq, testseq)
     dotPlot(testseq, rev(testseq))
     dotPlot(testseq, rep(testseq,2))
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
-
-    library("seqinr")
-    lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-    ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 
 	dotPlot(lepraeseq, ulceransseq)
 
