@@ -5,6 +5,8 @@
 [2019](#2019)
 [2018](#2018)
 - [enrichment](#enrichment)
+- [ggtree](#ggtree)
+
 
 ----------
 
@@ -29,6 +31,13 @@ KEGGREST パッケージは R を利用して、KEGG ウェブサイトにある
 
 ## 2019
 
+https://twitter.com/tangming2005/status/1186283109911674880
+Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? https://t.co/iNrB64yQ4X . https://t.co/Cwa0R24JSq https://t.co/88rpGuUtIe #rstats" / Twitter
+11:08 PM · Oct 21, 2019
+- https://bioconductor.org/packages/release/bioc/html/motifRG.html
+- https://bioconductor.org/packages/release/bioc/html/motifcounter.html
+- https://bioconductor.org/packages/release/bioc/html/PWMEnrich.html
+
 https://www.ncbi.nlm.nih.gov/pubmed/31584605
 Bioinformatics. 2019 Oct 4. pii: btz735. doi: 10.1093/bioinformatics/btz735. [Epub ahead of print]
 simurg: simulate bacterial pangenomes in R.
@@ -38,6 +47,10 @@ https://www.ncbi.nlm.nih.gov/pubmed/31498385
 Bioinformatics. 2019 Sep 9. pii: btz700. doi: 10.1093/bioinformatics/btz700. [Epub ahead of print]
 hypeR: An R Package for Geneset Enrichment Workflows.
 Federico A1,2, Monti S1,2.
+
+https://twitter.com/lobrowR/status/1157870107303055362
+Nathan Brouwer on Twitter: "I've compiled a short list of #rstats -based #bioinformatics and computational biology books and tutorials. (THREAD) 1/n"
+1:25 PM · Aug 4, 2019
 
 https://www.ncbi.nlm.nih.gov/pubmed/31324268
 BMC Res Notes. 2019 Jul 19;12(1):441. doi: 10.1186/s13104-019-4473-z.
@@ -115,12 +128,6 @@ https://cran.r-project.org/web/packages/gggenes/readme/README.html
 
 ![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
 
-https://twitter.com/search?q=ggtree
-
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
-
-![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
 
 ### 2018-02
 
@@ -259,4 +266,29 @@ RでGO!
 topGO（工事中）
 
 ----------
+
+## ggtree
+
+https://twitter.com/search?q=ggtree
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+
+![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
+
+
+2019年09月25日に更新
+https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
+ggtreeを使ってRで系統樹を扱う
+
+
+----------
+
+
+
+
+
+
+
+
 
