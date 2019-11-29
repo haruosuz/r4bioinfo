@@ -842,15 +842,14 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     dotPlot(myseq, myseq)
 
 
-2009年4月 [多様性の源　複雑な生物を生む力 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/0904/200904_036.html)
-
 [変異](https://ja.wikipedia.org/wiki/突然変異)
+[Mutation](https://en.wikipedia.org/wiki/Mutation)
 
-[Single gene mutations](http://www.bbc.co.uk/education/guides/zc499j6/revision/2)
+[Single gene mutations](https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3)
 
 塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
 
-![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
+![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
