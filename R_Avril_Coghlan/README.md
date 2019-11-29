@@ -744,9 +744,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 ----------
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
-**2つの配列間でのアラインメント**
-
-**[ペアワイズ配列アラインメント]https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
+**[2つの配列間でのアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
 
@@ -815,6 +813,9 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     dotPlot(testseq, rep(testseq,2))
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
+
+    # setting font in plots
+    par(family="mono")
 
 	dotPlot(lepraeseq, ulceransseq)
 
