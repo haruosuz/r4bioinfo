@@ -841,22 +841,22 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     myseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q2V0S3.fasta")[[1]]
     dotPlot(myseq, myseq)
 
+- 2018-11-19 [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
+- 2019-06-28 [進化で読み解く　バイオインフォマティクス入門](https://www.morikita.co.jp/books/book/3349)
 
-[変異](https://ja.wikipedia.org/wiki/突然変異)
-[Mutation](https://en.wikipedia.org/wiki/Mutation)
-
-[Single gene mutations](https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3)
+変異
+[Mutations](https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3)
 
 塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
 
 ![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
-### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
-**2つのDNA配列間のグローバル・アライメント**
-
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
+
+### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
+**2つのDNA配列間のグローバル・アライメント**
 
 【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける。
 
