@@ -852,6 +852,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 ![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
+[Global alignment and Local alignment](https://towardsdatascience.com/pairwise-sequence-alignment-using-biopython-d1a9d0ba861f)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
