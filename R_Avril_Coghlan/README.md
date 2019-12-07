@@ -861,15 +861,11 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 以下のアラインメントのスコアは？
 
-	# give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
+    # Scoring by hand using match score of +2, mismatch score of -1, gap penalty of -2, 
+    # what is the score for the following alignment of two nucleotide sequences?
 
-    # the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
     GAATTC
     GATT-A
-
-    # the score for the following alignment is 2 + 2 + (-2) + 2 + 2 + (-1) = 5:
-    GAATTC
-    GA-TTA
 
 *scoring matrix (substitution matrix)*
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
