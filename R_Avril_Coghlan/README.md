@@ -1053,7 +1053,7 @@ library(msa)
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
 
-[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession:
+[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession: 
 [P06747](http://www.uniprot.org/uniprot/P06747), 
 [P0C569](http://www.uniprot.org/uniprot/P0C569), 
 [O56773](http://www.uniprot.org/uniprot/O56773), 
@@ -1078,8 +1078,6 @@ library(msa)
 
 多重整列プログラム
 [Clustal](https://ja.wikipedia.org/wiki/Clustal)
-
-![](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image8.png)
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
