@@ -1053,7 +1053,7 @@ library(msa)
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
 
-[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession:  
+[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession:
 [P06747](http://www.uniprot.org/uniprot/P06747), 
 [P0C569](http://www.uniprot.org/uniprot/P0C569), 
 [O56773](http://www.uniprot.org/uniprot/O56773), 
