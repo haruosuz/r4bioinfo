@@ -845,6 +845,27 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
+
+Dec 8, 2014
+https://www.youtube.com/watch?v=MOtRqBs0jxE
+Mutations in DNA
+1:44
+
+Apr 25, 2012
+https://www.youtube.com/watch?v=yobHMYhHAXE
+4.1.4 Explain the consequences of a base substitution mutation
+2:36
+
+Aug 28, 2014
+https://www.youtube.com/watch?v=JGDPZrQsMXI
+Substitution Mutations
+2:36
+
+Apr 2, 2014
+https://www.youtube.com/watch?v=xYOK-yzUWSI
+The different types of mutations | Biomolecules | MCAT | Khan Academy
+5:51
+
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
 
@@ -1123,8 +1144,6 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
     print(nchar(msa.trimmed$Sequence))
     writeFasta(fdta = msa.trimmed, out.file = "msa.trimmed.fasta", width = 80)
     # myaln <- read.alignment(file = "msa.trimmed.fasta", format = "fasta")
-
-http://molevol.cmima.csic.es/castresana/Gblocks.html
 
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
 **タンパク質配列間の遺伝的距離を計算する**
