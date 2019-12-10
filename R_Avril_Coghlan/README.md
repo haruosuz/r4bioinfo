@@ -1013,6 +1013,8 @@ We set “gapOpening” to be -2 and “gapExtension” to be -8, which means th
     # Write a PairwiseAlignments object to a file
     writePairwiseAlignments(globalAlignLepraeUlcerans, file="globalAlignLepraeUlcerans.txt")
 
+    #system("open .")
+
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
 **2つのタンパク質配列間のローカル・アライメント**
 
