@@ -1073,15 +1073,16 @@ Parsimony
 
 [`msa`](https://bioconductor.org/packages/release/bioc/html/msa.html)パッケージのインストール:  
 ```
-# install the 'msa' package
+# Install the "msa" package:
 if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+     install.packages("BiocManager")
 
 BiocManager::install("msa")
 ```
 
 [`ape`](http://ape-package.ird.fr/ape_installation.html)パッケージのインストール:  
 ```
+# Install the "ape" package:
 install.packages("ape")
 ```
 
