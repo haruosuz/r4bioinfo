@@ -1170,13 +1170,13 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
     mydist <- dist.alignment(myaln) # Calculate the genetic distances
     mydist                          # Print out the genetic distance matrix
 
+距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
+
 Based on the genetic distance matrix above, we can see that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is smallest (about 0.414).
 
 Similarly, the genetic distance between Western Caucasian bat virus phosphoprotein (Q5VKP1) and Lagos bat virus phosphoprotein (O56773) is the biggest (about 0.507).
 
 The larger the genetic distance between two sequences, the more amino acid changes or indels that have occurred since they shared a common ancestor, and the longer ago their common ancestor probably lived.
-
-距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
@@ -1202,13 +1202,14 @@ This is consistent with what we saw above in the genetic distance matrix, which 
 
 In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
 
-For example, the protein Fox-1 is involved in determining the sex (gender) of an embryo in the nematode worm Caenorhabditis elegans (UniProt accession Q10572). Related proteins are found in other organisms, including Xenopus tropicalis (UniProt Q66JB7), Rattus norvegicus (UniProt A1A5R1), and Mus musculus (UniProt Q8BP71).
+For example, the protein Fox-1 is involved in determining the sex (gender) of an embryo in the nematode worm Caenorhabditis elegans (UniProt accession Q10572). 
+Related proteins are found in other organisms, including Xenopus tropicalis (UniProt Q66JB7), Rattus norvegicus (UniProt A1A5R1), and Mus musculus (UniProt Q8BP71).
 
 線虫 fox-1 遺伝子は性決定に関わる。
-[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス) (UniProt accession [Q10572](https://www.uniprot.org/uniprot/Q10572)), 
-ネッタイツメガエル Xenopus tropicalis (UniProt Q66JB7), 
-ドブネズミ Rattus norvegicus (UniProt A1A5R1), 
-ハツカネズミ Mus musculus (UniProt Q8BP71)
+[線虫](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス) Caenorhabditis elegans (UniProt accession [Q10572](https://www.uniprot.org/uniprot/Q10572)), 
+[ネッタイツメガエル](https://ja.wikipedia.org/wiki/ネッタイツメガエル) Xenopus tropicalis (UniProt [Q66JB7](https://www.uniprot.org/uniprot/Q66JB7)), 
+[ドブネズミ](https://ja.wikipedia.org/wiki/ドブネズミ) Rattus norvegicus (UniProt [A1A5R1](https://www.uniprot.org/uniprot/A1A5R1)), 
+[ハツカネズミ](https://ja.wikipedia.org/wiki/ハツカネズミ) Mus musculus (UniProt [Q8BP71](https://www.uniprot.org/uniprot/Q8BP71))
 の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。
 外群 [outgroup](https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#outgroup)として"Q10572"を選択し、系統樹に根をつける。
 
