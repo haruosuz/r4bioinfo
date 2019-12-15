@@ -1085,6 +1085,8 @@ BiocManager::install("msa")
 install.packages("ape")
 ```
 
+- [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview)
+
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
 
@@ -1130,8 +1132,6 @@ install.packages("ape")
     writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
 
     # system("open .")
-
-- [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview)
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アライメントのファイルをRに読み込む**
@@ -1226,8 +1226,10 @@ myAlignment <- msa(mySequences, "ClustalW")
 # write an XStringSet object to a file
 writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
 
-# read the FASTA-format alignment into R, and calculate the genetic distances between the protein sequences:
+# read the FASTA-format alignment into R
 myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
+
+# calculate the genetic distances between the protein sequences
 mydist <- dist.alignment(myaln)
 mydist
 
