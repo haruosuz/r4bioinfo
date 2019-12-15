@@ -1202,55 +1202,41 @@ This is consistent with what we saw above in the genetic distance matrix, which 
 
 In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
 
-For example, the protein Fox-1 is involved in determining the sex (gender) of an embryo in the nematode worm Caenorhabditis elegans (UniProt accession Q10572). 
-Related proteins are found in other organisms, including Xenopus tropicalis (UniProt Q66JB7), Rattus norvegicus (UniProt A1A5R1), and Mus musculus (UniProt Q8BP71).
+The Zika virus is related to Dengue viruses, but is not a Dengue virus, and so therefore can be used as an outgroup in phylogenetic trees of Dengue virus sequences. UniProt accession Q32ZE1 consists of a sequence with similarity to the Dengue NS1 protein, so seems to be a related protein from Zika virus.
 
-線虫 fox-1 遺伝子は性決定に関わる。
-[線虫](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス) Caenorhabditis elegans (UniProt accession [Q10572](https://www.uniprot.org/uniprot/Q10572)), 
-[ネッタイツメガエル](https://ja.wikipedia.org/wiki/ネッタイツメガエル) Xenopus tropicalis (UniProt [Q66JB7](https://www.uniprot.org/uniprot/Q66JB7)), 
-[ドブネズミ](https://ja.wikipedia.org/wiki/ドブネズミ) Rattus norvegicus (UniProt [A1A5R1](https://www.uniprot.org/uniprot/A1A5R1)), 
-[ハツカネズミ](https://ja.wikipedia.org/wiki/ハツカネズミ) Mus musculus (UniProt [Q8BP71](https://www.uniprot.org/uniprot/Q8BP71))
-の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。
-外群 [outgroup](https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#outgroup)として"Q10572"を選択し、系統樹に根をつける。
-
+    seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1") # Make a vector containing the names of the sequences
     # retrieve several sequences from UniProt
     library("seqinr")
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
-    seqnames <- c("Q10572","Q66JB7","A1A5R1","Q8BP71")
-    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
 
     # write out the sequences to a FASTA file
-    write.fasta(seqs, seqnames, file="fox1.fasta")
+    write.fasta(seqs, seqnames, file="myseq.fasta")
 
     # Read an XStringSet object from a file
     library(Biostrings)
-    mySequences <- readAAStringSet(file = "fox1.fasta")
+    mySequences <- readAAStringSet(file = "myseq.fasta")
 
     # Multiple Sequence Alignment using ClustalW
     library(msa)
-    myAlignment <- msa(mySequences)
+    myAlignment <- msa(mySequences, "ClustalW")
 
-    # convert msa for the seqinr package
-    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
+    # write an XStringSet object to a file
+    writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
 
-    # calculating genetic distances between protein sequences
-    mydist <- dist.alignment(fox1aln)
+    # read the FASTA-format alignment into R, and calculate the genetic distances between the protein sequences:
+    myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
+    mydist <- dist.alignment(myaln)
+    mydist
 
     # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(mydist)
-    mytree <- root(mytree, outgroup = "Q10572")
+    mytree <- root(mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
     plot.phylo(mytree, main = "Phylogenetic Tree")
 
     # get sequence annotations
     unlist(getAnnot(seqs))
-
-```
->Q10572 Sex determination protein fox-1 OS=Caenorhabditis elegans OX=6239 GN=fox-1 PE=1 SV=2
->Q66JB7 RNA binding protein fox-1 homolog 2 OS=Xenopus tropicalis OX=8364 GN=rbfox2 PE=2 SV=1
->A1A5R1 RNA binding protein fox-1 homolog 2 OS=Rattus norvegicus OX=10116 GN=Rbfox2 PE=2 SV=1
->Q8BP71 RNA binding protein fox-1 homolog 2 OS=Mus musculus OX=10090 GN=Rbfox2 PE=1 SV=2
-```
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
