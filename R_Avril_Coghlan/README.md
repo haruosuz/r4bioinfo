@@ -1062,10 +1062,16 @@ We see that the optimal local alignment is quite similar to the optimal global a
 - [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) 
+- [Yang (2006) "Computational Molecular Evolution"](http://aracnologia.macn.gov.ar/st/biblio/Yang%202006%20Computational%20Molecular%20Evolution.pdf)
+Fig. 3.18
+- Sep 4, 2017
+https://www.youtube.com/watch?v=t0iAm-JQcrs
+Parsimony
+6:25
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
-[`msa`](https://bioconductor.org/packages/release/bioc/html/msa.html)パッケージのインストールと呼び出し:  
+[`msa`](https://bioconductor.org/packages/release/bioc/html/msa.html)パッケージのインストール:  
 ```
 # install the 'msa' package
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -1075,6 +1081,11 @@ BiocManager::install("msa")
 
 # load the 'msa' package into R
 library(msa)
+```
+
+[`ape`](http://ape-package.ird.fr/ape_installation.html)パッケージのインストール:  
+```
+library(ape)
 ```
 
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
@@ -1123,6 +1134,8 @@ library(msa)
 
     # system("open .")
 
+- [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview)
+
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アライメントのファイルをRに読み込む**
 
@@ -1157,6 +1170,12 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
     mydist <- dist.alignment(myaln) # Calculate the genetic distances
     mydist                          # Print out the genetic distance matrix
 
+Based on the genetic distance matrix above, we can see that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is smallest (about 0.414).
+
+Similarly, the genetic distance between Western Caucasian bat virus phosphoprotein (Q5VKP1) and Lagos bat virus phosphoprotein (O56773) is the biggest (about 0.507).
+
+The larger the genetic distance between two sequences, the more amino acid changes or indels that have occurred since they shared a common ancestor, and the longer ago their common ancestor probably lived.
+
 距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
@@ -1167,30 +1186,36 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
     par(family="mono")
 
     # construct a phylogenetic tree with the neighbor joining algorithm
-    library(ape) # install.packages("ape")
+    library(ape)
     mytree <- nj(mydist)
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
     unlist(getAnnot(seqs))
 
+We can see that Q5VKP1 (Western Caucasian bat virus phosphoprotein) and P06747 (rabies virus phosphoprotein) have been grouped together in the tree, and that O56773 (Lagos bat virus phosphoprotein) and P0C569 (Mokola virus phosphoprotein) are grouped together in the tree.
+
+This is consistent with what we saw above in the genetic distance matrix, which showed that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is relatively small.
+
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
+In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
+
+For example, the protein Fox-1 is involved in determining the sex (gender) of an embryo in the nematode worm Caenorhabditis elegans (UniProt accession Q10572). Related proteins are found in other organisms, including Xenopus tropicalis (UniProt Q66JB7), Rattus norvegicus (UniProt A1A5R1), and Mus musculus (UniProt Q8BP71).
+
 線虫 fox-1 遺伝子は性決定に関わる。
-[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス), Caenorhabditis remanei, [Kladothrips waterhousei](http://what-when-how.com/insects/thrips-insects/), [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ) の 相同タンパク質配列（UniProt accession は 
-[Q10572](http://www.uniprot.org/uniprot/Q10572), 
-[E3M2K8](http://www.uniprot.org/uniprot/E3M2K8), 
-[Q8WS01](http://www.uniprot.org/uniprot/Q8WS01), 
-[Q9VT99](http://www.uniprot.org/uniprot/Q9VT99)
-）を取得し、多重配列アライメントに基づく有根系統樹を構築する。
-[外群](https://ja.wikipedia.org/wiki/外群)として"Q8WS01"を選択し、系統樹に根をつける。
+[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス) (UniProt accession [Q10572](https://www.uniprot.org/uniprot/Q10572)), 
+ネッタイツメガエル Xenopus tropicalis (UniProt Q66JB7), 
+ドブネズミ Rattus norvegicus (UniProt A1A5R1), 
+ハツカネズミ Mus musculus (UniProt Q8BP71)
+の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。
+外群 [outgroup](https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#outgroup)として"Q10572"を選択し、系統樹に根をつける。
 
     # retrieve several sequences from UniProt
     library("seqinr")
-    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
-	#seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")
-    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
+    seqnames <- c("Q10572","Q66JB7","A1A5R1","Q8BP71")
     seqs <- lapply(seqnames,  retrieve_seqs_uniprot)
 
     # write out the sequences to a FASTA file
@@ -1213,11 +1238,18 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
     # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(mydist)
-    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
+    mytree <- root(mytree, outgroup = "Q10572")
     plot.phylo(mytree, main = "Phylogenetic Tree")
 
     # get sequence annotations
     unlist(getAnnot(seqs))
+
+```
+>Q10572 Sex determination protein fox-1 OS=Caenorhabditis elegans OX=6239 GN=fox-1 PE=1 SV=2
+>Q66JB7 RNA binding protein fox-1 homolog 2 OS=Xenopus tropicalis OX=8364 GN=rbfox2 PE=2 SV=1
+>A1A5R1 RNA binding protein fox-1 homolog 2 OS=Rattus norvegicus OX=10116 GN=Rbfox2 PE=2 SV=1
+>Q8BP71 RNA binding protein fox-1 homolog 2 OS=Mus musculus OX=10090 GN=Rbfox2 PE=1 SV=2
+```
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
