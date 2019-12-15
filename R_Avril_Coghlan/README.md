@@ -1197,7 +1197,7 @@ This is consistent with what we saw above in the genetic distance matrix, which 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
-フラビウイルス属に属するジカウイルス(Zika virus)とデングウイルス(Dengue virus)の非構造タンパク質 Nonstructural protein 1 (NS1) の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。外群として"Q32ZE1"を選択し、系統樹に根をつける。
+フラビウイルス属に属するジカウイルス (Zika virus) とデングウイルス (Dengue virus) の非構造タンパク質 (Nonstructural protein 1; NS1) の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。外群としてジカウイルスを選択し、系統樹に根をつける。
 
 In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
 
