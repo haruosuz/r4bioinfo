@@ -1197,6 +1197,8 @@ This is consistent with what we saw above in the genetic distance matrix, which 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
+フラビウイルス属に属するジカウイルス(Zika virus)とデングウイルス(Dengue virus)の非構造タンパク質 Nonstructural protein 1 (NS1) の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。外群として"Q8WS01"を選択し、系統樹に根をつける。
+
 In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
 
 1. Calculate the genetic distances between the following NS1 proteins from different Dengue virus strains: Dengue virus 1 NS1 protein (Uniprot Q9YRR4), Dengue virus 2 NS1 protein (UniProt Q9YP96), Dengue virus 3 NS1 protein (UniProt B0LSS3), and Dengue virus 4 NS1 protein (UniProt Q6TFL5). 
