@@ -1203,39 +1203,41 @@ In order to convert the unrooted tree into a rooted tree, we need to add an outg
 2. Build an unrooted phylogenetic tree of the NS1 proteins from Dengue virus 1, Dengue virus 2, Dengue virus 3 and Dengue virus 4, using the neighbour-joining algorithm.
 3. The Zika virus is related to Dengue viruses, but is not a Dengue virus, and so therefore can be used as an outgroup in phylogenetic trees of Dengue virus sequences. UniProt accession Q32ZE1 consists of a sequence with similarity to the Dengue NS1 protein, so seems to be a related protein from Zika virus.
 
-    seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1") # Make a vector containing the names of the sequences
-    # retrieve several sequences from UniProt
-    library("seqinr")
-    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
-    seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
+```
+seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1") # Make a vector containing the names of the sequences
+# retrieve several sequences from UniProt
+library("seqinr")
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
 
-    # write out the sequences to a FASTA file
-    write.fasta(seqs, seqnames, file="myseq.fasta")
+# write out the sequences to a FASTA file
+write.fasta(seqs, seqnames, file="myseq.fasta")
 
-    # Read an XStringSet object from a file
-    library(Biostrings)
-    mySequences <- readAAStringSet(file = "myseq.fasta")
+# Read an XStringSet object from a file
+library(Biostrings)
+mySequences <- readAAStringSet(file = "myseq.fasta")
 
-    # Multiple Sequence Alignment using ClustalW
-    library(msa)
-    myAlignment <- msa(mySequences, "ClustalW")
+# Multiple Sequence Alignment using ClustalW
+library(msa)
+myAlignment <- msa(mySequences, "ClustalW")
 
-    # write an XStringSet object to a file
-    writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
+# write an XStringSet object to a file
+writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
 
-    # read the FASTA-format alignment into R, and calculate the genetic distances between the protein sequences:
-    myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
-    mydist <- dist.alignment(myaln)
-    mydist
+# read the FASTA-format alignment into R, and calculate the genetic distances between the protein sequences:
+myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
+mydist <- dist.alignment(myaln)
+mydist
 
-    # construct a phylogenetic tree with the neighbor joining algorithm
-    library(ape)
-    mytree <- nj(mydist)
-    mytree <- root(mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
-    plot.phylo(mytree, main = "Phylogenetic Tree")
+# construct a phylogenetic tree with the neighbor joining algorithm
+library(ape)
+mytree <- nj(mydist)
+mytree <- root(mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
+plot.phylo(mytree, main = "Phylogenetic Tree")
 
-    # get sequence annotations
-    unlist(getAnnot(seqs))
+# get sequence annotations
+unlist(getAnnot(seqs))
+```
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
