@@ -1063,6 +1063,7 @@ We see that the optimal local alignment is quite similar to the optimal global a
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) 
 - [Yang (2006) "Computational Molecular Evolution"](http://aracnologia.macn.gov.ar/st/biblio/Yang%202006%20Computational%20Molecular%20Evolution.pdf)
+3.4 Maximum parsimony
 Fig. 3.18
 - Sep 4, 2017
 https://www.youtube.com/watch?v=t0iAm-JQcrs
