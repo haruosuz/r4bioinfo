@@ -1188,11 +1188,10 @@ Once we have a distance matrix that gives the pairwise distances between all our
 
 タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
-    par(family="mono")
-
     # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(mydist)
+    par(family="mono")
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
@@ -1254,6 +1253,7 @@ mydist
 library(ape)
 mytree <- nj(mydist)
 mytree <- root(mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
+    par(family="mono")
 plot.phylo(mytree, main = "Phylogenetic Tree")
 
 # get sequence annotations
