@@ -1,7 +1,5 @@
-----------
-
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-04-01
+Last Update: 2019-12-26
 
 ----------
 
@@ -17,6 +15,20 @@ by [Liam J. Revell](https://github.com/liamrevell)
 
 http://blog.phytools.org
 Phylogenetic Tools for Comparative Biology
+
+----------
+2017
+
+http://www.phytools.org/Cordoba2017/
+Latin American Macroevolution Workshop
+Córdoba, Argentina. 1 August — 4 August, 2017
+```
+Tuesday 1 August 2017.
+Brownian motion and phylogenetically independent contrasts. [PDF]
+Exercise 3: Phylogenetically independent contrasts in R. [URL]
+```
+http://www.phytools.org/Cordoba2017/ex/3/PICs.html
+Exercise 3: Phylogenetically independent contrasts
 
 ----------
 2016-01-29
