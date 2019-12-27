@@ -28,15 +28,93 @@ Rによる微生物データ解析
 - [micropan](#micropan)
 - [mcaGUI](#mcaGUI)
 
+
+
+
+----------
+## MicrobiomeWorkflow
+
+https://github.com/spholmes/F1000_workflow
+
+http://web.stanford.edu/class/bios221/MicrobiomeWorkflowII.html
+https://bioconductor.org/help/course-materials/2017/BioC2017/Day1/Workshops/Microbiome/MicrobiomeWorkflowII.html
+25 July 2017
+
+https://www.ncbi.nlm.nih.gov/pubmed/27508062
+Version 2. F1000Res. 2016 Jun 24 [revised 2016 Nov 2];5:1492. eCollection 2016.
+Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses.
+Callahan BJ1, Sankaran K1, Fukuyama JA1, McMurdie PJ2, Holmes SP1.
+
+We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and vegan
+
+https://f1000research.com/articles/5-1492
+REVISED Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses [version 2; peer review: 3 approved]
+Ben J. Callahan1, Kris Sankaran1, Julia A. Fukuyama1, Paul J. McMurdie2, Susan P. Holmes1
+Author details
+
+
+----------
+## microbiome
+
+https://bioconductor.org/packages/release/bioc/html/microbiome.html
+Bioconductor - microbiome
+
+To install this package, start R (version "3.6") and enter:
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("microbiome")
+```
+
+https://microbiome.github.io/tutorials/
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty et al. 2019-11-07
+
+
+https://bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty, et al.
+2019-12-06
+
+
+https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
+https://bioconductor.org/packages/3.7/bioc/vignettes/microbiome/inst/doc/vignette.html
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty, et al.
+2018-02-09
+
+
+
+https://bioc.ism.ac.jp/packages/3.6/bioc/vignettes/microbiome/inst/doc/vignette.html
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty, et al.
+2018-02-22
+
+
+
+
+
+
+
+Feb 10, 2018
+https://github.com/microbiome/microbiome
+https://github.com/microbiome/microbiome/wiki/Installation
+
+https://microbiome.github.io/microbiome/
+Introduction to the microbiome R package
+
+https://microbiome.github.io/microbiome/Tutorial.html
+Tutorial on Microbiome Data Analysis
+
+
 ----------
 ## updates
 
 ## 2019
 
-https://www.ncbi.nlm.nih.gov/pubmed/29211828
-Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
-ASAR: visual analysis of metagenomes in R.
-Orakov AN1,2, Sakenova NK1,2, Sorokin A3,4, Goryanin II1,5,6.
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2744-2
+metamicrobiomeR: an R package for analysis of microbiome relative abundance data using zero-inflated beta GAMLSS and meta-analysis across studies using random effects models
 
 https://www.ncbi.nlm.nih.gov/pubmed/30929407
 Genomics Inform. 2019 Mar;17(1):e6. doi: 10.5808/GI.2019.17.1.e6. Epub 2019 Mar 31.
@@ -48,6 +126,7 @@ In this review we outline some of the procedures that are most commonly used for
 
 https://grunwaldlab.github.io/analysis_of_microbiome_community_data_in_r/index.html
 ZSL Foster and NJ Grünwald. 2018. Analysis of Microbiome Community Data in R. DOI: XXX.
+This workshop will not start with the raw reads, 
 
 https://www.ncbi.nlm.nih.gov/pubmed/29211828
 Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
@@ -61,13 +140,26 @@ Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R
 2018-02-14
 http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
 microbiomeSeq: An R package for microbial community analysis in an environmental context
+**DISCLAIMER: microbiomeSeq is still in development phase and we do not recommend you to use it until a stable version is available and when this message disappears.**
+
 
 ### 2017
+
+https://rstudio-pubs-static.s3.amazonaws.com/268156_d3ea37937f4f4469839ab6fa2c483842.html
+Microbiota Analysis in R
+Kim Dill-McFarland
+March 20, 2017
+Updated April 15, 2017
 
 https://www.ncbi.nlm.nih.gov/pubmed/28302051
 BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
 microclass: an R-package for 16S taxonomy classification.
 Liland KH1,2, Vinje H1, Snipen L3.
+
+
+
+
+
 
 ## 2016
 
@@ -145,34 +237,7 @@ Microbial Comparative Genomics in R
 
 Pedersen TL (2016). FindMyFriends: Microbial Comparative Genomics in R. R package version 1.8.0, https://github.com/thomasp85/FindMyFriends.
 
-----------
-## microbiome
 
-https://bioconductor.org/packages/release/bioc/html/microbiome.html
-Bioconductor - microbiome
-
-	source("https://bioconductor.org/biocLite.R")
-	biocLite("microbiome")
-
-Warning message:
-package ‘microbiome’ is not available (for R version 3.3.3) 
-
-
-https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
-https://bioconductor.org/packages/3.7/bioc/vignettes/microbiome/inst/doc/vignette.html
-Introduction to the microbiome R package
-Leo Lahti, Sudarshan Shetty, et al.
-2018-02-09
-
-Feb 10, 2018
-https://github.com/microbiome/microbiome
-https://github.com/microbiome/microbiome/wiki/Installation
-
-https://microbiome.github.io/microbiome/
-Introduction to the microbiome R package
-
-https://microbiome.github.io/microbiome/Tutorial.html
-Tutorial on Microbiome Data Analysis
 
 ----------
 
@@ -190,22 +255,6 @@ https://www.ncbi.nlm.nih.gov/pubmed/28066818
 mSystems. 2017 Jan 3;2(1). pii: e00127-16. doi: 10.1128/mSystems.00127-16. eCollection 2017 Jan-Feb.
 Microbiome Helper: a Custom and Streamlined Workflow for Microbiome Research.
 Comeau AM1, Douglas GM1, Langille MG1.
-
-----------
-## MicrobiomeWorkflow
-
-https://github.com/spholmes/F1000_workflow
-
-http://web.stanford.edu/class/bios221/MicrobiomeWorkflowII.html
-https://bioconductor.org/help/course-materials/2017/BioC2017/Day1/Workshops/Microbiome/MicrobiomeWorkflowII.html
-25 July 2017
-
-https://www.ncbi.nlm.nih.gov/pubmed/27508062
-Version 2. F1000Res. 2016 Jun 24 [revised 2016 Nov 2];5:1492. eCollection 2016.
-Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses.
-Callahan BJ1, Sankaran K1, Fukuyama JA1, McMurdie PJ2, Holmes SP1.
-
-We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and vegan
 
 ----------
 ## Metacoder
