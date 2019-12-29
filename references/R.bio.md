@@ -6,8 +6,6 @@
 [2018](#2018)
 - [enrichment](#enrichment)
 - [gggenes](#gggenes)
-- [ggtree](#ggtree)
-- [DECIPHER](#DECIPHER)
 - [rentrez](#rentrez)
 
 ----------
@@ -31,10 +29,6 @@ KEGGREST パッケージは R を利用して、KEGG ウェブサイトにある
 ----------
 ## gggenes
 
-![](https://pbs.twimg.com/media/DrZ92YjU0AM0C5B?format=jpg&name=small)
-
-https://twitter.com/search?q=gggenes
-
 https://wilkox.org/gggenes/
 ```
 #install.packages("gggenes")
@@ -48,7 +42,6 @@ ggplot(example_genes, aes(xmin = start, xmax = end, y = molecule, fill = gene)) 
   scale_fill_brewer(palette = "Set3")
 ```
 
-![](https://wilkox.org/gggenes/reference/figures/README-geom_gene_arrow-1.png)
 
 https://cran.r-project.org/web/packages/gggenes/
 gggenes: Draw Gene Arrow Maps in 'ggplot2'
@@ -61,92 +54,19 @@ David Wilkins
 https://cran.r-project.org/web/packages/gggenes/readme/README.html
 ‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
 
-![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
-
-
 2019年01月07日
 https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
 Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
 
-----------
+https://twitter.com/search?q=gggenes
 
-## ggtree
-
-https://twitter.com/search?q=ggtree
-
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
-
-2019年09月25日に更新
-https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
-ggtreeを使ってRで系統樹を扱う
-
-
-https://twitter.com/Alex_Washburne/status/1100057770844286977
-Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
-10:39 AM - 25 Feb 2019
-
-![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
+![](https://pbs.twimg.com/media/DrZ92YjU0AM0C5B?format=jpg&name=small)
 
 ----------
-
-
-パッケージ確認日：2019/12/01
-https://www.trifields.jp/bioconductor-packages-software-3484
-Bioconductor Softwareパッケージ一覧 | トライフィールズ
-```
-125. DECIPHER
-Tools for curating, analyzing, and manipulating biological sequences
-生物学的配列をキュレーション、分析、および操作するためのツール
-```
-
-
-
-https://bioconductor.github.io/BiocWorkshops/working-with-genomic-data-in-r-with-the-decipher-package.html
-The Bioconductor 2018 Workshop Compilation
-```
-13 250: Working with genomic data in R with the DECIPHER package
-Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
-```
-
-----------
-## DECIPHER
-
-https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
-Bioconductor - DECIPHER
-
-https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
-The Art of Multiple Sequence Alignment in R
-Erik S. Wright
-October 29, 2019
-
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
-解析 | 一般 | アラインメント | マルチプル | DECIPHER(Wright_2015) (last modified 2016/12/29)
-
-https://www.ncbi.nlm.nih.gov/pubmed/26445311
-BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
-DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
-Wright ES1,2.
 
 
 ----------
 ## updates
-
-
-First published: 27 May 2018
-https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
-babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
-
-February 9, 2018
-https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
-Phylogeny and species traits predict bird detectability | R-bloggers
-- The following figure shows the two input data vectors mirrored side-by-side:
-![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
-
-December 16, 2016
-https://www.r-bloggers.com/ggtree-version-of-plottree-2/
-ggtree version of plotTree | R-bloggers
-https://github.com/katholt/plotTree
 
 
 ## 2019
@@ -155,10 +75,6 @@ https://qiita.com/advent-calendar/2019/bioinfo
 バイオインフォマティクス Advent Calendar 2019 - Qiita
 https://qiita.com/antiplastics/items/474a49237d3aa6f0e9e3
 BiocWorkflowToolsパッケージを使ってみた - Qiita
-
-Microbiome関係のパッケージ群: https://f1000research.com/articles/5-1492
-Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses [version 2; peer review: 3 approved]
-
 
 https://qiita.com/advent-calendar/2019/metagenome
 メタゲノム Advent Calendar 2019 - Qiita
@@ -201,19 +117,27 @@ Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? htt
 - https://bioconductor.org/packages/release/bioc/html/motifcounter.html
 - https://bioconductor.org/packages/release/bioc/html/PWMEnrich.html
 
+
 https://www.ncbi.nlm.nih.gov/pubmed/31584605
 Bioinformatics. 2019 Oct 4. pii: btz735. doi: 10.1093/bioinformatics/btz735. [Epub ahead of print]
 simurg: simulate bacterial pangenomes in R.
 Ferrés I1, Fresia P1,2, Iraola G1,3,4.
+https://github.com/iferres/simurg
+https://github.com/iferres/simurg/wiki
+```
+git clone https://github.com/iferres/simurg.wiki.git
+$grep "^##" simurg.wiki/Home.md 
+## Example
+### Coalescent tree
+### Gene list
+### Panmatrix
+### Substitutions
+### Distances
+### Sequences folder
+### Summary method
+### Session Information
+```
 
-https://www.ncbi.nlm.nih.gov/pubmed/31498385
-Bioinformatics. 2019 Sep 9. pii: btz700. doi: 10.1093/bioinformatics/btz700. [Epub ahead of print]
-hypeR: An R Package for Geneset Enrichment Workflows.
-Federico A1,2, Monti S1,2.
-
-https://twitter.com/lobrowR/status/1157870107303055362
-Nathan Brouwer on Twitter: "I've compiled a short list of #rstats -based #bioinformatics and computational biology books and tutorials. (THREAD) 1/n"
-1:25 PM · Aug 4, 2019
 
 https://www.ncbi.nlm.nih.gov/pubmed/31324268
 BMC Res Notes. 2019 Jul 19;12(1):441. doi: 10.1186/s13104-019-4473-z.
@@ -234,18 +158,6 @@ hilldiv: an R package for the integral analysis of diversity based on Hill numbe
 
 ## 2018
 
-https://twitter.com/XavierDidelot/status/1039083946913529856
-BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
-Dating of PMEN1, before and after accounting for recombination
-5:31 AM - 10 Sep 2018
-https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky783/5089898
-Bayesian inference of ancestral dates on bacterial phylogenetic trees | Nucleic Acids Research | Oxford Academic
-Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
-
-https://www.ncbi.nlm.nih.gov/pubmed/30016406
-Bioinformatics. 2018 Jul 17. doi: 10.1093/bioinformatics/bty633. [Epub ahead of print]
-ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R.
-Paradis E1, Schliep K2.
 
 https://twitter.com/strnr/status/1030176659322888192
 Stephen Turner on Twitter: "FastqCleaner: an interactive Bioconductor application for quality-control, filtering and trimming of FASTQ files https://t.co/WcPUarN6ho"
@@ -256,15 +168,18 @@ Jean Fan on Twitter: "Too many #singlecell points in your figures? Crashing Illu
 4:35 PM - 12 Aug 2018
 
 
+### AnnotationBustR
+- https://cran.r-project.org/web/packages/AnnotationBustR/
+- https://cran.r-project.org/web/packages/AnnotationBustR/vignettes/AnnotationBustR-vignette.html
+- https://github.com/sborstein/AnnotationBustR
+
 https://www.ncbi.nlm.nih.gov/pubmed/30002984
 PeerJ. 2018 Jul 3;6:e5179. doi: 10.7717/peerj.5179. eCollection 2018.
 AnnotationBustR: an R package to extract subsequences from GenBank annotations.
 Borstein SR1, O'Meara BC1.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6034590/
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6034590/bin/peerj-06-5179-g001.jpg)
 
-https://www.ncbi.nlm.nih.gov/pubmed/29874797
-Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
-phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
-Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
 
 
 
@@ -313,6 +228,13 @@ Database URL: http://dataome.mensxmachina.org/
 ----------
 
 ## enrichment
+
+https://www.ncbi.nlm.nih.gov/pubmed/31498385
+Bioinformatics. 2019 Sep 9. pii: btz700. doi: 10.1093/bioinformatics/btz700. [Epub ahead of print]
+hypeR: An R Package for Geneset Enrichment Workflows.
+Federico A1,2, Monti S1,2.
+https://github.com/montilab/hypeR
+
 
 Nov 21, 2018
 https://www.subioplatform.com/ja/info_technical/152/enrichment-analysis-tool
