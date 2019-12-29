@@ -5,11 +5,10 @@
 [2019](#2019)
 [2018](#2018)
 - [enrichment](#enrichment)
-- [ggtree](#ggtree)
 - [gggenes](#gggenes)
+- [ggtree](#ggtree)
 - [DECIPHER](#DECIPHER)
 - [rentrez](#rentrez)
-
 
 ----------
 
@@ -31,7 +30,31 @@ KEGGREST パッケージは R を利用して、KEGG ウェブサイトにある
 
 ----------
 ## gggenes
+
 https://twitter.com/search?q=gggenes
+
+https://wilkox.org/gggenes/
+```
+#install.packages("gggenes")
+
+library(ggplot2)
+library(gggenes)
+
+ggplot(example_genes, aes(xmin = start, xmax = end, y = molecule, fill = gene)) +
+  geom_gene_arrow() +
+  facet_wrap(~ molecule, scales = "free", ncol = 1) +
+  scale_fill_brewer(palette = "Set3")
+```
+
+![](https://wilkox.org/gggenes/reference/figures/README-geom_gene_arrow-1.png)
+
+https://cran.r-project.org/web/packages/gggenes/
+gggenes: Draw Gene Arrow Maps in 'ggplot2'
+
+https://cran.r-project.org/web/packages/gggenes/vignettes/introduction-to-gggenes.html
+Introduction to ‘gggenes’
+David Wilkins
+2019-06-24
 
 https://cran.r-project.org/web/packages/gggenes/readme/README.html
 ‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
