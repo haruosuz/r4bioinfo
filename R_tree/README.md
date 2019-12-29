@@ -41,7 +41,7 @@ pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics an
 
 http://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
 Phylogenetic Comparative Methods (PCMs) in R | R Functions
-### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
+\### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
 
 31 July 2017
 http://www.phytools.org/Cordoba2017/ex/3/PICs.html
