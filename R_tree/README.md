@@ -3,14 +3,13 @@ Last Update: 2019-09-07
 
 ----------
 
-# Tree
+# tree
 [系統樹](https://ja.wikipedia.org/wiki/系統樹)
 
 ----------
 
 ## Table of Contents
 - [updates](#updates)
-- [pic](#pic) Phylogenetically Independent Contrasts
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
   - [GettingStarted](#gettingstarted)
@@ -22,10 +21,117 @@ Last Update: 2019-09-07
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+- [DECIPHER](#DECIPHER)
+- [ggtree](#ggtree)
+- [pic](#pic) Phylogenetically Independent Contrasts
+
+----------
+## ggtree
+
+https://twitter.com/search?q=ggtree
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+
+2019年09月25日に更新
+https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
+ggtreeを使ってRで系統樹を扱う
+
+
+https://twitter.com/Alex_Washburne/status/1100057770844286977
+Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
+10:39 AM - 25 Feb 2019
+
+![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
+
+----------
+## DECIPHER
+
+https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
+Bioconductor - DECIPHER
+
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
+The Art of Multiple Sequence Alignment in R
+Erik S. Wright
+October 29, 2019
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
+解析 | 一般 | アラインメント | マルチプル | DECIPHER(Wright_2015) (last modified 2016/12/29)
+
+https://www.ncbi.nlm.nih.gov/pubmed/26445311
+BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
+DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
+Wright ES1,2.
+
+----------
+
+パッケージ確認日：2019/12/01
+https://www.trifields.jp/bioconductor-packages-software-3484
+Bioconductor Softwareパッケージ一覧 | トライフィールズ
+```
+125. DECIPHER
+Tools for curating, analyzing, and manipulating biological sequences
+生物学的配列をキュレーション、分析、および操作するためのツール
+```
+
+https://bioconductor.github.io/BiocWorkshops/working-with-genomic-data-in-r-with-the-decipher-package.html
+The Bioconductor 2018 Workshop Compilation
+```
+13 250: Working with genomic data in R with the DECIPHER package
+Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
+```
 
 ----------
 ## updates
 
+
+
+## 2019
+
+
+
+
+## 2018
+
+https://twitter.com/XavierDidelot/status/1039083946913529856
+BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
+Dating of PMEN1, before and after accounting for recombination
+5:31 AM - 10 Sep 2018
+https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky783/5089898
+Bayesian inference of ancestral dates on bacterial phylogenetic trees | Nucleic Acids Research | Oxford Academic
+Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
+
+
+https://www.ncbi.nlm.nih.gov/pubmed/29874797
+Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
+phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
+Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
+- two large taxonomic clades: Palms and primates.
+
+
+
+First published: 27 May 2018
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
+babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+
+February 9, 2018
+https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
+Phylogeny and species traits predict bird detectability | R-bloggers
+- The following figure shows the two input data vectors mirrored side-by-side:
+![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
+
+## 2017
+
+
+## 2016
+
+December 16, 2016
+https://www.r-bloggers.com/ggtree-version-of-plottree-2/
+ggtree version of plotTree | R-bloggers
+https://github.com/katholt/plotTree
+
+
+## 2011
 
 2011/07/20
 http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
