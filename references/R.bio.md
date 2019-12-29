@@ -6,6 +6,87 @@
 [2018](#2018)
 - [enrichment](#enrichment)
 - [ggtree](#ggtree)
+- [gggenes](#gggenes)
+- [DECIPHER](#DECIPHER)
+- [rentrez](#rentrez)
+
+----------
+## 
+
+## rentrez
+
+https://cran.r-project.org/web/packages/rentrez/index.html
+rentrez: 'Entrez' in R
+
+Version:	1.2.2
+Published:	2019-05-02
+
+Vignettes:	Rentrez Tutorial
+https://cran.r-project.org/web/packages/rentrez/vignettes/rentrez_tutorial.html
+```
+##  LastUpdate: 2019/04/05 20:21
+```
+
+https://github.com/ropensci/rentrez
+ropensci/rentrez: talk with NCBI entrez using R
+on Nov 3
+```
+tree <- nj(dist.dna(coi_aligned))
+```
+https://docs.ropensci.org/rentrez/
+Entrez in R • rOpenSci: rentrez
+rOpenScirentrez v1.2.2
+
+
+2019年06月18日
+https://qiita.com/antiplastics/items/446916d3c32245cf98cd
+rentrezでNCBI Geneの情報を取得 - Qiita
+
+https://journal.r-project.org/archive/2017/RJ-2017-058/index.html
+The R Journal: article published in 2017, volume 9:2
+rentrez: An R package for the NCBI eUtils API PDF download
+https://journal.r-project.org/archive/2017/RJ-2017-058/RJ-2017-058.pdf
+David J. Winter , The R Journal (2017) 9:2, pages 520-526.
+Received: 2017-09-01; online 2017-11-16, supplementary material, (11.2 Kb)
+https://journal.r-project.org/archive/2017/RJ-2017-058/RJ-2017-058.zip
+
+https://peerj.com/preprints/3179v2/
+rentrez: An R package for the NCBI eUtils API
+Bioinformatics toolBioinformaticsGeneticsGenomicsMolecular BiologyData Mining and Machine Learning
+August 25, 2017
+
+https://ropensci.org/blog/2018/03/20/rentrez-paper/
+rOpenSci | A rentrez paper, and how to use the NCBI's new API keys
+
+rentrez: An R package for the NCBI eUtils API
+Bioinformatics toolBioinformaticsGeneticsGenomicsMolecular BiologyData Mining and Machine Learning
+David J Winter ​
+August 25, 2017
+
+https://ropensci.org/tutorials/rentrez_tutorial/
+rentrez tutorial
+for v1.1.0
+To cite rentrez in publications use: 
+David Winter (2017). rentrez: Entrez in R. R package version 1.1.0. https://CRAN.R-project.org/package=rentrez
+
+2015/09/24
+https://www.karada-good.net/analyticsr/r-259
+Rで解析：Entrezの操作が楽々です！「rentrez」パッケージ
+
+	#install.packages("rentrez")
+	library("rentrez")
+	entrez_dbs()
+	entrez_db_summary("gene")
+	entrez_db_searchable("gene")
+	r_search <- entrez_search(db = "gene", term = "MTHFR AND Homo sapiens[ORGN]", retmax = NULL)
+	r_search
+	str(r_search)
+	GeneResult <- entrez_summary(db = "gene", id = r_search$ids)
+	GeneResult
+
+https://mran.microsoft.com/snapshot/2015-03-29/web/packages/rentrez/vignettes/rentrez_tutorial.html
+rentrez tutorial
+
 
 ----------
 
@@ -24,6 +105,40 @@ trinucleotideFrequency(x, ...)
 https://bi.biopapyrus.jp/rnaseq/annotation/keggrest.html
 KEGGREST | パスウェイ解析アノテーション R/Bioconductor
 KEGGREST パッケージは R を利用して、KEGG ウェブサイトにあるパスウェイデータを検索したり、取得したりすることのできる Bioconductor パッケージである。
+
+----------
+## gggenes
+https://twitter.com/search?q=gggenes
+
+https://cran.r-project.org/web/packages/gggenes/readme/README.html
+‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
+
+![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
+
+
+2019年01月07日
+https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
+Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
+
+----------
+
+## ggtree
+
+https://twitter.com/search?q=ggtree
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+
+2019年09月25日に更新
+https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
+ggtreeを使ってRで系統樹を扱う
+
+
+https://twitter.com/Alex_Washburne/status/1100057770844286977
+Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
+10:39 AM - 25 Feb 2019
+
+![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
 
 ----------
 
@@ -157,11 +272,6 @@ BMC Res Notes. 2019 Jul 19;12(1):441. doi: 10.1186/s13104-019-4473-z.
 RepViz: a replicate-driven R tool for visualizing genomic regions.
 Faux T1, Rytkönen KT2,3, Laiho A2, Elo LL4.
 
-https://twitter.com/Alex_Washburne/status/1100057770844286977
-Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
-10:39 AM - 25 Feb 2019
-
-![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
 
 Posted February 18, 2019.
 https://www.biorxiv.org/content/10.1101/553057v1
@@ -172,9 +282,7 @@ https://www.biorxiv.org/content/10.1101/545665v1
 hilldiv: an R package for the integral analysis of diversity based on Hill numbers | bioRxiv
 , microbial community profiling or
 
-2019年01月07日
-https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
-Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
+
 
 ## 2018
 
@@ -199,21 +307,6 @@ https://twitter.com/JEFworks/status/1028741712896843778
 Jean Fan on Twitter: "Too many #singlecell points in your figures? Crashing Illustrator? Check out ggrastr for #ggplot2 #rstats by @PetukhovViktor to rasterize just the points layer. Maintain vectorized text for publication quality. Ideal for >10000 points. https://t.co/6iR7qYw1ap #dataviz #bigdata… https://t.co/9QDDmfua6w"
 4:35 PM - 12 Aug 2018
 
-https://twitter.com/strnr/status/1022451016736927745
-Stephen Turner on Twitter:
-
-Stop using biocLite(). Instead:
-
-1. Install BiocManager from CRAN. https://cran.r-project.org/package=BiocManager …
-
-2. Install Bioconductor or CRAN packages with one command:
-BiocManager::install(c("limma", "knitr"))
-
-More info: https://cran.r-project.org/web/packages/BiocManager/vignettes/BiocManager.html
-
-#Bioconductor #Rstats #bioc2018
-
-7:58 AM - 26 Jul 2018
 
 https://www.ncbi.nlm.nih.gov/pubmed/30002984
 PeerJ. 2018 Jul 3;6:e5179. doi: 10.7717/peerj.5179. eCollection 2018.
@@ -225,12 +318,6 @@ Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
 phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
 Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
 
-https://twitter.com/search?q=gggenes
-
-https://cran.r-project.org/web/packages/gggenes/readme/README.html
-‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
-
-![https://twitter.com/TheSladeLab/status/914230340092416002](https://pbs.twimg.com/media/DK6a1M5UQAUsz5x.jpg)
 
 
 ### 2018-02
@@ -268,22 +355,12 @@ https://twitter.com/fvgnoriyuki/status/956843571788709888
 
 学生たちはスマホでポケモンを採集し、Rを使って地域間の群集を比較し（ベータ多様性）、多次元尺度法でグラフ化した。多くの生物実習では生き物を採集して名前を調べるのに精一杯だけど、この"game-to-class pipeline"だと多様度指数の理解やデータ解析に集中できそう。
 
-### 2015
-
-2015/09/24
-https://www.karada-good.net/analyticsr/r-259
-Rで解析：Entrezの操作が楽々です！「rentrez」パッケージ
-
-	#install.packages("rentrez")
-	library("rentrez")
-	entrez_dbs()
-	entrez_db_summary("gene")
-	entrez_db_searchable("gene")
-	r_search <- entrez_search(db = "gene", term = "MTHFR AND Homo sapiens[ORGN]", retmax = NULL)
-	r_search
-	str(r_search)
-	GeneResult <- entrez_summary(db = "gene", id = r_search$ids)
-	GeneResult
+https://www.ncbi.nlm.nih.gov/pubmed/29688366
+Database (Oxford). 2018 Jan 1;2018. doi: 10.1093/database/bay011.
+BioDataome: a collection of uniformly preprocessed and automatically annotated datasets for data-driven biology.
+Lakiotaki K1, Vorniotakis N1, Tsagris M1, Georgakopoulos G1, Tsamardinos I1,2.
+https://github.com/mensxmachina/BioDataome/
+Database URL: http://dataome.mensxmachina.org/
 
 ----------
 
@@ -370,23 +447,6 @@ RでGO!
 topGO（工事中）
 
 ----------
-
-## ggtree
-
-https://twitter.com/search?q=ggtree
-
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
-
-2019年09月25日に更新
-https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
-ggtreeを使ってRで系統樹を扱う
-
-----------
-
-
-
-
 
 
 
