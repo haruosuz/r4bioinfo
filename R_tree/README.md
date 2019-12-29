@@ -26,28 +26,6 @@ Last Update: 2019-09-07
 ----------
 ## updates
 
-https://twitter.com/phy_papers/status/968162251151622144
-phypapers on Twitter: "babette: BEAUti 2, BEAST2 and Tracer for R https://t.co/92QqtXY8lM"
-11:34 AM - 26 Feb 2018
-
-https://twitter.com/Rbloggers/status/967632877650436096
-R-bloggers on Twitter: "ggtree version of plotTree https://t.co/trcTAvdFb7 #rstats #DataScience"
-12:30 AM - 25 Feb 2018
-
-December 16, 2016
-https://www.r-bloggers.com/ggtree-version-of-plottree-2/
-ggtree version of plotTree | R-bloggers
-
-February 9, 2018
-https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
-Phylogeny and species traits predict bird detectability | R-bloggers
-
-![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
-
-January 22, 2018
-https://www.bioconductor.org/packages/3.7/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
-The Art of Multiple Sequence Alignment in R
-Erik S. Wright
 
 2011/07/20
 http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
@@ -61,9 +39,18 @@ https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_
 https://rdrr.io/cran/ape/man/pic.html
 pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
 
+http://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
+Phylogenetic Comparative Methods (PCMs) in R | R Functions
+### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
+
 31 July 2017
 http://www.phytools.org/Cordoba2017/ex/3/PICs.html
 Exercise 3: Phylogenetically independent contrasts
+
+13 December 2016
+http://www.phytools.org/Bariloche2016/lec/3/PICs.pdf
+Phylogenetically independent contrasts
+Liam J. Revell & Luke J. Harmon
 
 https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
 Phylogenetically independent contrasts – Comparative methods in R - Ilhabela
@@ -92,11 +79,6 @@ HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
 https://informatics.nescent.org/wiki/R_Hackathon_1/Phylogenetic_Independent_Contrasts
 R Hackathon 1/Phylogenetic Independent Contrasts - Phyloinformatics
 
-統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
-FIG.2.データ点が独立 FIG.3. データ点が非独立
-https://www.jstor.org/stable/2461605
-Joseph Felsenstein (1985)
-Phylogenies and the Comparative Method
 
 https://www.ncbi.nlm.nih.gov/pubmed/15728743
 Nucleic Acids Res. 2005 Feb 23;33(4):1141-53. Print 2005.
@@ -106,6 +88,18 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC549432/
 Variation in the strength of selected codon usage bias among bacteria
 - Phylogeny-independent correlations among species characters were estimated using the generalized least squares approach implemented in Continuous (39).
 - The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
+
+統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
+FIG.2.データ点が独立 FIG.3. データ点が非独立
+https://www.jstor.org/stable/2461605
+Joseph Felsenstein (1985)
+Phylogenies and the Comparative Method
+
+https://twitter.com/JunShimizu/status/1204217634662731776
+Junichi Shimizu / 清水準一 on Twitter: "気をつけたい。　関西学院大学の清水先生のブログ「都道府県単位の分析、国単位の分析は、いろいろ罠があるので気をつけようね、というお話でした。」 納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up! https://t.co/JvGfvTWF2Y" / Twitter
+10:53 AM · Dec 10, 2019
+http://norimune.net/3313
+納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up!
 
 ----------
 
