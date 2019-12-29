@@ -7,7 +7,6 @@
 - [enrichment](#enrichment)
 - [ggtree](#ggtree)
 
-
 ----------
 
 http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
@@ -27,9 +26,110 @@ KEGGREST | パスウェイ解析アノテーション R/Bioconductor
 KEGGREST パッケージは R を利用して、KEGG ウェブサイトにあるパスウェイデータを検索したり、取得したりすることのできる Bioconductor パッケージである。
 
 ----------
+
+
+パッケージ確認日：2019/12/01
+https://www.trifields.jp/bioconductor-packages-software-3484
+Bioconductor Softwareパッケージ一覧 | トライフィールズ
+```
+125. DECIPHER
+Tools for curating, analyzing, and manipulating biological sequences
+生物学的配列をキュレーション、分析、および操作するためのツール
+```
+
+
+
+https://bioconductor.github.io/BiocWorkshops/working-with-genomic-data-in-r-with-the-decipher-package.html
+The Bioconductor 2018 Workshop Compilation
+```
+13 250: Working with genomic data in R with the DECIPHER package
+Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
+```
+
+----------
+## DECIPHER
+
+https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
+Bioconductor - DECIPHER
+
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
+The Art of Multiple Sequence Alignment in R
+Erik S. Wright
+October 29, 2019
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
+解析 | 一般 | アラインメント | マルチプル | DECIPHER(Wright_2015) (last modified 2016/12/29)
+
+https://www.ncbi.nlm.nih.gov/pubmed/26445311
+BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
+DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
+Wright ES1,2.
+
+
+----------
 ## updates
 
+
+First published: 27 May 2018
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
+babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+
+February 9, 2018
+https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
+Phylogeny and species traits predict bird detectability | R-bloggers
+- The following figure shows the two input data vectors mirrored side-by-side:
+![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
+
+December 16, 2016
+https://www.r-bloggers.com/ggtree-version-of-plottree-2/
+ggtree version of plotTree | R-bloggers
+https://github.com/katholt/plotTree
+
+
 ## 2019
+
+https://qiita.com/advent-calendar/2019/bioinfo
+バイオインフォマティクス Advent Calendar 2019 - Qiita
+https://qiita.com/antiplastics/items/474a49237d3aa6f0e9e3
+BiocWorkflowToolsパッケージを使ってみた - Qiita
+
+Microbiome関係のパッケージ群: https://f1000research.com/articles/5-1492
+Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses [version 2; peer review: 3 approved]
+
+
+https://qiita.com/advent-calendar/2019/metagenome
+メタゲノム Advent Calendar 2019 - Qiita
+https://qiita.com/Yohei__K/items/dffc8767581bfbaad812
+メタゲノムのイケてるネットワーク解析手法、WGCNA解説 - Qiita
+R packageに関して
+
+https://www.ncbi.nlm.nih.gov/pubmed/31791245
+BMC Bioinformatics. 2019 Dec 2;20(1):621. doi: 10.1186/s12859-019-3234-2.
+deltaRpkm: an R package for a rapid detection of differential gene presence between related bacterial genomes.
+Akarsu H1,2, Aguilar-Bultet L2,3,4,5, Falquet L6,7.
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-3234-2
+- Background
+LS-BSR
+Roary
+BPGA
+The above methods are focusing on the protein coding genes, neglecting the non-coding features e.g., small RNA [8].
+R package, deltaRpkm, identifies putative genes involved in a given phenotype by inferring their presence/absence from their differential coverage between a reference genome group and a comparison group.
+- Input files
+The deltaRpkm pipeline requires as input data metadata and gene read count tables. The read count table can be derived from standard methods like bedtools multicov [11] based on a reference genome annotation file and the bam files produced by bwa mem [12]. Alternatively, the rapid RNA-seq aligner STAR can be used to obtain the coverage table [13] (Fig. 1).
+
+
+
+2019年11月26日（火）
+https://ncrna.jp/blog/item/450-drawing-domain-structures
+タンパク質のドメイン構造の書き方 - ノンコーディングRNAネオタクソノミ
+
+https://twitter.com/kfuku0502/status/1196373619640881152
+Kenji Fukushima on Twitter: "遺伝子のconvergent rate changeを見て、その後エンリッチメント解析と組み合わせて表現型との関連を解釈するためのRパッケージ。 https://t.co/zBLWe6G8oG"
+7:24 PM · Nov 18, 2019
+https://academic.oup.com/bioinformatics/article-abstract/35/22/4815/5514536
+RERconverge: an R package for associating evolutionary rates with convergent traits | Bioinformatics | Oxford Academic
+
+
 
 https://twitter.com/tangming2005/status/1186283109911674880
 Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? https://t.co/iNrB64yQ4X . https://t.co/Cwa0R24JSq https://t.co/88rpGuUtIe #rstats" / Twitter
@@ -72,6 +172,12 @@ https://www.biorxiv.org/content/10.1101/545665v1
 hilldiv: an R package for the integral analysis of diversity based on Hill numbers | bioRxiv
 , microbial community profiling or
 
+2019年01月07日
+https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
+Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
+
+## 2018
+
 https://twitter.com/XavierDidelot/status/1039083946913529856
 BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
 Dating of PMEN1, before and after accounting for recombination
@@ -79,8 +185,6 @@ Dating of PMEN1, before and after accounting for recombination
 https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky783/5089898
 Bayesian inference of ancestral dates on bacterial phylogenetic trees | Nucleic Acids Research | Oxford Academic
 Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
-
-## 2018
 
 https://www.ncbi.nlm.nih.gov/pubmed/30016406
 Bioinformatics. 2018 Jul 17. doi: 10.1093/bioinformatics/bty633. [Epub ahead of print]
@@ -274,13 +378,9 @@ https://twitter.com/search?q=ggtree
 https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
 Phylogenetic trees in R using ggtree
 
-![https://twitter.com/DrKatHolt/status/1016835161818722305](https://pbs.twimg.com/card_img/1077890691349368832/t8XRvrwC?format=jpg&name=144x144_2)
-
-
 2019年09月25日に更新
 https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
 ggtreeを使ってRで系統樹を扱う
-
 
 ----------
 
