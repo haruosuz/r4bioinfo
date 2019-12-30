@@ -7,14 +7,19 @@
 - [enrichment](#enrichment)
 - [gggenes](#gggenes)
 - [rentrez](#rentrez)
+- [Biostrings](#biostrings)
+
 
 ----------
 
-http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
-Some bacterial genome analysis using R
-```
-library("seqinr")
-```
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
+(Rで)マイクロアレイデータ解析
+(last modified 2019/12/28, since 2005)
+解析 | 機能解析（GSEA周辺）について(以下は再編予定)(last modified 2014/06/01)
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
+(Rで)塩基配列解析
+(last modified 2019/12/23, since 2010)
 
 https://heavywatal.github.io/rstats/bioconductor.html
 Bioconductor: Genomicデータ解析ツール群 - Heavy Watal
@@ -25,6 +30,54 @@ trinucleotideFrequency(x, ...)
 https://bi.biopapyrus.jp/rnaseq/annotation/keggrest.html
 KEGGREST | パスウェイ解析アノテーション R/Bioconductor
 KEGGREST パッケージは R を利用して、KEGG ウェブサイトにあるパスウェイデータを検索したり、取得したりすることのできる Bioconductor パッケージである。
+
+http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
+Some bacterial genome analysis using R
+```
+library("seqinr")
+```
+
+2015-06-22
+https://web.stanford.edu/class/bios221/labs/
+```
+Lab 1: Biostrings (due June 26)
+Lab 2: Graphics (due June 27)
+Lab 3: Simulations (due July 1st at 11pm) – submit a .pdf or .html to dropbox on coursework (this lab is required).
+Lab 4: Multivariate (due July 5) --- This lab covers both multivariate lectures and the corresponding homework is due several days after the second multivariate lecture.
+Lab 5: RNAseq (due July 5)
+Lab 6: Multiple Testing (due July 7)
+Lab 7: Phyloseq (due July 9)
+Lab 8: Networks (due July 10)
+```
+https://web.stanford.edu/class/bios221/labs/biostrings/lab_1_biostrings.html
+Lab 1: Biostrings in R
+https://web.stanford.edu/class/bios221/labs/phyloseq/lab_phyloseq.html
+Lab 7: Phyloseq
+
+----------
+## Biostrings
+
+2017年12月07日
+https://qiita.com/MaedaTaro_Umiushi/items/2fdb695929f5714b43cd
+配列名を使ってfastaをまとめて別ファイルに出力 - Qiita
+
+https://web.stanford.edu/class/bios221/labs/biostrings/
+[TXT]	lab_1_biostrings.html	2015-06-22 20:31	921K	 
+https://web.stanford.edu/class/bios221/labs/biostrings/lab_1_biostrings.html
+Lab 1: Biostrings in R
+
+
+wakuteka
+
+2013-12-20
+http://wakuteka.hatenablog.jp/entry/2013/12/20/153421
+R/Bioconductorでmultifasta形式をsinglefasta形式に変換する - 僕らはRを愛しすぎてる
+
+2013年02月13日に更新
+https://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2
+Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する
+https://gist.github.com/wakuteka/8050846
+writeXStringset.R
 
 ----------
 ## gggenes
@@ -225,6 +278,14 @@ Lakiotaki K1, Vorniotakis N1, Tsagris M1, Georgakopoulos G1, Tsamardinos I1,2.
 https://github.com/mensxmachina/BioDataome/
 Database URL: http://dataome.mensxmachina.org/
 
+
+### 2014
+
+May 04 '14 at 21:37
+http://qa.lifesciencedb.jp/questions/512/rでfastaファイルを読み込む際におすすめのパッケージはありますか
+
+
+
 ----------
 
 ## enrichment
@@ -264,11 +325,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1183189/
 PAGE: Parametric Analysis of Gene Set Enrichment
 PAGE was statistically more sensitive and required much less computational effort than GSEA, 
 , we set the minimal gene set size as 10.
-
-2018/11/21
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
-(Rで)マイクロアレイデータ解析
-解析 | 機能解析（GSEA周辺）について(以下は再編予定)(last modified 2014/06/01)
 
 2009/11/19
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html#page_go
