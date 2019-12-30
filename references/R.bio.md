@@ -10,6 +10,57 @@
 - [Biostrings](#biostrings)
 
 
+
+----------
+
+
+
+----------
+## bioconductor
+
+https://www.bioconductor.org/help/events/
+Course material from many previous events is available.
+https://www.bioconductor.org/help/course-materials/
+
+
+https://github.com/Bioconductor/BioC2019
+http://bioc2019.bioconductor.org/
+
+http://biocworkshops2019.bioconductor.org.s3-website-us-east-1.amazonaws.com/
+BiocWorkshops2019
+
+https://bioconductor.github.io/BiocWorkshops/
+The Bioconductor 2018 Workshop Compilation
+Last modified: 30 July, 2018.
+
+
+
+2016?
+https://www.coursera.org/learn/bioconductor
+Bioconductor for Genomic Data Science | Coursera
+
+Week Two
+In this week we will learn how to represent and compute on biological sequences, both at the whole-genome level and at the level of millions of short reads.
+
+8件のビデオ （合計81分）, 1 quiz
+```
+Biostrings7 分
+BSgenome6 分
+Biostrings - Matching6 分
+```
+
+
+2015
+https://btep.ccr.cancer.gov/classes/rbioconductor-basics-workshop-2-day-3/
+R/Bioconductor Basics Workshop (2-day) | Bioinformatics Training and Education Program
+Date: January 29th, 2015 - January 30th, 2015
+Web-based resources for this class: (See Below for PDF versions)
+- Introduction to R for Biologists (David Wheeler)
+https://bioinformatics.cancer.gov/content/r-intro
+- Introduction to Bioconductor (David Wheeler)
+https://bioinformatics.cancer.gov/content/r-bioc
+
+
 ----------
 
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
@@ -67,11 +118,6 @@ Tips for NGS Data Analysis
 https://bioconductor.org/packages/release/bioc/html/Biostrings.html
 Efficient manipulation of biological strings
 
-
-http://catway.jp/bioinformatics/etc/biostrings.html
-DNA配列をRで操作する | Tips for NGS Data Analysis
-
-
 2018年07月23日
 https://qiita.com/Kazuki-Nakamae/items/ae16c962615ad11b5c01
 Bioconductor解説 Biostrings編 その２
@@ -79,11 +125,6 @@ Bioconductor解説 Biostrings編 その２
 2017年06月09日
 https://qiita.com/Kazuki-Nakamae/items/dd8859c5fe5a2e2d9671
 Bioconductor 解説 Biostrings 編 その１
-
-
-
-
-
 
 2017年12月07日
 https://qiita.com/MaedaTaro_Umiushi/items/2fdb695929f5714b43cd
@@ -93,7 +134,6 @@ https://web.stanford.edu/class/bios221/labs/biostrings/
 [TXT]	lab_1_biostrings.html	2015-06-22 20:31	921K	 
 https://web.stanford.edu/class/bios221/labs/biostrings/lab_1_biostrings.html
 Lab 1: Biostrings in R
-
 
 wakuteka
 
@@ -106,6 +146,15 @@ https://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2
 Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する
 https://gist.github.com/wakuteka/8050846
 writeXStringset.R
+
+dritoshien
+
+2013/02/01
+http://catway.jp/bioinformatics/etc/biostrings.html
+DNA配列をRで操作する | Tips for NGS Data Analysis
+
+
+
 
 ----------
 ## gggenes
