@@ -54,8 +54,36 @@ Lab 1: Biostrings in R
 https://web.stanford.edu/class/bios221/labs/phyloseq/lab_phyloseq.html
 Lab 7: Phyloseq
 
+
+
+http://catway.jp/bioinformatics/
+Tips for NGS Data Analysis
+次世代DNAシーケンサーのデータ解析技術 (2013/02/01)
+二階堂愛
+
 ----------
 ## Biostrings
+
+https://bioconductor.org/packages/release/bioc/html/Biostrings.html
+Efficient manipulation of biological strings
+
+
+http://catway.jp/bioinformatics/etc/biostrings.html
+DNA配列をRで操作する | Tips for NGS Data Analysis
+
+
+2018年07月23日
+https://qiita.com/Kazuki-Nakamae/items/ae16c962615ad11b5c01
+Bioconductor解説 Biostrings編 その２
+
+2017年06月09日
+https://qiita.com/Kazuki-Nakamae/items/dd8859c5fe5a2e2d9671
+Bioconductor 解説 Biostrings 編 その１
+
+
+
+
+
 
 2017年12月07日
 https://qiita.com/MaedaTaro_Umiushi/items/2fdb695929f5714b43cd
