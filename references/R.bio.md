@@ -6,13 +6,7 @@
 [2018](#2018)
 - [enrichment](#enrichment)
 - [gggenes](#gggenes)
-- [rentrez](#rentrez)
 - [Biostrings](#biostrings)
-
-
-
-----------
-
 
 
 ----------
