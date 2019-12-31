@@ -9,6 +9,10 @@ Last Update: 2019-09-07
 ----------
 
 ## Table of Contents
+- [ggtree](#ggtree)
+- [phylofactor](#phylofactor)
+- [DECIPHER](#decipher)
+- [pic](#pic) Phylogenetically Independent Contrasts
 - [updates](#updates)
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
@@ -21,9 +25,26 @@ Last Update: 2019-09-07
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
-- [DECIPHER](#DECIPHER)
-- [ggtree](#ggtree)
-- [pic](#pic) Phylogenetically Independent Contrasts
+
+----------
+## phylofactor
+
+https://github.com/reptalex/phylofactor
+phylofactor: R package for phylogentic factorization of biological data
+
+https://twitter.com/Alex_Washburne/status/1100057770844286977
+Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
+10:39 AM - 25 Feb 2019
+![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
+
+2019-02-25
+https://docs.wixstatic.com/ugd/0119a1_5ff56560b8c74f169ce3965ba3f421df.pdf
+phylofactor tutorial
+Alex Washburne
+
+https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
+phylofactor Tutorial
+
 
 ----------
 ## ggtree
@@ -37,12 +58,12 @@ Phylogenetic trees in R using ggtree
 https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
 ggtreeを使ってRで系統樹を扱う
 
-
-https://twitter.com/Alex_Washburne/status/1100057770844286977
-Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
-10:39 AM - 25 Feb 2019
-
-![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
+December 16, 2016
+https://www.r-bloggers.com/ggtree-version-of-plottree-2/
+ggtree version of plotTree | R-bloggers
+@DrKatHolt developed plotTree
+https://github.com/katholt/plotTree
+Plotting trees with data using R and Python
 
 ----------
 ## DECIPHER
@@ -109,10 +130,18 @@ Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,
 - two large taxonomic clades: Palms and primates.
 
 
-
 First published: 27 May 2018
 https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
 babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+
+https://github.com/ropensci/babette
+ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
+https://github.com/ropensci/babette/blob/master/doc/install.md
+
+
+https://methodsblog.com/2018/06/25/babette-beast2/
+The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
+
 
 February 9, 2018
 https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
@@ -125,16 +154,11 @@ Phylogeny and species traits predict bird detectability | R-bloggers
 
 ## 2016
 
-December 16, 2016
-https://www.r-bloggers.com/ggtree-version-of-plottree-2/
-ggtree version of plotTree | R-bloggers
-https://github.com/katholt/plotTree
-
-
 ## 2011
 
 2011/07/20
 http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
+
 
 ----------
 ## pic
