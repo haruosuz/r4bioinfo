@@ -20,19 +20,22 @@ Rによる微生物データ解析
 - [Metacoder](#metacoder)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
-- [phyloseq](#phyloseq)
 
-
-- [phylogeo](#phylogeo)
+- [simurg](#simurg)
 - [mcaGUI](#mcaGUI)
 
-- [matR](#matR) # take forever
+
+- [phyloseq](#phyloseq)
+- [phylogeo](#phylogeo)
+- [matR](#matR)
 - [microbiome](#microbiome)
 - [phylofactor](#phylofactor)
 - [micropan](#micropan)
 - [DADA2](#DADA2)
-
 - [Biomartr](#biomartr) # removed from CRAN
+
+ # take forever
+
 
 ----------
 ## featuring
@@ -42,13 +45,59 @@ http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 - 解析 | 菌叢解析 | について (last modified 2017/06/04)
 - 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
 
+----------
+## simurg
 
-
-
+https://www.ncbi.nlm.nih.gov/pubmed/31584605
+Bioinformatics. 2019 Oct 4. pii: btz735. doi: 10.1093/bioinformatics/btz735. [Epub ahead of print]
+simurg: simulate bacterial pangenomes in R.
+Ferrés I1, Fresia P1,2, Iraola G1,3,4.
+https://github.com/iferres/simurg
+https://github.com/iferres/simurg/wiki
+```
+git clone https://github.com/iferres/simurg.wiki.git
+$grep "^##" simurg.wiki/Home.md 
+## Example
+### Coalescent tree
+### Gene list
+### Panmatrix
+### Substitutions
+### Distances
+### Sequences folder
+### Summary method
+### Session Information
+```
 
 ----------
 ## phyloseq
 
+https://bioconductor.org/packages/release/bioc/html/phyloseq.html
+Bioconductor - phyloseq
+Handling and analysis of high-throughput microbiome census data
+Bioconductor version: Release (3.10)
+
+```
+BiocManager::install("phyloseq")
+
+browseVignettes("phyloseq")
+```
+
+https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-analysis.html
+Vignette for phyloseq: Analysis of high-throughput microbiome census data
+29 October 2019
+
+https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-mixture-models.html
+Example using Negative Binomial in Microbiome Differential Abundance Testing
+29 October 2019
+
+https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-basics.html
+Basic storage, access, and manipulation of phylogenetic sequencing data with phyloseq
+29 October 2019
+
+https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-FAQ.html
+phyloseq Frequently Asked Questions (FAQ)
+Paul McMurdie and Susan Holmes
+Tue Oct 29 20:20:01 2019
 
 https://www.ncbi.nlm.nih.gov/pubmed/23630581
 PLoS One. 2013 Apr 22;8(4):e61217. doi: 10.1371/journal.pone.0061217. Print 2013.
@@ -56,18 +105,49 @@ phyloseq: an R package for reproducible interactive analysis and graphics of mic
 McMurdie PJ1, Holmes S.
 
 
-
-
 https://github.com/joey711/phyloseq
 
 https://joey711.github.io/phyloseq/
 phyloseq: Import, share, and analyze microbiome census data using R
 
-http://joey711.github.io/phyloseq-demo/phyloseq-demo.html
+Tutorials
+
+https://joey711.github.io/phyloseq/import-data.html
+Importing phyloseq Data
+
+https://joey711.github.io/phyloseq/Example-Data.html
+Example Data in phyloseq
+Mon Mar 12 15:05:42 2018
+
+https://joey711.github.io/phyloseq/merge.html
+Merge Data
+
+https://joey711.github.io/phyloseq/preprocess.html
+Functions for Accessing and (Pre)Processing Data
+Mon Mar 12 15:08:48 2018
+
+https://joey711.github.io/phyloseq/distance.html
+The distance function in phyloseq
+Mon Mar 12 15:04:35 2018
+
+https://joey711.github.io/phyloseq/gap-statistic.html
+Gap Statistic
+
+
+https://joey711.github.io/phyloseq-demo/phyloseq-demo.html
 Demo: phyloseq – An R package for microbiome census data
+```
+library("phyloseq")
+packageVersion("phyloseq")
+## [1] '1.7.24'
+```
+
 
 https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
 Phyloseq - Draft of Pediatric Surgery
+```
+# データの取扱い
+```
 
 http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
 Microbial Community Diversity Analysis Tutorial with Phyloseq
@@ -118,7 +198,6 @@ Version:	0.9.1
 
 https://github.com/MG-RAST/matR
 Package matR (Metagenomics Analysis Tools for R) is an analysis client for the MG-RAST metagenome annotation engine, part of the US Department of Energy (DOE) Systems Biology Knowledge Base (KBase). 
-
 
 http://www.mcs.anl.gov/~braithwaite/library/matR/html/00Index.html
 
