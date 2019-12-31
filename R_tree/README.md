@@ -10,7 +10,6 @@ Last Update: 2019-09-07
 
 ## Table of Contents
 - [ggtree](#ggtree)
-- [phylofactor](#phylofactor)
 - [DECIPHER](#decipher)
 - [pic](#pic) Phylogenetically Independent Contrasts
 - [updates](#updates)
@@ -25,26 +24,6 @@ Last Update: 2019-09-07
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
-
-----------
-## phylofactor
-
-https://github.com/reptalex/phylofactor
-phylofactor: R package for phylogentic factorization of biological data
-
-https://twitter.com/Alex_Washburne/status/1100057770844286977
-Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
-10:39 AM - 25 Feb 2019
-![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
-
-2019-02-25
-https://docs.wixstatic.com/ugd/0119a1_5ff56560b8c74f169ce3965ba3f421df.pdf
-phylofactor tutorial
-Alex Washburne
-
-https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
-phylofactor Tutorial
-
 
 ----------
 ## ggtree
