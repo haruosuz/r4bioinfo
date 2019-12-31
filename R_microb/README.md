@@ -1,56 +1,137 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-09
+Last Update: 2019-12
 
 ----------
 
-# R for Microbiology
+# microb
+R for Microbiology
 Rによる微生物データ解析
 
 ## Table of Contents
+- [featuring](#featuring)
 - [updates](#updates)
   - [2019](#2019)
   - [2018](#2018)
 - [MLSTar](#mlstar)
-- [Biomartr](#biomartr)
 - [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [FindMyFriends](#FindMyFriends)
 - [Rhea](#Rhea)
-- [microbiome](#microbiome)
 - [Microbiome Helper](microbiome_helper)
-- [MicrobiomeWorkflow](#MicrobiomeWorkflow)
 - [Metacoder](#metacoder)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
-- [DADA2](#DADA2)
 - [phyloseq](#phyloseq)
-- [matR](#matR)
+
+
 - [phylogeo](#phylogeo)
-- [micropan](#micropan)
 - [mcaGUI](#mcaGUI)
+
+- [matR](#matR) # take forever
+- [microbiome](#microbiome)
+- [phylofactor](#phylofactor)
+- [micropan](#micropan)
+- [DADA2](#DADA2)
+
+- [Biomartr](#biomartr) # removed from CRAN
+
+----------
+## featuring
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
+(Rで)塩基配列解析
+- 解析 | 菌叢解析 | について (last modified 2017/06/04)
+- 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
+
 
 
 
 
 ----------
-## MicrobiomeWorkflow
+## phyloseq
 
-https://github.com/spholmes/F1000_workflow
 
-http://web.stanford.edu/class/bios221/MicrobiomeWorkflowII.html
-https://bioconductor.org/help/course-materials/2017/BioC2017/Day1/Workshops/Microbiome/MicrobiomeWorkflowII.html
-25 July 2017
+https://www.ncbi.nlm.nih.gov/pubmed/23630581
+PLoS One. 2013 Apr 22;8(4):e61217. doi: 10.1371/journal.pone.0061217. Print 2013.
+phyloseq: an R package for reproducible interactive analysis and graphics of microbiome census data.
+McMurdie PJ1, Holmes S.
 
-https://www.ncbi.nlm.nih.gov/pubmed/27508062
-Version 2. F1000Res. 2016 Jun 24 [revised 2016 Nov 2];5:1492. eCollection 2016.
-Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses.
-Callahan BJ1, Sankaran K1, Fukuyama JA1, McMurdie PJ2, Holmes SP1.
 
-We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and vegan
 
-https://f1000research.com/articles/5-1492
-REVISED Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses [version 2; peer review: 3 approved]
-Ben J. Callahan1, Kris Sankaran1, Julia A. Fukuyama1, Paul J. McMurdie2, Susan P. Holmes1
-Author details
+
+https://github.com/joey711/phyloseq
+
+https://joey711.github.io/phyloseq/
+phyloseq: Import, share, and analyze microbiome census data using R
+
+http://joey711.github.io/phyloseq-demo/phyloseq-demo.html
+Demo: phyloseq – An R package for microbiome census data
+
+https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
+Phyloseq - Draft of Pediatric Surgery
+
+http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
+Microbial Community Diversity Analysis Tutorial with Phyloseq
+Author: Michelle Berry
+Updated: April 14, 2016
+
+
+
+
+
+----------
+## phylogeo
+phylogeo: geographic analysis of microbiome data
+
+https://github.com/zachcp/phylogeo
+
+```
+cd ~/projects/r/my_phylogeo/
+git clone https://github.com/zachcp/phylogeo
+```
+
+
+http://zachcp.github.io/phylogeo/
+
+https://www.ncbi.nlm.nih.gov/pubmed/25913208
+Bioinformatics. 2015 Sep 1;31(17):2909-11. doi: 10.1093/bioinformatics/btv269. Epub 2015 Apr 25.
+phylogeo: an R package for geographic analysis and visualization of microbiome data.
+Charlop-Powers Z1, Brady SF1.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4547612/
+By extending the popular phyloseq package and using the same data structures and command formats, phylogeo allows users to easily map and explore the geographic dimensions of their data from the R programming language.
+
+
+----------
+
+## matR
+
+https://www.ncbi.nlm.nih.gov/pubmed/26791506
+Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
+MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
+- matR (metagenomic analysis tools for R, covered later in this chapter) that utilize the MG-RAST API ( http://api.metagenomics.anl.gov/api.html ) to easily download data from any stage in the MG-RAST processing pipeline.
+
+
+https://cran.r-project.org/package=matR
+matR: Metagenomics Analysis Tools
+An analysis platform for metagenomics combining specialized tools and workflows, easy handling of the BIOM format, and transparent access to MG-RAST resources. Integrates easily with other R packages and non-R software.
+
+Version:	0.9.1
+
+https://github.com/MG-RAST/matR
+Package matR (Metagenomics Analysis Tools for R) is an analysis client for the MG-RAST metagenome annotation engine, part of the US Department of Energy (DOE) Systems Biology Knowledge Base (KBase). 
+
+
+http://www.mcs.anl.gov/~braithwaite/library/matR/html/00Index.html
+
+R: metagenomics analysis tools for R
+
+http://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
+
+Short Tutorials for Metagenomic Analysis 
+
+https://mg-rast.github.io/matR/
+Metagenomics Analysis Tools: the matR package
+
+
 
 
 ----------
@@ -59,53 +140,117 @@ Author details
 https://bioconductor.org/packages/release/bioc/html/microbiome.html
 Bioconductor - microbiome
 
-To install this package, start R (version "3.6") and enter:
 ```
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
 BiocManager::install("microbiome")
+
+browseVignettes("microbiome")
 ```
 
+- HTML	R Script	microbiome R package
+https://bioconductor.org/packages/release/bioc/vignettes/microbiome/inst/doc/vignette.html
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty, et al.
+2019-10-29
+
+The on-line tutorial 
 https://microbiome.github.io/tutorials/
 Introduction to the microbiome R package
-Leo Lahti, Sudarshan Shetty et al. 2019-11-07
+Leo Lahti, Sudarshan Shetty et al. 2019-12-25
 
+https://microbiome.github.io/microbiome
 
-https://bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
-Introduction to the microbiome R package
-Leo Lahti, Sudarshan Shetty, et al.
-2019-12-06
-
-
-https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
-https://bioconductor.org/packages/3.7/bioc/vignettes/microbiome/inst/doc/vignette.html
-Introduction to the microbiome R package
-Leo Lahti, Sudarshan Shetty, et al.
-2018-02-09
-
-
-
-https://bioc.ism.ac.jp/packages/3.6/bioc/vignettes/microbiome/inst/doc/vignette.html
-Introduction to the microbiome R package
-Leo Lahti, Sudarshan Shetty, et al.
-2018-02-22
-
-
-
-
-
-
-
-Feb 10, 2018
 https://github.com/microbiome/microbiome
-https://github.com/microbiome/microbiome/wiki/Installation
 
-https://microbiome.github.io/microbiome/
-Introduction to the microbiome R package
 
-https://microbiome.github.io/microbiome/Tutorial.html
-Tutorial on Microbiome Data Analysis
+
+----------
+## phylofactor
+
+https://github.com/reptalex/phylofactor
+phylofactor: R package for phylogentic factorization of biological data
+
+https://twitter.com/Alex_Washburne/status/1100057770844286977
+Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
+10:39 AM - 25 Feb 2019
+![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
+
+
+https://docs.wixstatic.com/ugd/0119a1_5ff56560b8c74f169ce3965ba3f421df.pdf
+phylofactor tutorial
+Alex Washburne
+2019-02-25
+
+https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
+phylofactor Tutorial
+
+
+
+----------
+## micropan
+https://cran.r-project.org/web/packages/micropan
+micropan: Microbial Pan-Genome Analysis
+A collection of functions for computations and visualizations of microbial pan-genomes.
+Version:	1.2
+Published:	2018-02-15
+
+https://www.ncbi.nlm.nih.gov/pubmed/25888166
+BMC Bioinformatics. 2015 Mar 12;16:79. doi: 10.1186/s12859-015-0517-0.
+micropan: an R-package for microbial pan-genomics.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4375852/
+
+```
+cd ~/projects/r/my_micropan/
+git clone https://github.com/cran/micropan
+find micropan -name "*.pdf"
+
+micropan/inst/doc/casestudy.pdf
+micropan/inst/doc/vignette.pdf
+
+micropan/demo/casestudy.R
+```
+
+
+
+----------
+## DADA2
+https://benjjneb.github.io/dada2/index.html
+https://benjjneb.github.io/dada2/tutorial.html
+
+https://www.ncbi.nlm.nih.gov/pubmed/27214047
+Nat Methods. 2016 Jul;13(7):581-3. doi: 10.1038/nmeth.3869. Epub 2016 May 23.
+DADA2: High-resolution sample inference from Illumina amplicon data.
+Callahan BJ1, McMurdie PJ2, Rosen MJ3, Han AW2, Johnson AJ2, Holmes SP1.
+
+https://github.com/benjjneb/dada2
+
+https://github.com/spholmes/F1000_workflow/issues/36
+
+
+
+----------
+## Biomartr
+
+https://github.com/ropensci/biomartr
+biomartr: Genomic Data Retrieval with R
+
+https://cran.r-project.org/web/packages/biomartr/index.html
+```
+Package ‘biomartr’ was removed from the CRAN repository.
+
+Formerly available versions can be obtained from the archive.
+
+Archived on 2019-12-12 for policy violation.
+```
+
+https://www.ncbi.nlm.nih.gov/pubmed/28110292
+Bioinformatics. 2017 Apr 15;33(8):1216-1217. doi: 10.1093/bioinformatics/btw821.
+Biomartr: genomic data retrieval with R.
+Drost HG, Paszkowski J.
+
+
+
+
+
 
 
 ----------
@@ -157,10 +302,6 @@ microclass: an R-package for 16S taxonomy classification.
 Liland KH1,2, Vinje H1, Snipen L3.
 
 
-
-
-
-
 ## 2016
 
 https://www.ncbi.nlm.nih.gov/pubmed/26776185
@@ -168,6 +309,8 @@ Pac Symp Biocomput. 2016;21:183-94.
 REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
 Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
 using R packages dada2, knitr, and phyloseq.
+
+
 
 ----------
 ## MLSTar
@@ -192,71 +335,6 @@ x <- doMLST(
 	(time Rscript --vanilla scripts/my_MLSTar.R &) >& log.MLSTar.$(date +%F).txt
 
 ----------
-## Biomartr
-
-https://github.com/cran/biomartr
-Genomic Data Retrieval with R
-
-https://cran.r-project.org/web/packages/biomartr/index.html
-biomartr: Genomic Data Retrieval
-
-Vignettes:	Ensembl BioMart Examples
-NCBI Database Retrieval
-Functional Annotation
-Introduction
-Meta-Genome Retrieval
-Sequence Retrieval
-
-https://www.ncbi.nlm.nih.gov/pubmed/28110292
-Bioinformatics. 2017 Apr 15;33(8):1216-1217. doi: 10.1093/bioinformatics/btw821.
-Biomartr: genomic data retrieval with R.
-Drost HG, Paszkowski J.
-
-----------
-## Tools-Microbiome-Anlaysis
-
-Jun 14, 2018
-https://github.com/microsud/Tools-Microbiome-Anlaysis
-A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
-
-----------
-## Rhea
-https://lagkouvardos.github.io/Rhea
-
-https://www.ncbi.nlm.nih.gov/pubmed/28097056
-PeerJ. 2017 Jan 11;5:e2836. doi: 10.7717/peerj.2836. eCollection 2017.
-Rhea: a transparent and modular R pipeline for microbial profiling based on 16S rRNA gene amplicons.
-Lagkouvardos I1, Fischer S1, Kumar N1, Clavel T1.
-
-----------
-## FindMyFriends
-
-https://bioconductor.org/packages/release/bioc/html/FindMyFriends.html
-Bioconductor - FindMyFriends
-Microbial Comparative Genomics in R
-
-Pedersen TL (2016). FindMyFriends: Microbial Comparative Genomics in R. R package version 1.8.0, https://github.com/thomasp85/FindMyFriends.
-
-
-
-----------
-
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
-(Rで)塩基配列解析
-- 解析 | 菌叢解析 | について (last modified 2017/06/04)
-- 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
-
-----------
-## Microbiome Helper
-
-https://github.com/LangilleLab/microbiome_helper/wiki
-
-https://www.ncbi.nlm.nih.gov/pubmed/28066818
-mSystems. 2017 Jan 3;2(1). pii: e00127-16. doi: 10.1128/mSystems.00127-16. eCollection 2017 Jan-Feb.
-Microbiome Helper: a Custom and Streamlined Workflow for Microbiome Research.
-Comeau AM1, Douglas GM1, Langille MG1.
-
-----------
 ## Metacoder
 
 Jan 23, 2018
@@ -274,6 +352,45 @@ https://www.ncbi.nlm.nih.gov/pubmed/28222096
 PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404. eCollection 2017 Feb.
 Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
 Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
+
+----------
+## Tools-Microbiome-Anlaysis
+
+Jun 14, 2018
+https://github.com/microsud/Tools-Microbiome-Anlaysis
+A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
+
+----------
+## Rhea
+https://lagkouvardos.github.io/Rhea
+
+https://www.ncbi.nlm.nih.gov/pubmed/28097056
+PeerJ. 2017 Jan 11;5:e2836. doi: 10.7717/peerj.2836. eCollection 2017.
+Rhea: a transparent and modular R pipeline for microbial profiling based on 16S rRNA gene amplicons.
+Lagkouvardos I1, Fischer S1, Kumar N1, Clavel T1.
+
+
+
+
+----------
+## Microbiome Helper
+
+https://github.com/LangilleLab/microbiome_helper/wiki
+
+https://www.ncbi.nlm.nih.gov/pubmed/28066818
+mSystems. 2017 Jan 3;2(1). pii: e00127-16. doi: 10.1128/mSystems.00127-16. eCollection 2017 Jan-Feb.
+Microbiome Helper: a Custom and Streamlined Workflow for Microbiome Research.
+Comeau AM1, Douglas GM1, Langille MG1.
+
+----------
+## FindMyFriends
+
+https://bioconductor.org/packages/release/bioc/html/FindMyFriends.html
+Bioconductor - FindMyFriends
+Microbial Comparative Genomics in R
+
+Pedersen TL (2016). FindMyFriends: Microbial Comparative Genomics in R. R package version 1.8.0, https://github.com/thomasp85/FindMyFriends.
+
 
 
 ----------
@@ -306,100 +423,7 @@ library(ggplot2)
 
 data('WWTP_Impact')
 
-----------
-## DADA2
-https://benjjneb.github.io/dada2/index.html
 
-https://benjjneb.github.io/dada2/tutorial.html
-Nat Methods. 2016 Jul;13(7):581-3. doi: 10.1038/nmeth.3869. Epub 2016 May 23.
-DADA2: High-resolution sample inference from Illumina amplicon data.
-Callahan BJ1, McMurdie PJ2, Rosen MJ3, Han AW2, Johnson AJ2, Holmes SP1.
-
-https://github.com/benjjneb/dada2
-
-![](https://benjjneb.github.io/dada2/tutorial_files/figure-html/bar-plot-1.png)
-
-----------
-## phyloseq
-
-https://github.com/joey711/phyloseq
-
-https://joey711.github.io/phyloseq/
-phyloseq: Import, share, and analyze microbiome census data using R
-
-http://joey711.github.io/phyloseq-demo/phyloseq-demo.html
-Demo: phyloseq – An R package for microbiome census data
-
-https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
-Phyloseq - Draft of Pediatric Surgery
-
-http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
-Microbial Community Diversity Analysis Tutorial with Phyloseq
-Author: Michelle Berry
-Updated: April 14, 2016
-
-----------
-
-## matR
-
-https://github.com/MG-RAST/matR
-
-
-
-
-
-http://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
-
-Short Tutorials for Metagenomic Analysis 
-
-1.2 Introduction to R . . 
-
-2    Examples
-
-3    Basics
-3.1    Data in an Annotation Matrix
-
-
-https://cran.r-project.org/web/packages/matR/index.html
-
-https://mg-rast.github.io/matR/
-Metagenomics Analysis Tools: the matR package
-
-http://www.mcs.anl.gov/~braithwaite/library/matR/html/00Index.html
-
-R: metagenomics analysis tools for R
-
-
-
-https://www.ncbi.nlm.nih.gov/pubmed/26791506
-Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
-MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
-
-
-----------
-## phylogeo
-
-http://zachcp.github.io/phylogeo/
-phylogeo - Introduction
-
-https://www.ncbi.nlm.nih.gov/pubmed/25913208
-Bioinformatics. 2015 Sep 1;31(17):2909-11. doi: 10.1093/bioinformatics/btv269. Epub 2015 Apr 25.
-phylogeo: an R package for geographic analysis and visualization of microbiome data.
-Charlop-Powers Z1, Brady SF1.
-
-----------
-## micropan
-https://cran.r-project.org/web/packages/micropan/index.html
-
-https://www.ncbi.nlm.nih.gov/pubmed/25888166
-BMC Bioinformatics. 2015 Mar 12;16:79. doi: 10.1186/s12859-015-0517-0.
-micropan: an R-package for microbial pan-genomics.
-
-Post-annotation analysis and visualization are also possible, directly through the web interface, or with tools like matR (metagenomic analysis tools for R, covered later in this chapter) that utilize the MG-RAST API ( http://api.metagenomics.anl.gov/api.html ) to easily download data from any stage in the MG-RAST processing pipeline. 
-
-	git clone https://github.com/cran/micropan
-	# micropan/inst/doc/casestudy.pdf
-	# micropan/inst/doc/vignette.pdf
 
 ----------
 ## mcaGUI
@@ -452,5 +476,14 @@ Gaidatzis D1, Lerch A1, Hahne F2, Stadler MB1.
 
 
 ----------
+
+
+
+
+----------
+
+
+
+
 
 
