@@ -12,18 +12,16 @@ Rによる微生物データ解析
 - [updates](#updates)
   - [2019](#2019)
   - [2018](#2018)
-- [MLSTar](#mlstar)
 - [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [FindMyFriends](#FindMyFriends)
 - [Rhea](#Rhea)
 - [Microbiome Helper](microbiome_helper)
-- [Metacoder](#metacoder)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
-
 - [simurg](#simurg)
 - [mcaGUI](#mcaGUI)
 
+ # take forever
 
 - [phyloseq](#phyloseq)
 - [phylogeo](#phylogeo)
@@ -33,8 +31,8 @@ Rによる微生物データ解析
 - [micropan](#micropan)
 - [DADA2](#DADA2)
 - [Biomartr](#biomartr) # removed from CRAN
-
- # take forever
+- [MLSTar](#mlstar)
+- [Metacoder](#metacoder)
 
 
 ----------
@@ -315,16 +313,10 @@ Bioinformatics. 2017 Apr 15;33(8):1216-1217. doi: 10.1093/bioinformatics/btw821.
 Biomartr: genomic data retrieval with R.
 Drost HG, Paszkowski J.
 
-----------
-## MLSTar
 
-https://github.com/iferres/MLSTar
-iferres/MLSTar: An easy way of MLSTyping your genomes in R.
 
-https://www.ncbi.nlm.nih.gov/pubmed/29922519
-PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
-MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
-Ferrés I1, Iraola G1,2.
+
+
 
 ----------
 ## Metacoder
@@ -352,6 +344,32 @@ https://www.ncbi.nlm.nih.gov/pubmed/28222096
 PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404. eCollection 2017 Feb.
 Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
 Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5340466/
+- metacoder can easily be applied to any data that has a hierarchical component such as gene ontology or geographic location data.
+- Fig 6
+This plot shows the results of the 2016 Democratic primary election organized by region, division, state, and county.
+- Data Availability
+A manual with documentation and examples is provided: Foster ZSL, Grunwald NJ. Metacoder user documentation [Internet]. 2016. doi:10.5281/zenodo.158228. This manual also provides the code to reproduce all figures included in this manuscript.
+
+```
+wget https://zenodo.org/record/158228/files/grunwaldlab/metacoder_documentation-v0.1.2.zip
+unzip metacoder_documentation-v0.1.2.zip
+cd grunwaldlab-metacoder_documentation-1a677af/
+```
+
+
+
+
+----------
+## MLSTar
+
+https://github.com/iferres/MLSTar
+iferres/MLSTar: An easy way of MLSTyping your genomes in R.
+
+https://www.ncbi.nlm.nih.gov/pubmed/29922519
+PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
+MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
+Ferrés I1, Iraola G1,2.
 
 ----------
 ## updates
