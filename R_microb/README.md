@@ -74,13 +74,6 @@ $grep "^##" simurg.wiki/Home.md
 https://bioconductor.org/packages/release/bioc/html/phyloseq.html
 Bioconductor - phyloseq
 Handling and analysis of high-throughput microbiome census data
-Bioconductor version: Release (3.10)
-
-```
-BiocManager::install("phyloseq")
-
-browseVignettes("phyloseq")
-```
 
 https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-analysis.html
 Vignette for phyloseq: Analysis of high-throughput microbiome census data
@@ -184,34 +177,32 @@ By extending the popular phyloseq package and using the same data structures and
 
 ## matR
 
-https://www.ncbi.nlm.nih.gov/pubmed/26791506
-Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
-MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
-- matR (metagenomic analysis tools for R, covered later in this chapter) that utilize the MG-RAST API ( http://api.metagenomics.anl.gov/api.html ) to easily download data from any stage in the MG-RAST processing pipeline.
-
-
 https://cran.r-project.org/package=matR
 matR: Metagenomics Analysis Tools
 An analysis platform for metagenomics combining specialized tools and workflows, easy handling of the BIOM format, and transparent access to MG-RAST resources. Integrates easily with other R packages and non-R software.
 
-Version:	0.9.1
-
-https://github.com/MG-RAST/matR
+https://github.com/MG-RAST/matR/
 Package matR (Metagenomics Analysis Tools for R) is an analysis client for the MG-RAST metagenome annotation engine, part of the US Department of Energy (DOE) Systems Biology Knowledge Base (KBase). 
+
+QUICK START
 
 http://www.mcs.anl.gov/~braithwaite/library/matR/html/00Index.html
 
 R: metagenomics analysis tools for R
-
-http://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
+https://www.mcs.anl.gov/~braithwaite/library/matR/doc/index.html
+User Manual for the matR Package
+https://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
 
 Short Tutorials for Metagenomic Analysis 
 
 https://mg-rast.github.io/matR/
 Metagenomics Analysis Tools: the matR package
+Tutorials
 
-
-
+https://www.ncbi.nlm.nih.gov/pubmed/26791506
+Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
+MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
+- matR (metagenomic analysis tools for R, covered later in this chapter) that utilize the MG-RAST API ( http://api.metagenomics.anl.gov/api.html ) to easily download data from any stage in the MG-RAST processing pipeline.
 
 ----------
 ## microbiome
@@ -241,7 +232,6 @@ https://microbiome.github.io/microbiome
 https://github.com/microbiome/microbiome
 
 
-
 ----------
 ## phylofactor
 
@@ -251,8 +241,10 @@ phylofactor: R package for phylogentic factorization of biological data
 https://twitter.com/Alex_Washburne/status/1100057770844286977
 Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
 10:39 AM - 25 Feb 2019
-![](https://pbs.twimg.com/media/D0QwPVnUwAAk6u8.png)
 
+19 February 2019
+https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecm.1353
+Phylofactorization: a graph partitioning algorithm to identify phylogenetic scales of ecological data - Washburne - 2019 - Ecological Monographs
 
 https://docs.wixstatic.com/ugd/0119a1_5ff56560b8c74f169ce3965ba3f421df.pdf
 phylofactor tutorial
@@ -261,7 +253,6 @@ Alex Washburne
 
 https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
 phylofactor Tutorial
-
 
 
 ----------
@@ -304,8 +295,6 @@ https://github.com/benjjneb/dada2
 
 https://github.com/spholmes/F1000_workflow/issues/36
 
-
-
 ----------
 ## Biomartr
 
@@ -326,11 +315,43 @@ Bioinformatics. 2017 Apr 15;33(8):1216-1217. doi: 10.1093/bioinformatics/btw821.
 Biomartr: genomic data retrieval with R.
 Drost HG, Paszkowski J.
 
+----------
+## MLSTar
 
+https://github.com/iferres/MLSTar
+iferres/MLSTar: An easy way of MLSTyping your genomes in R.
 
+https://www.ncbi.nlm.nih.gov/pubmed/29922519
+PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
+MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
+Ferrés I1, Iraola G1,2.
 
+----------
+## Metacoder
 
+https://cran.r-project.org/package=metacoder
 
+https://github.com/grunwaldlab/metacoder
+
+https://grunwaldlab.github.io/metacoder_documentation/
+Metacoder documentation
+Zachary S. L. Foster and Niklaus J. Grünwald
+2018-11-23
+https://grunwaldlab.github.io/metacoder_documentation/example.html
+
+8 Jan 2018
+https://twitter.com/zacharyfoster19/status/950423225619554304
+Zachary Foster on Twitter: "metacoder 0.2.0 is on CRAN. Lots of new features and refinements. Check out https://t.co/zdiFcEPGB0 for an introduction. * parsing and filtering moved to https://t.co/YS8tGOBijP * label overlap avoidance * new parsers and writers * heat tree matrix plotting * and more! #rstats… https://t.co/sFDqYgRoSu"
+
+https://mran.microsoft.com/snapshot/2018-02-12/web/packages/metacoder/vignettes/introduction.html
+An introduction to MetacodeR
+Zachary S. L. Foster and Niklaus J. Grünwald
+2018-01-05
+
+https://www.ncbi.nlm.nih.gov/pubmed/28222096
+PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404. eCollection 2017 Feb.
+Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
+Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
 
 ----------
 ## updates
@@ -389,48 +410,6 @@ REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICRO
 Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
 using R packages dada2, knitr, and phyloseq.
 
-
-
-----------
-## MLSTar
-
-https://github.com/iferres/MLSTar
-iferres/MLSTar: An easy way of MLSTyping your genomes in R.
-
-https://www.ncbi.nlm.nih.gov/pubmed/29922519
-PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
-MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
-Ferrés I1, Iraola G1,2.
-
-	git clone https://github.com/iferres/MLSTar
-
-my_MLSTar/scripts/my_MLSTar.R
-
-x <- doMLST(
-
-##### take a long time...
-##### take forever...
-
-	(time Rscript --vanilla scripts/my_MLSTar.R &) >& log.MLSTar.$(date +%F).txt
-
-----------
-## Metacoder
-
-Jan 23, 2018
-https://github.com/grunwaldlab/metacoder
-
-	(time Rscript --vanilla scripts/my_metacoder.R &) >& log.metacoder.$(date +%F).txt
-
-8 Jan 2018
-https://twitter.com/zacharyfoster19/status/950423225619554304
-Zachary Foster on Twitter: "metacoder 0.2.0 is on CRAN. Lots of new features and refinements. Check out https://t.co/zdiFcEPGB0 for an introduction. * parsing and filtering moved to https://t.co/YS8tGOBijP * label overlap avoidance * new parsers and writers * heat tree matrix plotting * and more! #rstats… https://t.co/sFDqYgRoSu"
-
-![](https://pbs.twimg.com/media/DTCTpgtV4AAKXV9.jpg)
-
-https://www.ncbi.nlm.nih.gov/pubmed/28222096
-PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404. eCollection 2017 Feb.
-Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
-Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
 
 ----------
 ## Tools-Microbiome-Anlaysis
