@@ -9,6 +9,8 @@ Last Update: 2019-09-07
 ----------
 
 ## Table of Contents
+- [Rphylip](#Rphylip)
+- [SpeciesGeoCoder](#speciesgeocodeR)
 - [ggtree](#ggtree)
 - [DECIPHER](#decipher)
 - [pic](#pic) Phylogenetically Independent Contrasts
@@ -24,6 +26,47 @@ Last Update: 2019-09-07
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+
+
+----------
+## Rphylip
+
+https://cran.r-project.org/package=Rphylip
+Rphylip: An R interface for PHYLIP
+Rphylip provides an R interface for the PHYLIP package. All users of Rphylip will thus first have to install the PHYLIP phylogeny methods program package (Felsenstein 2013). See http://www.phylip.com for more information about installing PHYLIP.
+
+
+http://www.phytools.org/Rphylip/
+Rphylip: An R interface for PHYLIP
+
+19 July 2014
+https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12233
+Rphylip: an R interface for PHYLIP - Revell - 2014 - Methods in Ecology and Evolution
+
+
+
+----------
+## SpeciesGeoCoder
+
+
+May 10, 2019
+https://github.com/azizka/speciesgeocodeR
+Preparation of species occurrences and distribution data for the use in phylogenetic analyses. SpeciesgeocodeR is built for data exploration and data analysis and especially suited for biogeographical and ecological questions on large datasets. The package includes the easy creation of summary-tables and -graphs and geographical maps, the calcul…
+speciesgeocodeR v. 2.0-10
+
+Jan 23, 2018
+https://github.com/azizka/speciesgeocodeR/wiki
+speciesgeocodeR v2.0-8
+
+https://www.ncbi.nlm.nih.gov/pubmed/27486181
+Syst Biol. 2017 Mar 1;66(2):145-151. doi: 10.1093/sysbio/syw064.
+SpeciesGeoCoder: Fast Categorization of Species Occurrences for Analyses of Biodiversity, Biogeography, Ecology, and Evolution.
+Töpel M1,2,3, Zizka A3, Calió MF3,4,5, Scharn R3, Silvestro D3, Antonelli A3,6.
+
+November 24, 2015.
+https://www.biorxiv.org/content/10.1101/032755v1
+speciesgeocodeR: An R package for linking species occurrences, user-defined regions and phylogenetic trees for biogeography, ecology and evolution | bioRxiv
+
 
 ----------
 ## ggtree
@@ -88,8 +131,12 @@ Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
 
 ## 2019
 
-
-
+https://twitter.com/kfuku0502/status/1080489725612486662
+Kenji Fukushima on Twitter: "Wrote an R script for divergence time estimation of a gene tree based on phylogeny reconciliation with a dated species tree. Posted code to GitHub. https://t.co/6uddGB2nAT https://t.co/xeZLfzg3he" / Twitter
+12:43 AM · Jan 3, 2019
+https://github.com/kfuku52/RADTE
+kfuku52/RADTE: divergence time estimation of complex gene families
+Reconciliation-Assisted Divergence Time Estimation (RADTE)
 
 ## 2018
 
@@ -132,6 +179,22 @@ Phylogeny and species traits predict bird detectability | R-bloggers
 
 
 ## 2016
+
+https://twitter.com/StephenZozaya/status/717523363720073217
+Stephen Zozaya on Twitter: "Need recommendations for useful R packages that incorporate phylogeny into multivariate analysis of trait data. Help me, Twitter." / Twitter
+10:24 AM · Apr 6, 2016
+
+https://cran.r-project.org/package=geomorph
+geomorph: Geometric Morphometric Analyses of 2D/3D Landmark Data
+Read, manipulate, and digitize landmark data, generate shape variables via Procrustes analysis for points, curves and surfaces, perform shape analyses, and provide graphical depictions of shapes and patterns of shape variation.
+```
+Published:	2019-12-19
+In views:	Phylogenetics
+Vignettes:	
+geomorph version 3.1.0 Assistance
+geomorph digitizing Synopsis
+geomorph functions
+```
 
 ## 2011
 
