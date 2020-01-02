@@ -9,20 +9,8 @@ Rによる微生物データ解析
 
 ## Table of Contents
 - [featuring](#featuring)
-- [updates](#updates)
-  - [2019](#2019)
-  - [2018](#2018)
+Checked
 - [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
-- [FindMyFriends](#FindMyFriends)
-- [Rhea](#Rhea)
-- [Microbiome Helper](microbiome_helper)
-- [MAGNAMWAR](#MAGNAMWAR)
-- [theseus](#theseus)
-- [simurg](#simurg)
-- [mcaGUI](#mcaGUI)
-
- # take forever
-
 - [phyloseq](#phyloseq)
 - [phylogeo](#phylogeo)
 - [matR](#matR)
@@ -33,7 +21,27 @@ Rによる微生物データ解析
 - [Biomartr](#biomartr) # removed from CRAN
 - [MLSTar](#mlstar)
 - [Metacoder](#metacoder)
-
+- [metabolic inference](https://github.com/haruosuz/mgsa/blob/master/references/mgsa.metagenome.md#metabolic-inference)
+  - Tax4Fun
+  - themetagenomics
+- [Statistical Analysis of Microbiome Data with R](#https://github.com/haruosuz/books/tree/master/samdr)
+- [updates](#updates)
+  - [2019](#2019)
+  - [2018](#2018)
+- [FindMyFriends](#FindMyFriends)
+- [Rhea](#Rhea)
+- [Microbiome Helper](microbiome_helper)
+- [MAGNAMWAR](#MAGNAMWAR)
+- [theseus](#theseus)
+- [mcaGUI](#mcaGUI)
+- [](#)
+- [](#)
+- [microclass](#microclass)
+- [ampvis2](#ampvis2)
+- [metagenomeSeq](#metagenomeSeq)
+- [simurg](#simurg)
+- [](#)
+- [](#)
 
 ----------
 ## featuring
@@ -42,6 +50,15 @@ http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 (Rで)塩基配列解析
 - 解析 | 菌叢解析 | について (last modified 2017/06/04)
 - 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
+
+----------
+## Tools-Microbiome-Anlaysis
+
+マイクロバイオーム解析パッケージのリスト
+Jun 14, 2018
+https://github.com/microsud/Tools-Microbiome-Anlaysis
+A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
+ In this post, numerous resources that can be helpful for analysis of microbiome data are listed. 
 
 ----------
 ## simurg
@@ -133,12 +150,9 @@ packageVersion("phyloseq")
 ## [1] '1.7.24'
 ```
 
-
 https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
 Phyloseq - Draft of Pediatric Surgery
-```
 # データの取扱い
-```
 
 http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
 Microbial Community Diversity Analysis Tutorial with Phyloseq
@@ -146,20 +160,11 @@ Author: Michelle Berry
 Updated: April 14, 2016
 
 
-
-
-
 ----------
 ## phylogeo
 phylogeo: geographic analysis of microbiome data
 
 https://github.com/zachcp/phylogeo
-
-```
-cd ~/projects/r/my_phylogeo/
-git clone https://github.com/zachcp/phylogeo
-```
-
 
 http://zachcp.github.io/phylogeo/
 
@@ -314,10 +319,6 @@ Biomartr: genomic data retrieval with R.
 Drost HG, Paszkowski J.
 
 
-
-
-
-
 ----------
 ## Metacoder
 
@@ -345,11 +346,12 @@ PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404.
 Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
 Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5340466/
-- metacoder can easily be applied to any data that has a hierarchical component such as gene ontology or geographic location data.
+- Data Availability Statement
+A manual with documentation and examples is provided: Foster ZSL, Grunwald NJ. Metacoder user documentation [Internet]. 2016. doi:10.5281/zenodo.158228. This manual also provides the code to reproduce all figures included in this manuscript.
+- Abstract
+metacoder can easily be applied to any data that has a hierarchical component such as gene ontology or geographic location data.
 - Fig 6
 This plot shows the results of the 2016 Democratic primary election organized by region, division, state, and county.
-- Data Availability
-A manual with documentation and examples is provided: Foster ZSL, Grunwald NJ. Metacoder user documentation [Internet]. 2016. doi:10.5281/zenodo.158228. This manual also provides the code to reproduce all figures included in this manuscript.
 
 ```
 wget https://zenodo.org/record/158228/files/grunwaldlab/metacoder_documentation-v0.1.2.zip
@@ -406,18 +408,13 @@ microbiomeSeq: An R package for microbial community analysis in an environmental
 **DISCLAIMER: microbiomeSeq is still in development phase and we do not recommend you to use it until a stable version is available and when this message disappears.**
 
 
-### 2017
+## 2017
 
 https://rstudio-pubs-static.s3.amazonaws.com/268156_d3ea37937f4f4469839ab6fa2c483842.html
 Microbiota Analysis in R
 Kim Dill-McFarland
 March 20, 2017
 Updated April 15, 2017
-
-https://www.ncbi.nlm.nih.gov/pubmed/28302051
-BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
-microclass: an R-package for 16S taxonomy classification.
-Liland KH1,2, Vinje H1, Snipen L3.
 
 
 ## 2016
@@ -428,13 +425,95 @@ REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICRO
 Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
 using R packages dada2, knitr, and phyloseq.
 
+----------
+## metagenomeSeq
+
+http://www.bioconductor.org/packages/devel/bioc/html/metagenomeSeq.html
+
+Nov 1, 2019
+https://github.com/HCBravoLab/metagenomeSeq
+
+https://www.ncbi.nlm.nih.gov/pubmed/24076764
+Nat Methods. 2013 Dec;10(12):1200-2. doi: 10.1038/nmeth.2658. Epub 2013 Sep 29.
+Differential abundance analysis for microbial marker-gene surveys.
+Paulson JN1, Stine OC, Bravo HC, Pop M.
 
 ----------
-## Tools-Microbiome-Anlaysis
+## ampvis2
+https://madsalbertsen.github.io/ampvis2/
 
-Jun 14, 2018
-https://github.com/microsud/Tools-Microbiome-Anlaysis
-A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
+Andersen KS, Kirkegaard RH, Karst SM, Albertsen M (2018). “ampvis2: an R package to analyse and visualise 16S rRNA amplicon data.” bioRxiv. http://dx.plos.org/10.1371/journal.pone.0132783.
+
+----------
+## DiversitySeq
+
+https://www.ncbi.nlm.nih.gov/pubmed/28025179
+Brief Bioinform. 2018 Jul 20;19(4):679-692. doi: 10.1093/bib/bbw119.
+Measuring the diversity of the human microbiota with targeted next-generation sequencing.
+Finotello F1,2, Mastrorilli E3, Di Camillo B2.
+https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbw119
+Published: 26 December 2016
+
+https://twitter.com/search?q=DiversitySeq
+
+![https://twitter.com/j_flan/status/934560569192939520](https://pbs.twimg.com/media/DPaI_tTWAAEii36?format=jpg&name=small)
+![](https://twitter.com/ProfWhelan/status/934085445847257088/photo/1)
+
+
+
+----------
+## theseus
+
+https://cran.r-project.org/package=theseus
+
+https://github.com/EESI/theseus
+
+2017-12-20
+https://cran.rstudio.com/web/packages/theseus/vignettes/general_usage.html
+Using the theseus R package
+
+
+
+----------
+## microclass
+
+https://www.ncbi.nlm.nih.gov/pubmed/28302051
+BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
+microclass: an R-package for 16S taxonomy classification.
+Liland KH1,2, Vinje H1, Snipen L3.
+
+https://cran.r-project.org/package=microclass
+microclass: Methods for Taxonomic Classification of Prokaryotes
+Functions for assigning 16S sequence data to a taxonomic level in the tree-of-life for prokaryotes.
+Published:	2017-01-17
+Vignettes:
+https://cran.r-project.org/web/packages/microclass/vignettes/intro.html
+Introduction to microclass
+
+----------
+## mcaGUI
+
+http://www.bioconductor.org/packages/mcaGUI/
+
+https://www.ncbi.nlm.nih.gov/pubmed/22692220
+Bioinformatics. 2012 Aug 15;28(16):2198-9. doi: 10.1093/bioinformatics/bts338. Epub 2012 Jun 12.
+mcaGUI: microbial community analysis R-Graphical User Interface (GUI).
+Copeland WK1, Krishnan V, Beck D, Settles M, Foster JA, Cho KC, Day M, Hickey R, Schütte UM, Zhou X, Williams CJ, Forney LJ, Abdo Z.
+
+アイダホ
+
+----------
+
+
+
+
+
+
+
+
+
+
+
 
 ----------
 ## Rhea
@@ -486,52 +565,6 @@ Metagenome-Wide Association of Microbial Determinants of Host Phenotype in Droso
 
 https://github.com/cran/MAGNAMWAR/blob/master/vignettes/using_mag.Rmd
 
-----------
-## theseus
-
-2017-12-20
-https://cran.rstudio.com/web/packages/theseus/vignettes/general_usage.html
-Using the theseus R package
-
-library(theseus)
-library(phyloseq)
-library(ggplot2)
-
-data('WWTP_Impact')
-
-
-
-----------
-## mcaGUI
-
-http://www.bioconductor.org/packages/release/bioc/html/mcaGUI.html
-
-https://www.ncbi.nlm.nih.gov/pubmed/22692220
-Bioinformatics. 2012 Aug 15;28(16):2198-9. doi: 10.1093/bioinformatics/bts338. Epub 2012 Jun 12.
-mcaGUI: microbial community analysis R-Graphical User Interface (GUI).
-Copeland WK1, Krishnan V, Beck D, Settles M, Foster JA, Cho KC, Day M, Hickey R, Schütte UM, Zhou X, Williams CJ, Forney LJ, Abdo Z.
-
-----------
-
-R package, 
-DiversitySeq
-
-6:12 PM - 25 Nov 2017
-https://twitter.com/j_flan/status/934560569192939520
-Jessica_Flannery on Twitter: "Great visualizations for microbial diversity and explanation about why/how “diversity” can mean so many different things! https://t.co/Uqi4HEp2yZ"
-
-10:44 AM - 24 Nov 2017
-https://twitter.com/ProfWhelan/status/934085445847257088
-Kevin Whelan on Twitter: "Gut #microbiome: confused about sequencing, reads, a-diversity and B-diversity? This great review will answer a lot of questions - my vote f… https://t.co/2EQRk2foNz"
-
-6:12 AM - 21 Nov 2017
-https://twitter.com/Francesca_Fin_/status/932929811776983040
-Francesca Finotello on Twitter: "How to compute #diversity from #NGS data? #DiversitySeq: a package to estimate different diversity measures from NGS counts and to simulate… https://t.co/jdo57DbTFR"
-
-https://www.ncbi.nlm.nih.gov/pubmed/28025179
-Brief Bioinform. 2016 Dec 26. pii: bbw119. doi: 10.1093/bib/bbw119. [Epub ahead of print]
-Measuring the diversity of the human microbiota with targeted next-generation sequencing.
-Finotello F, Mastrorilli E, Di Camillo B.
 
 
 ----------
