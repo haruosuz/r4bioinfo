@@ -9,6 +9,7 @@ Last Update: 2019-09-07
 ----------
 
 ## Table of Contents
+- [perfectphyloR](#perfectphyloR)
 - [Rphylip](#Rphylip)
 - [SpeciesGeoCoder](#speciesgeocodeR)
 - [ggtree](#ggtree)
@@ -27,6 +28,23 @@ Last Update: 2019-09-07
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
 
+
+----------
+## perfectphyloR
+
+23 December 2019
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-3313-4
+perfectphyloR: An R package for reconstructing perfect phylogenies | BMC Bioinformatics | Full Text
+
+https://cran.r-project.org/package=perfectphyloR
+perfectphyloR: Reconstruct Perfect Phylogenies from DNA Sequence Data
+Reconstructs perfect phylogeny at a user-given focal point and to depict and test association in a genomic region based on the reconstructed partitions. Charith B Karunarathna and Jinko Graham (2019) <bioRxiv:10.1101/674523>.
+
+Materials:	README
+https://cran.r-project.org/web/packages/perfectphyloR/readme/README.html
+
+Vignettes:	perfectphyloR: Reconstruct Perfect Phylogenies from DNA Sequence Data
+https://cran.r-project.org/web/packages/perfectphyloR/vignettes/perfectphyloR.pdf
 
 ----------
 ## Rphylip
