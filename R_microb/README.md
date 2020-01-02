@@ -4,84 +4,114 @@ Last Update: 2019-12
 ----------
 
 # microb
-R for Microbiology
-Rによる微生物データ解析
+R for Microbiology Microbiome Metagenome
+微生物データ解析
 
 ## Table of Contents
 - [featuring](#featuring)
 Checked
-- [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
-- [phyloseq](#phyloseq)
 - [phylogeo](#phylogeo)
+- [phyloseq](#phyloseq)
 - [matR](#matR)
 - [microbiome](#microbiome)
 - [phylofactor](#phylofactor)
-- [micropan](#micropan)
+- [micropan](#micropan) lars.snipen #pangenome
+- [microclass](#microclass) lars.snipen
 - [DADA2](#DADA2)
-- [Biomartr](#biomartr) # removed from CRAN
+- [Biomartr](#biomartr) removed from CRAN
 - [MLSTar](#mlstar)
 - [Metacoder](#metacoder)
 - [metabolic inference](https://github.com/haruosuz/mgsa/blob/master/references/mgsa.metagenome.md#metabolic-inference)
-  - Tax4Fun
-  - themetagenomics
-- [Statistical Analysis of Microbiome Data with R](#https://github.com/haruosuz/books/tree/master/samdr)
+  - [Tax4Fun](#tax4fun)
+  - [themetagenomics](#themetagenomics) removed from CRAN
+- [Statistical Analysis of Microbiome Data with R](https://github.com/haruosuz/books/tree/master/samdr)
 - [updates](#updates)
   - [2019](#2019)
   - [2018](#2018)
-- [FindMyFriends](#FindMyFriends)
+- [MicrobeR](#)
+- [FindMyFriends](#FindMyFriends) #pangenome
+- [simurg](#simurg) #pangenome
+- [](#)
 - [Rhea](#Rhea)
 - [Microbiome Helper](microbiome_helper)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
 - [mcaGUI](#mcaGUI)
 - [](#)
-- [](#)
-- [microclass](#microclass)
 - [ampvis2](#ampvis2)
 - [metagenomeSeq](#metagenomeSeq)
-- [simurg](#simurg)
-- [](#)
 - [](#)
 
 ----------
+## SigTree
+
+https://github.com/cran/SigTree
+
+https://cran.r-project.org/package=SigTree
+SigTree: Identify and Visualize Significantly Responsive Branches in a Phylogenetic Tree
+Provides tools to identify and visualize branches in a phylogenetic tree that are significantly responsive to some intervention, taking as primary inputs a phylogenetic tree (of class phylo) and a data frame (or matrix) of corresponding tip (OTU) labels and p-values.
+```
+Version:	1.10.6
+Published:	2017-10-02
+Vignettes:	SigTree Tutorial Vignette
+```
+https://cran.r-project.org/web/packages/SigTree/vignettes/SigTree.pdf
+
+
+https://www.ncbi.nlm.nih.gov/pubmed/28748045
+Comput Struct Biotechnol J. 2017 Jul 6;15:372-378. doi: 10.1016/j.csbj.2017.06.002. eCollection 2017.
+SigTree: A Microbial Community Analysis Tool to Identify and Visualize Significantly Responsive Branches in a Phylogenetic Tree.
+Stevens JR1, Jones TR1,2, Lefevre M3, Ganesan B4, Weimer BC5.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5512180/
+https://www.sciencedirect.com/science/article/pii/S2001037017300132
+
+8-2012
+https://digitalcommons.usu.edu/etd/1314/
+"SigTree: An Automated Meta-Analytic Approach to Find Significant Branc" by Todd R. Jones
+
+
+----------
 ## featuring
+
+Jun 14, 2018
+https://github.com/microsud/Tools-Microbiome-Anlaysis
+A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
+ In this post, numerous resources that can be helpful for analysis of microbiome data are listed. 
+マイクロバイオーム解析パッケージのリスト
+
+https://twitter.com/aquabolina/status/978657686911938560
+Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
+11:39 AM - 27 Mar 2018
 
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 (Rで)塩基配列解析
 - 解析 | 菌叢解析 | について (last modified 2017/06/04)
 - 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
 
-----------
-## Tools-Microbiome-Anlaysis
 
-マイクロバイオーム解析パッケージのリスト
-Jun 14, 2018
-https://github.com/microsud/Tools-Microbiome-Anlaysis
-A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
- In this post, numerous resources that can be helpful for analysis of microbiome data are listed. 
-
-----------
-## simurg
-
-https://www.ncbi.nlm.nih.gov/pubmed/31584605
-Bioinformatics. 2019 Oct 4. pii: btz735. doi: 10.1093/bioinformatics/btz735. [Epub ahead of print]
-simurg: simulate bacterial pangenomes in R.
-Ferrés I1, Fresia P1,2, Iraola G1,3,4.
-https://github.com/iferres/simurg
-https://github.com/iferres/simurg/wiki
+2019年12月23日に更新
+https://qiita.com/xvtyzn/items/6a008b61d852dcbaed57
+Qiime2を使ったメタゲノム解析パイプライン
 ```
-git clone https://github.com/iferres/simurg.wiki.git
-$grep "^##" simurg.wiki/Home.md 
-## Example
-### Coalescent tree
-### Gene list
-### Panmatrix
-### Substitutions
-### Distances
-### Sequences folder
-### Summary method
-### Session Information
+・microbeR (version 0.3.1)
+・phyloseq (version 1.26.1)
+・qiime2R (version 0.99.11)
 ```
+
+----------
+## phylogeo
+phylogeo: geographic analysis of microbiome data
+
+https://github.com/zachcp/phylogeo
+
+http://zachcp.github.io/phylogeo/
+
+https://www.ncbi.nlm.nih.gov/pubmed/25913208
+Bioinformatics. 2015 Sep 1;31(17):2909-11. doi: 10.1093/bioinformatics/btv269. Epub 2015 Apr 25.
+phylogeo: an R package for geographic analysis and visualization of microbiome data.
+Charlop-Powers Z1, Brady SF1.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4547612/
+By extending the popular phyloseq package and using the same data structures and command formats, phylogeo allows users to easily map and explore the geographic dimensions of their data from the R programming language.
 
 ----------
 ## phyloseq
@@ -152,28 +182,16 @@ packageVersion("phyloseq")
 
 https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
 Phyloseq - Draft of Pediatric Surgery
+```
 # データの取扱い
+## 各データを取り出す
+## Phyloseqデータのメタデータの順番を指定する
+```
 
 http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
 Microbial Community Diversity Analysis Tutorial with Phyloseq
 Author: Michelle Berry
 Updated: April 14, 2016
-
-
-----------
-## phylogeo
-phylogeo: geographic analysis of microbiome data
-
-https://github.com/zachcp/phylogeo
-
-http://zachcp.github.io/phylogeo/
-
-https://www.ncbi.nlm.nih.gov/pubmed/25913208
-Bioinformatics. 2015 Sep 1;31(17):2909-11. doi: 10.1093/bioinformatics/btv269. Epub 2015 Apr 25.
-phylogeo: an R package for geographic analysis and visualization of microbiome data.
-Charlop-Powers Z1, Brady SF1.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4547612/
-By extending the popular phyloseq package and using the same data structures and command formats, phylogeo allows users to easily map and explore the geographic dimensions of their data from the R programming language.
 
 
 ----------
@@ -257,32 +275,42 @@ Alex Washburne
 https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
 phylofactor Tutorial
 
-
 ----------
 ## micropan
+
 https://cran.r-project.org/web/packages/micropan
 micropan: Microbial Pan-Genome Analysis
 A collection of functions for computations and visualizations of microbial pan-genomes.
+```
 Version:	1.2
 Published:	2018-02-15
+Maintainer:	Lars Snipen <lars.snipen at nmbu.no>
+```
 
 https://www.ncbi.nlm.nih.gov/pubmed/25888166
 BMC Bioinformatics. 2015 Mar 12;16:79. doi: 10.1186/s12859-015-0517-0.
 micropan: an R-package for microbial pan-genomics.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4375852/
 
+----------
+## microclass
+
+https://www.ncbi.nlm.nih.gov/pubmed/28302051
+BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
+microclass: an R-package for 16S taxonomy classification.
+Liland KH1,2, Vinje H1, Snipen L3.
+
+https://cran.r-project.org/package=microclass
+microclass: Methods for Taxonomic Classification of Prokaryotes
+Functions for assigning 16S sequence data to a taxonomic level in the tree-of-life for prokaryotes.
 ```
-cd ~/projects/r/my_micropan/
-git clone https://github.com/cran/micropan
-find micropan -name "*.pdf"
-
-micropan/inst/doc/casestudy.pdf
-micropan/inst/doc/vignette.pdf
-
-micropan/demo/casestudy.R
+Published:	2017-01-17
+Maintainer:	Lars Snipen <lars.snipen at nmbu.no>
+Vignettes:
 ```
-
-
+https://cran.r-project.org/web/packages/microclass/vignettes/intro.html
+Introduction to microclass
+K-mers
 
 ----------
 ## DADA2
@@ -373,6 +401,9 @@ PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
 MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
 Ferrés I1, Iraola G1,2.
 
+
+
+
 ----------
 ## updates
 
@@ -398,10 +429,6 @@ Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
 ASAR: visual analysis of metagenomes in R.
 Orakov AN1,2, Sakenova NK1,2, Sorokin A3,4, Goryanin II1,5,6.
 
-https://twitter.com/aquabolina/status/978657686911938560
-Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
-11:39 AM - 27 Mar 2018
-
 2018-02-14
 http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
 microbiomeSeq: An R package for microbial community analysis in an environmental context
@@ -410,11 +437,11 @@ microbiomeSeq: An R package for microbial community analysis in an environmental
 
 ## 2017
 
-https://rstudio-pubs-static.s3.amazonaws.com/268156_d3ea37937f4f4469839ab6fa2c483842.html
+http://rpubs.com/dillmcfarlan/R_microbiotaSOP
 Microbiota Analysis in R
 Kim Dill-McFarland
 March 20, 2017
-Updated April 15, 2017
+Updated December 19, 2017
 
 
 ## 2016
@@ -424,6 +451,64 @@ Pac Symp Biocomput. 2016;21:183-94.
 REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
 Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
 using R packages dada2, knitr, and phyloseq.
+
+
+
+
+----------
+## MicrobeR
+
+May 23, 2019
+https://github.com/jbisanz/MicrobeR
+https://jbisanz.github.io/MicrobeR/
+MicrobeR v0.3
+J Bisanz
+2018-01-09
+MicrobeR is intended to supplement other packages such as phyloseq and vegan by providing wrapped functions for common analysis.
+
+
+----------
+## FindMyFriends
+
+https://bioconductor.org/packages/release/bioc/html/FindMyFriends.html
+Bioconductor - FindMyFriends
+Microbial Comparative Genomics in R
+A framework for doing microbial comparative genomics in R. The main purpose of the package is assisting in the creation of pangenome matrices where genes from related organisms are grouped by similarity, as well as the analysis of these data. FindMyFriends provides many novel approaches to doing pangenome analysis and supports a gene grouping algorithm that scales linearly, thus making the creation of huge pangenomes feasible.
+
+Pedersen TL (2019). FindMyFriends: Microbial Comparative Genomics in R. R package version 1.16.0, https://github.com/thomasp85/FindMyFriends.
+
+Creating pangenomes using FindMyFriends
+R Script
+https://bioconductor.org/packages/release/bioc/vignettes/FindMyFriends/inst/doc/FindMyFriends_intro.R
+HTML
+https://bioconductor.org/packages/release/bioc/vignettes/FindMyFriends/inst/doc/FindMyFriends_intro.html
+Creating pangenomes using FindMyFriends
+Thomas Lin Pedersen
+29 October 2019
+
+----------
+## simurg
+
+https://www.ncbi.nlm.nih.gov/pubmed/31584605
+Bioinformatics. 2019 Oct 4. pii: btz735. doi: 10.1093/bioinformatics/btz735. [Epub ahead of print]
+simurg: simulate bacterial pangenomes in R.
+Ferrés I1, Fresia P1,2, Iraola G1,3,4.
+https://github.com/iferres/simurg
+https://github.com/iferres/simurg/wiki
+```
+git clone https://github.com/iferres/simurg.wiki.git
+$grep "^##" simurg.wiki/Home.md 
+## Example
+### Coalescent tree
+### Gene list
+### Panmatrix
+### Substitutions
+### Distances
+### Sequences folder
+### Summary method
+### Session Information
+```
+
 
 ----------
 ## metagenomeSeq
@@ -457,9 +542,6 @@ Published: 26 December 2016
 https://twitter.com/search?q=DiversitySeq
 
 ![https://twitter.com/j_flan/status/934560569192939520](https://pbs.twimg.com/media/DPaI_tTWAAEii36?format=jpg&name=small)
-![](https://twitter.com/ProfWhelan/status/934085445847257088/photo/1)
-
-
 
 ----------
 ## theseus
@@ -473,23 +555,6 @@ https://cran.rstudio.com/web/packages/theseus/vignettes/general_usage.html
 Using the theseus R package
 
 
-
-----------
-## microclass
-
-https://www.ncbi.nlm.nih.gov/pubmed/28302051
-BMC Bioinformatics. 2017 Mar 16;18(1):172. doi: 10.1186/s12859-017-1583-2.
-microclass: an R-package for 16S taxonomy classification.
-Liland KH1,2, Vinje H1, Snipen L3.
-
-https://cran.r-project.org/package=microclass
-microclass: Methods for Taxonomic Classification of Prokaryotes
-Functions for assigning 16S sequence data to a taxonomic level in the tree-of-life for prokaryotes.
-Published:	2017-01-17
-Vignettes:
-https://cran.r-project.org/web/packages/microclass/vignettes/intro.html
-Introduction to microclass
-
 ----------
 ## mcaGUI
 
@@ -501,19 +566,6 @@ mcaGUI: microbial community analysis R-Graphical User Interface (GUI).
 Copeland WK1, Krishnan V, Beck D, Settles M, Foster JA, Cho KC, Day M, Hickey R, Schütte UM, Zhou X, Williams CJ, Forney LJ, Abdo Z.
 
 アイダホ
-
-----------
-
-
-
-
-
-
-
-
-
-
-
 
 ----------
 ## Rhea
@@ -536,15 +588,6 @@ https://www.ncbi.nlm.nih.gov/pubmed/28066818
 mSystems. 2017 Jan 3;2(1). pii: e00127-16. doi: 10.1128/mSystems.00127-16. eCollection 2017 Jan-Feb.
 Microbiome Helper: a Custom and Streamlined Workflow for Microbiome Research.
 Comeau AM1, Douglas GM1, Langille MG1.
-
-----------
-## FindMyFriends
-
-https://bioconductor.org/packages/release/bioc/html/FindMyFriends.html
-Bioconductor - FindMyFriends
-Microbial Comparative Genomics in R
-
-Pedersen TL (2016). FindMyFriends: Microbial Comparative Genomics in R. R package version 1.8.0, https://github.com/thomasp85/FindMyFriends.
 
 
 
