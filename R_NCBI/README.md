@@ -1,9 +1,38 @@
 # R_NCBI
 
 ## Table of Contents
+- [AnnotationBustR]
 - [easyPubMed](#easypubmed)
 - [reutils](#reutils)
 - [rentrez](#rentrez)
+
+----------
+
+
+
+----------
+## AnnotationBustR
+https://cran.r-project.org/package=AnnotationBustR
+AnnotationBustR: Extract Subsequences from GenBank Annotations
+Extraction of subsequences into FASTA files from GenBank annotations where gene names may vary among accessions.
+
+https://github.com/sborstein/AnnotationBustR
+https://github.com/sborstein/AnnotationBustR/blob/master/vignettes/AnnotationBustR-vignette.md
+AnnotationBustR Tutorial
+Samuel R. Borstein
+19 August, 2019
+
+https://cran.r-project.org/web/packages/AnnotationBustR/vignettes/AnnotationBustR-vignette.html
+AnnotationBustR Tutorial
+Samuel R. Borstein
+09 April, 2018
+
+https://www.ncbi.nlm.nih.gov/pubmed/30002984
+PeerJ. 2018 Jul 3;6:e5179. doi: 10.7717/peerj.5179. eCollection 2018.
+AnnotationBustR: an R package to extract subsequences from GenBank annotations.
+Borstein SR1, O'Meara BC1.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6034590/
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6034590/bin/peerj-06-5179-g001.jpg)
 
 ----------
 
