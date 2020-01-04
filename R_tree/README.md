@@ -311,6 +311,11 @@ The Bioconductor 2018 Workshop Compilation
 Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
 ```
 
+![](https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/plotneighbors2-1.png)
+
+
+![](https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/smallpairsplot-1.png)
+
 
 ----------
 ## treeio
