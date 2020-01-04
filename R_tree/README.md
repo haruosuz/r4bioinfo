@@ -72,8 +72,21 @@ The Bioconductor 2018 Workshop Compilation
 Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
 ```
 
+#### 13.2.2.7 Comparison of genomes
+
 <img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/plotneighbors2-1.png" width=25%>
-<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/smallpairsplot-1.png" width=25%>
+
+Pairs plots are my personal favorite way to visualize syntenic information, but, they can become overwhelming as the number of genomes compared increases. 
+
+<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/largepairsplot-1.png" width=25%>
+
+<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/unnamed-chunk-3-1.png" width=25%>
+
+PanGenomeMatrix represents every homolog set, and every singleton gene in our genomes.
+
+We can, additionally, create a simple tangleogram from these two phylogenetic trees. Allowing a comparison of the core, and pan genomes. The core is on the left, while the pan is on the right.
+
+<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/simpletangleogram-1.png" width=25%>
 
 ----------
 ## castor
