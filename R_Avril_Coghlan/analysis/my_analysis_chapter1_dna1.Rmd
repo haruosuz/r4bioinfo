@@ -1,0 +1,117 @@
+---
+title: "DNA Sequence Statistics (1)"
+author: '@haruo_suzuki'
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+Sys.Date()
+```
+
+```{bash}
+ls -l
+```
+
+テスト用の配列データを作成する:
+
+```{r}
+# Create tests
+library("seqinr")
+testseq <- s2c("acgt")
+length(testseq)
+table(testseq)
+GC(testseq)
+count(testseq, wordsize = 2)
+```
+
+## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
+**DNA配列の統計 (1)**
+
+### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
+**バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
+
+```{r}
+# load the “SeqinR” R package
+library("seqinr")
+
+# ask for more information about the library() function
+help("library")
+```
+
+### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
+**RパッケージSeqinRを用いて、ゲノム配列データを取得する**
+
+```{r}
+library("seqinr")
+dengueseq <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")[[1]]
+
+dengueseq[1:50]
+```
+
+### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
+**配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
+
+```{r write.fasta}
+write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
+```
+
+### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
+**配列データをRに読み込む**
+
+```{r read.fasta}
+library("seqinr")
+dengue <- read.fasta(file = "den1.fasta")
+dengueseq <- dengue[[1]]
+```
+
+### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
+**DNA配列の長さ**
+
+```{r length}
+length(dengueseq)
+```
+
+### [Base composition of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#base-composition-of-a-dna-sequence)
+**DNA配列の塩基組成**
+
+```{r table}
+table(dengueseq)
+```
+
+### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
+**DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
+
+```{r GC}
+(2240+2770)/(3426+2240+2770+2299)
+GC(dengueseq)
+```
+
+### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
+**連続塩基**
+
+```{r count}
+# Count oligomers (monomer/dimer/trimer/etc)
+count(seq = dengueseq, wordsize = 1)
+count(seq = dengueseq, wordsize = 2)
+
+denguetable <- count(dengueseq, wordsize = 1)
+denguetable[[3]]
+denguetable[["g"]]
+```
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+### references
+https://github.com/haruosuz/bioinfo/blob/master/2019/CaseStudy.md
+
+

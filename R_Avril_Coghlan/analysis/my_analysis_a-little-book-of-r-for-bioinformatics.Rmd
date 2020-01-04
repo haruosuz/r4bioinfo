@@ -1,0 +1,206 @@
+---
+title: "A Little Book of R For Bioinformatics"
+author: '@haruo_suzuki'
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+Sys.Date()
+```
+
+```{bash}
+ls -l
+```
+
+テスト用の配列データを作成する:
+
+```{r}
+# Create tests
+library("seqinr")
+testseq <- s2c("acgt")
+length(testseq)
+table(testseq)
+GC(testseq)
+count(testseq, wordsize = 2)
+```
+
+## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
+**DNA配列の統計 (1)**
+
+### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
+**バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
+
+```{r}
+# load the “SeqinR” R package
+library("seqinr")
+
+# ask for more information about the library() function
+help("library")
+```
+
+### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
+**RパッケージSeqinRを用いて、ゲノム配列データを取得する**
+
+```{r}
+library("seqinr")
+dengueseq <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")[[1]]
+
+dengueseq[1:50]
+```
+
+### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
+**配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
+
+```{r write.fasta}
+write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
+```
+
+### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
+**配列データをRに読み込む**
+
+```{r read.fasta}
+library("seqinr")
+dengue <- read.fasta(file = "den1.fasta")
+dengueseq <- dengue[[1]]
+```
+
+### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
+**DNA配列の長さ**
+
+```{r length}
+length(dengueseq)
+```
+
+### [Base composition of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#base-composition-of-a-dna-sequence)
+**DNA配列の塩基組成**
+
+```{r table}
+table(dengueseq)
+```
+
+### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
+**DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
+
+```{r GC}
+(2240+2770)/(3426+2240+2770+2299)
+GC(dengueseq)
+```
+
+### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
+**連続塩基**
+
+```{r count}
+# Count oligomers (monomer/dimer/trimer/etc)
+count(seq = dengueseq, wordsize = 1)
+count(seq = dengueseq, wordsize = 2)
+
+denguetable <- count(dengueseq, wordsize = 1)
+denguetable[[3]]
+denguetable[["g"]]
+```
+
+## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
+**DNA配列の統計 (2)**
+
+### [A little more introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-little-more-introduction-to-r)
+**続・R言語入門**
+
+### Reading sequence data with SeqinR
+
+```{r}
+# reading the sequence for the DEN-1 Dengue virus genome (NCBI accession: NC_001477)
+library("seqinr")                          # Load the SeqinR package.
+# TogoWS REST service http://togows.dbcls.jp/site/en/rest.html
+dengue <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")
+#dengue <- read.fasta(file = "den1.fasta") # Read in the file "den1.fasta".
+dengueseq <- dengue[[1]]                   # Put the sequence in a vector called "dengueseq".
+
+# obtain nucleotides 452-535 of DNA sequence stored in the vector `dengueseq`
+dengueseq[452:535]
+```
+
+### Local variation in GC content
+### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
+GC含量の移動解析
+### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
+GC含量の移動プロット
+
+```{r}
+#install.packages('zoo')
+library(zoo)
+windowsize <- 2000
+#windowsize <- 3000
+#windowsize <- 300
+x <- seq(from = 1, to = length(dengueseq)-windowsize, by = windowsize)
+y <- rollapply(data = dengueseq, width = windowsize, by = windowsize, FUN = GC)
+par(family="mono")
+plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
+```
+
+### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
+連続塩基組成 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature) / [k-mer](https://en.wikipedia.org/wiki/K-mer)
+
+```{r}
+# Count oligomers (monomer/dimer/trimer/etc)
+count(seq = dengueseq, wordsize = 2)
+
+# Statistical over- and under- representation of oligonucleotides in a sequence
+# The rho statistic can be computed on each of oligonucleotides
+rho(sequence = dengueseq, wordsize = 2)
+```
+
+## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
+**[2つの配列間でのアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
+
+
+### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
+**SeqinRでUniProtのタンパク質配列を取得**
+
+```{r}
+library("seqinr")
+lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+lepraeseq # Display the contents of "lepraeseq"
+```
+
+### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
+**ドットプロットで2つの配列を比較**
+
+```{r}
+# Create tests
+library("seqinr")
+testseq <- s2c("acgt")
+par(family="mono"); par(mfrow=c(2,2))
+dotPlot(testseq, testseq)
+dotPlot(testseq, rev(testseq))
+dotPlot(testseq, rep(testseq,2))
+```
+
+
+
+```{r}
+# setting font in plots
+par(family="mono")
+
+dotPlot(lepraeseq, ulceransseq)
+```
+
+
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+### references
+- https://github.com/haruosuz/DS4GD/tree/master/2019giga
+- https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md
+- https://github.com/haruosuz/books/tree/master/r4ds
+- https://kohske.github.io/R/rmarkdown/
