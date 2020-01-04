@@ -9,13 +9,13 @@ Last Update: 2020-01
 ----------
 
 ## Table of Contents
+- [DECIPHER](#decipher)
+- [featuring](#featuring)
 - [castor](#castor)
 - [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
-- [updates](#updates)
 - [pic](#pic) Phylogenetically Independent Contrasts
-- [DECIPHER](#decipher)
-- [featuring](#featuring)
+- [updates](#updates)
 - [treeio](#treeio)
 - [perfectphyloR](#perfectphyloR)
 - [rgenesconverged](#rgenesconverged)
@@ -33,6 +33,47 @@ Last Update: 2020-01
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+
+----------
+## DECIPHER
+
+https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
+Bioconductor - DECIPHER
+
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
+The Art of Multiple Sequence Alignment in R
+Erik S. Wright
+October 29, 2019
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
+解析 | 一般 | アラインメント | マルチプル | DECIPHER(Wright_2015) (last modified 2016/12/29)
+
+https://www.ncbi.nlm.nih.gov/pubmed/26445311
+BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
+DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
+Wright ES1,2.
+
+----------
+## featuring
+
+パッケージ確認日：2019/12/01
+https://www.trifields.jp/bioconductor-packages-software-3484
+Bioconductor Softwareパッケージ一覧 | トライフィールズ
+```
+125. DECIPHER
+Tools for curating, analyzing, and manipulating biological sequences
+生物学的配列をキュレーション、分析、および操作するためのツール
+```
+
+https://bioconductor.github.io/BiocWorkshops/working-with-genomic-data-in-r-with-the-decipher-package.html
+The Bioconductor 2018 Workshop Compilation
+```
+13 250: Working with genomic data in R with the DECIPHER package
+Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
+```
+
+<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/plotneighbors2-1.png" width=25%>
+<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/smallpairsplot-1.png" width=25%>
 
 ----------
 ## castor
@@ -125,6 +166,77 @@ This page was last edited on 23 May 2014, at 15:48.
 
 
 ----------
+## pic
+Phylogenetically independent contrasts
+
+https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts
+
+https://rdrr.io/cran/ape/man/pic.html
+pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
+
+http://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
+Phylogenetic Comparative Methods (PCMs) in R | R Functions
+\### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
+
+31 July 2017
+http://www.phytools.org/Cordoba2017/ex/3/PICs.html
+Exercise 3: Phylogenetically independent contrasts
+
+13 December 2016
+http://www.phytools.org/Bariloche2016/lec/3/PICs.pdf
+Phylogenetically independent contrasts
+Liam J. Revell & Luke J. Harmon
+
+https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
+Phylogenetically independent contrasts – Comparative methods in R - Ilhabela
+
+August 2, 2008
+http://www2.hawaii.edu/~mbutler/Rquickstart/Rcomparative.pdf
+Comparative Methods and Data Analysis in R
+Chapter 2
+
+http://www.jbon.org/wp/wp-content/uploads/2009/04/e8a995e4bea1e4ba88e6b8ac2_ootani.pdf
+系統関係を考慮した解析法
+Phylogenetically independent contrast
+(PIC; Felsenstein 1985)
+- 系統樹の枝先の姉妹群(ペア)の対比，ノードの平均値の対比のみを使う方法
+- 非独立性を過剰評価してしまうことがある
+
+https://www.ikushimo.com/news/2009/03/23.html
+系統的に近い生物は互いに似ているという系統自己相関も存在します。これをちゃんと考慮に入れてやろうというのが、
+「系統的独立比較」(Phylogenetic Independent Contrast)です。
+
+8 August 2008
+https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts
+HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
+
+6 February 2008
+https://informatics.nescent.org/wiki/R_Hackathon_1/Phylogenetic_Independent_Contrasts
+R Hackathon 1/Phylogenetic Independent Contrasts - Phyloinformatics
+
+
+https://www.ncbi.nlm.nih.gov/pubmed/15728743
+Nucleic Acids Res. 2005 Feb 23;33(4):1141-53. Print 2005.
+Variation in the strength of selected codon usage bias among bacteria.
+Sharp PM1, Bailes E, Grocock RJ, Peden JF, Sockett RE.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC549432/
+Variation in the strength of selected codon usage bias among bacteria
+- Phylogeny-independent correlations among species characters were estimated using the generalized least squares approach implemented in Continuous (39).
+- The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
+
+統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
+FIG.2.データ点が独立 FIG.3. データ点が非独立
+https://www.jstor.org/stable/2461605
+Joseph Felsenstein (1985)
+Phylogenies and the Comparative Method
+
+https://twitter.com/JunShimizu/status/1204217634662731776
+Junichi Shimizu / 清水準一 on Twitter: "気をつけたい。　関西学院大学の清水先生のブログ「都道府県単位の分析、国単位の分析は、いろいろ罠があるので気をつけようね、というお話でした。」 納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up! https://t.co/JvGfvTWF2Y" / Twitter
+10:53 AM · Dec 10, 2019
+http://norimune.net/3313
+納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up!
+
+----------
 ## updates
 
 
@@ -200,121 +312,6 @@ geomorph functions
 
 2011/07/20
 http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
-
-
-----------
-## pic
-Phylogenetically independent contrasts
-
-https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts
-
-https://rdrr.io/cran/ape/man/pic.html
-pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
-
-http://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
-Phylogenetic Comparative Methods (PCMs) in R | R Functions
-\### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
-
-31 July 2017
-http://www.phytools.org/Cordoba2017/ex/3/PICs.html
-Exercise 3: Phylogenetically independent contrasts
-
-13 December 2016
-http://www.phytools.org/Bariloche2016/lec/3/PICs.pdf
-Phylogenetically independent contrasts
-Liam J. Revell & Luke J. Harmon
-
-https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
-Phylogenetically independent contrasts – Comparative methods in R - Ilhabela
-
-August 2, 2008
-http://www2.hawaii.edu/~mbutler/Rquickstart/Rcomparative.pdf
-Comparative Methods and Data Analysis in R
-Chapter 2
-
-http://www.jbon.org/wp/wp-content/uploads/2009/04/e8a995e4bea1e4ba88e6b8ac2_ootani.pdf
-系統関係を考慮した解析法
-Phylogenetically independent contrast
-(PIC; Felsenstein 1985)
-- 系統樹の枝先の姉妹群(ペア)の対比，ノードの平均値の対比のみを使う方法
-- 非独立性を過剰評価してしまうことがある
-
-https://www.ikushimo.com/news/2009/03/23.html
-系統的に近い生物は互いに似ているという系統自己相関も存在します。これをちゃんと考慮に入れてやろうというのが、
-「系統的独立比較」(Phylogenetic Independent Contrast)です。
-
-8 August 2008
-https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts
-HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
-
-6 February 2008
-https://informatics.nescent.org/wiki/R_Hackathon_1/Phylogenetic_Independent_Contrasts
-R Hackathon 1/Phylogenetic Independent Contrasts - Phyloinformatics
-
-
-https://www.ncbi.nlm.nih.gov/pubmed/15728743
-Nucleic Acids Res. 2005 Feb 23;33(4):1141-53. Print 2005.
-Variation in the strength of selected codon usage bias among bacteria.
-Sharp PM1, Bailes E, Grocock RJ, Peden JF, Sockett RE.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC549432/
-Variation in the strength of selected codon usage bias among bacteria
-- Phylogeny-independent correlations among species characters were estimated using the generalized least squares approach implemented in Continuous (39).
-- The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
-
-統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
-FIG.2.データ点が独立 FIG.3. データ点が非独立
-https://www.jstor.org/stable/2461605
-Joseph Felsenstein (1985)
-Phylogenies and the Comparative Method
-
-https://twitter.com/JunShimizu/status/1204217634662731776
-Junichi Shimizu / 清水準一 on Twitter: "気をつけたい。　関西学院大学の清水先生のブログ「都道府県単位の分析、国単位の分析は、いろいろ罠があるので気をつけようね、というお話でした。」 納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up! https://t.co/JvGfvTWF2Y" / Twitter
-10:53 AM · Dec 10, 2019
-http://norimune.net/3313
-納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up!
-
-----------
-## DECIPHER
-
-https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
-Bioconductor - DECIPHER
-
-https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
-The Art of Multiple Sequence Alignment in R
-Erik S. Wright
-October 29, 2019
-
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
-解析 | 一般 | アラインメント | マルチプル | DECIPHER(Wright_2015) (last modified 2016/12/29)
-
-https://www.ncbi.nlm.nih.gov/pubmed/26445311
-BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
-DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
-Wright ES1,2.
-
-----------
-## featuring
-
-パッケージ確認日：2019/12/01
-https://www.trifields.jp/bioconductor-packages-software-3484
-Bioconductor Softwareパッケージ一覧 | トライフィールズ
-```
-125. DECIPHER
-Tools for curating, analyzing, and manipulating biological sequences
-生物学的配列をキュレーション、分析、および操作するためのツール
-```
-
-https://bioconductor.github.io/BiocWorkshops/working-with-genomic-data-in-r-with-the-decipher-package.html
-The Bioconductor 2018 Workshop Compilation
-```
-13 250: Working with genomic data in R with the DECIPHER package
-Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
-```
-
-![](https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/plotneighbors2-1.png)
-
-
-![](https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/smallpairsplot-1.png)
 
 
 ----------
