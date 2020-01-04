@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2020-01-02
+Last Update: 2020-01
 
 ----------
 
