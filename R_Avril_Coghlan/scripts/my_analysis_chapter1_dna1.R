@@ -1,6 +1,6 @@
 # Usage: Rscript --vanilla scripts/my_analysis_chapter1_dna1.R >& log.$(date +%F).txt
-
 # https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md#dna-sequence-statistics-1
+# https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html
 
 # R packages for bioinformatics: Bioconductor and SeqinR
 library("seqinr")

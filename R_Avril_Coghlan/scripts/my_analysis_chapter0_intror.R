@@ -1,7 +1,5 @@
 # Usage: Rscript --vanilla scripts/my_analysis_chapter0_intror.R >& log.$(date +%F).txt
-
-# https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html
-
+# https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md
 # https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#a-brief-introduction-to-r
 2*3
 10-3
@@ -39,5 +37,6 @@ myfunction <- function(x) { return(20 + (x*x)) }
 myfunction(10)
 myfunction(25)
 
+# 
 Sys.time()
 sessionInfo()
