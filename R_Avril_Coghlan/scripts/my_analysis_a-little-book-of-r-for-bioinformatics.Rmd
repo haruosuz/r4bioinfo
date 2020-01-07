@@ -12,28 +12,44 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
+By Avril Coghlan
+
+This is a simple introduction to bioinformatics, with a focus on genome analysis, using the R statistics software.
+
+## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
+
+### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
+
+#### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
+
 ```{r}
-Sys.Date()
+# install the "seqinr" package
+#install.packages("seqinr")
+# load the "seqinr" package into R
+library("seqinr")
 ```
 
-```{bash}
-ls -l
+#### [How to install a Bioconductor R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-a-bioconductor-r-package)
+
+```{r}
+# install the Bioconductor package called "Biostrings"
+#BiocManager::install("Biostrings")
+# load the "Biostrings" package into R
+library(Biostrings)
 ```
 
-テスト用の配列データを作成する:
+## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
+**DNA配列の統計 (1)**
 
 ```{r}
 # Create tests
-library("seqinr")
 testseq <- s2c("acgt")
 length(testseq)
 table(testseq)
 GC(testseq)
 count(testseq, wordsize = 2)
 ```
-
-## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
-**DNA配列の統計 (1)**
 
 ### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
 **バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
@@ -107,6 +123,10 @@ denguetable[[3]]
 denguetable[["g"]]
 ```
 
+### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#exercises)
+
+Model answers to the exercises are given in [Answers to the exercises on DNA Sequence Statistics (1)](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#dna-sequence-statistics-1).
+
 ## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
 **DNA配列の統計 (2)**
 
@@ -127,9 +147,13 @@ dengueseq <- dengue[[1]]                   # Put the sequence in a vector called
 dengueseq[452:535]
 ```
 
-### Local variation in GC content
+### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
+
+Local fluctuations in GC content within the genome sequence can provide different interesting information, for example, they may reveal cases of horizontal transfer or reveal biases in mutation.
+
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 GC含量の移動解析
+
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 GC含量の移動プロット
 
@@ -148,6 +172,10 @@ plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
 連続塩基組成 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature) / [k-mer](https://en.wikipedia.org/wiki/K-mer)
 
+It is interesting to identify DNA words that are two nucleotides long (“dinucleotides”, ie. “AT”, “AC”, etc.) that are over-represented or under-represented in a DNA sequence. If a particular DNA word is over-represented in a sequence, it means that it occurs many more times in the sequence than you would have expected by chance. Similarly, if a particular DNA word is under-represented in a sequence, it means it occurs far fewer times in the sequence than you would have expected.
+
+A statistic called ρ (Rho) is used to measure how over- or under-represented a particular DNA word is. 
+
 ```{r}
 # Count oligomers (monomer/dimer/trimer/etc)
 count(seq = dengueseq, wordsize = 2)
@@ -159,7 +187,6 @@ rho(sequence = dengueseq, wordsize = 2)
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
 **[2つの配列間でのアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
-
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
 **SeqinRでUniProtのタンパク質配列を取得**
@@ -184,8 +211,6 @@ dotPlot(testseq, rev(testseq))
 dotPlot(testseq, rep(testseq,2))
 ```
 
-
-
 ```{r}
 # setting font in plots
 par(family="mono")
@@ -193,10 +218,69 @@ par(family="mono")
 dotPlot(lepraeseq, ulceransseq)
 ```
 
+## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
+**多重配列アライメントと系統樹**
 
+### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
+**UniProtから複数の配列を取得**
+
+### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
+**CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
+
+### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
+**多重アライメントのファイルをRに読み込む**
+
+### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
+**多重アライメントの表示**
+
+### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
+**タンパク質配列間の遺伝的距離を計算する**
+
+A common first step in performing a phylogenetic analysis is to calculate the pairwise genetic distances between sequences. The genetic distance is an estimate of the divergence between two sequences, and is usually measured in quantity of evolutionary change (an estimate of the number of mutations that have occurred since the two sequences shared a common ancestor).
+
+Based on the genetic distance matrix above, we can see that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is smallest (about 0.414).
+
+Similarly, the genetic distance between Western Caucasian bat virus phosphoprotein (Q5VKP1) and Lagos bat virus phosphoprotein (O56773) is the biggest (about 0.507).
+
+The larger the genetic distance between two sequences, the more amino acid changes or indels that have occurred since they shared a common ancestor, and the longer ago their common ancestor probably lived.
+
+### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
+**タンパク質配列の無根系統樹の構築**
+
+Once we have a distance matrix that gives the pairwise distances between all our protein sequences, we can build a phylogenetic tree based on that distance matrix. One method for using this is the neighbour-joining algorithm.
+
+We can see that Q5VKP1 (Western Caucasian bat virus phosphoprotein) and P06747 (rabies virus phosphoprotein) have been grouped together in the tree, and that O56773 (Lagos bat virus phosphoprotein) and P0C569 (Mokola virus phosphoprotein) are grouped together in the tree.
+
+This is consistent with what we saw above in the genetic distance matrix, which showed that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is relatively small.
+
+The lengths of the branches in the plot of the tree are proportional to the amount of evolutionary change (estimated number of mutations) along the branches.
+
+The tree above of the virus phosphoproteins is an unrooted phylogenetic tree as it does not contain an outgroup sequence, that is a sequence of a protein that is known to be more distantly related to the other proteins in the tree than they are to each other.
+
+As a result, we cannot tell which direction evolutionary time ran in along the internal branches of the tree.
+
+### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
+**タンパク質配列の有根系統樹の構築**
+
+In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
+
+1. Calculate the genetic distances between the following NS1 proteins from different Dengue virus strains: Dengue virus 1 NS1 protein (Uniprot Q9YRR4), Dengue virus 2 NS1 protein (UniProt Q9YP96), Dengue virus 3 NS1 protein (UniProt B0LSS3), and Dengue virus 4 NS1 protein (UniProt Q6TFL5). 
+2. Build an unrooted phylogenetic tree of the NS1 proteins from Dengue virus 1, Dengue virus 2, Dengue virus 3 and Dengue virus 4, using the neighbour-joining algorithm.
+3. The Zika virus is related to Dengue viruses, but is not a Dengue virus, and so therefore can be used as an outgroup in phylogenetic trees of Dengue virus sequences. UniProt accession Q32ZE1 consists of a sequence with similarity to the Dengue NS1 protein, so seems to be a related protein from Zika virus.
+
+### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
+**系統樹をNewick形式ファイルとして保存する**
 
 ```{r sessionInfo}
 sessionInfo()
+```
+
+```{r}
+Sys.Date()
+```
+
+```{bash}
+ls -l
 ```
 
 ## References

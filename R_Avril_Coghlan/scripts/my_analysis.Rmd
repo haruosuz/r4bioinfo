@@ -1,0 +1,103 @@
+---
+title: "Your report title"
+author: '@your_name'
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
+By Avril Coghlan
+
+This is a simple introduction to bioinformatics, with a focus on genome analysis, using the R statistics software.
+
+## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
+
+### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
+
+#### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
+
+```{r}
+library("seqinr")
+```
+
+## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
+
+```{r}
+# Create tests
+testseq <- s2c("acgt")
+length(testseq)
+table(testseq)
+GC(testseq)
+count(testseq, wordsize = 2)
+```
+
+The length of the sequence is `r length(testseq)` nucleotides, the GC content is `r GC(testseq)`.
+
+"[GC content](https://en.wikipedia.org/wiki/GC-content) is found to be variable with different organisms, the process of which is envisaged to be contributed to by variation in selection, mutational bias, and biased recombination-associated DNA repair."
+"Several mammalian species (e.g., shrew, microbat, tenrec, rabbit) have independently undergone a marked increase in the GC-content of their genes. These GC-content changes are correlated with species life-history traits (e.g., body mass or longevity) and genome size,[17] and might be linked to a molecular phenomenon called the GC-biased gene conversion.[24]"
+
+### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#exercises)
+
+Model answers to the exercises are given in [Answers to the exercises on DNA Sequence Statistics (1)](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#dna-sequence-statistics-1).
+
+## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
+
+### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
+
+Local fluctuations in GC content within the genome sequence can provide different interesting information, for example, they may reveal cases of [horizontal gene transfer (HGT)](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer) or reveal biases in mutation.
+
+![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/441px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
+
+### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
+
+A statistic called ρ (Rho) is used to measure how over- or under-represented a particular DNA word is. 
+
+```{r}
+# Create tests
+testseq <- s2c("aatgc")
+rho(sequence = testseq, wordsize = 2)
+```
+
+## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
+
+### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
+
+```{r}
+# Create tests
+library("seqinr")
+testseq <- s2c("acgt")
+par(family="mono")
+dotPlot(testseq, testseq)
+```
+
+## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
+
+### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
+
+In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence.
+
+# Your R environment 
+```{r}
+# Collect Information About the Current R Session
+sessionInfo()
+```
+
+# References
+- https://github.com/haruosuz/DS4GD/tree/master/2019giga
+- https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md
+- [R for Data Science](https://github.com/haruosuz/books/tree/master/r4ds)
+  - [27 R Markdown](https://r4ds.had.co.nz/r-markdown.html)
+    - [27.2 R Markdown basics](https://r4ds.had.co.nz/r-markdown.html#r-markdown-basics)
+    - [27.4 Code chunks](https://r4ds.had.co.nz/r-markdown.html#code-chunks)
+      - [27.4.2 Chunk options](https://r4ds.had.co.nz/r-markdown.html#chunk-options)
+        - include = FALSE runs the code, but doesn’t show the code or results in the final document. Use this for setup code that you don’t want cluttering your report.
+        - echo = FALSE prevents code, but not the results from appearing in the finished file. Use this when writing reports aimed at people who don’t want to see the underlying R code.
+      - [27.4.6 Inline code](https://r4ds.had.co.nz/r-markdown.html#inline-code)
+
