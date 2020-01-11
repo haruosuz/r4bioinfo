@@ -37,8 +37,10 @@ Last Update: 2020-01
 ----------
 ## DECIPHER
 
-https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
+https://bioconductor.org/packages/DECIPHER/
 Bioconductor - DECIPHER
+A toolset for deciphering and managing biological sequences.
+Author: Erik Wright
 
 https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
 The Art of Multiple Sequence Alignment in R
@@ -72,6 +74,8 @@ The Bioconductor 2018 Workshop Compilation
 Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
 ```
 
+## 13.2 Workshop goals and objectives
+
 #### 13.2.2.7 Comparison of genomes
 
 <img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/plotneighbors2-1.png" width=25%>
@@ -79,6 +83,8 @@ Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
 Pairs plots are my personal favorite way to visualize syntenic information, but, they can become overwhelming as the number of genomes compared increases. 
 
 <img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/largepairsplot-1.png" width=25%>
+
+#### 13.2.2.8 Predict homology between genes that are linked by syntenic hits
 
 <img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/unnamed-chunk-3-1.png" width=25%>
 
@@ -183,6 +189,23 @@ This page was last edited on 23 May 2014, at 15:48.
 Phylogenetically independent contrasts
 
 https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts
+
+
+https://lukejharmon.github.io/pcm/pdf/phylogeneticComparativeMethods.pdf
+
+https://lukejharmon.github.io/pcm/chapter6_beyondbm/
+Beyond Brownian motion · Phylogenetic Comparative Methods
+https://lukejharmon.github.io/pcm/chapter6_beyondbm/#section-6.3a-rate-tests-using-phylogenetic-independent-contrasts
+
+Section 6.3a: Rate tests using phylogenetic independent contrasts
+
+In particular, Garland (1992) suggests using a t-test, as long as the absolute value of independent contrasts are approximately normally distributed. However, under a Brownian motion model, the contrasts themselves – but not the absolute values of the contrasts – should be approximately normal, so it is quite likely that absolute values of contrasts will strongly violate the assumptions of a t-test.
+
+A t-test is not significant (Welch two-sample t-test P = 0.42), but we also can see that the distribution of PIC absolute values is strongly skewed (Figure 6.2C).
+
+Alternatively, we can again follow Garland’s (1992) suggestion and use a Mann-Whitney U-test, the nonparametric equivalent of a t-test, on the absolute values of the contrasts.
+
+
 
 https://rdrr.io/cran/ape/man/pic.html
 pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
