@@ -14,6 +14,7 @@ Last Update: 2020-01
 - [castor](#castor)
 - [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
+- [pcm](#pcm) phylogenetic comparative methods
 - [pic](#pic) Phylogenetically Independent Contrasts
 - [updates](#updates)
 - [treeio](#treeio)
@@ -183,13 +184,13 @@ https://www.r-phylo.org/wiki/HowTo/Ancestral_State_Reconstruction
 HowTo/Ancestral State Reconstruction - Comparative Phylogenetics in R
 This page was last edited on 23 May 2014, at 15:48.
 
-
 ----------
-## pic
-Phylogenetically independent contrasts
+## pcm
+phylogenetic comparative methods
 
-https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts
-
+https://twitter.com/vsbuffalo/status/1216475530066743296
+Vince Buffalo on Twitter: "A question for comparative methods folks: when we think about patterns across extremely broad taxonomical groups, such as the body length and generation time (Bonner 1983) and body size and pop density (Damuth 1987), does it make sense to correct for phylogeny? https://t.co/0Ggr9uEAJA" / Twitter
+6:42 AM · Jan 13, 2020
 
 https://lukejharmon.github.io/pcm/pdf/phylogeneticComparativeMethods.pdf
 
@@ -205,7 +206,23 @@ A t-test is not significant (Welch two-sample t-test P = 0.42), but we also 
 
 Alternatively, we can again follow Garland’s (1992) suggestion and use a Mann-Whitney U-test, the nonparametric equivalent of a t-test, on the absolute values of the contrasts.
 
+統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
+FIG.2.データ点が独立 FIG.3. データ点が非独立
+https://www.jstor.org/stable/2461605
+Joseph Felsenstein (1985)
+Phylogenies and the Comparative Method
 
+https://twitter.com/JunShimizu/status/1204217634662731776
+Junichi Shimizu / 清水準一 on Twitter: "気をつけたい。　関西学院大学の清水先生のブログ「都道府県単位の分析、国単位の分析は、いろいろ罠があるので気をつけようね、というお話でした。」 納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up! https://t.co/JvGfvTWF2Y" / Twitter
+10:53 AM · Dec 10, 2019
+http://norimune.net/3313
+納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up!
+
+----------
+## pic
+Phylogenetically independent contrasts
+
+https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts
 
 https://rdrr.io/cran/ape/man/pic.html
 pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
@@ -250,7 +267,6 @@ HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
 https://informatics.nescent.org/wiki/R_Hackathon_1/Phylogenetic_Independent_Contrasts
 R Hackathon 1/Phylogenetic Independent Contrasts - Phyloinformatics
 
-
 https://www.ncbi.nlm.nih.gov/pubmed/15728743
 Nucleic Acids Res. 2005 Feb 23;33(4):1141-53. Print 2005.
 Variation in the strength of selected codon usage bias among bacteria.
@@ -259,18 +275,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC549432/
 Variation in the strength of selected codon usage bias among bacteria
 - Phylogeny-independent correlations among species characters were estimated using the generalized least squares approach implemented in Continuous (39).
 - The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
-
-統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
-FIG.2.データ点が独立 FIG.3. データ点が非独立
-https://www.jstor.org/stable/2461605
-Joseph Felsenstein (1985)
-Phylogenies and the Comparative Method
-
-https://twitter.com/JunShimizu/status/1204217634662731776
-Junichi Shimizu / 清水準一 on Twitter: "気をつけたい。　関西学院大学の清水先生のブログ「都道府県単位の分析、国単位の分析は、いろいろ罠があるので気をつけようね、というお話でした。」 納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up! https://t.co/JvGfvTWF2Y" / Twitter
-10:53 AM · Dec 10, 2019
-http://norimune.net/3313
-納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up!
 
 ----------
 ## updates
