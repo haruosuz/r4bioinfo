@@ -7,8 +7,6 @@ Last Update: 2020-01-04
 
 ## Table of Contents
 - [updates](#updates)
-  - [2018-02](#2018-02)
-  - [2018-01](#2018-01)
   - [2018-01-04](#2018-01-04)
 - [QTL](#qtl)
 - [stock](#stock)
@@ -23,7 +21,116 @@ Last Update: 2020-01-04
 - [git](#git)
 - [kohske](#kohske)
 - [kazutan](#kazutan)
+- [tidylog](#tidylog)
+- [purrr](#purrr)
 - [](#)
+
+----------
+## require-library
+
+http://justdoit.hatenablog.jp/entry/2015/01/11/231208
+R関連(1) requireとlibraryの違い -パッケージのインポート
+
+2012-09-29
+https://blog.recyclebin.jp/archives/2879
+R のスクリプトでパッケージをロードするときは require を使う
+
+----------
+
+
+https://id.fnshr.info/2017/01/09/tidy-data-intro/
+整然データとは何か｜Colorless Green Ideas
+
+
+https://heavywatal.github.io/rstats/config.html
+R環境設定 - Heavy Watal
+- .Renviron
+R起動時に読み込まれ、環境変数を設定するファイル。 Rスクリプトではなく、シェルスクリプトっぽい代入式で書く。 例 (https://github.com/heavywatal/dotfiles/blob/master/.R/.Renviron):
+- .Rprofile
+R起動時に読み込まれるファイル。 中身はRスクリプトなので、パッケージの読み込みや関数の定義など、Rでできることは何でもできるはず。 例: https://github.com/heavywatal/dotfiles/blob/master/.R/.Rprofile
+
+----------
+## purrr
+
+
+https://github.com/haruosuz/books/tree/master/r4ds
+
+https://r4ds.had.co.nz/iteration.html
+21 Iteration | R for Data Science
+
+https://www.oreilly.co.jp/books/9784873118147/#toc
+17章　purrrでイテレーション
+
+2019年09月18日に更新
+https://qiita.com/kilometer/items/b4977df268d2c21211fc
+{purrr} mapを導入しよう。 - Qiita
+
+2019-01-31
+https://www.medi-08-data-06.work/entry/how_to_use_purrr1901
+モダンな繰り返し処理purrrの使い方 - 医療職からデータサイエンティストへ
+
+https://heavywatal.github.io/rstats/purrr.html
+purrr: ループ処理やapply系関数の決定版 - Heavy Watal
+
+https://stats.biopapyrus.jp/r/basic/apply.html
+applyファミリー | R で同じ処理を”並列的”に実行する関数
+
+
+----------
+## tidylog
+
+https://github.com/elbersb/tidylog
+library("tidylog", warn.conflicts = FALSE)
+
+
+https://twitter.com/elbersb/status/1214553592700555266
+Tidylog 1.0.0 has just arrived on CRAN 🎉
+
+Tidylog provides feedback for dplyr and tidyr commands, and now includes all common data-wrangling functions!
+
+blog: http://elbersb.com/public/posts/tidylog100/
+github: http://github.com/elbersb/tidylog
+
+https://twitter.com/Shuntarooo3/status/1214878443193520128
+Chuntaro@生物統計家 on Twitter: "Tidylog 少し使ってみましたが，これはすごい‼️ RってerrorもしくはWarning以外のlogが出ないから，いちいち作成したデータを確認しないといけないけど（しなかったら後で痛い目をみる）， このpackageはtidy familyを実行するたびに，簡単なsummaryが出力される😻 全R民は使うべき🌏🌍🌎 https://t.co/VOixlt0KSU" / Twitter
+8:56 PM · Jan 8, 2020
+
+2019年03月15日
+https://qiita.com/ando_roid/items/ae59cb8a17d3d28b9daa
+tidylog::でどんどんドーナツ、ドーンと行こう - Qiita
+
+
+
+----------
+
+http://goldenstate.cocolog-nifty.com/blog/2015/02/r-7f2e.html
+［R］コマンドの実行時間を計る: Golden State
+
+ system.time
+
+表示される時間の単位は秒（secs）。精度は1/100秒（10ミリ秒）。表示されるそれぞれの時間については以下のとおり。
+
+ユーザ：記述をしたコマンドの処理時間
+システム：システム(OSなど)に依る処理時間
+経過：コマンドの起動から終了までに要した時間
+
+
+----------
+## cor use
+
+https://shohei-doi.github.io/notes/posts/2019-04-12-missing-values/
+欠損値の扱い方
+Rにおける欠損値の扱い方についてまとめました。
+
+http://keita43a.hatenablog.com/entry/2018/04/10/034230
+RでデータにNAがある時の相関係数 - Untitled Note
+
+欠損値の扱い方
+https://www.rdocumentation.org/packages/stats/versions/3.6.1/topics/cor
+use
+an optional character string giving a method for computing covariances in the presence of missing values. This must be (an abbreviation of) one of the strings "everything", "all.obs", "complete.obs", "na.or.complete", or "pairwise.complete.obs".
+
+
 
 ----------
 
@@ -93,51 +200,6 @@ R Markdown入門
 https://kazutan.github.io/HijiyamaR5/rmd_intro.html#/
 R Markdown入門
 Hijiyama.R #5
-
-----------
-## require-library
-
-http://justdoit.hatenablog.jp/entry/2015/01/11/231208
-R関連(1) requireとlibraryの違い -パッケージのインポート
-
-2012-09-29
-https://blog.recyclebin.jp/archives/2879
-R のスクリプトでパッケージをロードするときは require を使う
-
-
-
-----------
-
-- https://business.nikkeibp.co.jp/atcl/report/16/122700258/010900004/
-統計言語 「R」の神はなぜ無償で貢献したのか：日経ビジネスオンライン
-
-
-
-https://twitter.com/yutakashino/status/1033359517398925312
-Yuta Kashino on Twitter: "価格が高いですけれど，確実に内容にその価値がありますし，邦訳は悪くありません．あと，何度か紹介していますが，この本についてビデオ講義があります．https://t.co/2b3rp8NfwE はい，学習環境も整備されてますので，今はこのくらいの知識が最低限必要となってます．… https://t.co/fz1yB5Eb7b"
-10:24 AM - 25 Aug 2018
-
-
-https://twitter.com/yishii_0207/status/1012957517369036800
-Yutaka Ishii (石井雄隆) on Twitter: "Rはいいぞ！むしろなぜ使わないのか！！ https://t.co/yNdbHYoGjV 統計解析の再現可能性を高める取り組み https://t.co/bc3RENuOyi ggplot2用例集　入門編 https://t.co/kDJrHbyf4h #bayesWS3rd"
-3:14 AM - 30 Jun 2018
-
-
-
-
-----------
-
-
-https://id.fnshr.info/2017/01/09/tidy-data-intro/
-整然データとは何か｜Colorless Green Ideas
-
-
-https://heavywatal.github.io/rstats/config.html
-R環境設定 - Heavy Watal
-- .Renviron
-R起動時に読み込まれ、環境変数を設定するファイル。 Rスクリプトではなく、シェルスクリプトっぽい代入式で書く。 例 (https://github.com/heavywatal/dotfiles/blob/master/.R/.Renviron):
-- .Rprofile
-R起動時に読み込まれるファイル。 中身はRスクリプトなので、パッケージの読み込みや関数の定義など、Rでできることは何でもできるはず。 例: https://github.com/heavywatal/dotfiles/blob/master/.R/.Rprofile
 
 
 
@@ -260,133 +322,6 @@ http://sudillap.hatenablog.com/entry/2013/03/26/210202
 Rの基本グラフィックス機能またはggplot2を使って地図を描くには - verum ipsum factum
 
 *いまここ*
-
-
-
-----------
-
-## updates
-
-https://twitter.com/Rbloggers
-
-
-
-### 2019
-
-https://twitter.com/Rbloggers/status/1122843202241945604
-R-bloggers on Twitter: "How to perform merges (joins) on two or more data frames with base R, tidyverse and data.table https://t.co/s6CeaA8Hc0 #rstats #DataScience"
-8:40 AM - 29 Apr 2019
-
-October 27, 2018
-https://www.r-bloggers.com/how-to-perform-merges-joins-on-two-or-more-data-frames-with-base-r-tidyverse-and-data-table-2/
-How to perform merges (joins) on two or more data frames with base R, tidyverse and data.table | R-bloggers
-
-### 2018
-
-https://kosugitti.github.io/kosugitti10/2018/12/04/2018m1judges/
-『M-1グランプリ』上沼恵美子さんの採点は本当に偏っていたのかを検証する · Kosugitti Labo ver.10
-
-----------
-
-### 2018-07
-
-[2018-07-16 追記] 
-https://oku.edu.mie-u.ac.jp/~okumura/stat/150809.html
-猛暑日の増加
-
-https://twitter.com/RLangTip
-One R Tip a Day (@RLangTip) | Twitter
-
-https://twitter.com/RLangTip/status/1014539336308715520
-
-Draw a map of the United States with R: 
-
-	library(maps)
-	map('usa') 
-
-
-### 2018-06
-
-https://twitter.com/Atsushi776/status/1007093278951530496
-Atsushi (Atusy) on Twitter: "iris %>% select(-Species) と 同じことが iris %>% mutate(Species = NULL) でもできるのは覚えておくと便利かも？"
-10:52 PM - 13 Jun 2018
-
-    library(tidyverse)
-	iris %>% select(-Species)
-	iris %>% mutate(Species = NULL)
-
-http://togotv.dbcls.jp/ja/20180408.html
-2018-04-08 統計解析ソフト「R」の使い方 〜Rの導入・パッケージの導入・作図・統計解析の基本編〜
-
-http://togotv.dbcls.jp/ja/20180125.html
-2018-01-25 RStudioを使って階層的クラスタリングを行う 2018
-
-----------
-
-### 2018-05-13
-
-https://tomizonor.wordpress.com/2018/05/13/tips-for-ellipse-summary-plot/
-Tips for Ellipse Summary Plot | R-bloggers
-
-    install.packages("elliplot")
-    library(elliplot)
-	# 1. How to specify size
-	ellipseplot(iris[,c("Species", "Sepal.Length")], iris[,c("Species", "Sepal.Width")], xlim=c(4,8), ylim=c(2,5))
-
-----------
-January 24, 2018
-https://www.r-bloggers.com/dec-2017-top-40-new-package-picks/
-Dec 2017: "Top 40" New Package Picks | R-bloggers
-
-theseus v0.1.0: Provides analysis and visualization tools for the interpretation of microbial community composition data, especially those originating from amplicon sequencing. The vignette describes how to use the package.
-
-
-----------
-
-### 2018-01-07
-
-January 7, 2018
-https://www.r-bloggers.com/anscombes-quartet-1980s-edition/
-Anscombe's Quartet: 1980's Edition | R-bloggers
-
-    #install.packages("showtext")
-	library(showtext)
-	font.add.google("Press Start 2P", "start2p")
-    png("Anscombe_80s.png", width=11,height=8, units='in', res=600)
-    showtext_begin()
-	#snip#
-    showtext_end()
-
-	dev.off()
-
-https://ja.wikipedia.org/wiki/アンスコムの例
-
-26 Apr 2015
-https://twitter.com/leeswijzer/status/592302113725755393
-MINAKA Nobuhiro on Twitter: "@leeswijzer この論文の「記述統計量を計算する前に生データを見よ」というメッセージは，有名な〈Anscombe’s quartet〉 http://t.co/A5oiHZt9Dj [Wikipedia] を連想させる．"
-
-22 Apr 2015
-https://twitter.com/neubig/status/591079565939748864
-Graham Neubig on Twitter: "「データを表示する時に、棒グラフと線グラフで平均を見せる代わりに、散布図で各データ点を見せましょう」という論文： http://t.co/T1d5aPZ9k8 。確かに紙面の大きさが同じでも、散布図でデータの分布がよく分かる。 http://t.co/YLOPbXiwBC"
-
-https://www.ncbi.nlm.nih.gov/pubmed/25901488
-PLoS Biol. 2015 Apr 22;13(4):e1002128. doi: 10.1371/journal.pbio.1002128. eCollection 2015 Apr.
-Beyond bar and line graphs: time for a new data presentation paradigm.
-
-http://d.hatena.ne.jp/hoxo_m/20120214/p1
-統計を学びたい人へ贈る、統計解析に使えるデータセットまとめ - ほくそ笑む
-
-	example(anscombe)
-
-2012年1月25日
-http://id.fnshr.info/2012/01/25/whycharts/
-統計分析におけるグラフの有用性｜Colorless Green Ideas
-- Anscombe, F. J. (1973). Graphs in Statistical Analysis. American Statistician, 27(1), 17–21.
-
-April 9, 2007
-http://jcb.rupress.org/content/177/1/7
-Error bars in experimental biology | JCB
-実験生物学におけるエラーバー（SD, SE, CI）の考え方 
 
 ----------
 
