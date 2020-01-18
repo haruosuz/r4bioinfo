@@ -63,7 +63,7 @@ http://mikuhatsune.hatenadiary.com/entry/20181128/1543404937
 ## 2018-07-25
 Rによる統計的学習入門
 
-![](http://www.asakura.co.jp/goods_img/113751.jpg)
+<img src="http://www.asakura.co.jp/goods_img/113751.jpg" width=25%>
 
 https://twitter.com/search?q=Ｒによる統計的学習入門
 
