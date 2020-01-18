@@ -19,6 +19,8 @@ Last Update: 2020-01
 https://qiita.com/A_KI/items/10887763b75a90404ef8
 Rのデータサイエンス書籍相関図(R初学者用)をつくってみた。 - Qiita
 
+![](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F207725%2Fade365a3-3682-9a87-d1ac-10ca81d80775.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&w=1400&fit=max&s=ebc7b2387201f9ff3c542c522eae5772)
+
 ----------
 published by O’Reilly in July 2014.
 
