@@ -5,7 +5,6 @@ Last Update: 2020-01
 # R books
 
 ## Table of Contents
-- [2019-03-12](#2019-03-12) Rをはじめよう生命科学のためのRStudio入門
 - [2018-10-11](#2018-10-11) 自然科学研究のためのR入門 (Wonderful R 4)
 - [2018-07-25](#2018-07-25) Rによる統計的学習入門
 - [2018-06-29](#2018-06-29) RユーザのためのRStudio［実践］入門
@@ -34,17 +33,6 @@ Garrett Grolemund on Twitter: "Hands-On Programming with R is now available for 
 
 https://twitter.com/niszet0/status/1053527927126519808
 Rガチ初心者はオライリーさんの「RStudioではじめるRプログラミング入門」が一番簡単ですが、これの原著がwebで公開されたので、英語に抵抗がなければこれを見ると良いのです…
-
-----------
-## 2019-03-12
-
-https://www.yodosha.co.jp/yodobook/book/9784758120951/
-Rをはじめよう生命科学のためのRStudio入門 - 羊土社
-
-訳者からの序 索引 目次詳細 正誤表・更新情報（2019.03.19）
-
-http://r4all.org/books/
-Getting Started with R
 
 ----------
 ## 2018-10-11
