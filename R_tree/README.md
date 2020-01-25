@@ -193,6 +193,8 @@ Vince Buffalo on Twitter: "A question for comparative methods folks: when we thi
 6:42 AM · Jan 13, 2020
 
 https://lukejharmon.github.io/pcm/pdf/phylogeneticComparativeMethods.pdf
+Phylogenetic Comparative Methods
+Luke J. Harmon 2019-3-15
 
 https://lukejharmon.github.io/pcm/chapter6_beyondbm/
 Beyond Brownian motion · Phylogenetic Comparative Methods
@@ -205,6 +207,16 @@ In particular, Garland (1992) suggests using a t-test, as long as the absolute v
 A t-test is not significant (Welch two-sample t-test P = 0.42), but we also can see that the distribution of PIC absolute values is strongly skewed (Figure 6.2C).
 
 Alternatively, we can again follow Garland’s (1992) suggestion and use a Mann-Whitney U-test, the nonparametric equivalent of a t-test, on the absolute values of the contrasts.
+
+https://ja.wikipedia.org/wiki/T検定
+標本が独立で、等分散性が仮定できない（異分散）場合。これは正確にはウェルチのt検定と呼ばれる。
+t検定は母集団の正規分布を前提とするパラメトリック検定であるが、この条件が満たされず、さらに標本サイズが小さいと、t検定で近似することも困難となる。そういった場合にはノンパラメトリック検定を用いる方法がある。
+標本が独立ならばマン・ホイットニーのU検定など
+
+https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
+ベイジアン MCMC による生物間系統関係の推定法 田辺 晶史
+そもそも、これまでに「系統的に独立した生物」は確認 されていない。そのため、統計解析上の最も重要な仮定の一つである「サンプル間の独立 性」が生物では成立し得ないことは明白である。ここで、仮に 100 種のトカゲの体色を考 えてみる。草原と砂漠にそれぞれ 50 種生息し、草原に生息する種は緑色と褐色がそれぞ れ 40 種と 10 種、砂漠に生息する種は緑色と褐色がそれぞれ 20 種と 30 種だったとしよ う (表 3)。では、生息環境と体色に関連性はあるだろうか。系統関係を考慮しない研究者
+はサンプル間の非独立性には気付かず、Fisher の正確確率検定を用いてしまうかもしれな い。すると、p = 0.00008039 となり、生息環境と体色に関連性を見いだすことになるだ ろう。しかし、仮に表 3 のマス目の各種群が単系統であったならどうだろう。数えるべき は種数ではなく単系統群の数であり、各マス目の数値は 1 ということになる。以上のよう に、系統関係を考慮するかしないかで結論が大きく変化し得ることがわかるだろう。そこ で、系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を 解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。これが系統樹の第 2 の用途である。
 
 統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
 FIG.2.データ点が独立 FIG.3. データ点が非独立
@@ -279,6 +291,15 @@ Variation in the strength of selected codon usage bias among bacteria
 ----------
 ## updates
 
+## 2020
+https://twitter.com/kfuku0502/status/1217791088347570176
+Kenji Fukushima on Twitter: "MCMCTreeの前処理＆後処理Rパッケージ。プロットがいいね。https://t.co/2XJnpXBBBh https://t.co/XABV0wGsIT" / Twitter
+9:49 PM · Jan 16, 2020
+https://www.ncbi.nlm.nih.gov/pubmed/31292621
+Bioinformatics. 2019 Dec 15;35(24):5321-5322. doi: 10.1093/bioinformatics/btz554.
+MCMCtreeR: functions to prepare MCMCtree analyses and visualize posterior ages on trees.
+Puttick MN1.
+https://CRAN.R-project.org/package=MCMCtreeR
 
 ## 2019
 
