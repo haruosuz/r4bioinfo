@@ -8,7 +8,12 @@
 - [bioconductor](#bioconductor)
 - [Biostrings](#biostrings)
 - [enrichment](#enrichment)
+- [codon](#codon)
 - [gggenes](#gggenes)
+- [genBaRcode](#genBaRcode)
+- [people](#people)
+  - [ushio](#ushio)
+- [](#)
 
 ----------
 ## featuring
@@ -17,7 +22,6 @@ https://www.r-exercises.com/tag/bioinformatics/
 R-exercises – bioinformatics
 - https://www.r-exercises.com/2017/06/18/manipulate-biological-data-using-biostrings-package-exercisespart-4/
 - https://www.r-exercises.com/2017/06/18/manipulate-biological-data-using-biostrings-package-solutionspart-4/
-- 
 - 
 - 
 - 
@@ -61,6 +65,17 @@ Tips for NGS Data Analysis
 ----------
 ## updates
 
+## 2020
+
+23 January 2020
+https://doi.org/10.1093/bioinformatics/btaa043
+Transfer index, NetUniFrac and some useful shortest path-based distances for community analysis in sequence similarity networks
+Henry Xing, Steven W Kembel, Vladimir Makarenkov
+Our NetFrac program, implemented in R and C, along with its source code, is freely available on Github at the following URL address: https://github.com/XPHenry/Netfrac.
+
+08 January 2020
+https://onlinelibrary.wiley.com/doi/10.1002/ece3.5970
+A checklist for choosing between R packages in ecology and evolution - Lortie - - Ecology and Evolution
 
 ## 2019
 
@@ -116,11 +131,13 @@ hilldiv: an R package for the integral analysis of diversity based on Hill numbe
 , microbial community profiling or
 https://github.com/anttonalberdi/hilldiv
 
+https://twitter.com/lobrowR/status/1157870107303055362
+Nathan Brouwer on Twitter: "I've compiled a short list of #rstats -based #bioinformatics and computational biology books and tutorials. (THREAD) 1/n"
+1:25 PM · Aug 4, 2019
 
 https://www.ncbi.nlm.nih.gov/pubmed/31324268
 BMC Res Notes. 2019 Jul 19;12(1):441. doi: 10.1186/s13104-019-4473-z.
 RepViz: a replicate-driven R tool for visualizing genomic regions.
-Faux T1, Rytkönen KT2,3, Laiho A2, Elo LL4.
 With ChIP-seq and ATAC-seq data 
 https://www.bioconductor.org/packages/devel/bioc/html/RepViz.html
 https://github.com/elolab/RepViz
@@ -135,6 +152,9 @@ read quality control, read mapping, training set generation, random forest-based
 
 ## 2018
 
+https://www.ncbi.nlm.nih.gov/pubmed/29790906
+Bioinformatics. 2018 Oct 15;34(20):3581-3583. doi: 10.1093/bioinformatics/bty402.
+bcSeq: an R package for fast sequence mapping in high-throughput shRNA and CRISPR screens.
 
 https://twitter.com/strnr/status/1030176659322888192
 Stephen Turner on Twitter: "FastqCleaner: an interactive Bioconductor application for quality-control, filtering and trimming of FASTQ files https://t.co/WcPUarN6ho"
@@ -302,6 +322,57 @@ dritoshien
 http://catway.jp/bioinformatics/etc/biostrings.html
 DNA配列をRで操作する | Tips for NGS Data Analysis
 
+----------
+## codon
+https://github.com/haruosuz/codon
+
+http://rpubs.com/dbg
+Daniel Bryan Goodman
+- http://rpubs.com/dbg/3350
+Step 07 - Looking at Codon and tRNA Adaptation Indices
+- http://rpubs.com/dbg/3351
+Step 10 - Looking at amino acid and codon usage
+
+### vhica
+
+https://cran.r-project.org/package=vhica
+vhica: Vertical and Horizontal Inheritance Consistence Analysis
+The "Vertical and Horizontal Inheritance Consistence Analysis" method is described in the following publication: "VHICA: a new method to discriminate between vertical and horizontal transposon transfer: application to the mariner family within Drosophila" by G. Wallau. et al. (2016) <doi:10.1093/molbev/msv341>. The purpose of the method is to detect horizontal transfers of transposable elements, by contrasting the divergence of transposable element sequences with that of regular genes.
+Published:	2016-04-05
+https://cran.r-project.org/web/packages/vhica/vhica.pdf
+April 5, 2016
+
+CUB Computes the Codon Usage Bias of DNA sequences
+Description
+The function reads aligned sequences in a fasta file and estimates the codon usage bias for each sequence. Several methods exist to estimate CUB; so far, only the "Effective Number of Codons" (ENC) calculation is available.
+
+https://rdrr.io/cran/vhica/man/CUB.html
+https://www.rdocumentation.org/packages/vhica/versions/0.2.4/topics/CUB
+
+### coRdon
+
+https://bioconductor.org/packages/3.8/bioc/html/coRdon.html
+Elek A, Kuzman M, Vlahovicek K (2019). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. R package version 1.0.3, https://github.com/BioinfoHR/coRdon.
+
+https://github.com/haruosuz/r4bioinfo/tree/master/R_coRdon
+A, Kuzman M, Vlahovicek K (2019). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. 
+
+### sscu
+
+22 Aug 2018
+https://arxiv.org/abs/1808.07259
+[1808.07259] SSCU: an R/Bioconductor package for analyzing selective profile in synonymous codon usage
+
+
+https://bioconductor.org/packages/release/bioc/html/sscu.html
+
+```
+library(sscu)
+s_index
+```
+
+https://bioconductor.org/packages/devel/bioc/manuals/sscu/man/sscu.pdf
+October 30, 2019
 
 ----------
 ## gggenes
@@ -344,6 +415,11 @@ https://twitter.com/search?q=gggenes
 ----------
 
 ## enrichment
+
+https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa001/5715574
+GSOAP: A tool for visualisation of gene set over-representation analysis | Bioinformatics | Oxford Academic
+Gene sets over-representation analysis (GSOA)
+https://github.com/tomastokar/gsoap.
 
 https://www.ncbi.nlm.nih.gov/pubmed/31498385
 Bioinformatics. 2019 Sep 9. pii: btz700. doi: 10.1093/bioinformatics/btz700. [Epub ahead of print]
@@ -427,7 +503,65 @@ http://www.nibb.ac.jp/training/2009/nakai/R_GO_2.7.2.html
 RでGO!
 topGO（工事中）
 
+
 ----------
+## genBaRcode
+
+https://cran.r-project.org/package=genBaRcode
+genBaRcode: Analysis and Visualization Tools for Genetic Barcode Data
+Provides the necessary functions to identify and extract a selection of already available barcode constructs (Cornils, K. et al. (2014) <doi:10.1093/nar/gku081>) and freely choosable barcode designs from next generation sequence (NGS) data. Furthermore, it offers the possibility to account for sequence errors, the calculation of barcode similarities and provides a variety of visualisation tools (Thielecke, L. et al. (2017) <doi:10.1038/srep43249>).
+```
+Published:	2019-10-25
+Vignettes:
+Introduction to the genBaRcode GUI
+Introduction to genBaRcode
+```
+
+29 November 2019
+https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btz872/5646645
+genBaRcode: a comprehensive R-package for genetic barcode analysis | Bioinformatics | Oxford Academic
+
+----------
+## people
+### ushio
+
+http://www.ecology.kyoto-u.ac.jp/~ushio/
+Masayuki Ushio's Website
+潮 雅之
+
+2019年12月19日木曜日
+https://ushio-ecology-blog.blogspot.com/2019/12/20191220blogger0006.html
+Ushio's blog: rEDM を用いた Empirical Dynamic Modeling: (3) 近未来予測 (S-map)
+
+2019年12月11日水曜日
+https://ushio-ecology-blog.blogspot.com/2019/12/20191211blogger0005.html
+Ushio's blog: rEDM を用いた Empirical Dynamic Modeling: (2) 近未来予測 (Simplex projection)
+
+2019年12月5日木曜日
+https://ushio-ecology-blog.blogspot.com/2019/12/20191205blogger0004.html
+Ushio's blog: rEDM を用いた Empirical Dynamic Modeling: (1) 動態の再構成
+
+2019年11月30日土曜日
+https://ushio-ecology-blog.blogspot.com/2019/11/20191129blogger0002_30.html
+Ushio's blog: DADA2 と Claident を用いた short-read amplicon sequence のデータ解析
+
+
+https://ushio-ecology-blog.blogspot.com/2019/11/%28http://www.earthmicrobiome.org/protocols-and-standards/16s/
+->
+http://www.earthmicrobiome.org/protocols-and-standards/16s/
+
+
+
+
+----------
+
+
+
+
+
+
+
+
 
 
 
