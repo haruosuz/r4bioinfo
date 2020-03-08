@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2020-01
+Last Update: 2020-03
 
 ----------
 
@@ -9,13 +9,15 @@ Last Update: 2020-01
 ----------
 
 ## Table of Contents
+- [babette](#babette)
+- [BactDating](#BactDating)
 - [DECIPHER](#decipher)
 - [featuring](#featuring)
 - [castor](#castor)
 - [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
-- [pcm](#pcm) phylogenetic comparative methods
 - [pic](#pic) Phylogenetically Independent Contrasts
+- [2019-11-11](#2019-11-11)
 - [updates](#updates)
 - [treeio](#treeio)
 - [perfectphyloR](#perfectphyloR)
@@ -34,6 +36,41 @@ Last Update: 2020-01
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+
+----------
+## babette
+
+https://github.com/ropensci/babette
+ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
+https://github.com/ropensci/babette/blob/master/doc/install.md
+
+https://ropensci.org/blog/2020/01/28/babette/
+Call BEAST2 for Bayesian evolutionary analysis from R
+
+https://methodsblog.com/2018/06/25/babette-beast2/
+The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
+
+27 May 2018
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
+babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+
+----------
+## BactDating
+https://github.com/xavierdidelot/BactDating
+
+細菌の系統樹における分岐年代のベイズ推定
+
+https://twitter.com/XavierDidelot/status/1039083946913529856
+BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
+Dating of PMEN1, before and after accounting for recombination
+5:31 AM - 10 Sep 2018
+https://www.ncbi.nlm.nih.gov/pubmed/30184106
+Nucleic Acids Res. 2018 Dec 14;46(22):e134. doi: 10.1093/nar/gky783.
+Bayesian inference of ancestral dates on bacterial phylogenetic trees.
+Didelot X1, Croucher NJ1, Bentley SD2, Harris SR2, Wilson DJ3.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6294524/
+- Figure 6.
+Dating of Streptococcus pneumoniae PMEN1 before and after correcting for recombination. 
 
 ----------
 ## DECIPHER
@@ -97,6 +134,12 @@ We can, additionally, create a simple tangleogram from these two phylogenetic tr
 
 ----------
 ## castor
+
+
+https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa031/5709039
+Simulating trees with millions of species | Bioinformatics | Oxford Academic
+The presented software is incorporated into the R package ‘castor’, which is available on The Comprehensive R Archive Network (CRAN).
+
 
 https://cran.r-project.org/package=castor
 castor: Efficient Phylogenetics on Large Trees
@@ -188,47 +231,7 @@ This page was last edited on 23 May 2014, at 15:48.
 ## pcm
 phylogenetic comparative methods
 
-https://twitter.com/vsbuffalo/status/1216475530066743296
-Vince Buffalo on Twitter: "A question for comparative methods folks: when we think about patterns across extremely broad taxonomical groups, such as the body length and generation time (Bonner 1983) and body size and pop density (Damuth 1987), does it make sense to correct for phylogeny? https://t.co/0Ggr9uEAJA" / Twitter
-6:42 AM · Jan 13, 2020
-
-https://lukejharmon.github.io/pcm/pdf/phylogeneticComparativeMethods.pdf
-Phylogenetic Comparative Methods
-Luke J. Harmon 2019-3-15
-
-https://lukejharmon.github.io/pcm/chapter6_beyondbm/
-Beyond Brownian motion · Phylogenetic Comparative Methods
-https://lukejharmon.github.io/pcm/chapter6_beyondbm/#section-6.3a-rate-tests-using-phylogenetic-independent-contrasts
-
-Section 6.3a: Rate tests using phylogenetic independent contrasts
-
-In particular, Garland (1992) suggests using a t-test, as long as the absolute value of independent contrasts are approximately normally distributed. However, under a Brownian motion model, the contrasts themselves – but not the absolute values of the contrasts – should be approximately normal, so it is quite likely that absolute values of contrasts will strongly violate the assumptions of a t-test.
-
-A t-test is not significant (Welch two-sample t-test P = 0.42), but we also can see that the distribution of PIC absolute values is strongly skewed (Figure 6.2C).
-
-Alternatively, we can again follow Garland’s (1992) suggestion and use a Mann-Whitney U-test, the nonparametric equivalent of a t-test, on the absolute values of the contrasts.
-
-https://ja.wikipedia.org/wiki/T検定
-標本が独立で、等分散性が仮定できない（異分散）場合。これは正確にはウェルチのt検定と呼ばれる。
-t検定は母集団の正規分布を前提とするパラメトリック検定であるが、この条件が満たされず、さらに標本サイズが小さいと、t検定で近似することも困難となる。そういった場合にはノンパラメトリック検定を用いる方法がある。
-標本が独立ならばマン・ホイットニーのU検定など
-
-https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
-ベイジアン MCMC による生物間系統関係の推定法 田辺 晶史
-そもそも、これまでに「系統的に独立した生物」は確認 されていない。そのため、統計解析上の最も重要な仮定の一つである「サンプル間の独立 性」が生物では成立し得ないことは明白である。ここで、仮に 100 種のトカゲの体色を考 えてみる。草原と砂漠にそれぞれ 50 種生息し、草原に生息する種は緑色と褐色がそれぞ れ 40 種と 10 種、砂漠に生息する種は緑色と褐色がそれぞれ 20 種と 30 種だったとしよ う (表 3)。では、生息環境と体色に関連性はあるだろうか。系統関係を考慮しない研究者
-はサンプル間の非独立性には気付かず、Fisher の正確確率検定を用いてしまうかもしれな い。すると、p = 0.00008039 となり、生息環境と体色に関連性を見いだすことになるだ ろう。しかし、仮に表 3 のマス目の各種群が単系統であったならどうだろう。数えるべき は種数ではなく単系統群の数であり、各マス目の数値は 1 ということになる。以上のよう に、系統関係を考慮するかしないかで結論が大きく変化し得ることがわかるだろう。そこ で、系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を 解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。これが系統樹の第 2 の用途である。
-
-統計的独立の問題。種間に系統関係があるならば、統計学的にみてデータ点は独立ではあり得ない。（三中信宏「生物系統学」334ページ）
-FIG.2.データ点が独立 FIG.3. データ点が非独立
-https://www.jstor.org/stable/2461605
-Joseph Felsenstein (1985)
-Phylogenies and the Comparative Method
-
-https://twitter.com/JunShimizu/status/1204217634662731776
-Junichi Shimizu / 清水準一 on Twitter: "気をつけたい。　関西学院大学の清水先生のブログ「都道府県単位の分析、国単位の分析は、いろいろ罠があるので気をつけようね、というお話でした。」 納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up! https://t.co/JvGfvTWF2Y" / Twitter
-10:53 AM · Dec 10, 2019
-http://norimune.net/3313
-納豆と牛肉の「イケナイ」関係：空間的自己相関のモデリング | Sunny side up!
+https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#pcm
 
 ----------
 ## pic
@@ -260,17 +263,6 @@ http://www2.hawaii.edu/~mbutler/Rquickstart/Rcomparative.pdf
 Comparative Methods and Data Analysis in R
 Chapter 2
 
-http://www.jbon.org/wp/wp-content/uploads/2009/04/e8a995e4bea1e4ba88e6b8ac2_ootani.pdf
-系統関係を考慮した解析法
-Phylogenetically independent contrast
-(PIC; Felsenstein 1985)
-- 系統樹の枝先の姉妹群(ペア)の対比，ノードの平均値の対比のみを使う方法
-- 非独立性を過剰評価してしまうことがある
-
-https://www.ikushimo.com/news/2009/03/23.html
-系統的に近い生物は互いに似ているという系統自己相関も存在します。これをちゃんと考慮に入れてやろうというのが、
-「系統的独立比較」(Phylogenetic Independent Contrast)です。
-
 8 August 2008
 https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts
 HowTo/Phylogenetic Independent Contrasts - Comparative Phylogenetics in R
@@ -289,6 +281,64 @@ Variation in the strength of selected codon usage bias among bacteria
 - The strengths of these correlations among rRNA operon numbers, tRNA gene copy numbers and S are overestimated by a simple analysis of the data as presented in Figures 4–6, due to the nonindependence of the data points. The 80 genomes are linked by a phylogenetic tree (Figure 1), and closely related species often share similar numbers of rRNA and tRNA genes, and have similar S-values, which may simply be due to their recent common ancestry. Using an approach to estimate the correlations after removing the effects of shared ancestry (39), the correlation coefficient for rRNA and tRNA gene copy numbers is 0.82, while the correlations between S and rRNA and tRNA gene copy numbers are 0.49 and 0.44, respectively (all values are highly statistically significant). 
 
 ----------
+
+## 2019-11-11
+
+https://www.ncbi.nlm.nih.gov/pubmed/31712737
+ISME J. 2020 Feb;14(2):597-608. doi: 10.1038/s41396-019-0552-3. Epub 2019 Nov 11.
+Unlinked rRNA genes are widespread among bacteria and archaea.
+Brewer TE1,2, Albertsen M3, Edwards A4, Kirkegaard RH3, Rocha EPC5, Fierer N6,7.
+https://www.nature.com/articles/s41396-019-0552-3
+With this set of reduced genomes (3967 genomes in total), we first calculated Pagel’s lambda [30] to determine
+whether there was a phylogenetic signal associated with unlinked rRNA genes using the phylosig function of the phytools package version 0.6.60 [31]. The results of this test indicated that there was a strong phylogenetic signal (lambda = 0.96, p < 0.0001), so we controlled for phylogeny in all of our subsequent tests by using a Phylogenetic Generalized Linear Model for continuous variables (with the function phyloglm in the phylolm package version 2.6 [32]).
+
+#### phylosig {phytools}
+
+```
+library(phytools)
+?phylosig
+# Compute phylogenetic signal with two methods
+```
+
+Jamie Winternitz, Sept 2016
+https://static1.squarespace.com/static/5459da8ae4b042d9849b7a7b/t/57ea64eae58c62718aa34769/1474979059782/Nesin_Winternitz_Practical_1and2.pdf
+Introduction to the phylogenetic (comparative) method
+
+We’ll use phylosig from phytools to see if lambda is significantly different from 0. 
+
+https://lukejharmon.github.io/ilhabela/instruction/2015/06/02/ContinuousModels/
+Models of continuous character evolution – Comparative methods in R - Ilhabela
+
+A significant p-value returned from phylosignal tells you that there is significant phylogenetic signal - that is, close relatives are more similar than random pairs of species.
+
+Another method for testing phylogenetic signal is Pagel’s lambda. Lambda is a
+
+http://rfunctions.blogspot.com/2014/02/measuring-phylogenetic-signal-in-r.html
+Measuring Phylogenetic Signal in R (Moran, Abouheif, Pagel and Blomberg)
+The content of this post has been moved to: https://clubedaciencia.com.br/measuring-phylogenetic-signal-in-r/
+
+#### phyloglm {phylolm}
+```
+install.packages("phylolm")
+library(phylolm)
+?phyloglm
+# Phylogenetic Generalized Linear Model
+```
+
+https://cran.r-project.org/package=phylolm
+phylolm: Phylogenetic Linear Regression
+Provides functions for fitting phylogenetic linear models and phylogenetic generalized linear models. The computation uses an algorithm that is linear in the number of tips in the tree. The package also provides functions for simulating continuous or binary traits along the tree. Other tools include functions to test the adequacy of a population tree.
+Published:	2018-05-31
+
+2019-12-06
+https://cran.r-project.org/web/packages/phylopath/vignettes/intro_to_phylopath.html
+Introduction to phylogenetic path analysis with phylopath
+
+You can either use "logistic_MPLE" (the default) or "logistic_IG10" (also see ?phylolm::phyloglm).
+
+Other settings of phylolm and phyloglm, such as constraints on the phylogenetic parameter, can be set easily by passing those to phylo_path, and will be respected in downstream functions.
+
+----------
 ## updates
 
 ## 2020
@@ -303,7 +353,6 @@ https://CRAN.R-project.org/package=MCMCtreeR
 
 ## 2019
 
-
 https://twitter.com/kfuku0502/status/1080489725612486662
 Kenji Fukushima on Twitter: "Wrote an R script for divergence time estimation of a gene tree based on phylogeny reconciliation with a dated species tree. Posted code to GitHub. https://t.co/6uddGB2nAT https://t.co/xeZLfzg3he" / Twitter
 12:43 AM · Jan 3, 2019
@@ -313,33 +362,14 @@ Reconciliation-Assisted Divergence Time Estimation (RADTE)
 
 ## 2018
 
-https://twitter.com/XavierDidelot/status/1039083946913529856
-BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
-Dating of PMEN1, before and after accounting for recombination
-5:31 AM - 10 Sep 2018
-https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky783/5089898
-Bayesian inference of ancestral dates on bacterial phylogenetic trees | Nucleic Acids Research | Oxford Academic
-Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
-
 
 https://www.ncbi.nlm.nih.gov/pubmed/29874797
 Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
 phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
 Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
-- two large taxonomic clades: Palms and primates.
+two large taxonomic clades: Palms and primates.
+霊長類
 
-
-First published: 27 May 2018
-https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
-babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
-
-https://github.com/ropensci/babette
-ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
-https://github.com/ropensci/babette/blob/master/doc/install.md
-
-
-https://methodsblog.com/2018/06/25/babette-beast2/
-The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
 
 
 February 9, 2018
@@ -377,6 +407,9 @@ http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較�
 
 ----------
 ## treeio
+
+https://twitter.com/kfuku0502/status/1224428158440611840
+Kenji Fukushima on Twitter: "お、treeioのパッケージ論文が出ている。ggtreeを使うときと、Rにnhx形式の系統樹を読み込ませるときにお世話になっています。 https://t.co/0jvBTzffVx" / Twitter
 
 https://www.ncbi.nlm.nih.gov/pubmed/31633786
 Mol Biol Evol. 2019 Oct 21. pii: msz240. doi: 10.1093/molbev/msz240. [Epub ahead of print]
