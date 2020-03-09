@@ -10,14 +10,14 @@ Last Update: 2020-03
 
 ## Table of Contents
 - [babette](#babette)
-- [BactDating](#BactDating)
+- [BactDating](#bactdating) 細菌の系統樹で分岐年代のベイズ推定
 - [DECIPHER](#decipher)
 - [featuring](#featuring)
 - [castor](#castor)
 - [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
 - [pic](#pic) Phylogenetically Independent Contrasts
-- [2019-11-11](#2019-11-11)
+- [2019-11-11](#2019-11-11) Unlinked rRNA genes | phylosig {phytools} | phyloglm {phylolm}
 - [updates](#updates)
 - [treeio](#treeio)
 - [perfectphyloR](#perfectphyloR)
@@ -56,14 +56,11 @@ babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecol
 
 ----------
 ## BactDating
+細菌の系統樹で分岐年代のベイズ推定
+https://twitter.com/search?q=BactDating
+
 https://github.com/xavierdidelot/BactDating
 
-細菌の系統樹における分岐年代のベイズ推定
-
-https://twitter.com/XavierDidelot/status/1039083946913529856
-BactDating is a fast Bayesian method for building bacterial dated trees and the paper is now published by @NAR_Open , see http://bit.ly/2MdNfOl  . Thanks to co-authors NickCroucher @StephenBentley5 @DrSimonHarris @apemandan
-Dating of PMEN1, before and after accounting for recombination
-5:31 AM - 10 Sep 2018
 https://www.ncbi.nlm.nih.gov/pubmed/30184106
 Nucleic Acids Res. 2018 Dec 14;46(22):e134. doi: 10.1093/nar/gky783.
 Bayesian inference of ancestral dates on bacterial phylogenetic trees.
