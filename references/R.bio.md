@@ -7,8 +7,8 @@
 [2018](#2018)
 - [bioconductor](#bioconductor)
 - [Biostrings](#biostrings)
-- [enrichment](#enrichment)
 - [codon](#codon)
+- [enrichment](#enrichment)
 - [gggenes](#gggenes)
 - [genBaRcode](#genBaRcode)
 - [people](#people)
@@ -453,42 +453,6 @@ https://bioconductor.org/packages/devel/bioc/manuals/sscu/man/sscu.pdf
 October 30, 2019
 
 ----------
-## gggenes
-
-https://wilkox.org/gggenes/
-```
-#install.packages("gggenes")
-
-library(ggplot2)
-library(gggenes)
-
-ggplot(example_genes, aes(xmin = start, xmax = end, y = molecule, fill = gene)) +
-  geom_gene_arrow() +
-  facet_wrap(~ molecule, scales = "free", ncol = 1) +
-  scale_fill_brewer(palette = "Set3")
-```
-
-
-https://cran.r-project.org/web/packages/gggenes/
-gggenes: Draw Gene Arrow Maps in 'ggplot2'
-
-https://cran.r-project.org/web/packages/gggenes/vignettes/introduction-to-gggenes.html
-Introduction to ‘gggenes’
-David Wilkins
-2019-06-24
-
-https://cran.r-project.org/web/packages/gggenes/readme/README.html
-‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
-
-2019年01月07日
-https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
-Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
-
-https://twitter.com/search?q=gggenes
-
-![](https://pbs.twimg.com/media/DrZ92YjU0AM0C5B?format=jpg&name=small)
-
-----------
 
 ## enrichment
 
@@ -555,9 +519,42 @@ Introduction to the genBaRcode GUI
 Introduction to genBaRcode
 ```
 
-29 November 2019
-https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btz872/5646645
-genBaRcode: a comprehensive R-package for genetic barcode analysis | Bioinformatics | Oxford Academic
+https://www.ncbi.nlm.nih.gov/pubmed/31782763
+Bioinformatics. 2019 Nov 29. pii: btz872. doi: 10.1093/bioinformatics/btz872. [Epub ahead of print]
+genBaRcode - a comprehensive R package for genetic barcode analysis.
+Thielecke L1, Cornils K2, Glauche I1.
+
+----------
+## gggenes
+https://cran.r-project.org/package=gggenes
+gggenes: Draw Gene Arrow Maps in 'ggplot2'
+```
+gggenes: Draw Gene Arrow Maps in 'ggplot2'
+Provides a 'ggplot2' geom and helper functions for drawing gene arrow maps.
+
+Version:	0.4.0
+Published:	2019-06-24
+
+URL:	https://wilkox.org/gggenes
+
+Materials:	README
+
+Vignettes:	Introduction to 'gggenes'
+```
+https://wilkox.org/gggenes
+
+https://cran.r-project.org/web/packages/gggenes/readme/README.html
+gggenes is a ggplot2 extension for drawing gene arrow maps.
+
+https://cran.r-project.org/web/packages/gggenes/vignettes/introduction-to-gggenes.html
+Introduction to ‘gggenes’
+David Wilkins
+2019-06-24
+‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
+
+2019年01月07日
+https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
+Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
 
 ----------
 ## people
