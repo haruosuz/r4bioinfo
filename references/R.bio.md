@@ -490,23 +490,24 @@ https://twitter.com/search?q=gggenes
 
 ----------
 
-----------
-
 ## enrichment
 
 https://github.com/haruosuz/bioinfo/blob/master/README.md#enrichment
 
+https://www.ncbi.nlm.nih.gov/pubmed/31977031
+Bioinformatics. 2020 Jan 24. pii: btaa001. doi: 10.1093/bioinformatics/btaa001. [Epub ahead of print]
+GSOAP: A tool for visualisation of gene set over-representation analysis.
+Tokar T1, Pastrello C1, Jurisica I1,2,3,4.
 https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa001/5715574
-GSOAP: A tool for visualisation of gene set over-representation analysis | Bioinformatics | Oxford Academic
 Gene sets over-representation analysis (GSOA)
-https://github.com/tomastokar/gsoap.
+https://github.com/tomastokar/gsoap
 
 https://www.ncbi.nlm.nih.gov/pubmed/31498385
-Bioinformatics. 2019 Sep 9. pii: btz700. doi: 10.1093/bioinformatics/btz700. [Epub ahead of print]
-hypeR: An R Package for Geneset Enrichment Workflows.
+Bioinformatics. 2020 Feb 15;36(4):1307-1308. doi: 10.1093/bioinformatics/btz700.
+hypeR: an R package for geneset enrichment workflows.
 Federico A1,2, Monti S1,2.
+https://academic.oup.com/bioinformatics/article-abstract/36/4/1307/5566242
 https://github.com/montilab/hypeR
-
 
 Ege Ulgen
 2018-11-20
@@ -519,7 +520,6 @@ pathfindR - An R Package for Pathway Enrichment Analysis Utilizing Active Subnet
 2018年05月03日
 https://qiita.com/nakachiy/items/b40bd0a8f233c380986b
 R/BioconductorのGOstats packageをもちいたGene Ontology(GO)やKEGGのenrichment解析 - Qiita
-
 
 2017.04.15
 https://bi.biopapyrus.jp/pathway/go/
@@ -534,7 +534,6 @@ https://www.biostars.org/p/97836/
 GO Term Enrichment Tutorial/Guide?
 http://mengnote.blogspot.com/2012/12/calculate-correct-hypergeometric-p.html
 Meng's Notes: Simple Enrichment Test -- calculate hypergeometric p-values in R
-
 
 https://heavywatal.github.io/rstats/topgo.html
 topGO: Bioconductor でenrichment解析 - Heavy Watal
