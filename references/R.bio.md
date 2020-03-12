@@ -14,9 +14,57 @@
 - [people](#people)
   - [ushio](#ushio)
 - [](#)
+- [SeqFeatR](#seqfeatr)
+- [nCov2019](#nCov2019)
+
+----------
+
+### nCov2019
+
+https://github.com/GuangchuangYu/nCov2019
+
+Posted March 05, 2020.
+https://www.medrxiv.org/content/10.1101/2020.02.25.20027433v2
+Open-source analytics tools for studying the COVID-19 coronavirus outbreak | medRxiv
+
+https://twitter.com/MinatoNakazawa/status/1235142870547349505
+中澤 港％人類生態学者＠神戸大学 on Twitter: "An R package and a website with real-time data on the COVID-19 coronavirus outbreak https://t.co/msaWQY1Y5Z 中身をまだ見ていないが、データをRのパッケージにした人たちがいるようだ。" / Twitter
+6:59 PM · Mar 4, 2020
+
+Feb 11
+https://towardsdatascience.com/an-r-package-to-explore-the-novel-coronavirus-590055738ad6
+An R Package to Explore the Novel Coronavirus - Towards Data Science
+
+
+
+----------
+
+### SeqFeatR
+https://cran.r-project.org/package=SeqFeatR
+SeqFeatR: A Tool to Associate FASTA Sequences and Features
+Provides user friendly methods for the identification of sequence patterns that are statistically significantly associated with a property of the sequence. For instance, SeqFeatR allows to identify viral immune escape mutations for hosts of given HLA types. The underlying statistical method is Fisher's exact test, with appropriate corrections for multiple testing, or Bayes. Patterns may be point mutations or n-tuple of mutations. SeqFeatR offers several ways to visualize the results of the statistical analyses, see Budeus (2016) <doi:10.1371/journal.pone.0146409>.
+Published:	2019-04-12
+
+Vignettes:	SeqFeatR Tutorial
+https://cran.r-project.org/web/packages/SeqFeatR/vignettes/SeqFeatR_tutorial.pdf
+April 12, 2019
+2 The core of SeqFeatR: Fisher’s exact test
+2.1 An example: association of a feature with sequence
+We have mentioned that in the above alignment there is seemingly a strong
+association of the occurrence of amino acid P at position 2 with the feature f.
+The probability and strength of this association can be quantified, respectively,
+by a p-value computed with Fisher’s exact test, a well-known statistical test for
+association, and by an odds ratio (OR).
+
+https://www.ncbi.nlm.nih.gov/pubmed/26731669
+PLoS One. 2016 Jan 5;11(1):e0146409. doi: 10.1371/journal.pone.0146409. eCollection 2016.
+SeqFeatR for the Discovery of Feature-Sequence Associations.
+Budeus B1, Timm J2, Hoffmann D1.
+https://seqfeatr.zmb.uni-due.de/
 
 ----------
 ## featuring
+
 
 https://www.r-exercises.com/tag/bioinformatics/
 R-exercises – bioinformatics
@@ -67,6 +115,32 @@ Tips for NGS Data Analysis
 
 ## 2020
 
+github.com/wanyuac/GeneMates
+GeneMates: an R package identifying horizontal gene co-transfer between bacteria
+Posted March 03, 2020.
+https://www.biorxiv.org/content/10.1101/2020.02.29.970970v1
+GeneMates: an R package for Detecting Horizontal Gene Co-transfer between Bacteria Using Gene-gene Associations Controlled for Population Structure | bioRxiv
+https://www.biorxiv.org/content/10.1101/2020.02.29.970970v1.full.pdf
+- Mobile genetic elements (MGEs), such as
+plasmids, bacteriophages and transposons, are common vectors for HGT [3].
+- For instance, the
+same ARG cluster sul2 -strA-strB has been circulating among Gram-negative bacteria
+for decades due to its association with plasmids and transposons [16].
+- Using megaBLAST under its default parameters, a sequence search of this MDR region against the NCBI nucleotide database of the
+Enterobacteriaceae group (taxid: 91347, accessed in April, 2018) showed exact matches
+(100% nucleotide identity and coverage) to a known and widely distributed MDR plasmid pCERC1 (GenBank accession: JN012467) as well as a number of plasmids widely
+distributed in bacteria of Enterobacterales (Table s12). Hence this MDR region is shared
+amongst a great variety of plasmids.
+
+
+
+February 13, 2020.
+https://www.biorxiv.org/content/10.1101/2020.02.12.945691v1
+phyloregion: R package for biogeographic regionalization and spatial conservation | bioRxiv
+
+
+
+
 23 January 2020
 https://doi.org/10.1093/bioinformatics/btaa043
 Transfer index, NetUniFrac and some useful shortest path-based distances for community analysis in sequence similarity networks
@@ -103,7 +177,6 @@ The above methods are focusing on the protein coding genes, neglecting the non-c
 R package, deltaRpkm, identifies putative genes involved in a given phenotype by inferring their presence/absence from their differential coverage between a reference genome group and a comparison group.
 - Input files
 The deltaRpkm pipeline requires as input data metadata and gene read count tables. The read count table can be derived from standard methods like bedtools multicov [11] based on a reference genome annotation file and the bam files produced by bwa mem [12]. Alternatively, the rapid RNA-seq aligner STAR can be used to obtain the coverage table [13] (Fig. 1).
-
 
 
 2019年11月26日（火）
@@ -209,6 +282,11 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5836265/
 https://github.com/mensxmachina/BioDataome/
 Database URL: http://dataome.mensxmachina.org/
 Documentation http://dataome.mensxmachina.org/docs
+
+### 2016
+
+
+
 
 ### 2015
 
@@ -416,6 +494,8 @@ https://twitter.com/search?q=gggenes
 
 ## enrichment
 
+https://github.com/haruosuz/bioinfo/blob/master/README.md#enrichment
+
 https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa001/5715574
 GSOAP: A tool for visualisation of gene set over-representation analysis | Bioinformatics | Oxford Academic
 Gene sets over-representation analysis (GSOA)
@@ -427,44 +507,6 @@ hypeR: An R Package for Geneset Enrichment Workflows.
 Federico A1,2, Monti S1,2.
 https://github.com/montilab/hypeR
 
-
-Nov 21, 2018
-https://www.subioplatform.com/ja/info_technical/152/enrichment-analysis-tool
-Enrichment Analysis Tool の使い方 | Subio
-
-https://home.hiroshima-u.ac.jp/naka/wiki/wiki.cgi?GSEA_%28Gene_Set_Enrichment_Analysis%29%A4%CB%A4%C4%A4%A4%A4%C6
-GSEA_(Gene_Set_Enrichment_Analysis)について -
-http://www.riken.jp/pr/press/2016/20160510_1/ wPGSA法（weighted Parametric Gene Set Analysis）
-
-https://www.ncbi.nlm.nih.gov/pubmed/27141961
-Nucleic Acids Res. 2016 Jul 8;44(W1):W90-7. doi: 10.1093/nar/gkw377. Epub 2016 May 3.
-Enrichr: a comprehensive gene set enrichment analysis web server 2016 update.
-http://amp.pharm.mssm.edu/Enrichr
-
-2012年12月20日
-http://array.cell-innovator.com/?p=1452
-Gene Set Enrichment Analysis (GSEA) – 遺伝子発現解析（マイクロアレイ解析, RNA-seq）
-
-### PAGE
-PAGEは正規分布（normal distribution）を仮定したパラメトリックなテストで、ノンパラメトリックテストのGSEAと比較して、計算が速く、検出感度が高い（統計的に有意な遺伝子が多い）。遺伝子セットの構成遺伝子数は最低10個
-
-https://www.ncbi.nlm.nih.gov/pubmed/15941488
-BMC Bioinformatics. 2005 Jun 8;6:144.
-PAGE: parametric analysis of gene set enrichment.
-Kim SY1, Volsky DJ.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1183189/
-PAGE: Parametric Analysis of Gene Set Enrichment
-PAGE was statistically more sensitive and required much less computational effort than GSEA, 
-, we set the minimal gene set size as 10.
-
-2009/11/19
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html#page_go
-解析 | 機能解析 | PAGE法(Kim_2005;統計量の変換なし)を用いてGene Ontology解析
-
-https://www.t-kagaku.co.jp/seimeiken/top/xmlSupport.php?id=21004
-PAGE解析(Parametric Analysis of Gene set Enrichment)とは
-
-### R GSEA
 
 Ege Ulgen
 2018-11-20
@@ -478,17 +520,15 @@ pathfindR - An R Package for Pathway Enrichment Analysis Utilizing Active Subnet
 https://qiita.com/nakachiy/items/b40bd0a8f233c380986b
 R/BioconductorのGOstats packageをもちいたGene Ontology(GO)やKEGGのenrichment解析 - Qiita
 
-Dong Li
-April 25, 2017
-https://www.cs.bham.ac.uk/~dxl466/st/GFEA.html
-A Practical Tutorial on Gene Set Functional Enrichment Analysis
 
 2017.04.15
 https://bi.biopapyrus.jp/pathway/go/
 GO 解析 | 遺伝子オントロジーエンリッチメント解析
+R パッケージ
 
 http://amphipod.hatenablog.com/entry/2017/01/28/121307
 非モデル生物のGO enrichment analysisをGOseqでおこなう - 備忘録 a record of inner life
+Rパッケージ
 
 https://www.biostars.org/p/97836/
 GO Term Enrichment Tutorial/Guide?
@@ -502,7 +542,6 @@ topGO: Bioconductor でenrichment解析 - Heavy Watal
 http://www.nibb.ac.jp/training/2009/nakai/R_GO_2.7.2.html
 RでGO!
 topGO（工事中）
-
 
 ----------
 ## genBaRcode
