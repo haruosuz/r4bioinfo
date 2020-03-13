@@ -15,9 +15,20 @@
   - [ushio](#ushio)
 - [](#)
 - [SeqFeatR](#seqfeatr)
-- [nCov2019](#nCov2019)
+- [coronavirus](#coronavirus)
+  - [nCov2019](#nCov2019)
 
 ----------
+
+## coronavirus
+
+https://github.com/haruosuz/microbe/blob/master/references/microbe.COVID-19.md
+
+http://www.bnosac.be/index.php/blog/97-corona-in-belgium
+bnosac :: open analytical helpers - Corona in Belgium
+```
+git clone https://github.com/CSSEGISandData/COVID-19
+```
 
 ### nCov2019
 
@@ -34,8 +45,6 @@ https://twitter.com/MinatoNakazawa/status/1235142870547349505
 Feb 11
 https://towardsdatascience.com/an-r-package-to-explore-the-novel-coronavirus-590055738ad6
 An R Package to Explore the Novel Coronavirus - Towards Data Science
-
-
 
 ----------
 
@@ -541,16 +550,6 @@ Materials:	README
 
 Vignettes:	Introduction to 'gggenes'
 ```
-https://wilkox.org/gggenes
-
-https://cran.r-project.org/web/packages/gggenes/readme/README.html
-gggenes is a ggplot2 extension for drawing gene arrow maps.
-
-https://cran.r-project.org/web/packages/gggenes/vignettes/introduction-to-gggenes.html
-Introduction to ‘gggenes’
-David Wilkins
-2019-06-24
-‘gggenes’ is a (quite small) set of tools for drawing gene arrow maps with ‘ggplot2.’
 
 2019年01月07日
 https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
