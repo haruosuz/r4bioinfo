@@ -144,6 +144,10 @@ https://twitter.com/kohske/status/1019840962137272320
 だいぶ時間が立ってしまいましたが、『再現可能性のすゝめ』のサポートページです。 https://scrapbox.io/saigenkanousei-no-susume/ … Scrapboxなので、ただのサポートページではなく、みんなで作り上げるサポートページ兼、再現可能なデータ解析とレポート作成関連の情報集積所になればいいなと思います。
 3:06 AM - 19 Jul 2018
 
+2018年05月10日
+https://qiita.com/kohske/items/3e8c02e9598c6d230a47
+「再現可能性のすゝめ」という本を書きました - Qiita
+
 2018-05-07
 https://ksmzn.hatenablog.com/entry/Wonderful-R-03
 『再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― 』を読みました
