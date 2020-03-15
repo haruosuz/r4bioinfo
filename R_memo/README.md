@@ -149,23 +149,11 @@ RStudioではじめるGitによるバージョン管理
 https://rmarkdown.rstudio.com/
 R Markdown
 
-2018-02-22
-http://hosho.ees.hokudai.ac.jp/~kubo/ce/RmarkDown.html
-生態学データ解析 - R Markdown
-
-Jul 13, 2017
-https://www.slideshare.net/YoshihikoKunisato/ss-77835559
-統計解析の再現可能性を高める取り組み
+2019年11月02日に更新
+https://qiita.com/tomotagwork/items/c92fb40a76f56ea16aa4
+R Markdownによるレポート生成 - Qiita
 
 ### kohske
-
-2018年05月11日
-http://www.kyoritsu-pub.co.jp/bookdetail/9784320112438
-再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― / 高橋 康介　著
-
-2018-05-07
-https://ksmzn.hatenablog.com/entry/Wonderful-R-03
-『再現可能性のすゝめ ―RStudioによるデータ解析とレポート作成― 』を読みました
 
 2018/3/12 高橋康介
 https://www.slideshare.net/kohske/rrstudior-markdown
