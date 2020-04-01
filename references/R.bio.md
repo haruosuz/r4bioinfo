@@ -18,6 +18,7 @@
   - [nCov2019](#nCov2019)
 - [](#)
 - [SubVis](#subvis)
+- [SubVis](#protr)
 - [Bios2mds](#bios2mds)
 - [SeqFeatR](#seqfeatr)
 
@@ -35,6 +36,23 @@ Barlowe S1, Coan HB2, Youker RT2.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5490468/
 - Package: https://cran.r-project.org/web/packages/SubVis/
 - Demo videos: https://github.com/sabarlowe/SubVis
+
+----------
+### protr
+
+https://cran.r-project.org/package=protr
+protr: Generating Various Numerical Representation Schemes for Protein Sequences
+Comprehensive toolkit for generating various numerical features of protein sequences described in Xiao et al. (2015) 
+Vignettes:
+https://cran.r-project.org/web/packages/protr/vignettes/protr.html
+protr: R package for generating various numerical representation schemes of protein sequences
+Nan Xiao <https://nanx.me>
+2019-05-18
+
+https://www.ncbi.nlm.nih.gov/pubmed/25619996
+Bioinformatics. 2015 Jun 1;31(11):1857-9. doi: 10.1093/bioinformatics/btv042. Epub 2015 Jan 24.
+protr/ProtrWeb: R package and web server for generating various numerical representation schemes of protein sequences.
+Xiao N1, Cao DS1, Zhu MF1, Xu QS1.
 
 ----------
 ### Bios2mds
