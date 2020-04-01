@@ -14,37 +14,39 @@
 - [people](#people)
   - [ushio](#ushio)
 - [](#)
-- [SeqFeatR](#seqfeatr)
 - [coronavirus](#coronavirus)
   - [nCov2019](#nCov2019)
+- [](#)
+- [SubVis](#subvis)
+- [Bios2mds](#bios2mds)
+- [SeqFeatR](#seqfeatr)
 
 ----------
+### SubVis
 
-## coronavirus
+https://cran.r-project.org/package=SubVis
+SubVis: Visual Exploration of Protein Alignments Resulting from Multiple Substitution Matrices
+Substitution matrices are important parameters in protein alignment algorithms. These matrices represent the likelihood that an amino acid will be substituted for another during mutation. This tool allows users to apply predefined and custom matrices and then explore the resulting alignments with interactive visualizations. 'SubVis' requires the availability of a web browser.
 
-https://github.com/haruosuz/microbe/blob/master/references/microbe.COVID-19.md
+https://www.ncbi.nlm.nih.gov/pubmed/28674656
+PeerJ. 2017 Jun 27;5:e3492. doi: 10.7717/peerj.3492. eCollection 2017.
+SubVis: an interactive R package for exploring the effects of multiple substitution matrices on pairwise sequence alignment.
+Barlowe S1, Coan HB2, Youker RT2.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5490468/
+- Package: https://cran.r-project.org/web/packages/SubVis/
+- Demo videos: https://github.com/sabarlowe/SubVis
 
-http://www.bnosac.be/index.php/blog/97-corona-in-belgium
-bnosac :: open analytical helpers - Corona in Belgium
-```
-git clone https://github.com/CSSEGISandData/COVID-19
-```
+----------
+### Bios2mds
 
-### nCov2019
+https://cran.r-project.org/package=bios2mds
+bios2mds: From BIOlogical Sequences to MultiDimensional Scaling
+Bios2mds is primarily dedicated to the analysis of biological sequences by metric MultiDimensional Scaling with projection of supplementary data. It contains functions for reading multiple sequence alignment files, calculating distance matrices, performing metric multidimensional scaling and visualizing results.
 
-https://github.com/GuangchuangYu/nCov2019
-
-Posted March 05, 2020.
-https://www.medrxiv.org/content/10.1101/2020.02.25.20027433v2
-Open-source analytics tools for studying the COVID-19 coronavirus outbreak | medRxiv
-
-https://twitter.com/MinatoNakazawa/status/1235142870547349505
-中澤 港％人類生態学者＠神戸大学 on Twitter: "An R package and a website with real-time data on the COVID-19 coronavirus outbreak https://t.co/msaWQY1Y5Z 中身をまだ見ていないが、データをRのパッケージにした人たちがいるようだ。" / Twitter
-6:59 PM · Mar 4, 2020
-
-Feb 11
-https://towardsdatascience.com/an-r-package-to-explore-the-novel-coronavirus-590055738ad6
-An R Package to Explore the Novel Coronavirus - Towards Data Science
+https://www.ncbi.nlm.nih.gov/pubmed/22702410
+BMC Bioinformatics. 2012 Jun 15;13:133. doi: 10.1186/1471-2105-13-133.
+Bios2mds: an R package for comparing orthologous protein families by metric multidimensional scaling.
+Pelé J1, Bécu JM, Abdi H, Chabbert M.
 
 ----------
 
@@ -70,6 +72,53 @@ PLoS One. 2016 Jan 5;11(1):e0146409. doi: 10.1371/journal.pone.0146409. eCollect
 SeqFeatR for the Discovery of Feature-Sequence Associations.
 Budeus B1, Timm J2, Hoffmann D1.
 https://seqfeatr.zmb.uni-due.de/
+
+
+
+
+
+----------
+
+19/03/2020
+https://freakonometrics.hypotheses.org/60482
+Modeling pandemics (1) | Freakonometrics
+
+
+## coronavirus
+
+https://github.com/haruosuz/microbe/blob/master/references/microbe.COVID-19.md
+
+
+http://mikuhatsune.hatenadiary.com/entry/2020/03/19/231812
+COVID-19 の潜伏期間をrstanで推定する - 驚異のアニヲタ社会復帰の予備
+
+March 4, 2020
+https://datascienceplus.com/map-visualization-of-covid19-across-world/
+Map Visualization of COVID-19 Across the World with R | DataScience+
+
+
+http://www.bnosac.be/index.php/blog/97-corona-in-belgium
+bnosac :: open analytical helpers - Corona in Belgium
+```
+git clone https://github.com/CSSEGISandData/COVID-19
+```
+
+### nCov2019
+
+https://github.com/GuangchuangYu/nCov2019
+
+Posted March 05, 2020.
+https://www.medrxiv.org/content/10.1101/2020.02.25.20027433v2
+Open-source analytics tools for studying the COVID-19 coronavirus outbreak | medRxiv
+
+https://twitter.com/MinatoNakazawa/status/1235142870547349505
+中澤 港％人類生態学者＠神戸大学 on Twitter: "An R package and a website with real-time data on the COVID-19 coronavirus outbreak https://t.co/msaWQY1Y5Z 中身をまだ見ていないが、データをRのパッケージにした人たちがいるようだ。" / Twitter
+6:59 PM · Mar 4, 2020
+
+Feb 11
+https://towardsdatascience.com/an-r-package-to-explore-the-novel-coronavirus-590055738ad6
+An R Package to Explore the Novel Coronavirus - Towards Data Science
+
 
 ----------
 ## featuring
