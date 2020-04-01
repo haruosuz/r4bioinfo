@@ -18,7 +18,7 @@
   - [nCov2019](#nCov2019)
 - [](#)
 - [SubVis](#subvis)
-- [SubVis](#protr)
+- [protr](#protr)
 - [Bios2mds](#bios2mds)
 - [SeqFeatR](#seqfeatr)
 
