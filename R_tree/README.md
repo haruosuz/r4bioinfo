@@ -9,22 +9,21 @@ Last Update: 2020-03
 ----------
 
 ## Table of Contents
+
+- [featuring](#featuring)
+- [DECIPHER](#decipher)
 - [babette](#babette)
 - [BactDating](#bactdating) 細菌の系統樹で分岐年代のベイズ推定
-- [DECIPHER](#decipher)
-- [featuring](#featuring)
 - [castor](#castor)
 - [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
 - [pic](#pic) Phylogenetically Independent Contrasts
 - [2019-11-11](#2019-11-11) Unlinked rRNA genes | phylosig {phytools} | phyloglm {phylolm}
 - [updates](#updates)
-- [treeio](#treeio)
 - [perfectphyloR](#perfectphyloR)
 - [rgenesconverged](#rgenesconverged)
 - [Rphylip](#Rphylip)
 - [SpeciesGeoCoder](#speciesgeocodeR)
-- [ggtree](#ggtree)
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo) 系統比較法
   - [GettingStarted](#gettingstarted)
@@ -36,38 +35,113 @@ Last Update: 2020-03
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+- [guangchuangyu](#guangchuangyu)
+  - [ggtree](#ggtree)
+  - [treeio](#treeio)
 
 ----------
-## babette
+## featuring
 
-https://github.com/ropensci/babette
-ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
-https://github.com/ropensci/babette/blob/master/doc/install.md
+https://www.trifields.jp/r-cran-task-views-639
+R言語 CRAN Task Views | トライフィールズ
 
-https://ropensci.org/blog/2020/01/28/babette/
-Call BEAST2 for Bayesian evolutionary analysis from R
+https://cran.r-project.org/web/views/Phylogenetics.html
+CRAN Task View: Phylogenetics, Especially Comparative Methods
+Maintainer:	Brian O'Meara
+Contact:	omeara.brian at gmail.com
+Version:	2020-03-04
+URL:	https://CRAN.R-project.org/view=Phylogenetics
 
-https://methodsblog.com/2018/06/25/babette-beast2/
-The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
 
-27 May 2018
-https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
-babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
+系統学、特に比較方法
+- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
+- geigerは、分類群の重複セットに木やデータを整理することができます。
+
+
+https://github.com/haruosuz/books/tree/master/aper
+Analysis of Phylogenetics and Evolution with R
+
+
+https://www.researchgate.net/post/How_to_construct_phylogenetic_tree_in_rstudio
+
 
 ----------
-## BactDating
-細菌の系統樹で分岐年代のベイズ推定
-https://twitter.com/search?q=BactDating
+## guangchuangyu
+https://twitter.com/guangchuangyu
+Guangchuang Yu (@guangchuangyu) / Professor of Bioinformatics at Southern Medical University.  Author of #ChIPseeker #clusterProfiler, #ggtree #GOSemSim #tidytree #treeio
 
-https://github.com/xavierdidelot/BactDating
+https://bioconductor.org/packages/release/bioc/vignettes/treeio/inst/doc/treeio.html
+2019-10-29
+Please go to https://yulab-smu.github.io/treedata-book/ (the first three chapters) for the full vignette.
+https://yulab-smu.github.io/treedata-book
+Data Integration, Manipulation and Visualization of Phylogenetic Trees
+Guangchuang Yu, PhD
+2020-04-08
 
-https://www.ncbi.nlm.nih.gov/pubmed/30184106
-Nucleic Acids Res. 2018 Dec 14;46(22):e134. doi: 10.1093/nar/gky783.
-Bayesian inference of ancestral dates on bacterial phylogenetic trees.
-Didelot X1, Croucher NJ1, Bentley SD2, Harris SR2, Wilson DJ3.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6294524/
-- Figure 6.
-Dating of Streptococcus pneumoniae PMEN1 before and after correcting for recombination. 
+----------
+### ggtree
+
+https://twitter.com/search?q=ggtree
+
+https://bioconductor.org/packages/release/bioc/html/ggtree.html
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+
+2019年09月25日に更新
+https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
+ggtreeを使ってRで系統樹を扱う
+
+December 17, 2016
+https://guangchuangyu.github.io/2016/12/ggtree-version-of-plottree/
+ggtree version of plotTree
+@DrKatHolt developed plotTree
+https://github.com/katholt/plotTree
+I reproduced the examples presented in the plotTree repo using ggtree. Source code is freely available in
+https://github.com/GuangchuangYu/plotTree-ggtree
+ggtree is far better than plotTree, please refer to our manuscript published on Molecular Biology and Evolution and the supplemental files for more detail information.
+https://academic.oup.com/mbe/article/35/12/3041/5142656
+Two Methods for Mapping and Visualizing Associated Data on Phylogeny Using Ggtree | Molecular Biology and Evolution | Oxford Academic
+https://github.com/GuangchuangYu/plotting_tree_with_data
+
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12628
+ggtree: an r package for visualization and annotation of phylogenetic trees with their covariates and other associated data - Yu - 2017 - Methods in Ecology and Evolution - Wiley Online Library
+```
+Example 1: parsing tree and analysis output files
+
+Example 2: phylogenetic tree visualization and annotation
+
+Figure 3
+Phylogenetic tree of H3 influenza viruses. The tree with branches scaled in time (years from the root) and coloured by substitution rates (a).
+
+Example 3: two‐dimensional trees
+
+Figure 4
+Two‐dimensional tree with the trunk and other branches highlighted in red (for swine) and blue (for human). 
+
+Example 4: more complex tree annotations
+
+Figure 5
+Open in figure viewerPowerPoint
+Timescaled phylogenetic tree annotated with a matrix of values associated with each taxon, in this case the genotypes of H3 influenza viruses.
+
+----------
+### treeio
+
+https://twitter.com/kfuku0502/status/1224428158440611840
+Kenji Fukushima on Twitter: "お、treeioのパッケージ論文が出ている。ggtreeを使うときと、Rにnhx形式の系統樹を読み込ませるときにお世話になっています。 https://t.co/0jvBTzffVx" / Twitter
+
+https://www.ncbi.nlm.nih.gov/pubmed/31633786
+Mol Biol Evol. 2019 Oct 21. pii: msz240. doi: 10.1093/molbev/msz240. [Epub ahead of print]
+treeio: an R package for phylogenetic tree input and output with richly annotated and associated data.
+Wang LG1, Lam TT2, Xu S1, Dai Z1, Zhou L1, Feng T1, Guo P1, Dunn CW3, Jones BR4, Bradley T5, Zhu H2,6,7, Guan Y2,6,7, Jiang Y8, Yu G1,8.
+BEAST compatible NEXUS and jtree formats; 
+the tidytree and ggtree packages.
+
+https://www.bioconductor.org/packages/treeio/
+Base Classes and Functions for Phylogenetic Tree Input and Output
+
 
 ----------
 ## DECIPHER
@@ -90,8 +164,6 @@ BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
 DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
 Wright ES1,2.
 
-----------
-## featuring
 
 パッケージ確認日：2019/12/01
 https://www.trifields.jp/bioconductor-packages-software-3484
@@ -128,6 +200,42 @@ PanGenomeMatrix represents every homolog set, and every singleton gene in our ge
 We can, additionally, create a simple tangleogram from these two phylogenetic trees. Allowing a comparison of the core, and pan genomes. The core is on the left, while the pan is on the right.
 
 <img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/simpletangleogram-1.png" width=25%>
+
+
+
+
+
+----------
+## babette
+
+https://github.com/ropensci/babette
+ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
+https://github.com/ropensci/babette/blob/master/doc/install.md
+
+https://ropensci.org/blog/2020/01/28/babette/
+Call BEAST2 for Bayesian evolutionary analysis from R
+
+https://methodsblog.com/2018/06/25/babette-beast2/
+The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
+
+27 May 2018
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
+babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+
+----------
+## BactDating
+細菌の系統樹で分岐年代のベイズ推定
+https://twitter.com/search?q=BactDating
+
+https://github.com/xavierdidelot/BactDating
+
+https://www.ncbi.nlm.nih.gov/pubmed/30184106
+Nucleic Acids Res. 2018 Dec 14;46(22):e134. doi: 10.1093/nar/gky783.
+Bayesian inference of ancestral dates on bacterial phylogenetic trees.
+Didelot X1, Croucher NJ1, Bentley SD2, Harris SR2, Wilson DJ3.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6294524/
+- Figure 6.
+Dating of Streptococcus pneumoniae PMEN1 before and after correcting for recombination. 
 
 ----------
 ## castor
@@ -188,6 +296,10 @@ Advanced features
 IntertwiningTreesAndNetworks
 Splits and Networx
 ```
+
+https://rdrr.io/cran/phangorn/man/codonTest.html
+codonTest: codonTest in phangorn: Phylogenetic Reconstruction and Analysis
+codonTest allows to test for positive selection similar to programs like PAML (Yang ) or HyPhy (Kosakovsky Pond et al. 2005).
 
 ----------
 ## ancestral reconstruction
@@ -401,34 +513,6 @@ geomorph functions
 2011/07/20
 http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
 
-
-----------
-## treeio
-
-https://twitter.com/kfuku0502/status/1224428158440611840
-Kenji Fukushima on Twitter: "お、treeioのパッケージ論文が出ている。ggtreeを使うときと、Rにnhx形式の系統樹を読み込ませるときにお世話になっています。 https://t.co/0jvBTzffVx" / Twitter
-
-https://www.ncbi.nlm.nih.gov/pubmed/31633786
-Mol Biol Evol. 2019 Oct 21. pii: msz240. doi: 10.1093/molbev/msz240. [Epub ahead of print]
-treeio: an R package for phylogenetic tree input and output with richly annotated and associated data.
-Wang LG1, Lam TT2, Xu S1, Dai Z1, Zhou L1, Feng T1, Guo P1, Dunn CW3, Jones BR4, Bradley T5, Zhu H2,6,7, Guan Y2,6,7, Jiang Y8, Yu G1,8.
-BEAST compatible NEXUS and jtree formats; 
-the tidytree and ggtree packages.
-
-https://www.bioconductor.org/packages/treeio/
-Base Classes and Functions for Phylogenetic Tree Input and Output
-
-https://bioconductor.org/packages/release/bioc/vignettes/treeio/inst/doc/treeio.html
-2019-10-29
-Please go to https://yulab-smu.github.io/treedata-book/ (the first three chapters) for the full vignette.
-https://yulab-smu.github.io/treedata-book/
-Data Integration, Manipulation and Visualization of Phylogenetic Trees
-Guangchuang Yu, PhD
-2019-12-23
-https://twitter.com/jfoox/status/1207349725810364417
-Jonathan Foox on Twitter: "Beautiful and flexible R package suite from @guangchuangyu for visualizing phylogenetic trees alongside secondary analyses — https://t.co/cXwN41Emuj" / Twitter
-2:19 AM · Dec 19, 2019
-
 ----------
 ## perfectphyloR
 
@@ -494,27 +578,6 @@ Töpel M1,2,3, Zizka A3, Calió MF3,4,5, Scharn R3, Silvestro D3, Antonelli A3,6
 November 24, 2015.
 https://www.biorxiv.org/content/10.1101/032755v1
 speciesgeocodeR: An R package for linking species occurrences, user-defined regions and phylogenetic trees for biogeography, ecology and evolution | bioRxiv
-
-
-----------
-## ggtree
-
-https://twitter.com/search?q=ggtree
-
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
-
-2019年09月25日に更新
-https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
-ggtreeを使ってRで系統樹を扱う
-
-December 16, 2016
-https://www.r-bloggers.com/ggtree-version-of-plottree-2/
-ggtree version of plotTree | R-bloggers
-@DrKatHolt developed plotTree
-https://github.com/katholt/plotTree
-Plotting trees with data using R and Python
-
 
 ----------
 
@@ -1069,10 +1132,6 @@ https://ww1.fukuoka-edu.ac.jp/~fukuhara/keitai/9-1.html
 9-1. 被子植物の系統樹と分類
 - 系統樹では、分岐点を「節」[node]、節と節とを結ぶ線を「枝」[branch]という。節ではふたまたに分岐する(二分岐)する場合も、3つ以上に分岐(多分岐[polytomy])することもある。
 
-http://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
-R言語 CRAN Task View：系統学、特に比較方法 | トライフィールズ
-- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
-- geigerは、分類群の重複セットに木やデータを整理することができます。
 
 ### ultrametric
 https://en.wikipedia.org/wiki/Distance_matrices_in_phylogeny
