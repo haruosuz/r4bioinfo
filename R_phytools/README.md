@@ -1,20 +1,18 @@
-Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-12-26
-
-----------
-
 # phytools
-phytools: Phylogenetic Tools for Comparative Biology (and Other Things)  
-by [Liam J. Revell](https://github.com/liamrevell)
-- [CRAN - Package phytools](https://cran.r-project.org/web/packages/phytools/index.html)
-- 論文 [Revell (2011) Methods in Ecology and Evolution. "phytools: an R package for phylogenetic comparative biology (and other things)"](http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x/abstract)  
-- 動画 2011-12-15 [Introduction to phytools and phangorn: Phylogenetics tools for R - YouTube](https://www.youtube.com/watch?v=_oEvbcmyVDQ)
-- ブログ [blog](http://blog.phytools.org)
 
-----------
+https://cran.r-project.org/package=phytools
+phytools: Phylogenetic Tools for Comparative Biology (and Other Things)
 
-http://blog.phytools.org
+http://blog.phytools.org/
 Phylogenetic Tools for Comparative Biology
+
+https://doi.org/10.1111/j.2041-210X.2011.00169.x
+phytools: an R package for phylogenetic comparative biology (and other things) - Revell - 2012 - Methods in Ecology and Evolution - Wiley Online Library
+
+https://www.youtube.com/watch?v=_oEvbcmyVDQ
+Introduction to phytools and phangorn: Phylogenetics tools for R
+Liam Revell, UMass Boston and Klaus Schliep, University of Paris
+December 15, 2011
 
 ----------
 2017
@@ -22,11 +20,9 @@ Phylogenetic Tools for Comparative Biology
 http://www.phytools.org/Cordoba2017/
 Latin American Macroevolution Workshop
 Córdoba, Argentina. 1 August — 4 August, 2017
-```
-Tuesday 1 August 2017.
-Brownian motion and phylogenetically independent contrasts. [PDF]
-Exercise 3: Phylogenetically independent contrasts in R. [URL]
-```
+
+Course co-taught by Ricardo Betancur, Luke Harmon, & Liam Revell. 1 August - 4 August 2017.
+
 http://www.phytools.org/Cordoba2017/ex/3/PICs.html
 Exercise 3: Phylogenetically independent contrasts
 
@@ -232,13 +228,10 @@ CRAN Task View: Phylogenetics, Especially Comparative Methods
 ----------
 
 # Acknowledgements
-I am grateful to Dr. Liam J. Revell for his advice on phytools.
+I am grateful to Dr. [Liam J. Revell](https://github.com/liamrevell) for his advice on phytools.
 
 ----------
 # References
-
-http://www.geocities.jp/ancientfishtree/R_JI.html
-R - 井上 潤
 
 http://evolgen.biol.se.tmu.ac.jp/MEGA/tree-protocol.htm
 系統樹の根（root）の位置を変え、植物が外群（outgroup）になるようにする。
