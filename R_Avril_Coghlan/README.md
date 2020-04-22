@@ -324,9 +324,12 @@ seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 
     write.fasta(sequences=seq1, names="DEN-1", file.out="den1.fasta")
 
-    getwd()
-    dir()
-    #system("open .")
+作業ディレクトリの確認:
+```
+getwd() # Get Working Directory
+list.files() # List the Files in a Directory/Folder
+#system("open .") # Invoke a System Command
+```
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
 **配列データをRに読み込む**
