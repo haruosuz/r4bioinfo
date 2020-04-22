@@ -99,7 +99,6 @@ Rを終了:
 [データ型 | R のデータ型・モード・クラス](https://stats.biopapyrus.jp/r/basic/data-type.html)  
 [R:データ型](http://www.f.waseda.jp/sakas/R/Rdata.html) データ型の自動変換 logical < integer < double < complex < character  
 
-
 [ベクトル | R のベクトル操作と演算](https://stats.biopapyrus.jp/r/basic/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
 
@@ -235,7 +234,7 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 
 `seqinr`パッケージの呼び出し:  
 
-	# load the “SeqinR” R package
+	# load the "SeqinR" R package
 	library("seqinr")
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
@@ -293,48 +292,65 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
 **RパッケージSeqinRを用いて、ゲノム配列データを取得する**
 
-[TogoWS: REST](http://togows.dbcls.jp/site/en/rest.html)  
-[TogoWS RESTサービスを使い倒す 2011](https://doi.org/10.7875/togotv.2011.058)
+[TogoWS REST service](http://togows.dbcls.jp/site/en/rest.html)  
+[TogoWS RESTサービスを使い倒す 2011 統合TV(togotv)](https://doi.org/10.7875/togotv.2011.058)
 
-    library("seqinr")
-
-    # TogoWS REST service http://togows.dbcls.jp/site/en/rest.html
-    dengueseq <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")[[1]]
+```
+library(seqinr)
+ACCESSION <- "NC_001477" # Dengue virus 1
+#ACCESSION <- "MN908947" # SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2)
+filename <- paste0("http://togows.org/entry/nucleotide/",ACCESSION,".fasta")
+filename <- paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text")
+seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
+```
 
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
-	dengueseq[1:50]
+	# prints out the first 50 nucleotides of the DEN-1 Dengue virus genome sequence:
+	seq1[1:50]
+
+配列の最初の10塩基を出力する:  
+
+    # The first 10 nucleotides of the sequence
+    head(seq1, 10)
+
+配列の最後の40塩基を出力する:  
+
+    # The last 40 nucleotides of the sequence
+    tail(seq1, 40)
 
 ### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
-	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
+    write.fasta(sequences=seq1, names="DEN-1", file.out="den1.fasta")
 
     getwd()
+    dir()
     #system("open .")
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
 **配列データをRに読み込む**
 
 `read.fasta()`関数でFASTA形式ファイル（den1.fasta）を読み込む:  
+```
+library("seqinr")
+seqs <- read.fasta(file = "den1.fasta")
+seq1 <- seqs[[1]]
+```
 
-	library("seqinr")
-	dengue <- read.fasta(file = "den1.fasta")
-	dengueseq <- dengue[[1]]
-
-変数`dengue`はリスト。リストの1番目の要素を代入した変数`dengueseq`は塩基配列を含むベクトル
+変数`seqs`はリスト。リストの1番目の要素を代入した変数`seq1`は塩基配列を含むベクトル
 
 ### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
 **DNA配列の長さ**
 
-	length(dengueseq)
+	length(seq1)
 
 ### [Base composition of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#base-composition-of-a-dna-sequence)
 **DNA配列の塩基組成**
 
 配列中の各ヌクレオチド（"a" "c" "g" "t"）の出現頻度を数える:  
 
-	table(dengueseq)
+	table(seq1)
 
 ### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
 **DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
@@ -342,7 +358,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     # (G+C)/(A+T+G+C)
     (2240+2770)/(3426+2240+2770+2299)
 
-	GC(dengueseq)
+	GC(seq1)
 
 ### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
 **連続塩基**
@@ -353,10 +369,10 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 `count`関数で連続塩基のカウント
 
     # Count oligomers (monomer/dimer/trimer/etc)
-    count(seq = dengueseq, wordsize = 1)
-    count(seq = dengueseq, wordsize = 2)
+    count(seq = seq1, wordsize = 1)
+    count(seq = seq1, wordsize = 2)
 
-    denguetable <- count(dengueseq, wordsize = 1)
+    denguetable <- count(seq1, wordsize = 1)
 	denguetable[[3]]
 	denguetable[["g"]]
 
@@ -454,21 +470,25 @@ for による繰り返し
 Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で配列データを読み込み
 
 DEN-1デング熱ウイルスのゲノム配列を取得する:  
+```
+# reading the sequence for the DEN-1 Dengue virus genome (NCBI accession: NC_001477)
+library("seqinr") # Load the SeqinR package.
 
-    # reading the sequence for the DEN-1 Dengue virus genome (NCBI accession: NC_001477)
-	library("seqinr")                          # Load the SeqinR package.
-    # TogoWS REST service http://togows.dbcls.jp/site/en/rest.html
-    dengue <- read.fasta(file = "http://togows.dbcls.jp/entry/nucleotide/NC_001477.fasta")
-	#dengue <- read.fasta(file = "den1.fasta") # Read in the file "den1.fasta".
-	dengueseq <- dengue[[1]]                   # Put the sequence in a vector called "dengueseq".
+ACCESSION <- "NC_001477" # Dengue virus 1
+#ACCESSION <- "MN908947" # SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2)
 
-    # obtain nucleotides 452-535 of DNA sequence stored in the vector `dengueseq`
-	dengueseq[452:535]
+filename <- paste0("http://togows.org/entry/nucleotide/",ACCESSION,".fasta")
+filename <- paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text")
+seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
+
+# obtain nucleotides 452-535 of DNA sequence stored in the vector `seq1`
+seq1[452:535]
+```
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 
-    # GC content of DNA sequence stored in the vector `dengueseq`
-	GC(dengueseq)
+    # GC content of DNA sequence stored in the vector `seq1`
+    GC(seq1)
 
 GC含量の局所変動は、[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
 
@@ -479,25 +499,25 @@ GC含量の局所変動は、[遺伝子の水平伝播](https://ja.wikipedia.org
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 GC含量の移動解析
 
-	GC(dengueseq[1:2000])      # 塩基配列の 1-2000 番目のGC含量
-	GC(dengueseq[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
-	GC(dengueseq[4001:6000])   # 塩基配列の 4001-6000 番目のGC含量
-	GC(dengueseq[6001:8000])   # 塩基配列の 6001-8000 番目のGC含量
-	GC(dengueseq[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
-	GC(dengueseq[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
+    GC(seq1[1:2000])      # 塩基配列の 1-2000 番目のGC含量
+    GC(seq1[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
+    GC(seq1[4001:6000])   # 塩基配列の 4001-6000 番目のGC含量
+    GC(seq1[6001:8000])   # 塩基配列の 6001-8000 番目のGC含量
+    GC(seq1[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
+    GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 GC含量の移動プロット
 
 `zoo`パッケージを用いて、異なる範囲（windowsize: 2000, 3000, 300 塩基）で移動プロットを作成する。
 
-    #install.packages('zoo')
+    #install.packages("zoo")
     library(zoo)
     windowsize <- 2000
     #windowsize <- 3000
     #windowsize <- 300
-    x <- seq(from = 1, to = length(dengueseq)-windowsize, by = windowsize)
-    y <- rollapply(data = dengueseq, width = windowsize, by = windowsize, FUN = GC)
+    x <- seq(from = 1, to = length(seq1)-windowsize, by = windowsize)
+    y <- rollapply(data = seq1, width = windowsize, by = windowsize, FUN = GC)
     par(family="mono")
     plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 
@@ -513,11 +533,11 @@ GC含量の移動プロット
 [Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
     # Count oligomers (monomer/dimer/trimer/etc)
-    count(seq = dengueseq, wordsize = 2)
+    count(seq = seq1, wordsize = 2)
 
     # Statistical over- and under- representation of oligonucleotides in a sequence
     # The rho statistic can be computed on each of oligonucleotides
-    rho(sequence = dengueseq, wordsize = 2)
+    rho(sequence = seq1, wordsize = 2)
 
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
 
@@ -532,36 +552,39 @@ GC含量の移動プロット
 ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
 テスト用の配列データを作成する:
-
-    # Create tests
-    library("seqinr")
-    testseq <- s2c("aatgc")
-    count(testseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
-    1/(2+1+1+1) # Get fG
-    1/(2+1+1+1) # Get fC
-    count(testseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
-    1/(0+0+0+1+1+0+0+0+0+1+0+0+0+0+1+0) # Get fGC
-    0.25/(0.2*0.2) # Get rho(GC)
+```
+# Create tests
+library("seqinr")
+testseq <- s2c("aatgc")
+count(testseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
+1/(2+1+1+1) # Get fG
+1/(2+1+1+1) # Get fC
+count(testseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
+1/(0+0+0+1+1+0+0+0+0+1+0+0+0+0+1+0) # Get fGC
+0.25/(0.2*0.2) # Get rho(GC)
+```
 
 2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
-
-    ( af1 <- count(testseq, wordsize = 1) ) # absolute frequencies of 1-mer
-    ( rf1 <- af1 / sum(af1) )               # relative frequencies of 1-mer
-    ( af2 <- count(testseq, wordsize = 2) ) # absolute frequencies of 2-mer
-    ( rf2 <- af2 / sum(af2) )               # relative frequencies of 2-mer
-    ( oe.2 <- rf2 / apply(expand.grid(rf1, rf1), 1, prod) ) # observed / expected
+```
+( af1 <- count(testseq, wordsize = 1) ) # absolute frequencies of 1-mer
+( rf1 <- af1 / sum(af1) )               # relative frequencies of 1-mer
+( af2 <- count(testseq, wordsize = 2) ) # absolute frequencies of 2-mer
+( rf2 <- af2 / sum(af2) )               # relative frequencies of 2-mer
+( oe.2 <- rf2 / apply(expand.grid(rf1, rf1), 1, prod) ) # observed / expected
+```
 
 `rho`関数を使う:  
 
     rho(sequence = testseq, wordsize = 2)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
-
-	seq()
-	print()
-	plot()
-	numeric()
-	function()
+```
+seq()
+print()
+plot()
+numeric()
+function()
+```
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#links-and-further-reading)
 
@@ -598,10 +621,6 @@ GC含量の移動プロット
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P3_image2.png)
 
 ### [RefSeq](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#refseq)
-
-- [What is the difference between RefSeq and GenBank?](https://www.ncbi.nlm.nih.gov/books/NBK50679/#RefSeqFAQ.what_is_the_difference_between_1)
-- 2017.03.12 [RefSeq | 詳細な注釈づけられている冗長性のない核酸データベース](https://bi.biopapyrus.jp/db/refseq.html)
-- 井上 潤 [RefSeq - JI](http://www.geocities.jp/ancientfishtree/RefSeq.html)
 
 [Table 1. RefSeq accession numbers and molecule types.](https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/)
 
@@ -705,8 +724,8 @@ In readLines(socket, n = nelem, ok = FALSE) :
 	attr(Dengue1, "names")
 	attr(Dengue1, "class")
 
-	dengueseq <- getSequence(Dengue1$req[[1]])
-	dengueseq[1:50]
+	seq1 <- getSequence(Dengue1$req[[1]])
+	seq1[1:50]
 	annots <- getAnnot(Dengue1$req[[1]])
 	annots[1:20]
 	closebank()
@@ -1061,7 +1080,8 @@ We see that the optimal local alignment is quite similar to the optimal global a
 
 - [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
-- [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) 
+- [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
+- [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
 - [Yang (2006) "Computational Molecular Evolution"](http://aracnologia.macn.gov.ar/st/biblio/Yang%202006%20Computational%20Molecular%20Evolution.pdf)
 3.4 Maximum parsimony
 Fig. 3.18
@@ -1157,7 +1177,8 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
 
 多重配列アライメントからギャップの多い列を破棄する
 
-    library(microseq) # install.packages("microseq") # help(package="microseq")
+    # install.packages("microseq")
+    library(microseq)
     msa <- readFasta(in.file = "myaln.fasta")
     print(nchar(msa$Sequence))
     msa.trimmed <- msaTrim(msa = msa, gap.end = 0.5, gap.mid = 0.9)
