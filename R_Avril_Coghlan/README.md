@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-11
+Last Update: 2020-04
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -232,15 +232,25 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 ### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
 **バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
 
+[ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
+
+	# ask for more information about the library() function
+	help("library")
+
 `seqinr`パッケージの呼び出し:  
 
 	# load the "SeqinR" R package
 	library("seqinr")
 
-[ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
-
-	# ask for more information about the library() function
-	help("library")
+テスト用の配列データを作成する:
+```
+# Create tests
+testseq <- s2c("acgt")
+length(testseq)
+table(testseq)
+GC(testseq)
+count(testseq, wordsize = 2)
+```
 
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 - [FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)
@@ -346,55 +356,48 @@ seq1 <- seqs[[1]]
 ### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
 **DNA配列の長さ**
 
-	length(seq1)
+    length(seq1)
 
 ### [Base composition of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#base-composition-of-a-dna-sequence)
 **DNA配列の塩基組成**
 
 配列中の各ヌクレオチド（"a" "c" "g" "t"）の出現頻度を数える:  
 
-	table(seq1)
+    table(seq1)
 
 ### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
 **DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
+```
+# (G+C)/(A+T+G+C)
+(2240+2770)/(3426+2240+2770+2299)
 
-    # (G+C)/(A+T+G+C)
-    (2240+2770)/(3426+2240+2770+2299)
-
-	GC(seq1)
+GC(seq1)
+```
 
 ### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
 **連続塩基**
 
-    words(length = 2) #  dinucleotides 2連続塩基 
-    words(length = 3) # trinucleotides 3連続塩基
-
 `count`関数で連続塩基のカウント
+```
+# Count oligomers (monomer/dimer/trimer/etc)
+count(seq = seq1, wordsize = 1)
+count(seq = seq1, wordsize = 2)
 
-    # Count oligomers (monomer/dimer/trimer/etc)
-    count(seq = seq1, wordsize = 1)
-    count(seq = seq1, wordsize = 2)
+table1 <- count(seq1, wordsize = 1)
+table1[[3]]
+table1[["g"]]
 
-    denguetable <- count(seq1, wordsize = 1)
-	denguetable[[3]]
-	denguetable[["g"]]
+words(length = 2) #  dinucleotides 2連続塩基 
+words(length = 3) # trinucleotides 3連続塩基
+```
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
-
-	length()
-	table()
-	GC()
-	count()
-
-テスト用の配列データを作成する:
-
-    # Create tests
-    library("seqinr")
-    testseq <- s2c("acgt")
-    length(testseq)
-    table(testseq)
-    GC(testseq)
-    count(testseq, wordsize = 2)
+```
+length()
+table()
+GC()
+count()
+```
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#links-and-further-reading)
 
@@ -470,7 +473,7 @@ for による繰り返し
 	log10(x) # Finds the log to the base 10 of variable x.
 
 ### [Reading sequence data with SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#reading-sequence-data-with-seqinr)
-Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で配列データを読み込み
+**Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で配列データを読み込み**
 
 DEN-1デング熱ウイルスのゲノム配列を取得する:  
 ```
@@ -486,63 +489,67 @@ seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 
 # obtain nucleotides 452-535 of DNA sequence stored in the vector `seq1`
 seq1[452:535]
+
+# GC content of DNA sequence stored in the vector `seq1`
+GC(seq1)
 ```
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
-
-    # GC content of DNA sequence stored in the vector `seq1`
-    GC(seq1)
-
-GC含量の局所変動は、[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
+**GC含量の局所変動**
+は、[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
 
 [Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
 
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/441px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
-GC含量の移動解析
-
-    GC(seq1[1:2000])      # 塩基配列の 1-2000 番目のGC含量
-    GC(seq1[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
-    GC(seq1[4001:6000])   # 塩基配列の 4001-6000 番目のGC含量
-    GC(seq1[6001:8000])   # 塩基配列の 6001-8000 番目のGC含量
-    GC(seq1[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
-    GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
+**GC含量の移動解析**
+```
+GC(seq1[1:2000])      # 塩基配列の 1-2000 番目のGC含量
+GC(seq1[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
+GC(seq1[4001:6000])   # 塩基配列の 4001-6000 番目のGC含量
+GC(seq1[6001:8000])   # 塩基配列の 6001-8000 番目のGC含量
+GC(seq1[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
+GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
+```
 
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
-GC含量の移動プロット
-
-`zoo`パッケージを用いて、異なる範囲（windowsize: 2000, 3000, 300 塩基）で移動プロットを作成する。
-
-    #install.packages("zoo")
-    library(zoo)
-    windowsize <- 2000
-    #windowsize <- 3000
-    #windowsize <- 300
-    x <- seq(from = 1, to = length(seq1)-windowsize, by = windowsize)
-    y <- rollapply(data = seq1, width = windowsize, by = windowsize, FUN = GC)
-    par(family="mono")
-    plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
+**GC含量の移動プロット**
 
 - [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
 - [Mean of a sliding window in R - Cross Validated ](http://stats.stackexchange.com/questions/3051/mean-of-a-sliding-window-in-r)
 
+`zoo`パッケージを用いて、異なる範囲（windowsize: 2000, 3000, 300 塩基）で移動プロットを作成する。
+```
+#install.packages("zoo")
+library(zoo)
+windowsize <- 2000
+#windowsize <- 3000
+#windowsize <- 300
+x <- seq(from = 1, to = length(seq1)-windowsize, by = windowsize)
+y <- rollapply(data = seq1, width = windowsize, by = windowsize, FUN = GC)
+par(family="mono")
+plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
+```
+
 ### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
-連続塩基組成 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature) / [k-mer](https://en.wikipedia.org/wiki/K-mer)
+**連続塩基組成 [*k*-mer](https://en.wikipedia.org/wiki/K-mer)**
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png)
 
-ゲノムの2連続塩基組成
-[Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
+[Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature)
+2連続塩基組成
+[dinucleotide relative abundances](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
+```
+# Count oligomers (monomer/dimer/trimer/etc)
+count(seq = seq1, wordsize = 2)
 
-    # Count oligomers (monomer/dimer/trimer/etc)
-    count(seq = seq1, wordsize = 2)
+# rho statistic is the ratio of the observed to expected frequency of oligonucleotides
+rho(sequence = seq1, wordsize = 2)
+```
 
-    # Statistical over- and under- representation of oligonucleotides in a sequence
-    # The rho statistic can be computed on each of oligonucleotides
-    rho(sequence = seq1, wordsize = 2)
-
-[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
+[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。
+2連続塩基の場合、ρ値は次の通り計算される:  
 
 ρ(xy) = fxy/(fx*fy),
 
@@ -557,7 +564,6 @@ GC含量の移動プロット
 テスト用の配列データを作成する:
 ```
 # Create tests
-library("seqinr")
 testseq <- s2c("aatgc")
 count(testseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
 1/(2+1+1+1) # Get fG
@@ -569,6 +575,7 @@ count(testseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
 
 2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
 ```
+# the ratio of the observed to expected frequency of dinucleotides
 ( af1 <- count(testseq, wordsize = 1) ) # absolute frequencies of 1-mer
 ( rf1 <- af1 / sum(af1) )               # relative frequencies of 1-mer
 ( af2 <- count(testseq, wordsize = 2) ) # absolute frequencies of 2-mer
@@ -577,8 +584,10 @@ count(testseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
 ```
 
 `rho`関数を使う:  
-
-    rho(sequence = testseq, wordsize = 2)
+```
+# The rho statistic can be computed on each of the 16 dinucleotides
+rho(sequence = testseq, wordsize = 2)
+```
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
 ```
@@ -767,106 +776,12 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
 
-### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
-
-[Swiss-Prot](https://ja.wikipedia.org/wiki/Swiss-Prot) タンパク質データベース
-
-### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
-
-[ハンセン病（Leprosy）](https://ja.wikipedia.org/wiki/ハンセン病)の原因細菌[*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)（chorismate lyase）タンパク質配列を検索するには、UniProtウェブサイト (http://www.uniprot.org) にアクセスし、ウェブページ上部の検索ボックスにUniProt accession [ Q9CD83 ] を入力して、"Search"ボタンを押す:  
-
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image0.png)
-
-### [Retrieving a UniProt protein sequence via the UniProt website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
-**UniProtのウェブサイトからタンパク質配列を取得**
-
-ハンセン病（Leprosy）の原因細菌*Mycobacterium leprae*（らい菌）と[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因細菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)のコリスミ酸リアーゼタンパク質配列（UniProt accession は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
-
-- [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
-
-![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.16.png)  
-
-'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
-
-![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)  
-
-`read.fasta()`関数で、FASTAファイルをRに読み込む:  
-
-	library("seqinr")
-	leprae <- read.fasta(file = "Q9CD83.fasta")
-	ulcerans <- read.fasta(file = "A0PQ23.fasta")
-	lepraeseq <- leprae[[1]]
-	ulceransseq <- ulcerans[[1]]
-	lepraeseq # Display the contents of the vector "lepraeseq"
-
-### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
-**SeqinRでUniProtのタンパク質配列を取得**
-
-[How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
-
-    library("seqinr")
-    lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-    ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
-	lepraeseq # Display the contents of "lepraeseq"
-
-### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
-**ドットプロットで2つの配列を比較**
-
-タンパク質のアミノ酸配列や核酸の塩基配列の
-[相同性](https://ja.wikipedia.org/wiki/相同)
-[homology](https://en.wikipedia.org/wiki/Homology_%28biology%29)
-（共通の祖先に由来すること）は、配列類似性に基づいて判断される。  
-[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)
-[Dot plot](https://en.wikipedia.org/wiki/Dot_plot_%28bioinformatics%29)
-とは、2本の配列を比較するためのグラフである。
-両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
-
-テスト用の配列データを作成する:
-
-    # Create tests
-    library("seqinr")
-    testseq <- s2c("acgt")
-    par(family="mono"); par(mfrow=c(2,2))
-    dotPlot(testseq, testseq)
-    dotPlot(testseq, rev(testseq))
-    dotPlot(testseq, rep(testseq,2))
-
-*M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
-
-    # setting font in plots
-    par(family="mono")
-
-	dotPlot(lepraeseq, ulceransseq)
-
-![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
-
-[相同性検索(アライメント)の威力](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
-
-ヒトの[血小板由来成長因子](https://ja.wikipedia.org/wiki/血小板由来成長因子) (Platelet-Derived Growth Factor, PDGF) と [サル肉腫ウイルスの癌遺伝子 v-sis](https://www.wikigenes.org/e/mesh/e/21827.html) のアミノ酸配列は類似性が高い。([Doolittle RF et al., 1983](https://www.ncbi.nlm.nih.gov/pubmed/6304883))
-
-    # "sp|P01127|PDGFB_HUMAN Platelet-derived growth factor subunit B OS=Homo sapiens GN=PDGFB PE=1 SV=1"          
-    # "sp|P01128|TSIS_WMSV PDGF-related-transforming protein sis OS=Woolly monkey sarcoma virus GN=V-SIS PE=3 SV=1"
-
-    library("seqinr")
-    seq1 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01127.fasta")[[1]]
-    seq2 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01128.fasta")[[1]]
-
-    # Comparing two sequences using a dotplot
-    dotPlot(seq1, seq2)
-
-[ジョロウグモ](https://ja.wikipedia.org/wiki/ジョロウグモ)*Nephila clavata*の[卵嚢](https://kotobank.jp/word/卵嚢-148216) Cylindrical Spidroin (CySp)
-[Cylindrical silk protein 1 (CySp1)](http://www.uniprot.org/uniprot/Q2V0S3)
-
-    myseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q2V0S3.fasta")[[1]]
-    dotPlot(myseq, myseq)
-
 変異
 [Mutations](https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3)
 
 塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
 
 ![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
-
 
 Dec 8, 2014
 https://www.youtube.com/watch?v=MOtRqBs0jxE
@@ -887,6 +802,107 @@ Apr 2, 2014
 https://www.youtube.com/watch?v=xYOK-yzUWSI
 The different types of mutations | Biomolecules | MCAT | Khan Academy
 5:51
+
+### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
+
+[Swiss-Prot](https://ja.wikipedia.org/wiki/Swiss-Prot) タンパク質データベース
+
+### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
+
+[ハンセン病（Leprosy）](https://ja.wikipedia.org/wiki/ハンセン病)の原因細菌[*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)（chorismate lyase）タンパク質配列を検索するには、UniProtウェブサイト (http://www.uniprot.org) にアクセスし、ウェブページ上部の検索ボックスにUniProt accession [ Q9CD83 ] を入力して、"Search"ボタンを押す:  
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image0.png)
+
+### [Retrieving a UniProt protein sequence via the UniProt website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
+**UniProtのウェブサイトからタンパク質配列を取得**
+
+ハンセン病（Leprosy）の原因細菌*Mycobacterium leprae*（らい菌）と[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因細菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)のコリスミ酸リアーゼタンパク質配列（UniProt accession は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
+
+- [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
+
+'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
+
+![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)  
+
+`read.fasta()`関数で、FASTAファイルをRに読み込む:  
+```
+library(seqinr)
+seqMleprae <- read.fasta(file = "Q9CD83.fasta")[[1]]
+seqMulcerans <- read.fasta(file = "A0PQ23.fasta")[[1]]
+seqMleprae # Display the contents of the vector "seqMleprae"
+```
+
+### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
+**SeqinRでUniProtのタンパク質配列を取得**
+
+[How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
+```
+library(seqinr)
+seqMleprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+seqMulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+seqMleprae # Display the contents of "seqMleprae"
+```
+
+### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
+**ドットプロットで2つの配列を比較**
+
+タンパク質のアミノ酸配列や核酸の塩基配列の
+[相同性](https://ja.wikipedia.org/wiki/相同)
+[homology](https://en.wikipedia.org/wiki/Homology_%28biology%29)
+（共通の祖先に由来すること）は、配列類似性に基づいて判断される。  
+[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)
+[Dot plot](https://en.wikipedia.org/wiki/Dot_plot_%28bioinformatics%29)
+とは、2本の配列を比較するためのグラフである。
+両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
+
+テスト用の配列データを作成する:
+```
+# Create tests
+library("seqinr")
+testseq <- s2c("acgt")
+par(family="mono"); par(mfrow=c(2,2))
+dotPlot(testseq, testseq)
+dotPlot(testseq, rev(testseq))
+dotPlot(testseq, rep(testseq,2))
+```
+
+- [2019年度バイオインフォマティクス技術者認定試験](https://www.jsbi.org/nintei/2019/)
+  - [問題と解答(PDF形式)](https://www.jsbi.org/files/8915/7672/6101/2019mondai.pdf)
+  - [解説(PDF形式)](https://www.jsbi.org/files/3015/8408/4627/kaisetsu_2019.pdf)
+- 問 44 
+
+*M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
+```
+# setting font in plots
+par(family="mono")
+
+dotPlot(seqMleprae, seqMulcerans)
+```
+
+![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
+
+[相同性検索(アライメント)の威力](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
+
+ヒトの[血小板由来成長因子](https://ja.wikipedia.org/wiki/血小板由来成長因子) (Platelet-Derived Growth Factor, PDGF) と [サル肉腫ウイルスの癌遺伝子 v-sis](https://www.wikigenes.org/e/mesh/e/21827.html) のアミノ酸配列は類似性が高い。([Doolittle RF et al., 1983](https://www.ncbi.nlm.nih.gov/pubmed/6304883))
+
+```
+# "sp|P01127|PDGFB_HUMAN Platelet-derived growth factor subunit B OS=Homo sapiens GN=PDGFB PE=1 SV=1"
+# "sp|P01128|TSIS_WMSV PDGF-related-transforming protein sis OS=Woolly monkey sarcoma virus GN=V-SIS PE=3 SV=1"
+
+library(seqinr)
+seq1 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01127.fasta")[[1]]
+seq2 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01128.fasta")[[1]]
+
+# Comparing two sequences using a dotplot
+dotPlot(seq1, seq2)
+```
+
+[ジョロウグモ](https://ja.wikipedia.org/wiki/ジョロウグモ)*Nephila clavata*の[卵嚢](https://kotobank.jp/word/卵嚢-148216) Cylindrical Spidroin (CySp)
+[Cylindrical silk protein 1 (CySp1)](http://www.uniprot.org/uniprot/Q2V0S3)
+```
+seqCySp1 <- read.fasta(file = "http://www.uniprot.org/uniprot/Q2V0S3.fasta")[[1]]
+dotPlot(seqCySp1, seqCySp1)
+```
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
