@@ -38,9 +38,52 @@ Last Update: 2020-03
 - [guangchuangyu](#guangchuangyu)
   - [ggtree](#ggtree)
   - [treeio](#treeio)
+- [phylogram](#phylogram)
+- [ggmsa](#ggmsa)
+
+----------
+## ggmsa
+
+https://cran.r-project.org/package=ggmsa
+ggmsa: Plot Multiple Sequence Alignment using 'ggplot2'
+Supports visualizing multiple sequence alignment of DNA and protein sequences using 'ggplot2'. It supports a number of colour schemes, including Chemistry, Clustal, Shapely, Taylor and Zappo. Multiple sequence alignment can easily be combined with other 'ggplot2' plots, such as aligning a phylogenetic tree produced by 'ggtree' with multiple sequence alignment.
+Published:	2020-01-08
+Vignettes:	ggmsa
+https://cran.r-project.org/web/packages/ggmsa/vignettes/ggmsa.html
+ggmsa: Plot multiple sequence alignment using ggplot2
+2020-01-08
+
+----------
+## phylogram
+
+http://github.com/ropensci/phylogram
+
+https://CRAN.R-project.org/package=phylogram
+phylogram: Dendrograms for Evolutionary Analysis
+Contains functions for developing phylogenetic trees as deeply-nested lists ("dendrogram" objects). Enables bi-directional conversion between dendrogram and "phylo" objects (see Paradis et al (2004) <doi:10.1093/bioinformatics/btg412>), and features several tools for command-line tree manipulation and import/export via Newick parenthetic text.
+```
+Published:	2018-06-25
+Vignettes:	Introduction to the phylogram package
+```
+https://cran.r-project.org/web/packages/phylogram/vignettes/phylogram-vignette.html
+phylogram: an R package for phylogenetic analysis with dendrograms
+Shaun P. Wilkinson 1,2 and Simon K. Davy 1
 
 ----------
 ## featuring
+
+
+https://bioinformaticshome.com/bioinformatics_tutorials/R/phylogeny_estimation.html
+BioinfoRmatics R Tutorial: Whole-genome viral phylogeny estimation without sequence alignment
+Introduction
+Zielezinski et al. (2017).
+A Machine Learning Perspective To Phylogeny Estimation
+4k k-mers, a "feature-frequency profile" (Sims et al., 2009). 
+The R Code
+
+
+
+
 
 https://www.trifields.jp/r-cran-task-views-639
 R言語 CRAN Task Views | トライフィールズ
@@ -488,7 +531,6 @@ Phylogeny and species traits predict bird detectability | R-bloggers
 ![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
 
 ## 2017
-
 
 ## 2016
 
