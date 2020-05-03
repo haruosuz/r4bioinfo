@@ -53,10 +53,13 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 - [Bioconductor: Genomicデータ解析ツール群 - Heavy Watal](https://heavywatal.github.io/rstats/bioconductor.html)
 
 Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
-
-    # install the Bioconductor package called "Biostrings"
+```
+# install the Bioconductor package called "Biostrings"
+if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-    BiocManager::install("Biostrings")
+
+BiocManager::install("Biostrings")
+```
 
 `Biostrings`パッケージの呼び出し:  
 
@@ -138,16 +141,17 @@ Rを終了:
 	attributes(mylist)
 
 [table 関数を使ったクロス集計](http://nshi.jp/contents/r/crosstab/)
-
-    # produce a table variable that contains the number of bases:
-    mybases <- c("A", "C", "G", "T", "A")
-    table(mybases)
-    # store the table variable produced by the function table(), and call the stored table “mytable”:
-    mytable <- table(mybases)
-    mytable
-    # access the 1st element in the table mytable (the number of base “A”):
-    mytable[[1]]
-    mytable[["A"]]
+```
+# produce a table variable that contains the number of bases:
+mybases <- c("A", "C", "G", "T", "A")
+table(mybases)
+# store the table variable produced by the function table(), and call the stored table “mytable”:
+mytable <- table(mybases)
+mytable
+# access the 1st element in the table mytable (the number of base “A”):
+mytable[[1]]
+mytable[["A"]]
+```
 
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 関数
@@ -219,7 +223,7 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 
 ----------
 
-## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
+## [DNA Sequence Statistics (1)](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html)
 **DNA配列の統計 (1)**
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
@@ -533,13 +537,15 @@ plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ```
 
 ### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
-**連続塩基組成 [*k*-mer](https://en.wikipedia.org/wiki/K-mer)**
+**連続塩基組成の偏り**
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png)
 
-[Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature)
+[*k*-mer](https://en.wikipedia.org/wiki/K-mer)  
+[Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature)  
 2連続塩基組成
 [dinucleotide relative abundances](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
+
 ```
 # Count oligomers (monomer/dimer/trimer/etc)
 count(seq = seq1, wordsize = 2)
@@ -551,15 +557,15 @@ rho(sequence = seq1, wordsize = 2)
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。
 2連続塩基の場合、ρ値は次の通り計算される:  
 
-ρ(xy) = fxy/(fx*fy),
+ρ(xy) = f<sub>xy</sub> / (f<sub>x</sub> * f<sub>y</sub>),
 
-ここで、"fxy", "fx", "fy"は、DNA配列中の文字列"xy", "x", "y"の頻度である。
+ここで、f<sub>xy</sub>, f<sub>x</sub>, f<sub>y</sub>は、DNA配列中の文字列"xy", "x", "y"の頻度である。
 
 例えば、2連続塩基"GC"のρ値の計算式は:  
 
-ρ(GC) = fGC/(fG * fC)
+ρ(GC) = f<sub>GC</sub> / (f<sub>G</sub> * f<sub>C</sub>),
 
-ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
+ここで、f<sub>GC</sub>, f<sub>G</sub>, f<sub>C</sub>は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
 テスト用の配列データを作成する:
 ```
@@ -866,11 +872,6 @@ dotPlot(testseq, rev(testseq))
 dotPlot(testseq, rep(testseq,2))
 ```
 
-- [2019年度バイオインフォマティクス技術者認定試験](https://www.jsbi.org/nintei/2019/)
-  - [問題と解答(PDF形式)](https://www.jsbi.org/files/8915/7672/6101/2019mondai.pdf)
-  - [解説(PDF形式)](https://www.jsbi.org/files/3015/8408/4627/kaisetsu_2019.pdf)
-- 問 44 
-
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
 # setting font in plots
@@ -880,29 +881,6 @@ dotPlot(seqMleprae, seqMulcerans)
 ```
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
-
-[相同性検索(アライメント)の威力](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
-
-ヒトの[血小板由来成長因子](https://ja.wikipedia.org/wiki/血小板由来成長因子) (Platelet-Derived Growth Factor, PDGF) と [サル肉腫ウイルスの癌遺伝子 v-sis](https://www.wikigenes.org/e/mesh/e/21827.html) のアミノ酸配列は類似性が高い。([Doolittle RF et al., 1983](https://www.ncbi.nlm.nih.gov/pubmed/6304883))
-
-```
-# "sp|P01127|PDGFB_HUMAN Platelet-derived growth factor subunit B OS=Homo sapiens GN=PDGFB PE=1 SV=1"
-# "sp|P01128|TSIS_WMSV PDGF-related-transforming protein sis OS=Woolly monkey sarcoma virus GN=V-SIS PE=3 SV=1"
-
-library(seqinr)
-seq1 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01127.fasta")[[1]]
-seq2 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01128.fasta")[[1]]
-
-# Comparing two sequences using a dotplot
-dotPlot(seq1, seq2)
-```
-
-[ジョロウグモ](https://ja.wikipedia.org/wiki/ジョロウグモ)*Nephila clavata*の[卵嚢](https://kotobank.jp/word/卵嚢-148216) Cylindrical Spidroin (CySp)
-[Cylindrical silk protein 1 (CySp1)](http://www.uniprot.org/uniprot/Q2V0S3)
-```
-seqCySp1 <- read.fasta(file = "http://www.uniprot.org/uniprot/Q2V0S3.fasta")[[1]]
-dotPlot(seqCySp1, seqCySp1)
-```
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
@@ -916,16 +894,17 @@ dotPlot(seqCySp1, seqCySp1)
 
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 以下のアラインメントのスコアは？
-
+```
 	# give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
-    # the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
-    GAATTC
-    GATT-A
+# the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
+GAATTC
+GATT-A
 
-    # the score for the following alignment is 2 + 2 + (-2) + 2 + 2 + (-1) = 5:
-    GAATTC
-    GA-TTA
+# the score for the following alignment is 2 + 2 + (-2) + 2 + 2 + (-1) = 5:
+GAATTC
+GA-TTA
+```
 
 *scoring matrix (substitution matrix)*
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
