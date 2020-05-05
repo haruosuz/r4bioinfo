@@ -1048,6 +1048,80 @@ We see that the optimal local alignment is quite similar to the optimal global a
 ### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 **ペアワイズグローバルアラインメントの統計的有意性の計算**
 
+<img src="https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image3.png" alt="" width=25%>
+
+To generate a certain number (eg.1000) random amino acid sequences of a certain length using a multinomial model, you can use the function generateSeqsWithMultinomialModel() below:
+
+```
+generateSeqsWithMultinomialModel <- function(inputsequence, X)
+  {
+     # Change the input sequence into a vector of letters
+     require("seqinr") # This function requires the SeqinR package.
+     inputsequencevector <- s2c(inputsequence)
+     # Find the frequencies of the letters in the input sequence "inputsequencevector":
+     mylength <- length(inputsequencevector)
+     mytable <- table(inputsequencevector)
+     # Find the names of the letters in the sequence
+     letters <- rownames(mytable)
+     numletters <- length(letters)
+     probabilities <- numeric() # Make a vector to store the probabilities of letters
+     for (i in 1:numletters)
+     {
+        letter <- letters[i]
+        count <- mytable[[i]]
+        probabilities[i] <- count/mylength
+     }
+     # Make X random sequences using the multinomial model with probabilities "probabilities"
+     seqs <- numeric(X)
+     for (j in 1:X)
+     {
+        seq <- sample(letters, mylength, rep=TRUE, prob=probabilities) # Sample with replacement
+        seq <- c2s(seq)
+        seqs[j] <- seq
+     }
+     # Return the vector of random sequences
+     return(seqs)
+  }
+```
+
+復元抽出 (sampling with replacement)
+
+We can use this function to generate 1000 7-letter amino acid sequences using a multinomial model in which the probabilities of the letters are set equal to their frequencies in ‘PAWHEAE’ (ie. probabilities 1/7 for P, 2/7 for A, 1/7 for W, 1/7 for H and 2/7 for E), by typing:
+
+	randomseqs <- generateSeqsWithMultinomialModel('PAWHEAE',1000)
+	randomseqs[1:10] # Print out the first 10 random sequences
+
+For example, to align ‘HEAGAWGHEE’ to the first of the 1000 random sequences (‘EEHAAAE’), we type:
+
+	s4 <- "HEAGAWGHEE"
+	pairwiseAlignment(s4, randomseqs[1], substitutionMatrix = "BLOSUM50", gapOpening = -2,
+	gapExtension = -8, scoreOnly = FALSE)
+
+
+If we use the pairwiseAlignment() function with the argument ‘scoreOnly=TRUE’, it will just give us the score for the alignment:
+
+	pairwiseAlignment(s4, randomseqs[1], substitutionMatrix = "BLOSUM50", gapOpening = -2,
+	gapExtension = -8, scoreOnly = TRUE)
+
+
+We can then compare the actual score for aligning ‘PAWHEAE’ to ‘HEAGAWGHEE’ (ie. -5) to the distribution of scores for aligning ‘HEAGAWGHEE’ to the random sequences.
+```
+	randomscores <- double(1000) # Create a numeric vector with 1000 elements
+	for (i in 1:1000)
+	  {
+	     score <- pairwiseAlignment(s4, randomseqs[i], substitutionMatrix = "BLOSUM50",
+	       gapOpening = -2, gapExtension = -8, scoreOnly = TRUE)
+	     randomscores[i] <- score
+	  }
+
+Once we have run the ‘for loop’, we can make a histogram plot of the 1000 scores in vector randomscores by typing:
+
+	hist(randomscores, col="red") # Draw a red histogram
+
+We can use the vector randomscores of scores for 1000 alignments of random sequences to ‘HEAGAWGHEE’ to calculate the probability of getting a score as large as the real alignment score for ‘PAWHEAE’ and ‘HEAGAWGHEE’ (ie. -5) by chance.
+
+	sum(randomscores >= -5)
+
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#summary)
 
 	data()
