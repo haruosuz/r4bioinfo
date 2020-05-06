@@ -597,11 +597,11 @@ rho(sequence = testseq, wordsize = 2)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
 ```
-seq()
-print()
-plot()
-numeric()
-function()
+?seq() # creating a sequence of numbers
+?print() # printing out the value of a variable
+?plot() # making a plot (eg. a scatterplot)
+?numeric() # making a numeric vector of a particular length
+?function(){} # making a function
 ```
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#links-and-further-reading)
@@ -883,14 +883,14 @@ dotPlot(seqMleprae, seqMulcerans)
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
-**2つのDNA配列間のグローバル・アライメント**
+**2つのDNA配列間のグローバル・アラインメント**
 
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
 [*global* alignment and *local* alignment](https://towardsdatascience.com/pairwise-sequence-alignment-using-biopython-d1a9d0ba861f)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
-【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける。
+【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける。
 
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 以下のアラインメントのスコアは？
@@ -930,7 +930,7 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
-`pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける:  
+`pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける:  
 
 	# print out the optimal global alignment for the two sequences and its score:
 	s1 <- "GAATTC"
@@ -948,13 +948,13 @@ The reason for doing this is that it is likely that adjacent gap positions were 
 
 Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. Here the alignment contains four matches, one mismatch, and one gap of length 1, so its score is (4\*2)+(1\*-1)+(1\*-10) = -3.
 
-このアライメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
+このアラインメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
 
 ![https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html](https://bi.biopapyrus.jp/media/nw-005.png)
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
-**2つのタンパク質配列間のグローバル・アライメント**
+**2つのタンパク質配列間のグローバル・アラインメント**
 
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
 
@@ -967,7 +967,7 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 	# get a list of the available scoring matrices that come with the Biostrings package:
 	data(package="Biostrings")
 
-タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアライメントを見つける:  
+タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアラインメントを見つける:  
 
 	# find the optimal global alignment between two protein sequences using the BLOSUM50 matrix:
 	data(BLOSUM50)
@@ -989,7 +989,7 @@ We set “gapOpening” to be -2 and “gapExtension” to be -8, which means th
 ギャップ(`---`)は -10-8-8 = -26 のスコアが与えられる。
 
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
-**UniProt配列のアライメント**
+**UniProt配列のアラインメント**
 
     library("seqinr")
     lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
@@ -1022,7 +1022,7 @@ We set “gapOpening” to be -2 and “gapExtension” to be -8, which means th
 	score: 627 
 
 ### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
-**2つの配列間のアライメントの表示と出力**
+**2つの配列間のアラインメントの表示と出力**
 
     # print out the alignment
     writePairwiseAlignments(globalAlignLepraeUlcerans)
@@ -1033,7 +1033,7 @@ We set “gapOpening” to be -2 and “gapExtension” to be -8, which means th
     #system("open .")
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
-**2つのタンパク質配列間のローカル・アライメント**
+**2つのタンパク質配列間のローカル・アラインメント**
 
     # find the best local alignment between the two protein sequences
 	localAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
@@ -1127,15 +1127,18 @@ We can use the vector randomscores of scores for 1000 alignments of random seque
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#summary)
 
-	data()
-	?toupper
+```
+data()
+?double
+?toupper
 
-    library("seqinr")
-    ?c2s
+library(Biostrings)
+nucleotideSubstitutionMatrix()
+?pairwiseAlignment
 
-    library(Biostrings)
-	nucleotideSubstitutionMatrix()
-    ?pairwiseAlignment
+library(seqinr)
+?c2s
+```
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#links-and-further-reading)
 
@@ -1151,7 +1154,7 @@ We can use the vector randomscores of scores for 1000 alignments of random seque
 ----------
 
 ## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
-**多重配列アライメントと系統樹**
+**多重配列アラインメントと系統樹**
 
 - [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
@@ -1216,7 +1219,7 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 [Clustal](https://ja.wikipedia.org/wiki/Clustal)
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
-**CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
+**CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アラインメントの作成**
 
     # Read an XStringSet object from a file
     library(Biostrings)
@@ -1233,7 +1236,7 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
     # system("open .")
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
-**多重アライメントのファイルをRに読み込む**
+**多重アラインメントのファイルをRに読み込む**
 
     library(seqinr)
     myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
@@ -1241,7 +1244,7 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
     myaln$seq
 
 ### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
-**多重アライメントの表示**
+**多重アラインメントの表示**
 
     print(myAlignment, show="complete")
 
@@ -1250,7 +1253,7 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 
 Trimming a multiple sequence alignment by discarding columns with too many gaps.
 
-多重配列アライメントからギャップの多い列を破棄する
+多重配列アラインメントからギャップの多い列を破棄する
 
     # install.packages("microseq")
     library(microseq)
@@ -1309,7 +1312,7 @@ As a result, we cannot tell which direction evolutionary time ran in along the i
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
-フラビウイルス属に属するジカウイルス (Zika virus) とデングウイルス (Dengue virus) の非構造タンパク質 (Nonstructural protein 1; NS1) の相同タンパク質配列を取得し、多重配列アライメントに基づく有根系統樹を構築する。外群としてジカウイルスを選択し、系統樹に根をつける。
+フラビウイルス属に属するジカウイルス (Zika virus) とデングウイルス (Dengue virus) の非構造タンパク質 (Nonstructural protein 1; NS1) の相同タンパク質配列を取得し、多重配列アラインメントに基づく有根系統樹を構築する。外群としてジカウイルスを選択し、系統樹に根をつける。
 
 In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
 
