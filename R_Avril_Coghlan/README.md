@@ -24,7 +24,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-- [R | R の使い方、グラフの書き方、ggplot の使い方](https://stats.biopapyrus.jp/r/)
+- [R | R を利用した統計解析およびデータの視覚化](https://stats.biopapyrus.jp/r/)
 
 ### [Installing R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r)
 
