@@ -33,6 +33,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 ### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
 
+- [R言語 CRANパッケージ一覧 | トライフィールズ](https://www.trifields.jp/statistical-analysis-r-cran-packages-341)
 - [08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
 - [パッケージ | R のパッケージのインストール方法と呼び出し方](https://stats.biopapyrus.jp/r/basic/package.html)
 
