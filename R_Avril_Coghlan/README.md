@@ -785,6 +785,8 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 [変異](https://ja.wikipedia.org/wiki/突然変異)
 [Mutation](https://en.wikipedia.org/wiki/Mutation)
 
+塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
+
 ![https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
 Dec 8, 2014
