@@ -36,6 +36,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 - [R言語 CRANパッケージ一覧 | トライフィールズ](https://www.trifields.jp/statistical-analysis-r-cran-packages-341)
 - [08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
 - [パッケージ | R のパッケージのインストール方法と呼び出し方](https://stats.biopapyrus.jp/r/basic/package.html)
+- [Bioconductor: Genomicデータ解析ツール群 - Heavy Watal](https://heavywatal.github.io/rstats/bioconductor.html)
 
 #### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
 
@@ -50,8 +51,6 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
     library(seqinr)
 
 #### [How to install a Bioconductor R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-a-bioconductor-r-package)
-
-- [Bioconductor: Genomicデータ解析ツール群 - Heavy Watal](https://heavywatal.github.io/rstats/bioconductor.html)
 
 Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
 ```
@@ -168,8 +167,8 @@ mytable[["A"]]
 標準偏差 standard deviation を計算する関数を探す
 
 	# search for all functions containing the word “deviation” in their description:
-	help.search("deviation")
-	RSiteSearch("deviation")
+	#help.search("deviation")
+	#RSiteSearch("deviation")
 
 ベクトルの値の平均
 
@@ -783,12 +782,10 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
 
-変異
-[Mutations](https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3)
+[変異](https://ja.wikipedia.org/wiki/突然変異)
+[Mutation](https://en.wikipedia.org/wiki/Mutation)
 
-塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
-
-![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
+![https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
 Dec 8, 2014
 https://www.youtube.com/watch?v=MOtRqBs0jxE
