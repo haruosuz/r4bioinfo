@@ -533,7 +533,6 @@ window_size <- 2000; #window_size <- 1000; #window_size <- 300
 step_size <- window_size
 x <- seq(from = 1, to = length(seq1) - window_size + 1, by = step_size)
 y <- rollapply(data = seq1, width = window_size, by = step_size, FUN = GC)
-par(family="mono")
 plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ```
 
@@ -866,12 +865,22 @@ seqMleprae # Display the contents of "seqMleprae"
 ```
 # Create tests
 library("seqinr")
-testseq <- s2c("acgt")
-par(family="mono"); par(mfrow=c(2,2))
-dotPlot(testseq, testseq)
-dotPlot(testseq, rev(testseq))
-dotPlot(testseq, rep(testseq,2))
+x <- s2c("tgca")
+x
+rev(x)
+comp(x)
+rev(comp(x))
+par(mfrow=c(2,2))
+dotPlot(x, x)
+dotPlot(x, comp(x))
+dotPlot(rep(x,2), rep(x,2))
+dotPlot(rep(x,2), comp(rep(x,2)))
 ```
+
+- [2019年度バイオインフォマティクス技術者認定試験](https://www.jsbi.org/nintei/2019/)
+| [問題と解答(PDF形式)](https://www.jsbi.org/files/8915/7672/6101/2019mondai.pdf)
+| [解説(PDF形式)](https://www.jsbi.org/files/3015/8408/4627/kaisetsu_2019.pdf)
+| 問 44 
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
