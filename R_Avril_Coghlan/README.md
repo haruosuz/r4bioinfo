@@ -793,22 +793,19 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ![https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
-Dec 8, 2014
+- Dec 8, 2014
 https://www.youtube.com/watch?v=MOtRqBs0jxE
 Mutations in DNA
 1:44
-
-Apr 25, 2012
+- Apr 25, 2012
 https://www.youtube.com/watch?v=yobHMYhHAXE
 4.1.4 Explain the consequences of a base substitution mutation
 2:36
-
-Aug 28, 2014
+- Aug 28, 2014
 https://www.youtube.com/watch?v=JGDPZrQsMXI
 Substitution Mutations
 2:36
-
-Apr 2, 2014
+- Apr 2, 2014
 https://www.youtube.com/watch?v=xYOK-yzUWSI
 The different types of mutations | Biomolecules | MCAT | Khan Academy
 5:51
@@ -899,7 +896,11 @@ dotPlot(seqMleprae, seqMulcerans)
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 以下のアラインメントのスコアは？
 ```
-	# give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
+# give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
+
+# the score for the following alignment is 2 + 2 + (-1) + 2 + (-1)+ (-2) = 2:
+GAATTC
+GATTA-
 
 # the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
 GAATTC
