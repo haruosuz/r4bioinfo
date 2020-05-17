@@ -543,7 +543,7 @@ plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
 **連続塩基組成の偏り**
 
-<img alt="https://en.wikipedia.org/wiki/K-mer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png" width=25%>
+<img alt="https://en.wikipedia.org/wiki/K-mer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png" width=10%>
 
 [*k*-mer](https://en.wikipedia.org/wiki/K-mer)  
 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature)  
