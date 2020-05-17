@@ -517,15 +517,12 @@ GC(seq1[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
 GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 ```
 
-ゲノム配列をある一定のサイズに分け（ここでは 2000 bp）、次に各配列断片のGC含量を計算し、その値をプロットする。このような方法はスライディングウィンドウ（sliding window）と呼ばれ、配列断片のサイズはウィンドウサイズ（window size）、配列断片を移動させるサイズはステップサイズ（step size）と呼ばれる。
+配列を固定長（ここでは 2000 bp）の断片に分け、各配列断片のGC含量を計算する。このような方法はスライディングウィンドウ（sliding window）と呼ばれ、配列断片のサイズはウィンドウサイズ（window size）、配列断片を移動させるサイズはステップサイズ（step size）と呼ばれる。
 - [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
 p.86
 
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 **GC含量のスライディングウィンドウプロット**
-
-- [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
-- [Mean of a sliding window in R - Cross Validated ](http://stats.stackexchange.com/questions/3051/mean-of-a-sliding-window-in-r)
 
 `zoo`パッケージを用いて、異なるウィンドウサイズ（2000, 3000, 300 bp）でスライディングウィンドウプロットを作成する。
 ```
@@ -540,10 +537,13 @@ par(family="mono")
 plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ```
 
+- [Mean of a sliding window in R - Cross Validated](http://stats.stackexchange.com/questions/3051/mean-of-a-sliding-window-in-r)
+- [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
+
 ### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
 **連続塩基組成の偏り**
 
-![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png)
+<img alt="https://en.wikipedia.org/wiki/K-mer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png" width=25%>
 
 [*k*-mer](https://en.wikipedia.org/wiki/K-mer)  
 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature)  
@@ -624,7 +624,7 @@ rho(sequence = testseq, wordsize = 2)
 
 [INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](https://www.ddbj.nig.ac.jp/insdc.html)
 
-![](https://www.ddbj.nig.ac.jp/images/center/insdc_shoukai.gif)
+<img alt="" src="https://www.ddbj.nig.ac.jp/images/center/insdc_shoukai.gif" width=25%>
 
 ### [Searching for an accession number in the NCBI database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#searching-for-an-accession-number-in-the-ncbi-database)
 **NCBIデータベースでアクセッション番号の検索**
