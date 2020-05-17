@@ -231,7 +231,7 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 ### [Using R for Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#using-r-for-bioinformatics)
 **R言語を用いたバイオインフォマティクス**
 
-![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
+R言語入門 [Introduction to R](https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md#how-to-install-r-and-a-brief-introduction-to-r)
 
 ### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
 **バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
@@ -507,7 +507,7 @@ GC(seq1)
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/441px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
-**GC含量の移動解析**
+**GC含量のスライディングウィンドウ解析**
 ```
 GC(seq1[1:2000])      # 塩基配列の 1-2000 番目のGC含量
 GC(seq1[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
@@ -517,8 +517,13 @@ GC(seq1[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
 GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 ```
 
+ゲノム配列をある一定の長さ毎に分け（ここでは 2 kb）、次にそれぞれの断片についてのGC含量の値を計算し、その値をプロットする。このような方法はスライディングウィンドウ（sliding window）とも呼ばれ、
+断片のサイズはウィンドウサイズ（window size）、それをずらす大きさはステップサイズ（step size）と呼ばれる。
+- [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
+p.86
+
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
-**GC含量の移動プロット**
+**GC含量のスライディングウィンドウプロット**
 
 - [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
 - [Mean of a sliding window in R - Cross Validated ](http://stats.stackexchange.com/questions/3051/mean-of-a-sliding-window-in-r)
@@ -951,8 +956,6 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 このアラインメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
 
-![https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html](https://bi.biopapyrus.jp/media/nw-005.png)
-
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
 **2つのタンパク質配列間のグローバル・アラインメント**
 
@@ -1142,6 +1145,9 @@ library(seqinr)
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#links-and-further-reading)
 
+- August 7, 2008 [sequence alignment program written in R](https://guangchuangyu.github.io/2008/08/sequence-alignment-program-written-in-r/)
+Sequence alignment by dynamic programming.
+Guangchuang Yu
 - [配列解析 | 塩基配列解析とアミノ酸配列解析](https://bi.biopapyrus.jp/seq/)
   - [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](https://bi.biopapyrus.jp/seq/alignment/)
     - [グローバルアライメント | グローバルアライメントを求める Needleman–Wunsch アルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
