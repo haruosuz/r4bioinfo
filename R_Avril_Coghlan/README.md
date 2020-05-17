@@ -898,6 +898,8 @@ dotPlot(seqMleprae, seqMulcerans)
 ```
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
+# What is the score for the following alignment between the sequences "GAATTC" and "GATTA"?
+
 # the score for the following alignment is 2 + 2 + (-1) + 2 + (-1)+ (-2) = 2:
 GAATTC
 GATTA-
