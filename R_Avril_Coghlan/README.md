@@ -508,6 +508,7 @@ GC(seq1)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 **GC含量のスライディングウィンドウ解析**
+
 ```
 GC(seq1[1:2000])      # 塩基配列の 1-2000 番目のGC含量
 GC(seq1[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
@@ -524,15 +525,14 @@ p.86
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 **GC含量のスライディングウィンドウプロット**
 
-`zoo`パッケージを用いて、異なるウィンドウサイズ（2000, 3000, 300 bp）でスライディングウィンドウプロットを作成する。
+`zoo`パッケージを用いて、異なるウィンドウサイズ（2000, 1000, 300 bp）でスライディングウィンドウ解析を実行し、プロットする。
 ```
 #install.packages("zoo")
 library(zoo)
-windowsize <- 2000
-#windowsize <- 3000
-#windowsize <- 300
-x <- seq(from = 1, to = length(seq1)-windowsize, by = windowsize)
-y <- rollapply(data = seq1, width = windowsize, by = windowsize, FUN = GC)
+window_size <- 2000; #window_size <- 1000; #window_size <- 300
+step_size <- window_size
+x <- seq(from = 1, to = length(seq1) - window_size + 1, by = step_size)
+y <- rollapply(data = seq1, width = window_size, by = step_size, FUN = GC)
 par(family="mono")
 plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ```
