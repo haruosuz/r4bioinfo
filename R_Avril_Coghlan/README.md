@@ -517,8 +517,7 @@ GC(seq1[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
 GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 ```
 
-ゲノム配列をある一定の長さ毎に分け（ここでは 2 kb）、次にそれぞれの断片についてのGC含量の値を計算し、その値をプロットする。このような方法はスライディングウィンドウ（sliding window）とも呼ばれ、
-断片のサイズはウィンドウサイズ（window size）、それをずらす大きさはステップサイズ（step size）と呼ばれる。
+ゲノム配列をある一定のサイズに分け（ここでは 2000 bp）、次に各配列断片のGC含量を計算し、その値をプロットする。このような方法はスライディングウィンドウ（sliding window）と呼ばれ、配列断片のサイズはウィンドウサイズ（window size）、配列断片を移動させるサイズはステップサイズ（step size）と呼ばれる。
 - [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
 p.86
 
@@ -528,7 +527,7 @@ p.86
 - [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
 - [Mean of a sliding window in R - Cross Validated ](http://stats.stackexchange.com/questions/3051/mean-of-a-sliding-window-in-r)
 
-`zoo`パッケージを用いて、異なる範囲（windowsize: 2000, 3000, 300 塩基）で移動プロットを作成する。
+`zoo`パッケージを用いて、異なるウィンドウサイズ（2000, 3000, 300 bp）でスライディングウィンドウプロットを作成する。
 ```
 #install.packages("zoo")
 library(zoo)
