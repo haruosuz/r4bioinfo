@@ -306,14 +306,9 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
 **RパッケージSeqinRを用いて、ゲノム配列データを取得する**
 
-[TogoWS REST service](http://togows.dbcls.jp/site/en/rest.html)  
-[TogoWS RESTサービスを使い倒す 2011 統合TV(togotv)](https://doi.org/10.7875/togotv.2011.058)
-
 ```
 library(seqinr)
 ACCESSION <- "NC_001477" # Dengue virus 1
-#ACCESSION <- "MN908947" # SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2)
-filename <- paste0("http://togows.org/entry/nucleotide/",ACCESSION,".fasta")
 filename <- paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text")
 seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 ```
@@ -338,10 +333,13 @@ seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 
     write.fasta(sequences=seq1, names="DEN-1", file.out="den1.fasta")
 
-作業ディレクトリの確認:
+[ファイル操作関数 | R によるファイルの作成、削除、移動などについて](https://stats.biopapyrus.jp/r/basic/file.html)
+
+作業ディレクトリのパスを表示し、ディレクトリ中のファイル一覧を表示する:  
+
 ```
-getwd() # Get Working Directory
-list.files() # List the Files in a Directory/Folder
+#getwd() # Get Working Directory
+#list.files() # List the Files in a Directory/Folder
 #system("open .") # Invoke a System Command
 ```
 
@@ -451,16 +449,18 @@ for による繰り返し
 
 [48. とりあえず plot()](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/48.html)
 
-    # setting font in plots
-    par(family="mono")
+```
+# setting font in plots
+par(family="mono")
 
-	# plot a scatterplot of the values in v1 against the values in v2
-	v1 <- 1:5
-	v2 <- 5:1
-    plot(x=v1, y=v2, xlab="x", ylab="y")
+# plot a scatterplot of the values in v1 against the values in v2
+v1 <- 1:5
+v2 <- 5:1
+plot(x=v1, y=v2, xlab="x", ylab="y")
 
-    # type: "p" for points, "l" for lines, "b" for both,
-    plot(x=v1, y=v2, xlab="x", ylab="y", type="b")
+# type: "p" for points, "l" for lines, "b" for both,
+plot(x=v1, y=v2, xlab="x", ylab="y", type="b")
+```
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 
@@ -861,32 +861,33 @@ seqMleprae # Display the contents of "seqMleprae"
 とは、2本の配列を比較するためのグラフである。
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
 
-テスト用の配列データを作成する:
-```
-# Create tests
-library("seqinr")
-x <- s2c("tgca")
-x
-rev(x)
-comp(x)
-rev(comp(x))
-par(mfrow=c(2,2))
-dotPlot(x, x)
-dotPlot(x, comp(x))
-dotPlot(rep(x,2), rep(x,2))
-dotPlot(rep(x,2), comp(rep(x,2)))
-```
-
+- [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
+p.86
 - [2019年度バイオインフォマティクス技術者認定試験](https://www.jsbi.org/nintei/2019/)
 | [問題と解答(PDF形式)](https://www.jsbi.org/files/8915/7672/6101/2019mondai.pdf)
 | [解説(PDF形式)](https://www.jsbi.org/files/3015/8408/4627/kaisetsu_2019.pdf)
 | 問 44 
 
+テスト用の配列データを作成する:
+```
+# Create tests
+library(seqinr)
+
+myseq <- s2c("tgca")
+myseq
+rev(myseq) # Reverse Elements
+comp(myseq) # complements a nucleic acid sequence
+rev(comp(myseq)) # reverse complementary strand
+
+par(mfrow=c(2,2))
+dotPlot(myseq, myseq)
+dotPlot(myseq, comp(myseq))
+dotPlot(rep(myseq,2), rep(myseq,2))
+dotPlot(rep(myseq,2), comp(rep(myseq,2)))
+```
+
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
-# setting font in plots
-par(family="mono")
-
 dotPlot(seqMleprae, seqMulcerans)
 ```
 
@@ -1307,7 +1308,6 @@ Once we have a distance matrix that gives the pairwise distances between all our
     # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(mydist)
-    par(family="mono")
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
@@ -1369,7 +1369,6 @@ mydist
 library(ape)
 mytree <- nj(mydist)
 mytree <- root(mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
-    par(family="mono")
 plot.phylo(mytree, main = "Phylogenetic Tree")
 
 # get sequence annotations
@@ -1417,11 +1416,12 @@ unlist(getAnnot(seqs))
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
 **DNA/mRNA配列の系統樹の構築**
 
-    # construct a phylogenetic tree with the neighbor joining algorithm
-    library(ape)
-    mytree <- nj(virusmRNAdist)
-    par(family="mono")
-    plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
+```
+# construct a phylogenetic tree with the neighbor joining algorithm
+library(ape)
+mytree <- nj(virusmRNAdist)
+plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
+```
 
 ### Summary
 
