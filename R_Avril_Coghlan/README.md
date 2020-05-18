@@ -873,17 +873,17 @@ p.86
 # Create tests
 library(seqinr)
 
-myseq <- s2c("tgca")
-myseq
-rev(myseq) # Reverse Elements
-comp(myseq) # complements a nucleic acid sequence
-rev(comp(myseq)) # reverse complementary strand
+testseq <- s2c("tgca")
+testseq
+rev(testseq) # Reverse Elements
+comp(testseq) # complements a nucleic acid sequence
+rev(comp(testseq)) # reverse complementary strand
 
 par(mfrow=c(2,2))
-dotPlot(myseq, myseq)
-dotPlot(myseq, comp(myseq))
-dotPlot(rep(myseq,2), rep(myseq,2))
-dotPlot(rep(myseq,2), comp(rep(myseq,2)))
+dotPlot(testseq, testseq)
+dotPlot(testseq, comp(testseq))
+dotPlot(rep(testseq,2), rep(testseq,2))
+dotPlot(rep(testseq,2), comp(rep(testseq,2)))
 ```
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
