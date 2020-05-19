@@ -48,11 +48,11 @@ count(testseq, wordsize = 2)
 #' LNFEEFKKIILNRQNEAEDKSLLELKNLGLDKHSRKKRLFRMTLSEKCCQVGCIRKDIAR
 #' LC
 #' ```
-
+#' 
 #' ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 #' **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 #' 
-#' 配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス (Dengue virus: DEN-1, DEN-2, DEN-3, DEN-4) のDNA配列のNCBIアクセッションは以下の通り:  
+#' 配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱) [Dengue fever](https://en.wikipedia.org/wiki/Dengue_fever) を引き起こすウイルス [Dengue virus](https://en.wikipedia.org/wiki/Dengue_virus) のDNA配列のNCBIアクセッションは以下の通り:  
 #' 
 #' - [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477) (Dengue virus 1, complete genome)
 #' - [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474) (Dengue virus 2, complete genome)
