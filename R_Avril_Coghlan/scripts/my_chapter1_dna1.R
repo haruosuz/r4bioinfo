@@ -5,7 +5,6 @@
 #' output:
 #'    html_document:
 #'      toc: true
-#' theme: united
 #' ---
 
 #' ## [DNA配列の統計 (1)](https://github.com/haruosuz/r4bioinfo/blob/master/R_Avril_Coghlan/README.md#dna-sequence-statistics-1)
@@ -40,8 +39,16 @@ count(testseq, wordsize = 2)
 
 #' ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 #' - [FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)
-#' - https://www.ncbi.nlm.nih.gov/search/?term=A06852
+#' - https://en.wikipedia.org/wiki/FASTA_format
 #' 
+#' ```
+#' > A06852 183 residues
+#' MPRLFSYLLGVWLLLSQLPREIPGQSTNDFIKACGRELVRLWVEICGSVSWGRTALSLEE
+#' PQLETGPPAETMPSSITKDAEILKMMLEFVPNLPQELKATLSERQPSLRELQQSASKDSN
+#' LNFEEFKKIILNRQNEAEDKSLLELKNLGLDKHSRKKRLFRMTLSEKCCQVGCIRKDIAR
+#' LC
+#' ```
+
 #' ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 #' **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 #' 
