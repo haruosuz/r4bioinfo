@@ -250,6 +250,7 @@ R言語入門 [Introduction to R](https://github.com/haruosuz/r4bioinfo/blob/mas
 ```
 # Create tests
 testseq <- s2c("acgt")
+testseq
 length(testseq)
 table(testseq)
 GC(testseq)
@@ -259,6 +260,14 @@ count(testseq, wordsize = 2)
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 - [FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)
 - https://www.ncbi.nlm.nih.gov/search/?term=A06852
+
+```
+> A06852 183 residues
+MPRLFSYLLGVWLLLSQLPREIPGQSTNDFIKACGRELVRLWVEICGSVSWGRTALSLEE
+PQLETGPPAETMPSSITKDAEILKMMLEFVPNLPQELKATLSERQPSLRELQQSASKDSN
+LNFEEFKKIILNRQNEAEDKSLLELKNLGLDKHSRKKRLFRMTLSEKCCQVGCIRKDIAR
+LC
+```
 
 ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
@@ -388,9 +397,6 @@ count(seq = seq1, wordsize = 2)
 table1 <- count(seq1, wordsize = 1)
 table1[[3]]
 table1[["g"]]
-
-words(length = 2) #  dinucleotides 2連続塩基 
-words(length = 3) # trinucleotides 3連続塩基
 ```
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
@@ -485,10 +491,9 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 library("seqinr") # Load the SeqinR package.
 
 ACCESSION <- "NC_001477" # Dengue virus 1
-#ACCESSION <- "MN908947" # SARS-CoV-2 (Severe acute respiratory syndrome coronavirus 2)
 
-filename <- paste0("http://togows.org/entry/nucleotide/",ACCESSION,".fasta")
 filename <- paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text")
+
 seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 
 # obtain nucleotides 452-535 of DNA sequence stored in the vector `seq1`
