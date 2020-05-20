@@ -1,5 +1,4 @@
-Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2020-04
+Last Update: 2020-05
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -259,7 +258,7 @@ count(testseq, wordsize = 2)
 
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 - [FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)
-- https://www.ncbi.nlm.nih.gov/search/?term=A06852
+- https://en.wikipedia.org/wiki/FASTA_format
 
 ```
 > A06852 183 residues
@@ -272,7 +271,7 @@ LC
 ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 
-配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス (Dengue virus: DEN-1, DEN-2, DEN-3, DEN-4) のDNA配列のNCBIアクセッションは以下の通り:  
+配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱) [Dengue fever](https://en.wikipedia.org/wiki/Dengue_fever) を引き起こすウイルス [Dengue virus](https://en.wikipedia.org/wiki/Dengue_virus) のDNA配列のNCBIアクセッションは以下の通り:  
 - [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477) (Dengue virus 1, complete genome)
 - [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474) (Dengue virus 2, complete genome)
 - [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475) (Dengue virus 3, complete genome)
@@ -906,26 +905,17 @@ dotPlot(seqMleprae, seqMulcerans)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
-【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける。
+【例題】DNA配列("ATTGC"と"ATGC")間の最適なグローバルアラインメントを見つける。
 
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 以下のアラインメントのスコアは？
 ```
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
-# What is the score for the following alignment between the sequences "GAATTC" and "GATTA"?
+# What is the score for the following alignment?
 
-# the score for the following alignment is 2 + 2 + (-1) + 2 + (-1)+ (-2) = 2:
-GAATTC
-GATTA-
-
-# the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
-GAATTC
-GATT-A
-
-# the score for the following alignment is 2 + 2 + (-2) + 2 + 2 + (-1) = 5:
-GAATTC
-GA-TTA
+ATTGC
+ATGC-
 ```
 
 *scoring matrix (substitution matrix)*
