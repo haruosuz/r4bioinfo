@@ -437,20 +437,31 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
 
 	# create a sequence of numbers
-    seq(from=1, to=10, by=1)
-    1:10
-    seq(from=1, to=10, by=2)
+```
+# create the sequence of numbers from 1-10 in steps of 1
+seq(from=1, to=10, by=1)
+1:10
+
+# create a sequence of numbers from 1-10 in steps of 2
+seq(from=1, to=10, by=2)
+```
 
 [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
 for による繰り返し
 
 	# for loop to carry out the same command several times
-	for (i in 1:10) { print (i*i) }
 
-    myvector <- c(1,3,5,7,9)
-    for (i in myvector) { print (i*i) }
+```
+# print out the square of each number between 1 and 10
+for (i in 1:10) { print (i*i) }
 
-    for (i in seq(from=1, to=10, by=2)) { print (i*i) }
+# give a for loop a vector of numbers containing the values 2, 9, 100, and 133
+myvector <- c(2, 9, 100, 133)
+for (i in myvector) { print (i*i) }
+
+# print out the square of every second number between 1 and 10
+for (i in seq(from=1, to=10, by=2)) { print (i*i) }
+```
 
 [48. とりあえず plot()](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/48.html)
 
@@ -467,13 +478,20 @@ plot(x=v1, y=v2, xlab="x", ylab="y")
 plot(x=v1, y=v2, xlab="x", ylab="y", type="b")
 ```
 
-[関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
+[31. 関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 
 	# create our own functions
-	myfunction <- function(x) { return(20 + (x*x)) }
-	myfunction
-	myfunction(2)
-	myfunction(3)
+```
+# create a function to calculate the value of 20 plus the square of some input number
+myfunction <- function(x) { return(20 + (x*x)) }
+
+# use the function for different input numbers (eg. 10, 25)
+myfunction(10)
+myfunction(25)
+
+# view the code that makes up a function by typing its name
+myfunction
+```
 
 `＃`の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
 
@@ -488,11 +506,8 @@ DEN-1デング熱ウイルスのゲノム配列を取得する:
 ```
 # reading the sequence for the DEN-1 Dengue virus genome (NCBI accession: NC_001477)
 library("seqinr") # Load the SeqinR package.
-
-ACCESSION <- "NC_001477" # Dengue virus 1
-
+ACCESSION <- "NC_001477"
 filename <- paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text")
-
 seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 
 # obtain nucleotides 452-535 of DNA sequence stored in the vector `seq1`
@@ -504,11 +519,10 @@ GC(seq1)
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 **GC含量の局所変動**
-は、[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)や変異バイアスを示唆
+は、[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播) [horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer) や変異バイアス [mutation bias](https://en.wikipedia.org/wiki/Mutation_bias) を示唆
 
-[Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
-
-![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/441px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
+<img alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/882px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png" width=50%>
+<img alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/800px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png" width=50%>
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 **GC含量のスライディングウィンドウ解析**
@@ -525,6 +539,7 @@ GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 配列を固定長（ここでは 2000 bp）の断片に分け、各配列断片のGC含量を計算する。このような方法はスライディングウィンドウ（sliding window）と呼ばれ、配列断片のサイズはウィンドウサイズ（window size）、配列断片を移動させるサイズはステップサイズ（step size）と呼ばれる。
 - [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
 p.86
+GC skew
 
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 **GC含量のスライディングウィンドウプロット**
@@ -546,12 +561,12 @@ plot(x, y, type="b", xlab="Position (bp)", ylab="GC content")
 ### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
 **連続塩基組成の偏り**
 
-<img alt="https://en.wikipedia.org/wiki/K-mer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png" width=10%>
-
-[*k*-mer](https://en.wikipedia.org/wiki/K-mer)  
 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature)  
-2連続塩基組成
+[*k*-mer](https://en.wikipedia.org/wiki/K-mer)  
 [dinucleotide relative abundances](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
+2連続塩基組成
+
+<img alt="https://en.wikipedia.org/wiki/K-mer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/K-mer_diagram.svg/203px-K-mer_diagram.svg.png" width=20%>
 
 ```
 # Count oligomers (monomer/dimer/trimer/etc)
