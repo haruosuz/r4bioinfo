@@ -436,8 +436,9 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
 
-	# create a sequence of numbers
 ```
+# create a sequence of numbers
+
 # create the sequence of numbers from 1-10 in steps of 1
 seq(from=1, to=10, by=1)
 1:10
@@ -449,9 +450,9 @@ seq(from=1, to=10, by=2)
 [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
 for による繰り返し
 
-	# for loop to carry out the same command several times
-
 ```
+# for loop to carry out the same command several times
+
 # print out the square of each number between 1 and 10
 for (i in 1:10) { print (i*i) }
 
@@ -480,8 +481,9 @@ plot(x=v1, y=v2, xlab="x", ylab="y", type="b")
 
 [31. 関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 
-	# create our own functions
 ```
+# create our own functions
+
 # create a function to calculate the value of 20 plus the square of some input number
 myfunction <- function(x) { return(20 + (x*x)) }
 
