@@ -11,135 +11,90 @@
 - [enrichment](#enrichment)
 - [gggenes](#gggenes)
 - [genBaRcode](#genBaRcode)
-- [people](#people)
-  - [ushio](#ushio)
-- [](#)
-- [coronavirus](#coronavirus)
-  - [nCov2019](#nCov2019)
 - [](#)
 - [SubVis](#subvis)
-- [protr](#protr)
-- [Bios2mds](#bios2mds)
 - [SeqFeatR](#seqfeatr)
+- [snp](#snp)
+- [mutation](#mutation)
+  - [CorMut](#snp)
+  - [SynMut](#snp)
+  - [g3viz](#snp)
+- [COVID-19](#COVID-19)
+  - [nCov2019](#nCov2019)
+  - [coronavirus](#coronavirus)
+- [](#)
+- [resistance](#resistance)
+- [plasmid](#plasmid)
+- [motif](#motif)
+- [Bios2mds](#bios2mds)
+- [protr](#protr)
+- [dendextend](#dendextend)
+- [](#)
+- [ecology](#ecology)
+- [people](#people)
+[coghlan-avril](#coghlan-avril)
+[ushio](#ushio)
+[fvgnoriyuki](#fvgnoriyuki) 鈴木紀之 Noriyuki Suzuki
 
 ----------
-### SubVis
+## bwt
+Burrows-Wheeler Transform
 
-https://cran.r-project.org/package=SubVis
-SubVis: Visual Exploration of Protein Alignments Resulting from Multiple Substitution Matrices
-Substitution matrices are important parameters in protein alignment algorithms. These matrices represent the likelihood that an amino acid will be substituted for another during mutation. This tool allows users to apply predefined and custom matrices and then explore the resulting alignments with interactive visualizations. 'SubVis' requires the availability of a web browser.
+2018.08.29
+https://bi.biopapyrus.jp/seq/bwt.html
+Burrows-Wheeler 変換 | アラインメントプログラムでよく使われる文字列検索アルゴリズム
 
-https://www.ncbi.nlm.nih.gov/pubmed/28674656
-PeerJ. 2017 Jun 27;5:e3492. doi: 10.7717/peerj.3492. eCollection 2017.
-SubVis: an interactive R package for exploring the effects of multiple substitution matrices on pairwise sequence alignment.
-Barlowe S1, Coan HB2, Youker RT2.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5490468/
-- Package: https://cran.r-project.org/web/packages/SubVis/
-- Demo videos: https://github.com/sabarlowe/SubVis
+https://rpubs.com/geest007/BWT
+Burrows Wheeler Transformation
+Geert van Geest
+24 maart 2020
 
-----------
-### protr
+Created 6 years ago
+https://gist.github.com/aaronwolen/cbdd74180a714267bf0c
+A simple R implementation of the Burrows-Wheeler transformation based on Wikipedia's python example.
+ bwt.r
 
-https://cran.r-project.org/package=protr
-protr: Generating Various Numerical Representation Schemes for Protein Sequences
-Comprehensive toolkit for generating various numerical features of protein sequences described in Xiao et al. (2015) 
-Vignettes:
-https://cran.r-project.org/web/packages/protr/vignettes/protr.html
-protr: R package for generating various numerical representation schemes of protein sequences
-Nan Xiao <https://nanx.me>
-2019-05-18
+### Rbowtie
+https://bioconductor.org/packages/release/bioc/html/Rbowtie.html
 
-https://www.ncbi.nlm.nih.gov/pubmed/25619996
-Bioinformatics. 2015 Jun 1;31(11):1857-9. doi: 10.1093/bioinformatics/btv042. Epub 2015 Jan 24.
-protr/ProtrWeb: R package and web server for generating various numerical representation schemes of protein sequences.
-Xiao N1, Cao DS1, Zhu MF1, Xu QS1.
-
-----------
-### Bios2mds
-
-https://cran.r-project.org/package=bios2mds
-bios2mds: From BIOlogical Sequences to MultiDimensional Scaling
-Bios2mds is primarily dedicated to the analysis of biological sequences by metric MultiDimensional Scaling with projection of supplementary data. It contains functions for reading multiple sequence alignment files, calculating distance matrices, performing metric multidimensional scaling and visualizing results.
-
-https://www.ncbi.nlm.nih.gov/pubmed/22702410
-BMC Bioinformatics. 2012 Jun 15;13:133. doi: 10.1186/1471-2105-13-133.
-Bios2mds: an R package for comparing orthologous protein families by metric multidimensional scaling.
-Pelé J1, Bécu JM, Abdi H, Chabbert M.
-
-----------
-
-### SeqFeatR
-https://cran.r-project.org/package=SeqFeatR
-SeqFeatR: A Tool to Associate FASTA Sequences and Features
-Provides user friendly methods for the identification of sequence patterns that are statistically significantly associated with a property of the sequence. For instance, SeqFeatR allows to identify viral immune escape mutations for hosts of given HLA types. The underlying statistical method is Fisher's exact test, with appropriate corrections for multiple testing, or Bayes. Patterns may be point mutations or n-tuple of mutations. SeqFeatR offers several ways to visualize the results of the statistical analyses, see Budeus (2016) <doi:10.1371/journal.pone.0146409>.
-Published:	2019-04-12
-
-Vignettes:	SeqFeatR Tutorial
-https://cran.r-project.org/web/packages/SeqFeatR/vignettes/SeqFeatR_tutorial.pdf
-April 12, 2019
-2 The core of SeqFeatR: Fisher’s exact test
-2.1 An example: association of a feature with sequence
-We have mentioned that in the above alignment there is seemingly a strong
-association of the occurrence of amino acid P at position 2 with the feature f.
-The probability and strength of this association can be quantified, respectively,
-by a p-value computed with Fisher’s exact test, a well-known statistical test for
-association, and by an odds ratio (OR).
-
-https://www.ncbi.nlm.nih.gov/pubmed/26731669
-PLoS One. 2016 Jan 5;11(1):e0146409. doi: 10.1371/journal.pone.0146409. eCollection 2016.
-SeqFeatR for the Discovery of Feature-Sequence Associations.
-Budeus B1, Timm J2, Hoffmann D1.
-https://seqfeatr.zmb.uni-due.de/
-
-
-
-
-
-----------
-
-19/03/2020
-https://freakonometrics.hypotheses.org/60482
-Modeling pandemics (1) | Freakonometrics
-
-
-## coronavirus
-
-https://github.com/haruosuz/microbe/blob/master/references/microbe.COVID-19.md
-
-
-http://mikuhatsune.hatenadiary.com/entry/2020/03/19/231812
-COVID-19 の潜伏期間をrstanで推定する - 驚異のアニヲタ社会復帰の予備
-
-March 4, 2020
-https://datascienceplus.com/map-visualization-of-covid19-across-world/
-Map Visualization of COVID-19 Across the World with R | DataScience+
-
-
-http://www.bnosac.be/index.php/blog/97-corona-in-belgium
-bnosac :: open analytical helpers - Corona in Belgium
-```
-git clone https://github.com/CSSEGISandData/COVID-19
-```
-
-### nCov2019
-
-https://github.com/GuangchuangYu/nCov2019
-
-Posted March 05, 2020.
-https://www.medrxiv.org/content/10.1101/2020.02.25.20027433v2
-Open-source analytics tools for studying the COVID-19 coronavirus outbreak | medRxiv
-
-https://twitter.com/MinatoNakazawa/status/1235142870547349505
-中澤 港％人類生態学者＠神戸大学 on Twitter: "An R package and a website with real-time data on the COVID-19 coronavirus outbreak https://t.co/msaWQY1Y5Z 中身をまだ見ていないが、データをRのパッケージにした人たちがいるようだ。" / Twitter
-6:59 PM · Mar 4, 2020
-
-Feb 11
-https://towardsdatascience.com/an-r-package-to-explore-the-novel-coronavirus-590055738ad6
-An R Package to Explore the Novel Coronavirus - Towards Data Science
+https://bioconductor.org/packages/release/bioc/vignettes/Rbowtie/inst/doc/Rbowtie-Overview.html
+An introduction to Rbowtie
+27 April, 2020
 
 
 ----------
 ## featuring
+
+
+https://www.trifields.jp/statistical-analysis-r-cran-packages-341
+R言語 CRANパッケージ一覧 | トライフィールズ
+パッケージ確認日：2020/05/01
+パッケージ数：15560
+
+https://www.ncbi.nlm.nih.gov/pubmed/29795540
+Nat Microbiol. 2018 Jun;3(6):652-661. doi: 10.1038/s41564-018-0156-0. Epub 2018 May 24.
+Methods for phylogenetic analysis of microbiome data.
+Washburne AD1, Morton JT2,3, Sanders J3, McDonald D3, Zhu Q3, Oliverio AM4,5, Knight R2,3.
+https://www.nature.com/articles/s41564-018-0156-0
+In this Review Article, we organize the field of phylogenetically structured data analysis by discussing the major classes of methods. We first emphasize a fundamental issue in the field: the imperfection of estimated phylogenies. We then define four classes: (1) comparative methods; (2) ancestral state reconstruction and descendant trait imputation; (3) phylogenetic variables; and (4) phylogeny-aware distances (Table 1); and provide Supplementary Online Tutorials with examples (https://knightlab-analyses.github.io/phylogenetic-tutorials/). 
+
+
+
+2020/02/10
+https://www.tidyverse.org/blog/2020/02/slider-0-1-0/
+slider 0.1.0 - Tidyverse
+slider provides a family of general purpose sliding window functions, which can be used to compute moving averages, cumulatives sums, rolling regressions, and any other sliding operation.
+
+
+https://github.com/evolvedmicrobe/dotplot
+evolvedmicrobe/dotplot: Fast generation of dotplots comparing sequences in R
+
+
+https://github.com/YokohamaR/yokohama.r
+横浜R道場（Yokohama.R）は横浜国立大学生態学分野の研究室で行っている、統計解析環境「R」を使う人向けのコミュニティです。Rおよび統計解析についての知識共有、技術向上を目的としています。月に２回ほど開催しています。
+https://github.com/YokohamaR/yokohama.r/wiki/R-packages-for-ecologist
+R packages for ecologist
+生態学関連で使われる便利なRパッケージ
 
 
 https://www.r-exercises.com/tag/bioinformatics/
@@ -187,9 +142,378 @@ Tips for NGS Data Analysis
 二階堂愛
 
 ----------
+
+
+
+----------
+## ecology
+
+12:51 PM · Apr 26, 2020
+https://twitter.com/copypasteusa/status/1254256843884396544
+Haruo Suzuki on Twitter: "生態学でRを教える。Rの学習は統計学の学習とは別のスキル "Learning R is a separate skill from learning statistics" https://t.co/YdOnTfXOnx" / Twitter
+21 April 2020
+https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3060
+Teaching R in the undergraduate ecology classroom: approaches, lessons learned, and recommendations - Auker - 2020 - Ecosphere - Wiley Online Library
+
+Table 1. R packages identified as used for analysis in the first two issues of Ecology from 2008, 2013, and 2018 combined.
+
+Table 2. Similarities and differences between two upper‐level ecology courses each focused on teaching R as a key component of the course.
+
+Table 3. Week by week map of R skill development activities in each course.
+
+Table 4. Steps to data analysis workflow adapted from Getting Started with R (Beckerman et al. 2017) and adopted as practice in Forest Ecology.
+
+Table 5. R Skills and packages covered in courses.
+
+
+Supporting Information
+Filename	Description
+ecs23060-sup-0001-AppendixS1.pdfPDF document, 804.9 KB
+https://esajournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fecs2.3060&file=ecs23060-sup-0001-AppendixS1.pdf
+
+
+08 January 2020
+https://onlinelibrary.wiley.com/doi/10.1002/ece3.5970
+A checklist for choosing between R packages in ecology and evolution - Lortie - - Ecology and Evolution
+
+
+----------
+
+
+
+----------
+### dendextend
+
+https://cran.r-project.org/package=dendextend
+dendextend: Extending 'dendrogram' Functionality in R
+Offers a set of functions for extending 'dendrogram' objects in R, letting you visualize and compare trees of 'hierarchical clusterings'. You can (1) Adjust a tree's graphical parameters - the color, size, type, etc of its branches, nodes and labels. (2) Visually and statistically compare different 'dendrograms' to one another.
+```
+Published:	2020-02-28
+
+Vignettes:	Hierarchical cluster analysis on famous data sets
+Frequently asked questions
+A quick introduction to dendextend (start here)
+Introduction to dendextend
+```
+
+----------
+### motif
+
+https://twitter.com/tangming2005/status/1186283109911674880
+Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? https://t.co/iNrB64yQ4X . https://t.co/Cwa0R24JSq https://t.co/88rpGuUtIe #rstats" / Twitter
+11:08 PM · Oct 21, 2019
+- https://bioconductor.org/packages/release/bioc/html/motifRG.html
+- https://bioconductor.org/packages/release/bioc/html/motifcounter.html
+- https://bioconductor.org/packages/release/bioc/html/PWMEnrich.html
+
+http://bioconductor.org/packages/release/bioc/html/universalmotif.html
+
+----------
+### Bios2cor
+
+https://cran.r-project.org/package=Bios2cor
+Bios2cor: From Biological Sequences and Simulations to Correlation Analysis
+Utilities for computation and analysis of correlation/covariation in multiple sequence alignments and in side chain motions during molecular dynamics simulations.
+
+Published:	2020-01-30
+
+https://www.ncbi.nlm.nih.gov/pubmed/29912865
+PLoS Comput Biol. 2018 Jun 18;14(6):e1006209. doi: 10.1371/journal.pcbi.1006209. eCollection 2018 Jun.
+Evolution of chemokine receptors is driven by mutations in the sodium binding site.
+Taddese B1, Deniaud M1, Garnier A1, Tiss A1,2, Guissouma H2, Abdi H3, Henrion D1, Chabbert M1.
+
+
+----------
+### Bios2mds
+
+https://cran.r-project.org/package=bios2mds
+bios2mds: From BIOlogical Sequences to MultiDimensional Scaling
+Bios2mds is primarily dedicated to the analysis of biological sequences by metric MultiDimensional Scaling with projection of supplementary data. It contains functions for reading multiple sequence alignment files, calculating distance matrices, performing metric multidimensional scaling and visualizing results.
+
+https://www.ncbi.nlm.nih.gov/pubmed/22702410
+BMC Bioinformatics. 2012 Jun 15;13:133. doi: 10.1186/1471-2105-13-133.
+Bios2mds: an R package for comparing orthologous protein families by metric multidimensional scaling.
+Pelé J1, Bécu JM, Abdi H, Chabbert M.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3403911/
+The “noise” of the data can be estimated from the MDS analysis of a random sequence alignment (Figure ​(Figure3)3) that is generated with the random function and has the same length, number of sequences, and amino acid composition as the initial alignment.
+
+
+
+----------
+### protr
+
+https://cran.r-project.org/package=protr
+protr: Generating Various Numerical Representation Schemes for Protein Sequences
+Comprehensive toolkit for generating various numerical features of protein sequences described in Xiao et al. (2015) 
+Vignettes:
+https://cran.r-project.org/web/packages/protr/vignettes/protr.html
+protr: R package for generating various numerical representation schemes of protein sequences
+Nan Xiao <https://nanx.me>
+2019-05-18
+
+The commonly used descriptors listed in protr include amino acid composition, autocorrelation, CTD, conjoint traid, quasi-sequence order, pseudo amino acid composition, and profile-based descriptors derived by Position-Specific Scoring Matrix (PSSM).
+```
+2 An Example Predictive Modeling Workflow
+
+# plot ROC curve
+library("pROC")
+
+3 Package Overview
+
+Profile-based descriptors
+extractPSSM()
+extractPSSMAcc()
+extractPSSMFeature()
+
+
+4 Commonly Used Descriptors
+4.1 Amino Acid Composition Descriptor
+4.2 Dipeptide Composition Descriptor
+4.3 Tripeptide Composition Descriptor
+4.4 Autocorrelation Descriptors
+4.4.1 Normalized Moreau-Broto autocorrelation descriptors
+4.4.2 Moran autocorrelation descriptors
+4.4.3 Geary autocorrelation descriptors
+4.5 Composition/Transition/Distribution
+
+4.8 Pseudo-Amino Acid Composition (PseAAC)
+4.9 Amphiphilic Pseudo-Amino Acid Composition (APseAAC)
+4.10 Profile-Based Descriptors
+
+5 Descriptors for Proteochemometric Modeling
+6 Similarity Calculation by Sequence Alignment
+7 Similarity Calculation by GO Semantic Similarity Measures
+8 Miscellaneous Tools
+8.1 Retrieve Protein Sequences from UniProt
+
+
+
+8.5 Remove Gaps from Sequences
+
+8.9 BLOSUM and PAM Matrices for the 20 Amino Acids
+
+
+10 Summary
+```
+
+https://www.ncbi.nlm.nih.gov/pubmed/25619996
+Bioinformatics. 2015 Jun 1;31(11):1857-9. doi: 10.1093/bioinformatics/btv042. Epub 2015 Jan 24.
+protr/ProtrWeb: R package and web server for generating various numerical representation schemes of protein sequences.
+Xiao N1, Cao DS1, Zhu MF1, Xu QS1.
+
+----------
+
+
+----------
+
+## COVID-19
+
+https://github.com/haruosuz/microbe/blob/master/references/microbe.COVID-19.md
+
+19/03/2020
+https://freakonometrics.hypotheses.org/60482
+Modeling pandemics (1) | Freakonometrics
+
+
+http://mikuhatsune.hatenadiary.com/entry/2020/03/19/231812
+COVID-19 の潜伏期間をrstanで推定する - 驚異のアニヲタ社会復帰の予備
+
+https://rdatamining.wordpress.com/2020/03/10/coronavirus-data-analysis-with-r-tidyverse-and-ggplot2/
+Coronavirus data analysis with R, tidyverse and ggplot2 | blog.RDataMining.com
+
+March 4, 2020
+https://datascienceplus.com/map-visualization-of-covid19-across-world/
+Map Visualization of COVID-19 Across the World with R | DataScience+
+
+
+http://www.bnosac.be/index.php/blog/97-corona-in-belgium
+bnosac :: open analytical helpers - Corona in Belgium
+```
+git clone https://github.com/CSSEGISandData/COVID-19
+```
+
+### nCov2019
+
+https://github.com/GuangchuangYu/nCov2019
+
+Posted March 05, 2020.
+https://www.medrxiv.org/content/10.1101/2020.02.25.20027433v2
+Open-source analytics tools for studying the COVID-19 coronavirus outbreak | medRxiv
+
+https://twitter.com/MinatoNakazawa/status/1235142870547349505
+中澤 港％人類生態学者＠神戸大学 on Twitter: "An R package and a website with real-time data on the COVID-19 coronavirus outbreak https://t.co/msaWQY1Y5Z 中身をまだ見ていないが、データをRのパッケージにした人たちがいるようだ。" / Twitter
+6:59 PM · Mar 4, 2020
+
+Feb 11
+https://towardsdatascience.com/an-r-package-to-explore-the-novel-coronavirus-590055738ad6
+An R Package to Explore the Novel Coronavirus - Towards Data Science
+
+### coronavirus
+https://cran.r-project.org/package=coronavirus
+coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset
+Provides a daily summary of the Coronavirus (COVID-19) cases by state/province. Data source: Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus <https://systems.jhu.edu/research/public-health/ncov/>.
+Published:	2020-02-23
+URL:	https://github.com/RamiKrispin/coronavirus
+
+
+----------
+## mutation
+
+### g3viz
+
+https://cran.r-project.org/package=g3viz
+URL:	https://github.com/G3viz/g3viz
+Vignettes:
+Chart themes of g3viz (live demo)
+Introduction to g3viz (live demo)
+
+https://cran.r-project.org/web/packages/g3viz/vignettes/chart_themes.html
+G3viz: chart themes
+Xin Guo <g3viz.group at gmail.com>
+2019-04-06
+
+https://cran.r-project.org/web/packages/g3viz/vignettes/introduction.html
+G3viz: an R package to interactively visualize genetic mutation data using a lollipop-diagram
+Xin Guo <g3viz.group at gmail.com>
+2019-04-06
+
+https://www.ncbi.nlm.nih.gov/pubmed/31393560
+Bioinformatics. 2020 Feb 1;36(3):928-929. doi: 10.1093/bioinformatics/btz631.
+G3viz: an R package to interactively visualize genetic mutation data using a lollipop-diagram.
+Guo X1,2,3, Zhang B1,2,3, Zeng W2,3, Zhao S2,3, Ge D1,2,3.
+
+### SynMut
+
+http://www.bioconductor.org/packages/release/bioc/html/SynMut.html
+There are increasing demands on designing virus mutants with specific dinucleotide or codon composition. This tool can take both dinucleotide preference and/or codon usage bias into account while designing mutants. It is a powerful tool for in silico designs of DNA sequence mutants.
+
+Gu H (2019). SynMut: SynMut: Designing Synonymously Mutated Sequences with Different Genomic Signatures. R package version 1.2.0, https://github.com/Koohoko/SynMut.
+
+### CorMut
+
+http://bioconductor.org/packages/release/bioc/html/CorMut.html
+Li Z (2019). CorMut: Detect the correlated mutations based on selection pressure. R package version 1.28.0.
+
+https://www.ncbi.nlm.nih.gov/pubmed/24681904
+Bioinformatics. 2014 Jul 15;30(14):2073-5. doi: 1
+0.1093/bioinformatics/btu154. Epub 2014 Mar 28.
+CorMut: an R/Bioconductor package for computing correlated mutations based on selection pressure.
+Li Z1, Huang Y1, Ouyang Y1, Jiao Y1, Xing H1, Liao L1, Jiang S1, Shao Y1, Ma L1.
+https://academic.oup.com/bioinformatics/article/30/14/2073/2390563
+combining Ka/Ks ratio and correlated mutations analysis
+
+
+
+----------
+## snp
+
+https://botany.natur.cuni.cz/hodnocenidat/Lesson_05_tutorial.pdf
+SNP data analysis in R
+version 2017‐01‐05 (Filip Kolář)
+1. What is a VCF file? 
+
+### apparent
+https://www.ncbi.nlm.nih.gov/pubmed/30819089
+BMC Bioinformatics. 2019 Feb 28;20(1):108. doi: 10.1186/s12859-019-2662-3.
+'apparent': a simple and flexible R package for accurate SNP-based parentage analysis in the absence of guiding information.
+Melo ATO1, Hale I2.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6396488/
+Project home page: https://github.com/halelab/apparent.
+
+### rsnps
+https://cran.r-project.org/package=rsnps
+rsnps: Get 'SNP' ('Single-Nucleotide' 'Polymorphism') Data on the Web
+A programmatic interface to various 'SNP' 'datasets' on the web: 'OpenSNP' (<https://opensnp.org>), and 'NBCIs' 'dbSNP' database (<https://www.ncbi.nlm.nih.gov/projects/SNP>). Functions are included for searching for 'NCBI'. For 'OpenSNP', functions are included for getting 'SNPs', and data for 'genotypes', 'phenotypes', annotations, and bulk downloads of data by user.
+Published:	2018-09-20
+URL:	https://github.com/ropensci/rsnps
+
+### SNPassoc
+https://cran.r-project.org/package=SNPassoc
+SNPassoc: SNPs-based whole genome association studies
+This package carries out most common analysis when performing whole genome association studies. These analyses include descriptive statistics and exploratory analysis of missing values, calculation of Hardy-Weinberg equilibrium, analysis of association based on generalized linear models (either for quantitative or binary traits), and analysis of multiple SNPs (haplotype and epistasis analysis). Permutation test and related tests (sum statistic and truncated product) are also implemented. Max-statistic and genetic risk-allele score exact distributions are also possible to be estimated.
+Published:	2014-04-23
+
+### SNPRelate
+https://bioconductor.org/packages/release/bioc/html/SNPRelate.html
+
+http://corearray.sourceforge.net/tutorials/SNPRelate/
+Tutorials for the R/Bioconductor Package SNPRelate
+Xiuwen Zheng (Department of Biostatistics, University of Washington, Seattle)
+Feb 11, 2015
+
+https://www.ncbi.nlm.nih.gov/pubmed/23060615
+Bioinformatics. 2012 Dec 15;28(24):3326-8. doi: 10.1093/bioinformatics/bts606. Epub 2012 Oct 11.
+A high-performance computing toolset for relatedness and principal component analysis of SNP data.
+Zheng X1, Levine D, Shen J, Gogarten SM, Laurie C, Weir BS.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3519454/
+Availability and implementation: gdsfmt and SNPRelate are available from R CRAN (http://cran.r-project.org), including a vignette. A tutorial can be found at https://www.genevastudy.org/Accomplishments/software.
+
+----------
+### SubVis
+
+https://cran.r-project.org/package=SubVis
+SubVis: Visual Exploration of Protein Alignments Resulting from Multiple Substitution Matrices
+Substitution matrices are important parameters in protein alignment algorithms. These matrices represent the likelihood that an amino acid will be substituted for another during mutation. This tool allows users to apply predefined and custom matrices and then explore the resulting alignments with interactive visualizations. 'SubVis' requires the availability of a web browser.
+
+https://www.ncbi.nlm.nih.gov/pubmed/28674656
+PeerJ. 2017 Jun 27;5:e3492. doi: 10.7717/peerj.3492. eCollection 2017.
+SubVis: an interactive R package for exploring the effects of multiple substitution matrices on pairwise sequence alignment.
+Barlowe S1, Coan HB2, Youker RT2.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5490468/
+- Package: https://cran.r-project.org/web/packages/SubVis/
+- Demo videos: https://github.com/sabarlowe/SubVis
+
+----------
+
+### SeqFeatR
+https://cran.r-project.org/package=SeqFeatR
+SeqFeatR: A Tool to Associate FASTA Sequences and Features
+Provides user friendly methods for the identification of sequence patterns that are statistically significantly associated with a property of the sequence. For instance, SeqFeatR allows to identify viral immune escape mutations for hosts of given HLA types. The underlying statistical method is Fisher's exact test, with appropriate corrections for multiple testing, or Bayes. Patterns may be point mutations or n-tuple of mutations. SeqFeatR offers several ways to visualize the results of the statistical analyses, see Budeus (2016) <doi:10.1371/journal.pone.0146409>.
+Published:	2019-04-12
+
+Vignettes:	SeqFeatR Tutorial
+https://cran.r-project.org/web/packages/SeqFeatR/vignettes/SeqFeatR_tutorial.pdf
+April 12, 2019
+2 The core of SeqFeatR: Fisher’s exact test
+2.1 An example: association of a feature with sequence
+We have mentioned that in the above alignment there is seemingly a strong
+association of the occurrence of amino acid P at position 2 with the feature f.
+The probability and strength of this association can be quantified, respectively,
+by a p-value computed with Fisher’s exact test, a well-known statistical test for
+association, and by an odds ratio (OR).
+
+https://www.ncbi.nlm.nih.gov/pubmed/26731669
+PLoS One. 2016 Jan 5;11(1):e0146409. doi: 10.1371/journal.pone.0146409. eCollection 2016.
+SeqFeatR for the Discovery of Feature-Sequence Associations.
+Budeus B1, Timm J2, Hoffmann D1.
+https://seqfeatr.zmb.uni-due.de/
+
+
+----------
 ## updates
 
 ## 2020
+
+https://github.com/genesofeve/projectR
+12:51 AM · Mar 18, 2020
+https://twitter.com/GenesOfEve/status/1239942449142906880
+Genevieve Stein-O'Brien on Twitter: "Excited to have this out for people to play with while they are stuck at home. projectR: An R/Bioconductor package for transfer learning via PCA, NMF, correlation, and clustering https://t.co/P0M7rl7uaR" / Twitter
+https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btaa183/5804979
+projectR: an R/Bioconductor package for transfer learning via PCA, NMF, correlation and clustering | Bioinformatics | Oxford Academic
+Transfer learning (TL) 
+https://en.wikipedia.org/wiki/Transfer_learning
+
+
+
+https://cran.r-project.org/package=pcadapt
+pcadapt: Fast Principal Component Analysis for Outlier Detection
+Methods to detect genetic markers involved in biological adaptation. 'pcadapt' provides statistical tools for outlier detection based on Principal Component Analysis. Implements the method described in (Luu, 2016) <doi:10.1111/1755-0998.12592>.
+https://www.ncbi.nlm.nih.gov/pubmed/32343802
+Mol Biol Evol. 2020 Apr 28. pii: msaa053. doi: 10.1093/molbev/msaa053. [Epub ahead of print]
+Performing highly efficient genome scans for local adaptation with R package pcadapt version 4.
+Privé F1,2, Luu K2, Vilhjálmsson BJ1, Blum MGB2,3.
+
+
 
 github.com/wanyuac/GeneMates
 GeneMates: an R package identifying horizontal gene co-transfer between bacteria
@@ -222,10 +546,6 @@ https://doi.org/10.1093/bioinformatics/btaa043
 Transfer index, NetUniFrac and some useful shortest path-based distances for community analysis in sequence similarity networks
 Henry Xing, Steven W Kembel, Vladimir Makarenkov
 Our NetFrac program, implemented in R and C, along with its source code, is freely available on Github at the following URL address: https://github.com/XPHenry/Netfrac.
-
-08 January 2020
-https://onlinelibrary.wiley.com/doi/10.1002/ece3.5970
-A checklist for choosing between R packages in ecology and evolution - Lortie - - Ecology and Evolution
 
 ## 2019
 
@@ -266,13 +586,6 @@ https://academic.oup.com/bioinformatics/article-abstract/35/22/4815/5514536
 RERconverge: an R package for associating evolutionary rates with convergent traits 
 
 
-https://twitter.com/tangming2005/status/1186283109911674880
-Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? https://t.co/iNrB64yQ4X . https://t.co/Cwa0R24JSq https://t.co/88rpGuUtIe #rstats" / Twitter
-11:08 PM · Oct 21, 2019
-- https://bioconductor.org/packages/release/bioc/html/motifRG.html
-- https://bioconductor.org/packages/release/bioc/html/motifcounter.html
-- https://bioconductor.org/packages/release/bioc/html/PWMEnrich.html
-
 
 Posted October 01, 2019.
 https://www.biorxiv.org/content/10.1101/545665v2
@@ -280,9 +593,9 @@ hilldiv: an R package for the integral analysis of diversity based on Hill numbe
 , microbial community profiling or
 https://github.com/anttonalberdi/hilldiv
 
+1:25 PM · Aug 4, 2019
 https://twitter.com/lobrowR/status/1157870107303055362
 Nathan Brouwer on Twitter: "I've compiled a short list of #rstats -based #bioinformatics and computational biology books and tutorials. (THREAD) 1/n"
-1:25 PM · Aug 4, 2019
 
 https://www.ncbi.nlm.nih.gov/pubmed/31324268
 BMC Res Notes. 2019 Jul 19;12(1):441. doi: 10.1186/s13104-019-4473-z.
@@ -314,6 +627,21 @@ Jean Fan on Twitter: "Too many #singlecell points in your figures? Crashing Illu
 4:35 PM - 12 Aug 2018
 
 
+### 2018-05
+
+2018.5.9
+http://www.iu.a.u-tokyo.ac.jp/lectures/AG16/180509/20180509.pdf
+R で GWAS と GS
+チュートリアル
+岩田洋佳
+本チュートリアルでは、R を用いて GWAS と GS のための予測モデル構築を行う方法について
+説明する。
+（２） 利用する R のパッケージ
+SNP データの読み込み・解析に vcfR と pcaMethods を、GWAS には rrBLUP と qqman パ
+ッケージを、GS の予測モデル構築には glmnet パッケージを用いる。い
+
+
+
 ### 2018-02
 
 水産研究・教育機構「日本海区水産研究所」
@@ -342,12 +670,6 @@ http://jsnfri.fra.affrc.go.jp/gunshu/4clust.html
 群集の類別と指標種
 
 ### 2018-01
-
-5:57 AM - 26 Jan 2018
-https://twitter.com/fvgnoriyuki/status/956843571788709888
-鈴木紀之 on Twitter: "アメリカの大学の生物実習で行なわれた「ポケモンGOを使ったポケモン群集の解析」が紹介されていたので、さっそく自分の授業でもやってみた。これなら虫や花の少ない冬でも都会でも、楽しみながら群集生態学の研究プロセスを体験できる。… "
-
-学生たちはスマホでポケモンを採集し、Rを使って地域間の群集を比較し（ベータ多様性）、多次元尺度法でグラフ化した。多くの生物実習では生き物を採集して名前を調べるのに精一杯だけど、この"game-to-class pipeline"だと多様度指数の理解やデータ解析に集中できそう。
 
 https://www.ncbi.nlm.nih.gov/pubmed/29688366
 Database (Oxford). 2018 Jan 1;2018. doi: 10.1093/database/bay011.
@@ -622,13 +944,111 @@ Vignettes:	Introduction to 'gggenes'
 https://qiita.com/hi-mori/items/99b56b604cf5e4bc38ec
 Rのgggenesパッケージで原核生物の遺伝子マップを描画する方法 - Qiita
 
+
+
+
+----------
+## resistance
+### AMR
+https://cran.r-project.org/package=AMR
+AMR: Antimicrobial Resistance Analysis
+Functions to simplify the analysis and prediction of Antimicrobial Resistance (AMR) and to work with microbial and antimicrobial properties by using evidence-based methods, like those defined by Leclercq et al. (2013) <doi:10.1111/j.1469-0691.2011.03703.x> and the Clinical and Laboratory Standards Institute (2014) <isbn: 1-56238-899-1>.
+
+https://msberends.gitlab.io/AMR/
+
+----------
+## plasmid
+
+### Plasmidprofiler
+https://CRAN.R-project.org/package=Plasmidprofiler
+Plasmidprofiler: Visualization of Plasmid Profile Results
+Contains functions developed to combine the results of querying a plasmid database using short-read sequence typing with the results of a blast analysis against the query results.
+
+Published:	2017-01-06
+
+http://wiki.pitagora-galaxy.org/wiki/index.php/Meetup_2018-02#.E9.88.B4.E6.9C.A8
+Plasmidprofiler プラスミドの可視化
+```
+install.packages("Plasmidprofiler")
+library(Plasmidprofiler)
+plot_heatmap(report)
+
+> install.packages("Plasmidprofiler")
+--- Please select a CRAN mirror for use in this session ---
+Warning: unable to access index for repository https://cran.ism.ac.jp/src/contrib:
+  cannot open URL 'https://cran.ism.ac.jp/src/contrib/PACKAGES'
+Warning: unable to access index for repository https://cran.ism.ac.jp/bin/macosx/el-capitan/contrib/3.6:
+  cannot open URL 'https://cran.ism.ac.jp/bin/macosx/el-capitan/contrib/3.6/PACKAGES'
+Warning message:
+package 'Plasmidprofiler' is not available (for R version 3.6.3) 
+
+> sessionInfo()
+R version 3.6.3 (2020-02-29)
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+Running under: macOS Mojave 10.14.6
+```
+
+### SDDE
+https://cran.r-project.org/package=SDDE
+SDDE: Shortcuts, Detours and Dead Ends (SDDE) Path Types in Genome Similarity Networks
+Compares the evolution of an original network X to an augmented network Y by counting the number of Shortcuts, Detours, Dead Ends (SDDE), equal paths and disconnected nodes.
+
+Published:	2015-08-26
+
+https://www.rdocumentation.org/packages/SDDE/versions/1.0.1
+SDDE package | R Documentation
+Plasmids	An original and an augmented real genomic networks
+https://www.rdocumentation.org/packages/SDDE/versions/1.0.1/topics/Plasmids
+These networks include 152 archaea, 217 eubacteria with the addition of 3 479 plasmids to illustrate the application of the SDDE package
+
+### plasmidR
+
+on Jun 25, 2015
+https://github.com/Nihasa/plasmidR
+An R Package to Generate and Analyze Plasmid Maps.
+
 ----------
 ## people
+
+----------
+### coghlan-avril
+Avril Coghlan
+
+https://www.sanger.ac.uk/people/directory/coghlan-avril
+
+A Little Book of R For Time Series
+https://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/
+Welcome to a Little Book of R for Time Series! — Time Series 0.2 documentation
+https://buildmedia.readthedocs.org/media/pdf/a-little-book-of-r-for-time-series/latest/a-little-book-of-r-for-time-series.pdf
+Sep 10, 2018
+
+A Little Book of R For Multivariate Analysis
+https://little-book-of-r-for-multivariate-analysis.readthedocs.io/en/latest/
+Welcome to a Little Book of R for Multivariate Analysis! — Multivariate Analysis 0.1 documentation
+https://buildmedia.readthedocs.org/media/pdf/little-book-of-r-for-multivariate-analysis/latest/little-book-of-r-for-multivariate-analysis.pdf
+February 19, 2017
+
+A Little Book of R For Biomedical Statistics
+https://a-little-book-of-r-for-biomedical-statistics.readthedocs.io/en/latest/
+Welcome to a Little Book of R for Biomedical Statistics! — Biomedical Statistics 0.2 documentation
+https://buildmedia.readthedocs.org/media/pdf/a-little-book-of-r-for-biomedical-statistics/latest/a-little-book-of-r-for-biomedical-statistics.pdf
+December 17, 2016
+
+A Little Book of R For Bioinformatics
+https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html
+Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation
+June 10, 2011
+
+----------
 ### ushio
 
 http://www.ecology.kyoto-u.ac.jp/~ushio/
 Masayuki Ushio's Website
 潮 雅之
+
+2020年5月7日木曜日
+https://ushio-ecology-blog.blogspot.com/2020/05/20200507blogger0012.html
+Ushio's blog: 解析するときのルールあれこれ
 
 2019年12月19日木曜日
 https://ushio-ecology-blog.blogspot.com/2019/12/20191220blogger0006.html
@@ -650,6 +1070,23 @@ Ushio's blog: DADA2 と Claident を用いた short-read amplicon sequence の�
 https://ushio-ecology-blog.blogspot.com/2019/11/%28http://www.earthmicrobiome.org/protocols-and-standards/16s/
 ->
 http://www.earthmicrobiome.org/protocols-and-standards/16s/
+
+### fvgnoriyuki
+鈴木紀之 Noriyuki Suzuki
+
+9:06 PM · Jan 7, 2019
+https://twitter.com/fvgnoriyuki/status/1082247131065344007
+鈴木紀之 Noriyuki Suzuki on Twitter: "今年の授業でもポケモンGOを使ってポケモンの多様性の解析。これなら虫や花の少ない冬でも都会でも、ゲームを楽しみながら群集生態学の研究プロセスとプログラミングの手順を体験できる。場所・時期ごとにポケモン群集を比較・グラフ化し、ベータ多様性を計算するところまで。#ポケモンGO https://t.co/djqFZn894f" / Twitter
+NMDS（各ポケモン群集がどれくらい異なるか平面上に図示したもの）で外れ値があるのは、どうやら「普通種のポケモンを無視し続けてレアな種類だけを採集した学生」がいたことが原因のようだ笑。調査する人・場所・時期によるバイアスは実際の生物群集の研究でも生じうるので、良い練習になったはず。
+今年から資料をRmarkdownで作ってhtmlで配布。学生にとってもだいぶやりやすくなった様子。いろいろとノウハウがたまってきたので、他の授業にも活かしていこうかなーと。
+
+5:57 AM - 26 Jan 2018
+https://twitter.com/fvgnoriyuki/status/956843571788709888
+鈴木紀之 on Twitter: "アメリカの大学の生物実習で行なわれた「ポケモンGOを使ったポケモン群集の解析」が紹介されていたので、さっそく自分の授業でもやってみた。これなら虫や花の少ない冬でも都会でも、楽しみながら群集生態学の研究プロセスを体験できる。… "
+学生たちはスマホでポケモンを採集し、Rを使って地域間の群集を比較し（ベータ多様性）、多次元尺度法でグラフ化した。多くの生物実習では生き物を採集して名前を調べるのに精一杯だけど、この"game-to-class pipeline"だと多様度指数の理解やデータ解析に集中できそう。
+
+
+
 
 
 
