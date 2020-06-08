@@ -36,6 +36,64 @@
 [ushio](#ushio)
 [fvgnoriyuki](#fvgnoriyuki) 鈴木紀之 Noriyuki Suzuki
 
+
+----------
+## motif
+
+11:08 PM · Oct 21, 2019
+https://twitter.com/tangming2005/status/1186283109911674880
+Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? https://t.co/iNrB64yQ4X . https://t.co/Cwa0R24JSq https://t.co/88rpGuUtIe #rstats" / Twitter
+- https://bioconductor.org/packages/release/bioc/html/motifRG.html
+- https://bioconductor.org/packages/release/bioc/html/motifcounter.html
+- https://bioconductor.org/packages/release/bioc/html/PWMEnrich.html
+
+3 March 2016
+http://cbdm-01.zdv.uni-mainz.de/~jibnsale/teaching/motif_analysis_exercises.html
+Sequence Motif Analysis in R
+
+### universalmotif
+
+2020
+http://bioconductor.org/packages/release/bioc/html/universalmotif.html
+Import, Modify, and Export Motifs with R
+```
+PDF	R Script	Introduction to "universalmotif"
+PDF	R Script	Introduction to sequence motifs
+PDF	R Script	Motif comparisons and P-values
+PDF	R Script	Motif import, export, and manipulation
+PDF	R Script	Sequence manipulation and scanning
+PDF	 	Reference Manual
+```
+
+http://bioconductor.org/packages/release/bioc/vignettes/universalmotif/inst/doc/IntroductionToSequenceMotifs.pdf
+Introduction to sequence motifs
+Benjamin Jean-Marie Tremblay∗
+14 March 2020
+Abstract
+There are four ways to represent sequence motif matrices: as counts, probabilities, logodds scores, or
+information content. This vignette discusses the relationship between these and how they are obtained.
+
+4 Position weight matrices
+
+
+### rGADEM
+http://bioconductor.org/packages/release/bioc/html/rGADEM.html
+The rGADEM users guide
+http://bioconductor.org/packages/release/bioc/vignettes/rGADEM/inst/doc/rGADEM.pdf
+Discovering and analyzing DNA sequence motifs
+April 28, 2020
+
+### rmotifx
+
+https://pubmed.ncbi.nlm.nih.gov/26572964/
+Mol Cell Proteomics
+. 2016 Jan;15(1):236-45. doi: 10.1074/mcp.M115.052357. Epub 2015 Nov 16.
+Uncovering Phosphorylation-Based Specificities Through Functional Interaction Networks
+Omar Wagih 1, Naoyuki Sugiyama 2, Yasushi Ishihama 2, Pedro Beltrao 3
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4762521/
+Since the motif-x tool was only available via an online webserver, we reimplemented the tool for the R programming language, which can be found here: https://github.com/omarwagih/rmotifx.
+
+
 ----------
 ## bwt
 Burrows-Wheeler Transform
@@ -195,18 +253,6 @@ Frequently asked questions
 A quick introduction to dendextend (start here)
 Introduction to dendextend
 ```
-
-----------
-### motif
-
-https://twitter.com/tangming2005/status/1186283109911674880
-Ming Tang on Twitter: "for DNA motif analysis, which bioc packages are good? https://t.co/iNrB64yQ4X . https://t.co/Cwa0R24JSq https://t.co/88rpGuUtIe #rstats" / Twitter
-11:08 PM · Oct 21, 2019
-- https://bioconductor.org/packages/release/bioc/html/motifRG.html
-- https://bioconductor.org/packages/release/bioc/html/motifcounter.html
-- https://bioconductor.org/packages/release/bioc/html/PWMEnrich.html
-
-http://bioconductor.org/packages/release/bioc/html/universalmotif.html
 
 ----------
 ### Bios2cor
