@@ -801,7 +801,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ----------
 
-## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
+## [Pairwise Sequence Alignment](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html)
 **[2つの配列間でのアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
@@ -830,7 +830,7 @@ https://www.youtube.com/watch?v=xYOK-yzUWSI
 The different types of mutations | Biomolecules | MCAT | Khan Academy
 5:51
 
-### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
+### [UniProt](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
 [Swiss-Prot](https://ja.wikipedia.org/wiki/Swiss-Prot) タンパク質データベース
 
@@ -840,7 +840,7 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image0.png)
 
-### [Retrieving a UniProt protein sequence via the UniProt website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
+### [Retrieving a UniProt protein sequence via the UniProt website](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
 **UniProtのウェブサイトからタンパク質配列を取得**
 
 ハンセン病（Leprosy）の原因細菌*Mycobacterium leprae*（らい菌）と[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因細菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)のコリスミ酸リアーゼタンパク質配列（UniProt accession は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
@@ -914,7 +914,7 @@ dotPlot(seqMleprae, seqMulcerans)
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
-### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
+### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アラインメント**
 
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
@@ -922,7 +922,7 @@ dotPlot(seqMleprae, seqMulcerans)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
-【例題】DNA配列("ATTGC"と"ATGC")間の最適なグローバルアラインメントを見つける。
+【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける。
 
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 以下のアラインメントのスコアは？
@@ -930,15 +930,18 @@ dotPlot(seqMleprae, seqMulcerans)
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
 # What is the score for the following alignment?
+GAATTC
+GATT-A
 
-ATTGC
-ATGC-
+# What is the score for the following alignment?
+GAATTC
+GA-TTA
 ```
 
 *scoring matrix (substitution matrix)*
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
 
-[Bioconductorパッケージ`Biostrings`のインストール](#how-to-install-a-bioconductor-r-package)
+[Bioconductorパッケージ`Biostrings`のインストール](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan#how-to-install-a-bioconductor-r-package)
 
 Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
 
@@ -967,13 +970,6 @@ The reason for doing this is that it is likely that adjacent gap positions were 
 	globalAligns1s2 <- pairwiseAlignment(s1, s2, substitutionMatrix = sigma, 
 	 gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 	globalAligns1s2 # Print out the optimal alignment and its score
-
-出力結果:
-
-	Global PairwiseAlignmentsSingleSubject (1 of 1)
-	pattern: [1] GAATTC 
-	subject: [1] GA-TTA 
-	score: -3 
 
 Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. Here the alignment contains four matches, one mismatch, and one gap of length 1, so its score is (4\*2)+(1\*-1)+(1\*-10) = -3.
 
@@ -1004,75 +1000,62 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 	 gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 	globalAligns3s4 # Print out the optimal global alignment and its score
 
-出力結果:
-
-	Global PairwiseAlignmentsSingleSubject (1 of 1)
-	pattern: [1] P---AWHEAE 
-	subject: [1] HEAGAWGHEE 
-	score: -5 
-
 We set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. This means that the gap will be given a score of -10-8-8 = -26.
 
 ギャップ(`---`)は -10-8-8 = -26 のスコアが与えられる。
 
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
 **UniProt配列のアラインメント**
+```
+library(seqinr)
+seqMleprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+seqMulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 
-    library("seqinr")
-    lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-    ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+# 文字ベクトルを文字列に変換
+# convert vectors of characters into strings
+sMleprae <- c2s(seqMleprae) # Make a string that contains the sequence in "seqMleprae"
+sMulcerans <- c2s(seqMulcerans) # Make a string that contains the sequence in "seqMulcerans"
 
-    # 文字ベクトルを文字列に変換
-    # convert vectors of characters into strings
-	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"
-	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"
+# 大文字に変換
+# convert strings to uppercase 
+sMleprae <- toupper(sMleprae)
+sMulcerans <- toupper(sMulcerans)
+sMleprae # Print out the content of "sMleprae"
 
-    # 大文字に変換
-    # convert strings to uppercase 
-	lepraeseqstring <- toupper(lepraeseqstring)
-	ulceransseqstring <- toupper(ulceransseqstring)
-	lepraeseqstring # Print out the content of "lepraeseqstring"
+# align the two protein sequences
+# library(Biostrings); data(BLOSUM50)
+globalAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 
-	# align the two protein sequences
-    # library(Biostrings); data(BLOSUM50)
-    # pairwiseAlignment
-	globalAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
-	 substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-
-	globalAlignLepraeUlcerans # Print out the optimal global alignment and its score
-
-出力結果:
-
-	Global PairwiseAlignmentsSingleSubject (1 of 1)
-	pattern: [1] MT-----NR--T---LSREEIRKLDRDLRILVATN...FQDTPREELDRCQYSNDIDTRSGDRFVLHGRVFKN 
-	subject: [1] MLAVLPEKREMTECHLSDEEIRKLNRDLRILIATN...FEDNSREEPIRHQRS--VGT-SA-R---SGRSICT 
-	score: 627 
+globalAlignMlepraeMulcerans # Print out the optimal global alignment and its score
+```
 
 ### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
 **2つの配列間のアラインメントの表示と出力**
+```
+# print out the alignment
+writePairwiseAlignments(globalAlignMlepraeMulcerans)
 
-    # print out the alignment
-    writePairwiseAlignments(globalAlignLepraeUlcerans)
+# Write a PairwiseAlignments object to a file
+writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMulcerans.txt")
 
-    # Write a PairwiseAlignments object to a file
-    writePairwiseAlignments(globalAlignLepraeUlcerans, file="globalAlignLepraeUlcerans.txt")
-
-    #system("open .")
+getwd()
+list.files()
+```
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
 **2つのタンパク質配列間のローカル・アラインメント**
+```
+# find the best local alignment between the two protein sequences
+localAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
 
-    # find the best local alignment between the two protein sequences
-	localAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
-	 substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
+localAlignMlepraeMulcerans # Print out the optimal local alignment and its score
 
-	localAlignLepraeUlcerans # Print out the optimal local alignment and its score
-
-    writePairwiseAlignments(localAlignLepraeUlcerans)
+writePairwiseAlignments(localAlignMlepraeMulcerans)
+```
 
 We see that the optimal local alignment is quite similar to the optimal global alignment in this case, except that it excludes a short region of poorly aligned sequence at the start and at the ends of the two proteins.
 
-### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
+### [Calculating the statistical significance of a pairwise global alignment](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 **ペアワイズグローバルアラインメントの統計的有意性の計算**
 
 タンパク質配列の多項式モデル
