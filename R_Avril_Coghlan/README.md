@@ -840,16 +840,14 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image0.png)
 
+[How to search UniProt | EMBL-EBI Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/how-search-uniprot)
+
+![](https://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/2760/images/UniProt_tutorial/searchbar3.png)
+
 ### [Retrieving a UniProt protein sequence via the UniProt website](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
 **UniProtのウェブサイトからタンパク質配列を取得**
 
 ハンセン病（Leprosy）の原因細菌*Mycobacterium leprae*（らい菌）と[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因細菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)のコリスミ酸リアーゼタンパク質配列（UniProt accession は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
-
-- [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
-
-'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
-
-![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)  
 
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 ```
@@ -907,6 +905,8 @@ dotPlot(rep(testseq,2), rep(testseq,2))
 dotPlot(rep(testseq,2), comp(rep(testseq,2)))
 ```
 
+![http://shadarf.blogspot.com/2017/07/how-to-make-reverse-complement-of-dna.html](https://2.bp.blogspot.com/-DW_qMaP3PsU/WXdCWB4R3aI/AAAAAAAAASQ/ivNMIFW4wR8gqsjLbn9F1rB75ldHCGVlQCLcBGAs/s640/Figure1ReverseComplementaion.PNG)
+
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
 dotPlot(seqMleprae, seqMulcerans)
@@ -929,7 +929,7 @@ dotPlot(seqMleprae, seqMulcerans)
 ```
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
-# What is the score for the following alignment?
+# the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
 GAATTC
 GATT-A
 
@@ -980,8 +980,6 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 **2つのタンパク質配列間のグローバル・アラインメント**
 
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
-
-![https://en.wikipedia.org/wiki/BLOSUM](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/BLOSUM62.gif/400px-BLOSUM62.gif)
 
 	# load the BLOSUM50 matrix
 	data(BLOSUM50)
