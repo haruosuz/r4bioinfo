@@ -851,10 +851,10 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 ```
-library(seqinr)
-seqMleprae <- read.fasta(file = "Q9CD83.fasta")[[1]]
-seqMulcerans <- read.fasta(file = "A0PQ23.fasta")[[1]]
-seqMleprae # Display the contents of the vector "seqMleprae"
+#library(seqinr)
+#seqMleprae <- read.fasta(file = "Q9CD83.fasta")[[1]]
+#seqMulcerans <- read.fasta(file = "A0PQ23.fasta")[[1]]
+#seqMleprae # Display the contents of the vector "seqMleprae"
 ```
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
@@ -880,13 +880,6 @@ seqMleprae # Display the contents of "seqMleprae"
 とは、2本の配列を比較するためのグラフである。
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
 
-- [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
-p.86
-- [2019年度バイオインフォマティクス技術者認定試験](https://www.jsbi.org/nintei/2019/)
-| [問題と解答(PDF形式)](https://www.jsbi.org/files/8915/7672/6101/2019mondai.pdf)
-| [解説(PDF形式)](https://www.jsbi.org/files/3015/8408/4627/kaisetsu_2019.pdf)
-| 問 44 
-
 テスト用の配列データを作成する:
 ```
 # Create tests
@@ -894,15 +887,10 @@ library(seqinr)
 
 testseq <- s2c("tgca")
 testseq
-rev(testseq) # Reverse Elements
-comp(testseq) # complements a nucleic acid sequence
-rev(comp(testseq)) # reverse complementary strand
 
 par(mfrow=c(2,2))
 dotPlot(testseq, testseq)
-dotPlot(testseq, comp(testseq))
 dotPlot(rep(testseq,2), rep(testseq,2))
-dotPlot(rep(testseq,2), comp(rep(testseq,2)))
 ```
 
 ![http://shadarf.blogspot.com/2017/07/how-to-make-reverse-complement-of-dna.html](https://2.bp.blogspot.com/-DW_qMaP3PsU/WXdCWB4R3aI/AAAAAAAAASQ/ivNMIFW4wR8gqsjLbn9F1rB75ldHCGVlQCLcBGAs/s640/Figure1ReverseComplementaion.PNG)
