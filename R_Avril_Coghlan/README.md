@@ -889,8 +889,6 @@ dotPlot(testseq, testseq)
 dotPlot(rep(testseq,2), rep(testseq,2))
 ```
 
-![http://shadarf.blogspot.com/2017/07/how-to-make-reverse-complement-of-dna.html](https://2.bp.blogspot.com/-DW_qMaP3PsU/WXdCWB4R3aI/AAAAAAAAASQ/ivNMIFW4wR8gqsjLbn9F1rB75ldHCGVlQCLcBGAs/s640/Figure1ReverseComplementaion.PNG)
-
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
 dotPlot(seqMleprae, seqMulcerans)
