@@ -840,10 +840,6 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image0.png)
 
-[How to search UniProt | EMBL-EBI Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/how-search-uniprot)
-
-![](https://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/2760/images/UniProt_tutorial/searchbar3.png)
-
 ### [Retrieving a UniProt protein sequence via the UniProt website](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
 **UniProtのウェブサイトからタンパク質配列を取得**
 
