@@ -1,15 +1,16 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2019-12
+Last Update: 2020-01-02
 
 ----------
 
 # microb
 R for Microbiology Microbiome Metagenome
-微生物データ解析
+微生物
 
 ## Table of Contents
 - [featuring](#featuring)
 Checked
+- [fastbaps](#fastbaps)
 - [phylogeo](#phylogeo)
 - [phyloseq](#phyloseq)
 - [matR](#matR)
@@ -17,6 +18,7 @@ Checked
 - [phylofactor](#phylofactor)
 - [micropan](#micropan) lars.snipen #pangenome
 - [microclass](#microclass) lars.snipen
+- [SigTree](#SigTree)
 - [DADA2](#DADA2)
 - [Biomartr](#biomartr) removed from CRAN
 - [MLSTar](#mlstar)
@@ -31,52 +33,75 @@ Checked
 - [MicrobeR](#)
 - [FindMyFriends](#FindMyFriends) #pangenome
 - [simurg](#simurg) #pangenome
-- [](#)
+- [metagenomeSeq](#metagenomeSeq)
+- [MAGNAMWAR](#MAGNAMWAR)
 - [Rhea](#Rhea)
 - [Microbiome Helper](microbiome_helper)
-- [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
 - [mcaGUI](#mcaGUI)
 - [](#)
 - [ampvis2](#ampvis2)
-- [metagenomeSeq](#metagenomeSeq)
 - [](#)
+- [treeWAS](#treeWAS)
 
 ----------
-## SigTree
+## Washburne
 
-https://github.com/cran/SigTree
+https://www.ncbi.nlm.nih.gov/pubmed/29795540
+Nat Microbiol. 2018 Jun;3(6):652-661. doi: 10.1038/s41564-018-0156-0. Epub 2018 May 24.
+Methods for phylogenetic analysis of microbiome data.
+Washburne AD1, Morton JT2,3, Sanders J3, McDonald D3, Zhu Q3, Oliverio AM4,5, Knight R2,3.
+https://www.nature.com/articles/s41564-018-0156-0
+In this Review Article, we organize the field of phylogenetically structured data analysis by discussing the major classes of methods. We first emphasize a fundamental issue in the field: the imperfection of estimated phylogenies. We then define four classes: (1) comparative methods; (2) ancestral state reconstruction and descendant trait imputation; (3) phylogenetic variables; and (4) phylogeny-aware distances (Table 1); and provide Supplementary Online Tutorials with examples (https://knightlab-analyses.github.io/phylogenetic-tutorials/). 
 
-https://cran.r-project.org/package=SigTree
-SigTree: Identify and Visualize Significantly Responsive Branches in a Phylogenetic Tree
-Provides tools to identify and visualize branches in a phylogenetic tree that are significantly responsive to some intervention, taking as primary inputs a phylogenetic tree (of class phylo) and a data frame (or matrix) of corresponding tip (OTU) labels and p-values.
-```
-Version:	1.10.6
-Published:	2017-10-02
-Vignettes:	SigTree Tutorial Vignette
-```
-https://cran.r-project.org/web/packages/SigTree/vignettes/SigTree.pdf
+https://knightlab-analyses.github.io/phylogenetic-tutorials/
+Tutorials:
+
+Phylogenetic Comparative Methods
+Phylogenetic Variables Analysis
+Kernel Methods
+
+https://knightlab-analyses.github.io/phylogenetic-tutorials/tutorials/PCM_tutorial.html
+https://knightlab-analyses.github.io/phylogenetic-tutorials/tutorials/PVA_tutorial.html
+https://knightlab-analyses.github.io/phylogenetic-tutorials/tutorials/kernel_methods.html
 
 
-https://www.ncbi.nlm.nih.gov/pubmed/28748045
-Comput Struct Biotechnol J. 2017 Jul 6;15:372-378. doi: 10.1016/j.csbj.2017.06.002. eCollection 2017.
-SigTree: A Microbial Community Analysis Tool to Identify and Visualize Significantly Responsive Branches in a Phylogenetic Tree.
-Stevens JR1, Jones TR1,2, Lefevre M3, Ganesan B4, Weimer BC5.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5512180/
-https://www.sciencedirect.com/science/article/pii/S2001037017300132
+まだ実行していない。
+/Users/haruo/Google_Drive/haruoszk/projects/r4bioinfo/R_microb/R_Washburne/my_Washburne_PCM.R
 
-8-2012
-https://digitalcommons.usu.edu/etd/1314/
-"SigTree: An Automated Meta-Analytic Approach to Find Significant Branc" by Todd R. Jones
+----------
+### phylofactor
 
+https://github.com/reptalex/phylofactor
+phylofactor: R package for phylogentic factorization of biological data
+
+https://twitter.com/Alex_Washburne/status/1100057770844286977
+Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
+10:39 AM - 25 Feb 2019
+
+19 February 2019
+https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecm.1353
+Phylofactorization: a graph partitioning algorithm to identify phylogenetic scales of ecological data - Washburne - 2019 - Ecological Monographs
+
+https://docs.wixstatic.com/ugd/0119a1_5ff56560b8c74f169ce3965ba3f421df.pdf
+phylofactor tutorial
+Alex Washburne
+2019-02-25
+
+https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
+phylofactor Tutorial
+
+
+----------
+## 
 
 ----------
 ## featuring
 
+
 Jun 14, 2018
 https://github.com/microsud/Tools-Microbiome-Anlaysis
-A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
- In this post, numerous resources that can be helpful for analysis of microbiome data are listed. 
+A list of R environment based tools for microbiome data exploration, statistical analysis and visualization
 マイクロバイオーム解析パッケージのリスト
 
 https://twitter.com/aquabolina/status/978657686911938560
@@ -97,6 +122,35 @@ Qiime2を使ったメタゲノム解析パイプライン
 ・phyloseq (version 1.26.1)
 ・qiime2R (version 0.99.11)
 ```
+
+
+
+----------
+## treeWAS
+
+https://twitter.com/StatgenetJ/status/1211110952252264448
+statgenet@KyotoU on Twitter: "微生物ゲノム解析手法TreeWAS(Rpackage) https://t.co/oqYuKrdrpK をUKバイオバンクに応用。いろんな人(微生物)がいろんな遺伝子(遺伝的バリアント)を持ちつつ、表現型共有している。この共通データ構造を利用しての手法援用。人特有の個人属性を共変量投入した点は応用上の工夫： https://t.co/v6P8IkyrKI" / Twitter
+11:25 AM · Dec 29
+Apr 24, 2019
+https://github.com/caitiecollins/treeWAS
+treeWAS: A Phylogenetic Tree-Based Tool for Genome-Wide Association Studies in Microbes
+
+
+
+----------
+## fastbaps
+
+Nov 8, 2019
+https://github.com/gtonkinhill/fastbaps
+A fast approximation to a Dirichlet Process Mixture model (DPM) for clustering genetic data
+https://github.com/gtonkinhill/fastbaps_manuscript
+
+https://www.ncbi.nlm.nih.gov/pubmed/31076776
+Nucleic Acids Res. 2019 Jun 20;47(11):5539-5549. doi: 10.1093/nar/gkz361.
+Fast hierarchical Bayesian analysis of population structure.
+Tonkin-Hill G1, Lees JA2, Bentley SD1, Frost SDW3,4, Corander J1,5,6.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6582336/
+a diverse set of real bacterial and viral datasets
 
 ----------
 ## phylogeo
@@ -253,27 +307,6 @@ https://microbiome.github.io/microbiome
 https://github.com/microbiome/microbiome
 
 
-----------
-## phylofactor
-
-https://github.com/reptalex/phylofactor
-phylofactor: R package for phylogentic factorization of biological data
-
-https://twitter.com/Alex_Washburne/status/1100057770844286977
-Alex Washburne on Twitter: "Here's a new tutorial for the R package phylofactor (currently on GitHub). This tool can find lineages with flexible, even nonlinear, associations with meta-data, make ggtree plots, summarize the taxonomic composition of those lineages, and more! https://t.co/kg2hS2mu1C… https://t.co/EgfCGEfgn0"
-10:39 AM - 25 Feb 2019
-
-19 February 2019
-https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecm.1353
-Phylofactorization: a graph partitioning algorithm to identify phylogenetic scales of ecological data - Washburne - 2019 - Ecological Monographs
-
-https://docs.wixstatic.com/ugd/0119a1_5ff56560b8c74f169ce3965ba3f421df.pdf
-phylofactor tutorial
-Alex Washburne
-2019-02-25
-
-https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
-phylofactor Tutorial
 
 ----------
 ## micropan
@@ -311,6 +344,36 @@ Vignettes:
 https://cran.r-project.org/web/packages/microclass/vignettes/intro.html
 Introduction to microclass
 K-mers
+
+
+
+----------
+## SigTree
+
+https://github.com/cran/SigTree
+
+https://cran.r-project.org/package=SigTree
+SigTree: Identify and Visualize Significantly Responsive Branches in a Phylogenetic Tree
+Provides tools to identify and visualize branches in a phylogenetic tree that are significantly responsive to some intervention, taking as primary inputs a phylogenetic tree (of class phylo) and a data frame (or matrix) of corresponding tip (OTU) labels and p-values.
+```
+Version:	1.10.6
+Published:	2017-10-02
+Vignettes:	SigTree Tutorial Vignette
+```
+https://cran.r-project.org/web/packages/SigTree/vignettes/SigTree.pdf
+
+
+https://www.ncbi.nlm.nih.gov/pubmed/28748045
+Comput Struct Biotechnol J. 2017 Jul 6;15:372-378. doi: 10.1016/j.csbj.2017.06.002. eCollection 2017.
+SigTree: A Microbial Community Analysis Tool to Identify and Visualize Significantly Responsive Branches in a Phylogenetic Tree.
+Stevens JR1, Jones TR1,2, Lefevre M3, Ganesan B4, Weimer BC5.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5512180/
+https://www.sciencedirect.com/science/article/pii/S2001037017300132
+
+8-2012
+https://digitalcommons.usu.edu/etd/1314/
+"SigTree: An Automated Meta-Analytic Approach to Find Significant Branc" by Todd R. Jones
+
 
 ----------
 ## DADA2
@@ -360,6 +423,9 @@ Zachary S. L. Foster and Niklaus J. Grünwald
 2018-11-23
 https://grunwaldlab.github.io/metacoder_documentation/example.html
 
+https://grunwaldlab.github.io/metacoder_documentation/publication--08--voting.html
+Graphing voting geography
+
 8 Jan 2018
 https://twitter.com/zacharyfoster19/status/950423225619554304
 Zachary Foster on Twitter: "metacoder 0.2.0 is on CRAN. Lots of new features and refinements. Check out https://t.co/zdiFcEPGB0 for an introduction. * parsing and filtering moved to https://t.co/YS8tGOBijP * label overlap avoidance * new parsers and writers * heat tree matrix plotting * and more! #rstats… https://t.co/sFDqYgRoSu"
@@ -387,8 +453,9 @@ unzip metacoder_documentation-v0.1.2.zip
 cd grunwaldlab-metacoder_documentation-1a677af/
 ```
 
-
-
+https://grunwaldlab.github.io/analysis_of_microbiome_community_data_in_r/index.html
+ZSL Foster and NJ Grünwald. 2018. Analysis of Microbiome Community Data in R. DOI: XXX.
+This workshop will not start with the raw reads, 
 
 ----------
 ## MLSTar
@@ -401,9 +468,6 @@ PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
 MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
 Ferrés I1, Iraola G1,2.
 
-
-
-
 ----------
 ## updates
 
@@ -412,6 +476,15 @@ Ferrés I1, Iraola G1,2.
 https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2744-2
 metamicrobiomeR: an R package for analysis of microbiome relative abundance data using zero-inflated beta GAMLSS and meta-analysis across studies using random effects models
 
+https://www.ncbi.nlm.nih.gov/pubmed/31757201
+BMC Bioinformatics. 2019 Nov 22;20(Suppl 9):347. doi: 10.1186/s12859-019-2887-1.
+STRAIN: an R package for multi-locus sequence typing from whole genome sequencing data.
+Dalsass M1,2, Bodini M1, Lambert C3, Mortier MC3, Romanelli M1,4, Medini D1, Muzzi A1, Brozzi A5.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6873635/
+STRAIN (ST Reduced Assembly IdentificatioN)
+Project home page: https://gitlab.com/DalsaMat/STRAIN
+ You need to sign in or sign up before continuing.
+
 https://www.ncbi.nlm.nih.gov/pubmed/30929407
 Genomics Inform. 2019 Mar;17(1):e6. doi: 10.5808/GI.2019.17.1.e6. Epub 2019 Mar 31.
 Statistical Analysis of Metagenomics Data.
@@ -419,10 +492,6 @@ Calle ML1.
 In this review we outline some of the procedures that are most commonly used for microbiome analysis and that are implemented in R packages. We place particular emphasis on the compositional structure of microbiome data.
 
 ## 2018
-
-https://grunwaldlab.github.io/analysis_of_microbiome_community_data_in_r/index.html
-ZSL Foster and NJ Grünwald. 2018. Analysis of Microbiome Community Data in R. DOI: XXX.
-This workshop will not start with the raw reads, 
 
 https://www.ncbi.nlm.nih.gov/pubmed/29211828
 Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
@@ -437,12 +506,16 @@ microbiomeSeq: An R package for microbial community analysis in an environmental
 
 ## 2017
 
+https://cran.r-project.org/package=StrainRanking
+StrainRanking: Ranking of Pathogen Strains
+Regression-based ranking of pathogen strains with respect to their contributions to natural epidemics, using demographic and genetic data sampled in the curse of the epidemics. This package also includes the GMCPIC test.
+Published:	2017-11-29
+
 http://rpubs.com/dillmcfarlan/R_microbiotaSOP
 Microbiota Analysis in R
 Kim Dill-McFarland
 March 20, 2017
 Updated December 19, 2017
-
 
 ## 2016
 
@@ -451,9 +524,6 @@ Pac Symp Biocomput. 2016;21:183-94.
 REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
 Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
 using R packages dada2, knitr, and phyloseq.
-
-
-
 
 ----------
 ## MicrobeR
@@ -523,6 +593,61 @@ Nat Methods. 2013 Dec;10(12):1200-2. doi: 10.1038/nmeth.2658. Epub 2013 Sep 29.
 Differential abundance analysis for microbial marker-gene surveys.
 Paulson JN1, Stine OC, Bravo HC, Pop M.
 
+
+----------
+## MetQy
+
+Feb 20, 2019
+https://github.com/OSS-Lab/MetQy/wiki
+
+Dec 16, 2018
+https://github.com/OSS-Lab/MetQy
+MetQy - metabolic query
+MetQy is a R package to ease interfacing with the Kyoto Encyclopedia of Genes and Genomes (KEGG) database to query metabolic functions of genes and genomes.
+
+https://www.ncbi.nlm.nih.gov/pubmed/29878056
+Bioinformatics. 2018 Dec 1;34(23):4134-4137. doi: 10.1093/bioinformatics/bty447.
+MetQy-an R package to query metabolic functions of genes and genomes.
+Martinez-Vernon AS1,2,3, Farrell F2, Soyer OS1,2,3.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6247936/
+[meta]genomes 
+microbial ecology, 
+
+
+----------
+## MAGNAMWAR
+
+https://cran.r-project.org/package=MAGNAMWAR
+MAGNAMWAR: A Pipeline for Meta-Genome Wide Association
+Correlates variation within the meta-genome to target species phenotype variations in meta-genome with association studies. Follows the pipeline described in Chaston, J.M. et al. (2014) <doi:10.1128/mBio.01631-14>.
+```
+Version:	2.0.4
+Published:	2018-07-12
+Vignettes:
+```
+https://cran.r-project.org/web/packages/MAGNAMWAR/vignettes/using_mag.html
+Using MAGNAMWAR: a case study with Drosophila melanogaster
+Corinne Sexton
+2018-06-15
+
+phylogenetic distribution group (PDG)
+
+https://www.ncbi.nlm.nih.gov/pubmed/29342236
+Bioinformatics. 2018 Jun 1;34(11):1951-1952. doi: 10.1093/bioinformatics/bty001.
+MAGNAMWAR: an R package for genome-wide association studies of bacterial orthologs.
+Sexton CE1, Smith HZ1, Newell PD2, Douglas AE3, Chaston JM4.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5972563/
+OrthoMCL.
+Mono-Associated GNotobiotic Animals Metagenome-Wide Association R package (MAGNAMWAR).
+
+https://www.ncbi.nlm.nih.gov/pubmed/25271286
+mBio. 2014 Sep 30;5(5):e01631-14. doi: 10.1128/mBio.01631-14.
+Metagenome-wide association of microbial determinants of host phenotype in Drosophila melanogaster.
+Chaston JM1, Newell PD2, Douglas AE.
+https://mbio.asm.org/content/5/5/e01631-14
+
+
+
 ----------
 ## ampvis2
 https://madsalbertsen.github.io/ampvis2/
@@ -530,42 +655,19 @@ https://madsalbertsen.github.io/ampvis2/
 Andersen KS, Kirkegaard RH, Karst SM, Albertsen M (2018). “ampvis2: an R package to analyse and visualise 16S rRNA amplicon data.” bioRxiv. http://dx.plos.org/10.1371/journal.pone.0132783.
 
 ----------
-## DiversitySeq
-
-https://www.ncbi.nlm.nih.gov/pubmed/28025179
-Brief Bioinform. 2018 Jul 20;19(4):679-692. doi: 10.1093/bib/bbw119.
-Measuring the diversity of the human microbiota with targeted next-generation sequencing.
-Finotello F1,2, Mastrorilli E3, Di Camillo B2.
-https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbw119
-Published: 26 December 2016
-
-https://twitter.com/search?q=DiversitySeq
-
-![https://twitter.com/j_flan/status/934560569192939520](https://pbs.twimg.com/media/DPaI_tTWAAEii36?format=jpg&name=small)
-
-----------
 ## theseus
 
 https://cran.r-project.org/package=theseus
+theseus: Analysis and Visualization Tools for Microbial Community Data
+An approach to the visualization, analysis, and interpretation of (microbial) community composition data, especially those originating from amplicon sequencing. Analysis techniques include constrained and unconstrained ordination and visualizing taxonomic abundances and spatial patterns, among others. Methods intended to assist bioinformaticians and ecologists in selecting read trimming by quality scores and preprocessing/denoising of datasets are also provided.
 
 https://github.com/EESI/theseus
 
-2017-12-20
-https://cran.rstudio.com/web/packages/theseus/vignettes/general_usage.html
+https://cran.r-project.org/web/packages/theseus/vignettes/general_usage.html
 Using the theseus R package
+Jacob Price and Stephen Woloszynek
+2017-12-20
 
-
-----------
-## mcaGUI
-
-http://www.bioconductor.org/packages/mcaGUI/
-
-https://www.ncbi.nlm.nih.gov/pubmed/22692220
-Bioinformatics. 2012 Aug 15;28(16):2198-9. doi: 10.1093/bioinformatics/bts338. Epub 2012 Jun 12.
-mcaGUI: microbial community analysis R-Graphical User Interface (GUI).
-Copeland WK1, Krishnan V, Beck D, Settles M, Foster JA, Cho KC, Day M, Hickey R, Schütte UM, Zhou X, Williams CJ, Forney LJ, Abdo Z.
-
-アイダホ
 
 ----------
 ## Rhea
@@ -575,9 +677,6 @@ https://www.ncbi.nlm.nih.gov/pubmed/28097056
 PeerJ. 2017 Jan 11;5:e2836. doi: 10.7717/peerj.2836. eCollection 2017.
 Rhea: a transparent and modular R pipeline for microbial profiling based on 16S rRNA gene amplicons.
 Lagkouvardos I1, Fischer S1, Kumar N1, Clavel T1.
-
-
-
 
 ----------
 ## Microbiome Helper
@@ -590,25 +689,34 @@ Microbiome Helper: a Custom and Streamlined Workflow for Microbiome Research.
 Comeau AM1, Douglas GM1, Langille MG1.
 
 
+----------
+## DiversitySeq
+
+https://www.ncbi.nlm.nih.gov/pubmed/28025179
+Brief Bioinform. 2018 Jul 20;19(4):679-692. doi: 10.1093/bib/bbw119.
+Measuring the diversity of the human microbiota with targeted next-generation sequencing.
+Finotello F1,2, Mastrorilli E3, Di Camillo B2.
+https://academic.oup.com/bib/article-lookup/doi/10.1093/bib/bbw119
+Published: 26 December 2016
+
+**Sign in**
+
+https://twitter.com/search?q=DiversitySeq
+
+![https://twitter.com/j_flan/status/934560569192939520](https://pbs.twimg.com/media/DPaI_tTWAAEii36?format=jpg&name=small)
+
 
 ----------
-## MAGNAMWAR
+## mcaGUI
 
-https://www.ncbi.nlm.nih.gov/pubmed/29342236
-Bioinformatics. 2018 Jan 12. doi: 10.1093/bioinformatics/bty001. [Epub ahead of print]
-MAGNAMWAR: An R package for genome-wide association studies of bacterial orthologs.
-Sexton CE1, Smith HZ1,2, Newell PD3, Douglas AE4, Chaston JM5.
+http://www.bioconductor.org/packages/mcaGUI/
 
-https://cran.r-project.org/web/packages/MAGNAMWAR/index.html
-MAGNAMWAR: A Pipeline for Meta-Genome Wide Association
+https://www.ncbi.nlm.nih.gov/pubmed/22692220
+Bioinformatics. 2012 Aug 15;28(16):2198-9. doi: 10.1093/bioinformatics/bts338. Epub 2012 Jun 12.
+mcaGUI: microbial community analysis R-Graphical User Interface (GUI).
+Copeland WK1, Krishnan V, Beck D, Settles M, Foster JA, Cho KC, Day M, Hickey R, Schütte UM, Zhou X, Williams CJ, Forney LJ, Abdo Z.
 
-Chaston, J.M. et al. (2014) 
-http://mbio.asm.org/content/5/5/e01631-14
-Metagenome-Wide Association of Microbial Determinants of Host Phenotype in Drosophila melanogaster
-
-https://github.com/cran/MAGNAMWAR/blob/master/vignettes/using_mag.Rmd
-
-
+**アイダホ**
 
 ----------
 ## QuasR
