@@ -1018,8 +1018,8 @@ writePairwiseAlignments(globalAlignMlepraeMulcerans)
 # Write a PairwiseAlignments object to a file
 writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMulcerans.txt")
 
-getwd()
-list.files()
+#getwd()
+#list.files()
 ```
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
@@ -1153,6 +1153,7 @@ Guangchuang Yu
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
+- 2018-07-30 [How to read a phylogenetic tree](https://artic.network/how-to-read-a-tree.html) | Author: Andrew Rambaut
 - [Yang (2006) "Computational Molecular Evolution"](http://aracnologia.macn.gov.ar/st/biblio/Yang%202006%20Computational%20Molecular%20Evolution.pdf)
 3.4 Maximum parsimony
 Fig. 3.18
@@ -1213,28 +1214,32 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アラインメントの作成**
+```
+# Read an XStringSet object from a file
+library(Biostrings)
+mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
 
-    # Read an XStringSet object from a file
-    library(Biostrings)
-    mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
+# Multiple Sequence Alignment using ClustalW
+library(msa)
+myAlignment <- msa(mySequences, "ClustalW")
+myAlignment
 
-    # Multiple Sequence Alignment using ClustalW
-    library(msa)
-    myAlignment <- msa(mySequences, "ClustalW")
-    myAlignment
+# write an XStringSet object to a file
+writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
 
-    # write an XStringSet object to a file
-    writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
-
-    # system("open .")
+#getwd()
+#list.files()
+```
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アラインメントのファイルをRに読み込む**
 
-    library(seqinr)
-    myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
-    names(myaln)
-    myaln$seq
+```
+library(seqinr)
+myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
+names(myaln)
+myaln$seq
+```
 
 ### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
 **多重アラインメントの表示**
@@ -1247,15 +1252,16 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 Trimming a multiple sequence alignment by discarding columns with too many gaps.
 
 多重配列アラインメントからギャップの多い列を破棄する
-
-    # install.packages("microseq")
-    library(microseq)
-    msa <- readFasta(in.file = "myaln.fasta")
-    print(nchar(msa$Sequence))
-    msa.trimmed <- msaTrim(msa = msa, gap.end = 0.5, gap.mid = 0.9)
-    print(nchar(msa.trimmed$Sequence))
-    writeFasta(fdta = msa.trimmed, out.file = "msa.trimmed.fasta", width = 80)
-    # myaln <- read.alignment(file = "msa.trimmed.fasta", format = "fasta")
+```
+# install.packages("microseq")
+library(microseq)
+msa <- readFasta(in.file = "myaln.fasta")
+print(nchar(msa$Sequence))
+msa.trimmed <- msaTrim(msa = msa, gap.end = 0.5, gap.mid = 0.9)
+print(nchar(msa.trimmed$Sequence))
+writeFasta(fdta = msa.trimmed, out.file = "msa.trimmed.fasta", width = 80)
+# myaln <- read.alignment(file = "msa.trimmed.fasta", format = "fasta")
+```
 
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
 **タンパク質配列間の遺伝的距離を計算する**
@@ -1357,36 +1363,37 @@ unlist(getAnnot(seqs))
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 **DNA/mRNA配列間の遺伝的距離を計算する**
+```
+library("seqinr")
+# create a function to retrieve several nucleotide sequences from NCBI
+retrieve_ncbi_fna <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), seqtype="DNA", strip.desc=TRUE)[[1]]
 
-    library("seqinr")
-    # create a function to retrieve several nucleotide sequences from NCBI
-    retrieve_ncbi_fna <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), seqtype = c("DNA"), strip.desc = TRUE)[[1]]
-    
-	seqnames <- c("AF049118", "AF049114", "AF049119", "AF049115")  # Make a vector containing the names of the sequences
-    seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store them in list variable "seqs"
+seqnames <- c("AF049118", "AF049114", "AF049119", "AF049115")  # Make a vector containing the names of the sequences
+seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store them in list variable "seqs"
 
-    # get sequence annotations
-    unlist(getAnnot(seqs))
+# get sequence annotations
+unlist(getAnnot(seqs))
 
-	# write out the sequences to a FASTA-format file
-	write.fasta(seqs, seqnames, file="virusmRNA.fasta")
+# write out the sequences to a FASTA-format file
+write.fasta(seqs, seqnames, file="virusmRNA.fasta")
 
-    # Read an XStringSet object from a file
-    library(Biostrings)
-    mySequences <- readDNAStringSet(file = "virusmRNA.fasta")
+# Read an XStringSet object from a file
+library(Biostrings)
+mySequences <- readDNAStringSet(file = "virusmRNA.fasta")
 
-    # Multiple Sequence Alignment using ClustalW
-    library(msa)
-    myAlignment <- msa(mySequences)
+# Multiple Sequence Alignment using ClustalW
+library(msa)
+myAlignment <- msa(mySequences)
 
-    # convert msa for the seqinr package
-    virusmRNAaln <- msaConvert(myAlignment, type="seqinr::alignment")
+# convert msa for the seqinr package
+virusmRNAaln <- msaConvert(myAlignment, type="seqinr::alignment")
 
-    # calculate a genetic distance for DNA/mRNA sequences
-    library(ape)
-	virusmRNAalnbin <- as.DNAbin(virusmRNAaln) # Convert the alignment to "DNAbin" format
-	virusmRNAdist <- dist.dna(virusmRNAalnbin) # Calculate the genetic distance matrix
-	virusmRNAdist                              # Print out the genetic distance matrix
+# calculate a genetic distance for DNA/mRNA sequences
+library(ape)
+virusmRNAalnbin <- as.DNAbin(virusmRNAaln)              # Convert the alignment to "DNAbin" format
+virusmRNAdist <- dist.dna(virusmRNAalnbin, model="K80") # Calculate the genetic distance matrix
+virusmRNAdist                                           # Print out the genetic distance matrix
+```
 
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
 **DNA/mRNA配列の系統樹の構築**
@@ -1399,20 +1406,21 @@ plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 ```
 
 ### Summary
+```
+# library(seqinr)
+?read.alignment
+?dist.alignment
 
-    # library(seqinr)
-    ?read.alignment
-    ?dist.alignment
+# library(msa)
+#example(msa)
 
-    # library(msa)
-    example(msa)
+# library(ape)
+?dist.dna
+#example(nj)
+?write.tree
+```
 
-    # library(ape)
-    ?dist.dna
-    example(nj)
-    ?write.tree
-
-### Links and Further Reading
+### [Links and Further Reading](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#links-and-further-reading)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#exercises)
 **演習**
