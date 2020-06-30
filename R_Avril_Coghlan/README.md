@@ -1005,7 +1005,6 @@ sMleprae # Print out the content of "sMleprae"
 # library(Biostrings); data(BLOSUM50)
 globalAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
                                 gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-
 globalAlignMlepraeMulcerans # Print out the optimal global alignment and its score
 ```
 
@@ -1028,7 +1027,6 @@ writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMul
 # find the best local alignment between the two protein sequences
 localAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
                                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
-
 localAlignMlepraeMulcerans # Print out the optimal local alignment and its score
 
 writePairwiseAlignments(localAlignMlepraeMulcerans)
