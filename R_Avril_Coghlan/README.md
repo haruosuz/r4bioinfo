@@ -39,7 +39,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 #### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
 
-パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
+パッケージ[`seqinr`](https://cran.r-project.org/package=seqinr)のインストール:  
 
     # install the "seqinr" package
     install.packages("seqinr")
@@ -923,16 +923,15 @@ GA-TTA
 *scoring matrix (substitution matrix)*
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
 
-[Bioconductorパッケージ`Biostrings`のインストール](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan#how-to-install-a-bioconductor-r-package)
-
-Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
+[`Biostrings`](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan#how-to-install-a-bioconductor-r-package)
+パッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
 
 	# make a scoring matrix which assigns a score of +2 to a match and -1 to a mismatch:
 	library(Biostrings)
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 	sigma # Print out the matrix
 
-- [**Gap penalty**](https://en.wikipedia.org/wiki/Gap_penalty)
+- [Gap penalty](https://en.wikipedia.org/wiki/Gap_penalty)
 - [ClustalW ヘルプ | DDBJ](https://www.ddbj.nig.ac.jp/clustalw-help.html)
 
 ギャップの最初の位置には、
