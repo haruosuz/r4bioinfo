@@ -809,7 +809,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 [変異](https://ja.wikipedia.org/wiki/突然変異)
 [Mutation](https://en.wikipedia.org/wiki/Mutation)
 
-塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
+塩基の置換 (Substitution)、挿入 (Insertion)、欠失 (Deletion)
 
 ![https://www.bbc.co.uk/bitesize/guides/zc499j6/revision/3](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/small)
 
@@ -906,7 +906,7 @@ dotPlot(seqMleprae, seqMulcerans)
 
 【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける。
 
-例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
+例えば、塩基の一致 (match) に+2のスコア、不一致 (mismatch) に-1のペナルティ、ギャップ (gap) に-2のペナルティを与える。
 以下のアラインメントのスコアは？
 ```
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
@@ -924,7 +924,7 @@ GA-TTA
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
 
 [`Biostrings`](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan#how-to-install-a-bioconductor-r-package)
-パッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
+パッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス（置換行列）を作る:  
 
 	# make a scoring matrix which assigns a score of +2 to a match and -1 to a mismatch:
 	library(Biostrings)
@@ -954,7 +954,7 @@ The reason for doing this is that it is likely that adjacent gap positions were 
 
 Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. Here the alignment contains four matches, one mismatch, and one gap of length 1, so its score is (4\*2)+(1\*-1)+(1\*-10) = -3.
 
-このアラインメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
+このアラインメントは、4個の一致 (match)、1個の不一致 (mismatch)、長さ1の1個のギャップ (gap) が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
@@ -1003,7 +1003,8 @@ sMleprae # Print out the content of "sMleprae"
 
 # align the two protein sequences
 # library(Biostrings); data(BLOSUM50)
-globalAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
+                                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 
 globalAlignMlepraeMulcerans # Print out the optimal global alignment and its score
 ```
@@ -1025,7 +1026,8 @@ writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMul
 **2つのタンパク質配列間のローカル・アラインメント**
 ```
 # find the best local alignment between the two protein sequences
-localAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
+localAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
+                               gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
 
 localAlignMlepraeMulcerans # Print out the optimal local alignment and its score
 
