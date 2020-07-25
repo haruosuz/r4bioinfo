@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2020-03
+Last Update: 2020-04
 
 ----------
 
@@ -11,14 +11,12 @@ Last Update: 2020-03
 ## Table of Contents
 
 - [featuring](#featuring)
-- [DECIPHER](#decipher)
 - [babette](#babette)
 - [BactDating](#bactdating) 細菌の系統樹で分岐年代のベイズ推定
 - [castor](#castor)
 - [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
 - [pic](#pic) Phylogenetically Independent Contrasts
-- [2019-11-11](#2019-11-11) Unlinked rRNA genes | phylosig {phytools} | phyloglm {phylolm}
 - [updates](#updates)
 - [perfectphyloR](#perfectphyloR)
 - [rgenesconverged](#rgenesconverged)
@@ -35,55 +33,111 @@ Last Update: 2020-03
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
-- [guangchuangyu](#guangchuangyu)
+- [msa](#msa) Multiple Sequence Alignment
+ - [BALCONY](#BALCONY)
+ - [msaR](#msaR)
+- [adegenet](#adegenet)
+- [guangchuangyu](#guangchuangyu) Guangchuang Yu
+  - [ggmsa](#ggmsa)
   - [ggtree](#ggtree)
+  - [seqmagick](#seqmagick)
   - [treeio](#treeio)
-- [phylogram](#phylogram)
-- [ggmsa](#ggmsa)
+- [martin.smith](#martin.smith) Martin R. Smith
+  - [TreeTools](#treetools)
+  - [TreeSearch](#treesearch)
+- [molecularecologist](#molecularecologist)
+- [dragonphylogeny](#dragonphylogeny)
+- [bioinformatics_tutorials](#bioinformatics_tutorials)
+- [treeman](#treeman)
+- [2019-11-11](#2019-11-11) Unlinked rRNA genes | phylosig {phytools} | phyloglm {phylolm}
 
 ----------
-## ggmsa
+## treeman
 
-https://cran.r-project.org/package=ggmsa
-ggmsa: Plot Multiple Sequence Alignment using 'ggplot2'
-Supports visualizing multiple sequence alignment of DNA and protein sequences using 'ggplot2'. It supports a number of colour schemes, including Chemistry, Clustal, Shapely, Taylor and Zappo. Multiple sequence alignment can easily be combined with other 'ggplot2' plots, such as aligning a phylogenetic tree produced by 'ggtree' with multiple sequence alignment.
-Published:	2020-01-08
-Vignettes:	ggmsa
-https://cran.r-project.org/web/packages/ggmsa/vignettes/ggmsa.html
-ggmsa: Plot multiple sequence alignment using ggplot2
-2020-01-08
+https://github.com/DomBennett/treeman
+DomBennett/treeman: An R package for manipulating phylogentic trees
 
-----------
-## phylogram
+https://cran.r-project.org/package=treeman
+treeman: Phylogenetic Tree Manipulation Class and Methods
+Published:	2020-05-26
+https://cran.r-project.org/web/packages/treeman/readme/README.html
+https://github.com/DomBennett/treeman/wiki
 
-http://github.com/ropensci/phylogram
-
-https://CRAN.R-project.org/package=phylogram
-phylogram: Dendrograms for Evolutionary Analysis
-Contains functions for developing phylogenetic trees as deeply-nested lists ("dendrogram" objects). Enables bi-directional conversion between dendrogram and "phylo" objects (see Paradis et al (2004) <doi:10.1093/bioinformatics/btg412>), and features several tools for command-line tree manipulation and import/export via Newick parenthetic text.
-```
-Published:	2018-06-25
-Vignettes:	Introduction to the phylogram package
-```
-https://cran.r-project.org/web/packages/phylogram/vignettes/phylogram-vignette.html
-phylogram: an R package for phylogenetic analysis with dendrograms
-Shaun P. Wilkinson 1,2 and Simon K. Davy 1
+https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2340-8
+treeman: an R package for efficient and intuitive manipulation of phylogenetic trees | BMC Research Notes | Full Text
 
 ----------
-## featuring
-
+## bioinformatics_tutorials
 
 https://bioinformaticshome.com/bioinformatics_tutorials/R/phylogeny_estimation.html
 BioinfoRmatics R Tutorial: Whole-genome viral phylogeny estimation without sequence alignment
+Whole-genome viral phylogeny estimation without sequence alignment
+BioinfoRmatics R Tutorial Series - Part 1
+by Dr. T. F. Khang
 Introduction
 Zielezinski et al. (2017).
 A Machine Learning Perspective To Phylogeny Estimation
 4k k-mers, a "feature-frequency profile" (Sims et al., 2009). 
 The R Code
+Download the entire R script bioinfoRmatics-series1.R.R and the virus genomes: virus_genomes.zip.
+https://bioinformaticshome.com/bioinformatics_tutorials/R/bioinfoRmatics-series1.R.R
+https://bioinformaticshome.com/bioinformatics_tutorials/R/virus_genomes.zip
+
+----------
+## dragonphylogeny
+
+https://twitter.com/dragonphylogeny
+
+https://colauttilab.github.io/DragonPhylogenyTutorial.html
+The Dragon Phylogeny
+Modern phylogenies are based on DNA or protein similarity, but in principal we can cluster objects based on any trait we can measure. To look at the process in more detail, let’s do a phylogeny of dragons.
+
+Advanced Techniques:
+Try overlaying your phylogeny on a geographical map: https://www.molecularecologist.com/2014/11/geophylogeny-plots-in-r-for-dummies/
+
+----------
+## molecularecologist
+
+https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
+Phylogenetic trees in R using ggtree
+Posted on 8 February, 2017 by Elin Videvall
+
+https://www.molecularecologist.com/2016/02/quick-and-dirty-tree-building-in-r/
+Quick and dirty tree building in R
+Posted on 26 February, 2016 by Ethan Linck
+The full script for my tutorial can be found on GitHub.
+https://github.com/elinck/molecologist
+
+https://www.molecularecologist.com/2014/11/geophylogeny-plots-in-r-for-dummies/
+Geophylogeny plots in R for Dummies
+Posted on 27 November, 2014 by Arun Sethuraman
+
+
+https://www.molecularecologist.com/2013/09/using-r-to-run-parallel-analyses-of-population-genetic-data-in-structure-parallelstructure/
+Using R to run parallel analyses of population genetic data in STRUCTURE: ParallelStructure
+Posted on 3 September, 2013 by Jeremy Yoder
+Besnier F and KA Glover. 2013. ParallelStructure: A R package to distribute parallel runs of the population genetics program STRUCTURE on multi-core computers. PLoS ONE 8: e70651. doi:10.1371/journal.pone.0070651.
 
 
 
+----------
+## adegenet
 
+https://cran.r-project.org/package=adegenet
+adegenet: Exploratory Analysis of Genetic and Genomic Data
+Toolset for the exploration of genetic and genomic data. Adegenet provides formal (S4) classes for storing and handling various genetic data, including genetic markers with varying ploidy and hierarchical population structure ('genind' class), alleles counts by populations ('genpop'), and genome-wide SNP data ('genlight'). It also implements original multivariate methods (DAPC, sPCA), graphics, statistical tests, simulation tools, distance and similarity measures, and several spatial methods. A range of both empirical and simulated datasets is also provided to illustrate various methods.
+Published:	2020-05-10
+https://github.com/thibautjombart/adegenet
+https://github.com/thibautjombart/adegenet/wiki/Tutorials
+
+11/7/2017
+https://fuzzyatelin.github.io/bioanth-stats/module-24/module-24.html
+Module 24: An Intro to Phylogenetic Tree Construction in R
+Brandon Güell, Dani Antos, Isabella Muratore (with modifications by Christopher A. Schmitt)
+{adegenet} - package for multivariate analysis of genetic markers data
+
+----------
+## featuring
 
 https://www.trifields.jp/r-cran-task-views-639
 R言語 CRAN Task Views | トライフィールズ
@@ -102,12 +156,118 @@ https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-m
 - geigerは、分類群の重複セットに木やデータを整理することができます。
 
 
+
+Jul 3, 2015
+https://lukejharmon.github.io/ilhabela/instruction/2015/07/03/PGLS/
+Phylogenetic Generalized Least Squares (PGLS) – Comparative methods in R - Ilhabela
+
+
 https://github.com/haruosuz/books/tree/master/aper
 Analysis of Phylogenetics and Evolution with R
 
 
+10th Apr, 2017
 https://www.researchgate.net/post/How_to_construct_phylogenetic_tree_in_rstudio
+How to construct phylogenetic tree in rstudio?
 
+
+8:12 AM · May 30, 2020
+https://twitter.com/AedinCulhane/status/1266507676005142528
+Aedin Culhane on Twitter: "@guangchuangyu Other R tools for phylogenetics; ape, adephylo, phylobase and Treetools ( I know I am missing several more.. ) https://t.co/D3c14YGSQ9 https://t.co/Kk7YonMd5g https://t.co/3docsznizT" / Twitter
+
+
+
+----------
+## msa
+
+-----
+### BALCONY
+
+https://cran.r-project.org/web/packages/BALCONY/readme/README.html
+
+https://cran.r-project.org/package=BALCONY
+BALCONY: Better ALignment CONsensus analYsis
+Facilitates the evolutionary analysis and structure conservation study of specified amino acids in proteins.
+Published:	2019-02-28
+
+-----
+### msaR
+
+https://cran.r-project.org/package=msaR
+msaR: Multiple Sequence Alignment for R Shiny
+Visualises multiple sequence alignments dynamically within the Shiny web application framework.
+```
+Published:	2017-10-01
+Vignettes:	Using msaR
+```
+https://cran.r-project.org/web/packages/msaR/vignettes/msaR.html
+
+
+
+
+
+
+
+
+----------
+## martin.smith
+Martin R. Smith
+
+### TreeSearch
+TreeSearch: Phylogenetic Tree Search Using Custom Optimality Criteria
+Published:	2020-07-09
+Maintainer:	Martin R. Smith <martin.smith at durham.ac.uk>
+Vignettes:	Getting started: installation and setup
+Tree search with inapplicable data
+Calculating concavity profiles for profile parsimony
+Tree search with profile parsimony
+
+
+### TreeTools
+
+2020-07-07
+https://cran.r-project.org/package=TreeTools
+TreeTools: Create, Modify and Analyse Phylogenetic Trees
+https://ms609.github.io/TreeTools/
+https://github.com/ms609/TreeTools/
+Vignettes:	
+Navigating the file system in R
+Load phylogenetic data
+Load phylogenetic trees
+
+https://cran.r-project.org/web/packages/TreeTools/vignettes/load-trees.html
+Loading phylogenetic trees into R
+Martin R. Smith martin.smith@durham.ac.uk
+2020-07-06
+
+What next?
+You might want to:
+
+Load phylogenetic data into R.
+
+https://cran.r-project.org/web/packages/TreeTools/vignettes/load-data.html
+Loading phylogenetic data into R
+Martin R. Smith martin.smith@durham.ac.uk
+2020-07-06
+
+Conduct parsimony search using Brazeau, Guillerme & Smith’s approach to inapplicable data, or using Profile parsimony.
+
+https://ms609.github.io/TreeSearch/articles/inapplicable.html
+Inapplicable data in morphological phylogenetics
+Martin R. Smith
+2020-07-08
+
+https://ms609.github.io/TreeSearch/articles/profile.html
+Tree Search with Profile Parsimony
+Martin R. Smith
+2020-07-08
+
+Calculate distances between pairs of trees.
+
+https://ms609.github.io/TreeDist/articles/Using-TreeDist.html
+Calculate tree similarity with ‘TreeDist’
+Martin R. Smith
+2020-07-09
 
 ----------
 ## guangchuangyu
@@ -122,19 +282,46 @@ Data Integration, Manipulation and Visualization of Phylogenetic Trees
 Guangchuang Yu, PhD
 2020-04-08
 
-----------
+August 7, 2008
+https://guangchuangyu.github.io/2008/08/sequence-alignment-program-written-in-r/
+sequence alignment program written in R
+
+-----
+### ggmsa
+
+https://cran.r-project.org/package=ggmsa
+ggmsa: Plot Multiple Sequence Alignment using 'ggplot2'
+
+Published:	2020-05-28
+Maintainer:	Guangchuang Yu <guangchuangyu at gmail.com>
+
+https://cran.r-project.org/web/packages/ggmsa/vignettes/ggmsa.html
+ggmsa: Plot multiple sequence alignment using ggplot2
+2020-05-28
+
+-----
 ### ggtree
 
 https://twitter.com/search?q=ggtree
 
 https://bioconductor.org/packages/release/bioc/html/ggtree.html
+an R package for visualization of tree and annotation data
+Maintainer: Guangchuang Yu <guangchuangyu at gmail.com>
 
-https://www.molecularecologist.com/2017/02/phylogenetic-trees-in-r-using-ggtree/
-Phylogenetic trees in R using ggtree
+https://pubmed.ncbi.nlm.nih.gov/32162851/
+Curr Protoc Bioinformatics
+. 2020 Mar;69(1):e96. doi: 10.1002/cpbi.96.
+Using Ggtree to Visualize Data on Tree-Like Structures
+Guangchuang Yu 1
+
 
 2019年09月25日に更新
 https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
 ggtreeを使ってRで系統樹を扱う
+
+JMU2017
+https://4va.github.io/biodatasci/r-ggtree.html
+Visualizing and Annotating Phylogenetic Trees with R+ggtree
 
 December 17, 2016
 https://guangchuangyu.github.io/2016/12/ggtree-version-of-plottree/
@@ -169,7 +356,16 @@ Figure 5
 Open in figure viewerPowerPoint
 Timescaled phylogenetic tree annotated with a matrix of values associated with each taxon, in this case the genotypes of H3 influenza viruses.
 
-----------
+-----
+### seqmagick
+
+https://cran.r-project.org/package=seqmagick
+seqmagick: Sequence Manipulation Utilities
+Supports reading and writing sequences for different formats (currently interleaved and sequential formats for 'FASTA' and 'PHYLIP'), file conversion, and manipulation (e.g. filter sequences that contain specify pattern, export consensus sequence from an alignment).
+Published:	2019-12-19
+Maintainer:	Guangchuang Yu <guangchuangyu at gmail.com>
+
+-----
 ### treeio
 
 https://twitter.com/kfuku0502/status/1224428158440611840
@@ -184,69 +380,25 @@ the tidytree and ggtree packages.
 
 https://www.bioconductor.org/packages/treeio/
 Base Classes and Functions for Phylogenetic Tree Input and Output
+Maintainer: Guangchuang Yu <guangchuangyu at gmail.com>
 
 
 ----------
-## DECIPHER
+## phylogram
 
-https://bioconductor.org/packages/DECIPHER/
-Bioconductor - DECIPHER
-A toolset for deciphering and managing biological sequences.
-Author: Erik Wright
+http://github.com/ropensci/phylogram
 
-https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
-The Art of Multiple Sequence Alignment in R
-Erik S. Wright
-October 29, 2019
-
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
-解析 | 一般 | アラインメント | マルチプル | DECIPHER(Wright_2015) (last modified 2016/12/29)
-
-https://www.ncbi.nlm.nih.gov/pubmed/26445311
-BMC Bioinformatics. 2015 Oct 6;16:322. doi: 10.1186/s12859-015-0749-z.
-DECIPHER: harnessing local sequence context to improve protein multiple sequence alignment.
-Wright ES1,2.
-
-
-パッケージ確認日：2019/12/01
-https://www.trifields.jp/bioconductor-packages-software-3484
-Bioconductor Softwareパッケージ一覧 | トライフィールズ
+https://CRAN.R-project.org/package=phylogram
+phylogram: Dendrograms for Evolutionary Analysis
+Contains functions for developing phylogenetic trees as deeply-nested lists ("dendrogram" objects). Enables bi-directional conversion between dendrogram and "phylo" objects (see Paradis et al (2004) <doi:10.1093/bioinformatics/btg412>), and features several tools for command-line tree manipulation and import/export via Newick parenthetic text.
 ```
-125. DECIPHER
-Tools for curating, analyzing, and manipulating biological sequences
-生物学的配列をキュレーション、分析、および操作するためのツール
+Published:	2018-06-25
+Maintainer:	Shaun Wilkinson <shaunpwilkinson at gmail.com>
+Vignettes:	Introduction to the phylogram package
 ```
-
-https://bioconductor.github.io/BiocWorkshops/working-with-genomic-data-in-r-with-the-decipher-package.html
-The Bioconductor 2018 Workshop Compilation
-```
-13 250: Working with genomic data in R with the DECIPHER package
-Authors: Nicholas Cooley24 Last Modified: 18 July, 2018
-```
-
-## 13.2 Workshop goals and objectives
-
-#### 13.2.2.7 Comparison of genomes
-
-<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/plotneighbors2-1.png" width=25%>
-
-Pairs plots are my personal favorite way to visualize syntenic information, but, they can become overwhelming as the number of genomes compared increases. 
-
-<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/largepairsplot-1.png" width=25%>
-
-#### 13.2.2.8 Predict homology between genes that are linked by syntenic hits
-
-<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/unnamed-chunk-3-1.png" width=25%>
-
-PanGenomeMatrix represents every homolog set, and every singleton gene in our genomes.
-
-We can, additionally, create a simple tangleogram from these two phylogenetic trees. Allowing a comparison of the core, and pan genomes. The core is on the left, while the pan is on the right.
-
-<img src="https://bioconductor.github.io/BiocWorkshops/250_Cooley_DECIPHER_files/figure-html/simpletangleogram-1.png" width=25%>
-
-
-
-
+https://cran.r-project.org/web/packages/phylogram/vignettes/phylogram-vignette.html
+phylogram: an R package for phylogenetic analysis with dendrograms
+Shaun P. Wilkinson 1,2 and Simon K. Davy 1
 
 ----------
 ## babette
@@ -441,33 +593,12 @@ ISME J. 2020 Feb;14(2):597-608. doi: 10.1038/s41396-019-0552-3. Epub 2019 Nov 11
 Unlinked rRNA genes are widespread among bacteria and archaea.
 Brewer TE1,2, Albertsen M3, Edwards A4, Kirkegaard RH3, Rocha EPC5, Fierer N6,7.
 https://www.nature.com/articles/s41396-019-0552-3
-With this set of reduced genomes (3967 genomes in total), we first calculated Pagel’s lambda [30] to determine
-whether there was a phylogenetic signal associated with unlinked rRNA genes using the phylosig function of the phytools package version 0.6.60 [31]. The results of this test indicated that there was a strong phylogenetic signal (lambda = 0.96, p < 0.0001), so we controlled for phylogeny in all of our subsequent tests by using a Phylogenetic Generalized Linear Model for continuous variables (with the function phyloglm in the phylolm package version 2.6 [32]).
+With this set of reduced genomes (3967 genomes in total), we first calculated Pagel’s lambda [30] to determine whether there was a phylogenetic signal associated with unlinked rRNA genes using the phylosig function of the phytools package version 0.6.60 [31]. The results of this test indicated that there was a strong phylogenetic signal (lambda = 0.96, p < 0.0001), so we controlled for phylogeny in all of our subsequent tests by using a Phylogenetic Generalized Linear Model for continuous variables (with the function phyloglm in the phylolm package version 2.6 [32]).
 
 #### phylosig {phytools}
 
-```
-library(phytools)
-?phylosig
-# Compute phylogenetic signal with two methods
-```
+https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md#phylosig
 
-Jamie Winternitz, Sept 2016
-https://static1.squarespace.com/static/5459da8ae4b042d9849b7a7b/t/57ea64eae58c62718aa34769/1474979059782/Nesin_Winternitz_Practical_1and2.pdf
-Introduction to the phylogenetic (comparative) method
-
-We’ll use phylosig from phytools to see if lambda is significantly different from 0. 
-
-https://lukejharmon.github.io/ilhabela/instruction/2015/06/02/ContinuousModels/
-Models of continuous character evolution – Comparative methods in R - Ilhabela
-
-A significant p-value returned from phylosignal tells you that there is significant phylogenetic signal - that is, close relatives are more similar than random pairs of species.
-
-Another method for testing phylogenetic signal is Pagel’s lambda. Lambda is a
-
-http://rfunctions.blogspot.com/2014/02/measuring-phylogenetic-signal-in-r.html
-Measuring Phylogenetic Signal in R (Moran, Abouheif, Pagel and Blomberg)
-The content of this post has been moved to: https://clubedaciencia.com.br/measuring-phylogenetic-signal-in-r/
 
 #### phyloglm {phylolm}
 ```
@@ -494,6 +625,14 @@ Other settings of phylolm and phyloglm, such as constraints on the phylogenetic 
 ## updates
 
 ## 2020
+
+1:32 PM · Jul 16, 2020
+https://twitter.com/EcologyinR/status/1283620505317027841
+Ecology in R on Twitter: "phyr: An R package for phylogenetic species-distribution modelling in ecological communities link to github: https://t.co/TnzasGshoh link to preprint: https://t.co/ijIKZyS5Pp link to tutorial: https://t.co/w1aq2kbj85 https://t.co/SqzSPDmxo9" / Twitter
+
+
+
+
 https://twitter.com/kfuku0502/status/1217791088347570176
 Kenji Fukushima on Twitter: "MCMCTreeの前処理＆後処理Rパッケージ。プロットがいいね。https://t.co/2XJnpXBBBh https://t.co/XABV0wGsIT" / Twitter
 9:49 PM · Jan 16, 2020
@@ -505,6 +644,15 @@ https://CRAN.R-project.org/package=MCMCtreeR
 
 ## 2019
 
+
+2:40 AM · Jul 5, 2019
+https://twitter.com/Kev_Falk/status/1146836192526295047
+Kevin Falk on Twitter: "Check out my new data visualization tutorial. Create dendrograms/phylogenetic trees based on genomic SNP data in R. https://t.co/pJXJUnJolq https://t.co/db8RWQHKnO" / Twitter
+Jul 4, 2019
+https://www.youtube.com/watch?v=LWgA2zaQ3y0
+Dendrogram Phylogram Data Visualization Tutorial - YouTube
+動画
+
 https://twitter.com/kfuku0502/status/1080489725612486662
 Kenji Fukushima on Twitter: "Wrote an R script for divergence time estimation of a gene tree based on phylogeny reconciliation with a dated species tree. Posted code to GitHub. https://t.co/6uddGB2nAT https://t.co/xeZLfzg3he" / Twitter
 12:43 AM · Jan 3, 2019
@@ -514,11 +662,11 @@ Reconciliation-Assisted Divergence Time Estimation (RADTE)
 
 ## 2018
 
-
 https://www.ncbi.nlm.nih.gov/pubmed/29874797
 Life (Basel). 2018 Jun 5;8(2). pii: E20. doi: 10.3390/life8020020.
 phylotaR: An Automated Pipeline for Retrieving Orthologous DNA Sequences from GenBank in R.
 Bennett DJ1,2, Hettling H3, Silvestro D4,5, Zizka A6,7, Bacon CD8,9, Faurby S10,11, Vos RA12, Antonelli A13,1
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6027284/
 two large taxonomic clades: Palms and primates.
 霊長類
 
@@ -531,6 +679,11 @@ Phylogeny and species traits predict bird detectability | R-bloggers
 ![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
 
 ## 2017
+
+
+
+
+
 
 ## 2016
 
