@@ -15,7 +15,21 @@ Liam Revell, UMass Boston and Klaus Schliep, University of Paris
 December 15, 2011
 
 ----------
-2017
+
+## Table of Contents
+- [updates](#updates)
+- [phylosig](#phylosig)
+
+----------
+## 2020
+
+12:26 AM · Jul 17, 2020
+https://twitter.com/phytools_liam/status/1283785073788178433
+Liam Revell on Twitter: "As promised - here's how to do it using ape, #phytools, &amp; #rstats. Mapping a continuous character onto the tree using variable edge widths: https://t.co/yHoscQWtff. https://t.co/hU2sAE4CRI" / Twitter
+
+
+----------
+## 2017
 
 http://www.phytools.org/Cordoba2017/
 Latin American Macroevolution Workshop
@@ -23,11 +37,16 @@ Córdoba, Argentina. 1 August — 4 August, 2017
 
 Course co-taught by Ricardo Betancur, Luke Harmon, & Liam Revell. 1 August - 4 August 2017.
 
+http://www.phytools.org/Cordoba2017/ex/2/Intro-to-phylogenies.html
+Exercise 2: Introduction to phylogenies in R
+Written by Liam J. Revell. Last updated 31 July 2017.
+
 http://www.phytools.org/Cordoba2017/ex/3/PICs.html
 Exercise 3: Phylogenetically independent contrasts
 
+
 ----------
-2016-01-29
+## 2016-01-29
 
 http://blog.phytools.org/2016/01/new-function-for-phylogenetic-heat-map.html
 New function for phylogenetic heat map
@@ -222,8 +241,57 @@ Rの"phylo"オブジェクト
 	## this is what it looks like:
 	cat(readLines("example.trees"),sep="\n")
 
-https://cran.r-project.org/web/views/Phylogenetics.html
-CRAN Task View: Phylogenetics, Especially Comparative Methods
+----------
+## 2013
+
+http://www.phytools.org/eqg/Exercise_3.2/
+Introduction to phylogenies in R
+Written by Liam J. Revell. Last updated Aug. 7, 2013
+
+----------
+#### phylosig
+
+```
+library(phytools)
+?phylosig
+# Compute phylogenetic signal with two methods
+```
+
+http://blog.phytools.org/2019/11/major-updates-to-phylosig-function.html
+Phylogenetic Tools for Comparative Biology: Major updates to phylosig function, including a new plotting method
+
+
+Jamie Winternitz, Sept 2016
+https://static1.squarespace.com/static/5459da8ae4b042d9849b7a7b/t/57ea64eae58c62718aa34769/1474979059782/Nesin_Winternitz_Practical_1and2.pdf
+Introduction to the phylogenetic (comparative) method
+
+We’ll use phylosig from phytools to see if lambda is significantly different from 0. 
+
+https://lukejharmon.github.io/ilhabela/instruction/2015/06/02/ContinuousModels/
+Models of continuous character evolution – Comparative methods in R - Ilhabela
+
+A significant p-value returned from phylosignal tells you that there is significant phylogenetic signal - that is, close relatives are more similar than random pairs of species.
+
+Another method for testing phylogenetic signal is Pagel’s lambda. Lambda is a
+
+http://rfunctions.blogspot.com/2014/02/measuring-phylogenetic-signal-in-r.html
+Measuring Phylogenetic Signal in R (Moran, Abouheif, Pagel and Blomberg)
+The content of this post has been moved to: https://clubedaciencia.com.br/measuring-phylogenetic-signal-in-r/
+
+
+18th Feb, 2014
+https://www.researchgate.net/post/Is_there_an_R_package_that_can_directly_calculate_Pagel_s_Lambda_phylogenetic_signal_with_p-values_from_a_likelihood_ratio_test
+Is there an R package that can directly calculate Pagel´s Lambda (phylogenetic signal) with p-values from a likelihood ratio test?
+
+Hi, Try Liam Revell's package "phytools". Particularly function "phylosig" can be useful for you. I have never tried it, but I remember that I have read about that possibility. Here are some useful links: http://cran.r-project.org/web/packages/phytools/phytools.pdf http://blog.phytools.org/2012/01/fitting-pagels-for-single-trait-using.html http://blog.phytools.org/2012/11/testing-for-pagels-10.html http://evolbiology.blogspot.com/2012/10/when-to-use-phylogenetic-comparative.html Hope this helps.
+
+
+First published: 15 December 2011
+https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x
+phytools: an R package for phylogenetic comparative biology (and other things) - Revell - 2012 - Methods in Ecology and Evolution - Wiley Online Library
+Table 1. Major functions of the phytools package
+phylosig	Computes phylogenetic signal using two different methods (Pagel 1999; Freckleton, Harvey & Pagel 2002; Blomberg, Garland & Ives 2003) and incorporating sampling error (Ives, Midford & Garland 2007)
+
 
 ----------
 
