@@ -154,8 +154,8 @@ https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-m
 系統学、特に比較方法
 - apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
 - geigerは、分類群の重複セットに木やデータを整理することができます。
-
-
+- phylolmは、ツリーに沿って連続またはバイナリ特性をシミュレートすることができます。
+Pagel（1999）のラムダ、
 
 Jul 3, 2015
 https://lukejharmon.github.io/ilhabela/instruction/2015/07/03/PGLS/
@@ -595,6 +595,24 @@ Brewer TE1,2, Albertsen M3, Edwards A4, Kirkegaard RH3, Rocha EPC5, Fierer N6,7.
 https://www.nature.com/articles/s41396-019-0552-3
 With this set of reduced genomes (3967 genomes in total), we first calculated Pagel’s lambda [30] to determine whether there was a phylogenetic signal associated with unlinked rRNA genes using the phylosig function of the phytools package version 0.6.60 [31]. The results of this test indicated that there was a strong phylogenetic signal (lambda = 0.96, p < 0.0001), so we controlled for phylogeny in all of our subsequent tests by using a Phylogenetic Generalized Linear Model for continuous variables (with the function phyloglm in the phylolm package version 2.6 [32]).
 
+
+https://www.esj.ne.jp/meeting/abst/60/P2-186.html
+(1)　キンキ幼虫の生存率や計測した葉の諸形質に系統的な近縁性があるのか、Pagelのlambda(Pagel 1999)でPhylogenetic signalを検討した。(2)　計測した植物種の形質がキンキ幼虫の生存率に影響するのか、系統関係の影響を考慮した(Phylogenetic generalized least squares)重回帰分析で検討した。
+
+https://bibgraph.hpcr.jp/abst/pubmed/18707460
+系統解析と比較データ：証拠のテストとレビュー。 - Bibgraph（ビブグラフ）| PubMedを日本語で論文検索
+この質問を調査するために、Pagel（1999）によって導入された、通常0（系統発生の独立性）と1（種の形質は共通の進化の歴史に直接比例して変化する）の間で変化する系統発生相関の尺度の使用を調査します。
+https://pubmed.ncbi.nlm.nih.gov/18707460/
+Am Nat
+. 2002 Dec;160(6):712-26. doi: 10.1086/343873.
+Phylogenetic analysis and comparative data: a test and review of evidence
+R P Freckleton 1, P H Harvey, M Pagel
+https://www.journals.uchicago.edu/doi/10.1086/343873
+The question is often raised whether it is statistically necessary to control for phylogenetic associations in comparative studies. To investigate this question, we explore the use of a measure of phylogenetic correlation, lambda, introduced by Pagel (1999), that normally varies between 0 (phylogenetic independence) and 1 (species' traits covary in direct proportion to their shared evolutionary history). 
+
+
+
+
 #### phylosig {phytools}
 
 https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md#phylosig
@@ -670,13 +688,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6027284/
 two large taxonomic clades: Palms and primates.
 霊長類
 
-
-
-February 9, 2018
-https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
-Phylogeny and species traits predict bird detectability | R-bloggers
-- The following figure shows the two input data vectors mirrored side-by-side:
-![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
 
 ## 2017
 
