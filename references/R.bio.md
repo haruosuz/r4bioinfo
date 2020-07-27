@@ -24,8 +24,6 @@
   - [coronavirus](#coronavirus)
 - [](#)
 - [resistance](#resistance)
-- [plasmid](#plasmid)
-- [motif](#motif)
 - [Bios2mds](#bios2mds)
 - [protr](#protr)
 - [dendextend](#dendextend)
@@ -35,6 +33,88 @@
 [coghlan-avril](#coghlan-avril)
 [ushio](#ushio)
 [fvgnoriyuki](#fvgnoriyuki) 鈴木紀之 Noriyuki Suzuki
+- [plasmid](#plasmid)
+- [bwt](#bwt)
+- [motif](#motif)
+- [AncestryMapper](#ancestrymapper)
+
+----------
+
+https://twitter.com/EcologyinR
+Ecology in R (@EcologyinR) / Twitter
+
+----------
+
+
+
+2020-04-23
+https://compgenomr.github.io/book/index.html
+Computational Genomics with R
+Altuna Akalin
+
+
+----------
+## AncestryMapper
+
+https://cran.r-project.org/package=AncestryMapper
+AncestryMapper: Assigning Ancestry Based on Population References
+Assigns genetic ancestry to an individual and studies relationships between local and global populations.
+Vignettes:	AncestryMapper Overview
+https://cran.r-project.org/web/packages/AncestryMapper/vignettes/AncestryMapper2.0.html
+AncestryMapper Overview
+Eoghan O’Halloran, Tiago Magalhães, Darren J. Fitzpatrick
+2016-09-24
+Introduction
+AncestryMapper is an R package that implements the methods described in “HGDP and HapMap Analysis by Ancestry Mapper Reveals Local and Global Population Relationships” Magalhães TR, Casey JP, Conroy J, Regan R, Fitzpatrick DJ, et al. PLoS ONE 7(11): e49438. (2012) Ancestry Mapper assigns genetic ancestry to an individual and allows the study of relationships between local and global populations. The method gives each individual an Ancestry Mapper Id (AMid), a genetic identifier comprising genetic coordinates that correspond to its relationship to various reference populations. The AMid metrics have intrinsic biological meaning and provide a tool to measure genetic similarity between world populations.
+
+https://pubmed.ncbi.nlm.nih.gov/23189146/
+PLoS One
+. 2012;7(11):e49438. doi: 10.1371/journal.pone.0049438. Epub 2012 Nov 26.
+HGDP and HapMap analysis by Ancestry Mapper reveals local and global population relationships
+Tiago R Magalhães 1, Jillian P Casey, Judith Conroy, Regina Regan, Darren J Fitzpatrick, Naisha Shah, João Sobral, Sean Ennis
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3506643/
+Human Genome Diversity Project (HGDP)
+Results
+References for Ancestry Mapper
+Ancestry Mapper Highlights Human Migrations
+
+https://ja.wikipedia.org/wiki/国際_HapMap_計画
+国際HapMap計画 (International HapMap Project) はヒトゲノムのハプロタイプマップを構築することを目標として組織された。 このハプロタイプマップはヒトの遺伝的変異の共通のパターンを集積したものになると期待されている。
+https://integbio.jp/dbcatalog/record/nbdc00509
+International HapMap Project (国際HapMap計画) - Integbio データベースカタログ
+国際 HapMap 計画は、ヒトにおける遺伝的多型パターンを明らかにし、病気や薬に対する反応性に関わる遺伝子を発見するための基盤を整備するプロジェクトです。
+
+https://sites.google.com/site/hiromimatsumae/ji-tuan-yi-chuan-xue
+集団遺伝学 - Hiromi Matsumae
+PSMCは、1個体のゲノムから集団の人口動態の変遷を推定する集団遺伝学のプログラムです。導入にあたり、日本語の説明が見当たらなかったので覚書をしておきます (2015年)。
+比較に用いたCHB, French, YorubaはいずれもHuman Genome Diversity Project由来の試料で、MPI-EVAの論文Meyer et al. 2012において、イルミナ社にてシーケンスされたものです。
+
+
+----------
+## bwt
+Burrows-Wheeler Transform
+
+2018.08.29
+https://bi.biopapyrus.jp/seq/bwt.html
+Burrows-Wheeler 変換 | アラインメントプログラムでよく使われる文字列検索アルゴリズム
+
+https://rpubs.com/geest007/BWT
+Burrows Wheeler Transformation
+Geert van Geest
+24 maart 2020
+
+Created 6 years ago
+https://gist.github.com/aaronwolen/cbdd74180a714267bf0c
+A simple R implementation of the Burrows-Wheeler transformation based on Wikipedia's python example.
+ bwt.r
+
+### Rbowtie
+https://bioconductor.org/packages/release/bioc/html/Rbowtie.html
+
+https://bioconductor.org/packages/release/bioc/vignettes/Rbowtie/inst/doc/Rbowtie-Overview.html
+An introduction to Rbowtie
+27 April, 2020
+
 
 
 ----------
@@ -94,31 +174,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4762521/
 Since the motif-x tool was only available via an online webserver, we reimplemented the tool for the R programming language, which can be found here: https://github.com/omarwagih/rmotifx.
 
 
-----------
-## bwt
-Burrows-Wheeler Transform
-
-2018.08.29
-https://bi.biopapyrus.jp/seq/bwt.html
-Burrows-Wheeler 変換 | アラインメントプログラムでよく使われる文字列検索アルゴリズム
-
-https://rpubs.com/geest007/BWT
-Burrows Wheeler Transformation
-Geert van Geest
-24 maart 2020
-
-Created 6 years ago
-https://gist.github.com/aaronwolen/cbdd74180a714267bf0c
-A simple R implementation of the Burrows-Wheeler transformation based on Wikipedia's python example.
- bwt.r
-
-### Rbowtie
-https://bioconductor.org/packages/release/bioc/html/Rbowtie.html
-
-https://bioconductor.org/packages/release/bioc/vignettes/Rbowtie/inst/doc/Rbowtie-Overview.html
-An introduction to Rbowtie
-27 April, 2020
-
 
 ----------
 ## featuring
@@ -128,15 +183,6 @@ https://www.trifields.jp/statistical-analysis-r-cran-packages-341
 R言語 CRANパッケージ一覧 | トライフィールズ
 パッケージ確認日：2020/05/01
 パッケージ数：15560
-
-https://www.ncbi.nlm.nih.gov/pubmed/29795540
-Nat Microbiol. 2018 Jun;3(6):652-661. doi: 10.1038/s41564-018-0156-0. Epub 2018 May 24.
-Methods for phylogenetic analysis of microbiome data.
-Washburne AD1, Morton JT2,3, Sanders J3, McDonald D3, Zhu Q3, Oliverio AM4,5, Knight R2,3.
-https://www.nature.com/articles/s41564-018-0156-0
-In this Review Article, we organize the field of phylogenetically structured data analysis by discussing the major classes of methods. We first emphasize a fundamental issue in the field: the imperfection of estimated phylogenies. We then define four classes: (1) comparative methods; (2) ancestral state reconstruction and descendant trait imputation; (3) phylogenetic variables; and (4) phylogeny-aware distances (Table 1); and provide Supplementary Online Tutorials with examples (https://knightlab-analyses.github.io/phylogenetic-tutorials/). 
-
-
 
 2020/02/10
 https://www.tidyverse.org/blog/2020/02/slider-0-1-0/
@@ -539,6 +585,30 @@ https://seqfeatr.zmb.uni-due.de/
 ## updates
 
 ## 2020
+
+----------
+
+5:39 PM · Jul 19, 2020
+https://twitter.com/OUPBioinfo/status/1284769780331884544
+OUP Bioinformatics on Twitter: "ampir: an R package for fast genome-wide prediction of antimicrobial peptides https://t.co/BgeQR3wjxe #bioinformatics" / Twitter
+
+
+10:24 PM · Jul 18, 2020
+https://twitter.com/heavywatal/status/1284479279426748417
+Watal M. Iwasaki on Twitter: "時系列と書いてあるけどゲノムデータでスライディングウィンドウしたい人とかも読みたい記事のはず" / Twitter
+12:20 AM · Jul 18, 2020
+https://twitter.com/ill_Identified/status/1284145844233486336
+ill-identified on Twitter: "dplyr 1.0.0 の話題に便乗してtidyverse と相性の良い時系列データ向けパッケージ比較記事を書きました. あまり知られてないsliderとrunnerも紹介しています [R] dplyr 1.0.0 時代の時系列… https://t.co/57kPMwxoog" / Twitter
+https://ill-identified.hatenablog.com/entry/2020/07/18/001708
+[R] dplyr 1.0.0 時代の時系列データ処理 — 特に移動集計 — - ill-identified diary
+https://rpubs.com/ktgrstsh/tidyverse-rolling
+RPubs - [R] dplyr 1.0.0 時代の時系列データ処理 — 特に移動集計 —
+
+
+1:32 PM · Jul 16, 2020
+https://twitter.com/EcologyinR/status/1283620505317027841
+Ecology in R on Twitter: "phyr: An R package for phylogenetic species-distribution modelling in ecological communities link to github: https://t.co/TnzasGshoh link to preprint: https://t.co/ijIKZyS5Pp link to tutorial: https://t.co/w1aq2kbj85 https://t.co/SqzSPDmxo9" / Twitter
+
 
 https://github.com/genesofeve/projectR
 12:51 AM · Mar 18, 2020
