@@ -1,4 +1,3 @@
-Haruo Suzuki (haruo[at]g-language[dot]org)  
 Last Update: 2020-04
 
 ----------
@@ -42,14 +41,37 @@ Last Update: 2020-04
   - [ggtree](#ggtree)
   - [seqmagick](#seqmagick)
   - [treeio](#treeio)
-- [martin.smith](#martin.smith) Martin R. Smith
-  - [TreeTools](#treetools)
-  - [TreeSearch](#treesearch)
 - [molecularecologist](#molecularecologist)
 - [dragonphylogeny](#dragonphylogeny)
 - [bioinformatics_tutorials](#bioinformatics_tutorials)
 - [treeman](#treeman)
 - [2019-11-11](#2019-11-11) Unlinked rRNA genes | phylosig {phytools} | phyloglm {phylolm}
+- [jackalope](#jackalope)
+
+- [martin.smith](#martin.smith) Martin R. Smith
+  - [TreeSearch](#treesearch)
+  - [TreeTools](#treetools)
+  - [TreeDist](#treeDist)
+  - [Quartet](#quartet)
+- [tree distance](#tree-distance)
+- [](#)
+
+
+----------
+## jackalope
+https://github.com/lucasnell/jackalope
+
+https://cran.r-project.org/package=jackalope
+jackalope: A Swift, Versatile Phylogenomic and High-Throughput Sequencing Simulator
+```
+Published:	2020-06-15
+Vignettes:
+```
+Intro to jackalope
+https://cran.r-project.org/web/packages/jackalope/vignettes/jackalope-intro.html
+
+Models of nucleotide substitution
+https://cran.r-project.org/web/packages/jackalope/vignettes/sub-models.html
 
 ----------
 ## treeman
@@ -157,10 +179,6 @@ https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-m
 - phylolmは、ツリーに沿って連続またはバイナリ特性をシミュレートすることができます。
 Pagel（1999）のラムダ、
 
-Jul 3, 2015
-https://lukejharmon.github.io/ilhabela/instruction/2015/07/03/PGLS/
-Phylogenetic Generalized Least Squares (PGLS) – Comparative methods in R - Ilhabela
-
 
 https://github.com/haruosuz/books/tree/master/aper
 Analysis of Phylogenetics and Evolution with R
@@ -202,13 +220,6 @@ Vignettes:	Using msaR
 ```
 https://cran.r-project.org/web/packages/msaR/vignettes/msaR.html
 
-
-
-
-
-
-
-
 ----------
 ## martin.smith
 Martin R. Smith
@@ -221,7 +232,6 @@ Vignettes:	Getting started: installation and setup
 Tree search with inapplicable data
 Calculating concavity profiles for profile parsimony
 Tree search with profile parsimony
-
 
 ### TreeTools
 
@@ -268,6 +278,48 @@ https://ms609.github.io/TreeDist/articles/Using-TreeDist.html
 Calculate tree similarity with ‘TreeDist’
 Martin R. Smith
 2020-07-09
+
+### TreeDist
+https://cran.r-project.org/package=TreeDist
+TreeDist: Distances Between Phylogenetic Trees
+Published:	2020-07-10
+URL:	https://ms609.github.io/TreeDist, https://github.com/ms609/TreeDist
+Vignettes:
+Generalized Robinson-Foulds distances
+https://cran.r-project.org/web/packages/TreeDist/vignettes/Generalized-RF.html
+Extending the Robinson-Foulds metric
+https://cran.r-project.org/web/packages/TreeDist/vignettes/Robinson-Foulds.html
+Calculate tree similarity with 'TreeDist'
+https://cran.r-project.org/web/packages/TreeDist/vignettes/Using-TreeDist.html
+Comparing splits using information theory
+https://cran.r-project.org/web/packages/TreeDist/vignettes/information.html
+Contextualizing tree distances
+https://cran.r-project.org/web/packages/TreeDist/vignettes/using-distances.html
+
+### Quartet
+https://cran.r-project.org/package=Quartet
+Quartet: Comparison of Phylogenetic Trees Using Quartet and Split Measures
+Published:	2020-01-28
+https://github.com/ms609/Quartet
+
+Vignettes:
+Interpreting large quartet distances
+https://cran.r-project.org/web/packages/Quartet/vignettes/Critical-distances.pdf
+Tree distance metrics
+https://cran.r-project.org/web/packages/Quartet/vignettes/Tree-distance-metrics.pdf
+
+
+----------
+## tree distance
+
+https://rdrr.io/cran/phangorn/man/treedist.html
+treedist: Distances between trees in phangorn: Phylogenetic Reconstruction and Analysis
+
+https://rdrr.io/cran/treeman/man/calcDstRF.html
+calcDstRF: Calculate the Robinson-Foulds distance between two trees in treeman: Phylogenetic Tree Manipulation Class and Methods
+
+http://www.phytools.org/static.help/multiRF.html
+Computes Robinson-Foulds distance between a set of trees
 
 ----------
 ## guangchuangyu
@@ -537,19 +589,30 @@ phylogenetic comparative methods
 
 https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#pcm
 
+
+### sensiPhy
+https://cran.r-project.org/package=sensiPhy
+sensiPhy: Sensitivity Analysis for Comparative Methods
+https://github.com/paternogbc/sensiPhy
+https://cran.r-project.org/web/packages/sensiPhy/vignettes/sensiPhy_vignette.html
+sensiPhy: R-package for sensitivity analysis in phylogenetic comparative methods.
+Gustavo Paterno, Caterina Penone, Gijsbert Werner
+2020-04-02
+
+26 February 2018
+https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12990
+sensiPhy: An r‐package for sensitivity analysis in phylogenetic comparative methods - Paterno - 2018 - Methods in Ecology and Evolution - Wiley Online Library
+
+
 ----------
 ## pic
-Phylogenetically independent contrasts
-
 https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_independent_contrasts
 
-https://rdrr.io/cran/ape/man/pic.html
-pic: Phylogenetically Independent Contrasts in ape: Analyses of Phylogenetics and Evolution
+jul 24 , 2017
+https://clubedaciencia.com.br/phylogenetic-comparative-methods-pcms/
+Phylogenetic Comparative Methods (PCMs) in R | Clube da Ciência
 
-http://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
-Phylogenetic Comparative Methods (PCMs) in R | R Functions
-\### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
-
+- my_phytools_Cordoba2017_ex_3_PICs.R
 31 July 2017
 http://www.phytools.org/Cordoba2017/ex/3/PICs.html
 Exercise 3: Phylogenetically independent contrasts
@@ -559,6 +622,7 @@ http://www.phytools.org/Bariloche2016/lec/3/PICs.pdf
 Phylogenetically independent contrasts
 Liam J. Revell & Luke J. Harmon
 
+Jul 2, 2015
 https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
 Phylogenetically independent contrasts – Comparative methods in R - Ilhabela
 
@@ -600,8 +664,8 @@ https://www.esj.ne.jp/meeting/abst/60/P2-186.html
 (1)　キンキ幼虫の生存率や計測した葉の諸形質に系統的な近縁性があるのか、Pagelのlambda(Pagel 1999)でPhylogenetic signalを検討した。(2)　計測した植物種の形質がキンキ幼虫の生存率に影響するのか、系統関係の影響を考慮した(Phylogenetic generalized least squares)重回帰分析で検討した。
 
 https://bibgraph.hpcr.jp/abst/pubmed/18707460
-系統解析と比較データ：証拠のテストとレビュー。 - Bibgraph（ビブグラフ）| PubMedを日本語で論文検索
-この質問を調査するために、Pagel（1999）によって導入された、通常0（系統発生の独立性）と1（種の形質は共通の進化の歴史に直接比例して変化する）の間で変化する系統発生相関の尺度の使用を調査します。
+系統解析と比較データ：証拠のテストとレビュー。 
+Pagel（1999）によって導入された、通常0（系統発生の独立性）と1（種の形質は共通の進化の歴史に直接比例して変化する）の間で変化する系統発生相関の尺度の使用を調査します。
 https://pubmed.ncbi.nlm.nih.gov/18707460/
 Am Nat
 . 2002 Dec;160(6):712-26. doi: 10.1086/343873.
@@ -610,13 +674,10 @@ R P Freckleton 1, P H Harvey, M Pagel
 https://www.journals.uchicago.edu/doi/10.1086/343873
 The question is often raised whether it is statistically necessary to control for phylogenetic associations in comparative studies. To investigate this question, we explore the use of a measure of phylogenetic correlation, lambda, introduced by Pagel (1999), that normally varies between 0 (phylogenetic independence) and 1 (species' traits covary in direct proportion to their shared evolutionary history). 
 
-
-
-
 #### phylosig {phytools}
 
 https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md#phylosig
-
+Jamie Winternitz, Sept 2016
 
 #### phyloglm {phylolm}
 ```
