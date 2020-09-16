@@ -7,7 +7,6 @@ R for Microbiology Microbiome Metagenome
 微生物
 
 ## Table of Contents
-- [featuring](#featuring)
 Checked
 - [fastbaps](#fastbaps)
 - [phylogeo](#phylogeo)
@@ -42,13 +41,38 @@ Checked
 - [ampvis2](#ampvis2)
 - [](#)
 - [treeWAS](#treeWAS)
-
-
 - [unclassified](#unclassified)
 
 ----------
 ## 
 
+----------
+## unclassified
+
+
+Jun 14, 2018
+https://github.com/microsud/Tools-Microbiome-Anlaysis
+A list of R environment based tools for microbiome data exploration, statistical analysis and visualization
+マイクロバイオーム解析パッケージのリスト
+
+https://twitter.com/aquabolina/status/978657686911938560
+Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
+11:39 AM - 27 Mar 2018
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
+(Rで)塩基配列解析
+- 解析 | 菌叢解析 | について (last modified 2017/06/04)
+- 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
+
+
+2019年12月23日に更新
+https://qiita.com/xvtyzn/items/6a008b61d852dcbaed57
+Qiime2を使ったメタゲノム解析パイプライン
+```
+・microbeR (version 0.3.1)
+・phyloseq (version 1.26.1)
+・qiime2R (version 0.99.11)
+```
 
 ----------
 rarefaction
@@ -168,36 +192,6 @@ Alex Washburne
 
 https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
 phylofactor Tutorial
-
-
-----------
-## featuring
-
-
-Jun 14, 2018
-https://github.com/microsud/Tools-Microbiome-Anlaysis
-A list of R environment based tools for microbiome data exploration, statistical analysis and visualization
-マイクロバイオーム解析パッケージのリスト
-
-https://twitter.com/aquabolina/status/978657686911938560
-Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
-11:39 AM - 27 Mar 2018
-
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
-(Rで)塩基配列解析
-- 解析 | 菌叢解析 | について (last modified 2017/06/04)
-- 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
-
-
-2019年12月23日に更新
-https://qiita.com/xvtyzn/items/6a008b61d852dcbaed57
-Qiime2を使ったメタゲノム解析パイプライン
-```
-・microbeR (version 0.3.1)
-・phyloseq (version 1.26.1)
-・qiime2R (version 0.99.11)
-```
-
 
 
 ----------
