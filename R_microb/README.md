@@ -1,5 +1,4 @@
-Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2020-01-02
+Last Update: 2020-09-16
 
 ----------
 
@@ -44,6 +43,85 @@ Checked
 - [](#)
 - [treeWAS](#treeWAS)
 
+
+- [unclassified](#unclassified)
+
+----------
+## 
+
+
+----------
+rarefaction
+
+https://cran.r-project.org/package=iNEXT
+iNEXT: Interpolation and Extrapolation for Species Diversity
+Provides simple functions to compute and plot two types (sample-size- and coverage-based) rarefaction and extrapolation of species diversity (Hill numbers) for individual-based (abundance) data or sampling-unit- based (incidence) data. (Hsieh, Ma and Chao 2014) <doi:10.1111/2041-210X.12613>.
+
+Vignettes:	A Quick Introduction to iNEXT via Examples
+
+
+https://cran.r-project.org/web/packages/iNEXT/vignettes/Introduction.html
+A Quick Introduction to iNEXT via Examples
+T. C. Hsieh, K. H. Ma, and Anne Chao
+2020-01-28
+
+rarefaction/extrapolation curve
+
+
+https://rpubs.com/brouwern/iNEXTvVEGAN
+RPubs - Rarefaction notes: iNEXT vs. vegan
+brouwern@gmail.com
+September 13, 2016
+
+
+https://astrobiomike.github.io/amplicon/dada2_workflow_ex
+A full example workflow for amplicon data
+
+Rarefaction curves
+
+----------
+categorical data analysis R microbiome
+
+https://towardsdatascience.com/how-to-give-life-to-your-microbiome-data-using-plotly-r-1892281183cf
+Ruth Schmidt
+Jul 23
+
+### 2019-12-16
+https://rpubs.com/jrandall7/EICC16s
+Microbiome Analysis (16s) with phyloseq and LDM
+Jessica Randall
+12/16/2019
+
+Richness estimation
+Correspondance Analysis
+
+Phyla-specific abundance plot
+Next, we want to see which particular phyla differ between human and non-human samples. 
+
+### 2017-08-09
+http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
+microbiomeSeq: An R package for microbial community analysis in an environmental context
+Alfred Ssekagiri, William T. Sloan, * Umer Zeeshan Ijaz (* Correspondence: Umer.Ijaz@glasgow.ac.uk)
+August 09, 2017
+
+Alpha diversity with ANOVA
+Beta diversity
+Canonical Correspondence Analysis
+Co-occurence pattern analysis
+
+### 2017-03-20
+https://rstudio-pubs-static.s3.amazonaws.com/268156_d3ea37937f4f4469839ab6fa2c483842.html
+Microbiota Analysis in R
+Kim Dill-McFarland
+March 20, 2017
+Updated April 15, 2017
+
+Categorical variables
+
+
+
+
+
 ----------
 ## Washburne
 
@@ -67,7 +145,7 @@ https://knightlab-analyses.github.io/phylogenetic-tutorials/tutorials/kernel_met
 
 
 まだ実行していない。
-/Users/haruo/Google_Drive/haruoszk/projects/r4bioinfo/R_microb/R_Washburne/my_Washburne_PCM.R
+/Users/haruo/Google_Drive/haruoszk/projects/r4bioinfo/R_microb/R_phylofactor/my_Washburne_PCM.R
 
 ----------
 ### phylofactor
@@ -91,9 +169,6 @@ Alex Washburne
 https://dfzljdn9uc3pi.cloudfront.net/2017/2969/1/PhyloFactor_tutorial.html
 phylofactor Tutorial
 
-
-----------
-## 
 
 ----------
 ## featuring
