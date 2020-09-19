@@ -151,8 +151,54 @@ R_vegan - Kitahashi's Web Site
 
     Rscript --vanilla scripts/tomokitahashi.R
 
+
+
+----------
+
+
+https://ysrkotori.hateblo.jp/entry/2018/12/01/221716
+生物の群集構造の解析の為に統計解析ソフトのRでNMDSを行う話（個人のメモ用） - Guten Morgen Kashiwa.
+
+----------
+
+### 2018-02
+
+水産研究・教育機構「日本海区水産研究所」
+資源環境部浅海環境グループ　高田宜武
+2018年2月23日
+http://jsnfri.fra.affrc.go.jp/gunshu/index.html
+Rによる群集組成の解析
+
+サンプルデータのダウンロード
+```
+curl -O http://jsnfri.fra.affrc.go.jp/gunshu/files/spcdat.csv
+curl -O http://jsnfri.fra.affrc.go.jp/gunshu/files/envdat.csv
+```
+
+http://jsnfri.fra.affrc.go.jp/gunshu/1divind.html
+多様度指数の比較
+Chao A, Gotelli NJ, Hsieh TC, Sander EL, Ma KH, Colwell RK, Ellison AM (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84: 45-67.
+
+http://jsnfri.fra.affrc.go.jp/gunshu/2nmds.html
+群集組成による配置図：間接傾度分析
+群集間の類似度を計算し、nMDSプロットを作成
+veganパッケージ
+
+https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan
+
+http://jsnfri.fra.affrc.go.jp/gunshu/3dbrda.html
+群集組成と環境変数の関係：直接傾度分析
+
+http://jsnfri.fra.affrc.go.jp/gunshu/4clust.html
+群集の類別と指標種
+
+
+
 ----------
 
 ## References
 
 ----------
+
+
+
