@@ -21,7 +21,6 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 **R言語入門**
 
-- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
 - [R | R を利用した統計解析およびデータの視覚化](https://stats.biopapyrus.jp/r/)
 
@@ -32,8 +31,6 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 ### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
 
-- [R言語 CRANパッケージ一覧 | トライフィールズ](https://www.trifields.jp/statistical-analysis-r-cran-packages-341)
-- [08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
 - [パッケージ | R のパッケージのインストール方法と呼び出し方](https://stats.biopapyrus.jp/r/basic/package.html)
 - [Bioconductor: Genomicデータ解析ツール群 - Heavy Watal](https://heavywatal.github.io/rstats/bioconductor.html)
 
@@ -80,14 +77,15 @@ Rを終了:
 
 ### [A brief introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#a-brief-introduction-to-r)
 
-[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
-演算子
+[演算子 | R の代入演算子や理論演算子などについて](https://stats.biopapyrus.jp/r/basic/arithmetic-operator.html)
+
+算術演算子
 
 	# typing in commands
 	2*3
 	10-3
 
-[オブジェクトと代入（付値）](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/05.html)
+代入演算子
 
 	# assign the value 2*3 to the variable x
 	x <- 2*3
@@ -96,8 +94,6 @@ Rを終了:
 	x
 
 データ型：文字列(character)、複素数(complex)、実数(numeric)、論理値(logical)など  
-[09. データの型](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)  
-[25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html) character > complex > numeric > logical > NULL  
 [データ型 | R のデータ型・モード・クラス](https://stats.biopapyrus.jp/r/basic/data-type.html)  
 [R:データ型](http://www.f.waseda.jp/sakas/R/Rdata.html) データ型の自動変換 logical < integer < double < complex < character  
 
@@ -110,8 +106,7 @@ Rを終了:
 	# see the contents of the variable myvector:
 	myvector
 
-[13. ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
-インデックス（添字）  
+ベクトル要素の取得は、角括弧に要素の添字を書く。
 
 	# get the value of the 4th element in the vector myvector
 	myvector[4]
@@ -152,13 +147,13 @@ mytable[[1]]
 mytable[["A"]]
 ```
 
-[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
+[03. 簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 関数
 
     # calculate the log to the base 10 of a number:
 	log10(100)
 
-[ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
+[07. ヘルプを見る](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
 	# get help about a particular function
 	help(log10)
@@ -949,7 +944,7 @@ The reason for doing this is that it is likely that adjacent gap positions were 
 	s1 <- "GAATTC"
 	s2 <- "GATTA"
 	globalAligns1s2 <- pairwiseAlignment(s1, s2, substitutionMatrix = sigma, 
-	 gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+	                    gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 	globalAligns1s2 # Print out the optimal alignment and its score
 
 Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. Here the alignment contains four matches, one mismatch, and one gap of length 1, so its score is (4\*2)+(1\*-1)+(1\*-10) = -3.
@@ -976,7 +971,7 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 	s3 <- "PAWHEAE"
 	s4 <- "HEAGAWGHEE"
 	globalAligns3s4 <- pairwiseAlignment(s3, s4, substitutionMatrix = "BLOSUM50", 
-	 gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+	                    gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 	globalAligns3s4 # Print out the optimal global alignment and its score
 
 We set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. This means that the gap will be given a score of -10-8-8 = -26.
@@ -1028,7 +1023,6 @@ writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMul
 localAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
                                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
 localAlignMlepraeMulcerans # Print out the optimal local alignment and its score
-
 writePairwiseAlignments(localAlignMlepraeMulcerans)
 ```
 
@@ -1220,7 +1214,8 @@ mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 library(msa)
-myAlignment <- msa(mySequences, "ClustalW")
+#?msa::msa
+myAlignment <- msa(inputSeqs=mySequences, method="ClustalW")
 myAlignment
 
 # write an XStringSet object to a file
