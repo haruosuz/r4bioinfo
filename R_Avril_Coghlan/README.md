@@ -93,9 +93,7 @@ Rを終了:
 	# To view the contents of any R object, just type its name
 	x
 
-データ型：文字列(character)、複素数(complex)、実数(numeric)、論理値(logical)など  
 [データ型 | R のデータ型・モード・クラス](https://stats.biopapyrus.jp/r/basic/data-type.html)  
-[R:データ型](http://www.f.waseda.jp/sakas/R/Rdata.html) データ型の自動変換 logical < integer < double < complex < character  
 
 [ベクトル | R のベクトル操作と演算](https://stats.biopapyrus.jp/r/basic/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
@@ -517,9 +515,6 @@ GC(seq1)
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 **GC含量の局所変動**
 は、[遺伝子の水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播) [horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer) や変異バイアス [mutation bias](https://en.wikipedia.org/wiki/Mutation_bias) を示唆
-
-<img alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/882px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png" width=50%>
-<img alt="" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/800px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png" width=50%>
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 **GC含量のスライディングウィンドウ解析**
