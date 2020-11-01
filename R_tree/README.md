@@ -1,4 +1,4 @@
-Last Update: 2020-04
+Last Update: 2020-08
 
 ----------
 
@@ -54,6 +54,54 @@ Last Update: 2020-04
   - [TreeDist](#treeDist)
   - [Quartet](#quartet)
 - [tree distance](#tree-distance)
+
+
+----------
+## featuring
+
+
+https://www.youtube.com/channel/UCR0JAI5HJkXk5fHMNKhWHoQ
+phylogenetics1 - YouTube
+Jan 31, 2017
+https://www.youtube.com/watch?v=tWRan4P2OJU
+Demonstration of phytools::tree.drawer in R - YouTube
+
+
+https://www.trifields.jp/r-cran-task-views-639
+R言語 CRAN Task Views | トライフィールズ
+
+https://cran.r-project.org/web/views/Phylogenetics.html
+CRAN Task View: Phylogenetics, Especially Comparative Methods
+Maintainer:	Brian O'Meara
+Contact:	omeara.brian at gmail.com
+Version:	2020-03-04
+URL:	https://CRAN.R-project.org/view=Phylogenetics
+
+
+https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
+系統学、特に比較方法
+- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
+- geigerは、分類群の重複セットに木やデータを整理することができます。
+- phylolmは、ツリーに沿って連続またはバイナリ特性をシミュレートすることができます。
+Pagel（1999）のラムダ、
+
+
+https://github.com/haruosuz/books/tree/master/aper
+Analysis of Phylogenetics and Evolution with R
+
+
+10th Apr, 2017
+https://www.researchgate.net/post/How_to_construct_phylogenetic_tree_in_rstudio
+How to construct phylogenetic tree in rstudio?
+
+
+8:12 AM · May 30, 2020
+https://twitter.com/AedinCulhane/status/1266507676005142528
+Aedin Culhane on Twitter: "@guangchuangyu Other R tools for phylogenetics; ape, adephylo, phylobase and Treetools ( I know I am missing several more.. ) https://t.co/D3c14YGSQ9 https://t.co/Kk7YonMd5g https://t.co/3docsznizT" / Twitter
+
+
+
+
 
 ----------
 ## jackalope
@@ -155,42 +203,6 @@ https://fuzzyatelin.github.io/bioanth-stats/module-24/module-24.html
 Module 24: An Intro to Phylogenetic Tree Construction in R
 Brandon Güell, Dani Antos, Isabella Muratore (with modifications by Christopher A. Schmitt)
 {adegenet} - package for multivariate analysis of genetic markers data
-
-----------
-## featuring
-
-https://www.trifields.jp/r-cran-task-views-639
-R言語 CRAN Task Views | トライフィールズ
-
-https://cran.r-project.org/web/views/Phylogenetics.html
-CRAN Task View: Phylogenetics, Especially Comparative Methods
-Maintainer:	Brian O'Meara
-Contact:	omeara.brian at gmail.com
-Version:	2020-03-04
-URL:	https://CRAN.R-project.org/view=Phylogenetics
-
-
-https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
-系統学、特に比較方法
-- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
-- geigerは、分類群の重複セットに木やデータを整理することができます。
-- phylolmは、ツリーに沿って連続またはバイナリ特性をシミュレートすることができます。
-Pagel（1999）のラムダ、
-
-
-https://github.com/haruosuz/books/tree/master/aper
-Analysis of Phylogenetics and Evolution with R
-
-
-10th Apr, 2017
-https://www.researchgate.net/post/How_to_construct_phylogenetic_tree_in_rstudio
-How to construct phylogenetic tree in rstudio?
-
-
-8:12 AM · May 30, 2020
-https://twitter.com/AedinCulhane/status/1266507676005142528
-Aedin Culhane on Twitter: "@guangchuangyu Other R tools for phylogenetics; ape, adephylo, phylobase and Treetools ( I know I am missing several more.. ) https://t.co/D3c14YGSQ9 https://t.co/Kk7YonMd5g https://t.co/3docsznizT" / Twitter
-
 
 
 ----------
@@ -697,6 +709,70 @@ Introduction to phylogenetic path analysis with phylopath
 You can either use "logistic_MPLE" (the default) or "logistic_IG10" (also see ?phylolm::phyloglm).
 
 Other settings of phylolm and phyloglm, such as constraints on the phylogenetic parameter, can be set easily by passing those to phylo_path, and will be respected in downstream functions.
+
+----------
+## mpcm
+
+https://link.springer.com/book/10.1007/978-3-662-43550-2
+Modern Phylogenetic Comparative Methods and Their Application in Evolutionary Biology | SpringerLink
+
+https://link.springer.com/chapter/10.1007%2F978-3-662-43550-2_5
+A Primer on Phylogenetic Generalised Least Squares | SpringerLink
+
+http://www.mpcm-evolution.com/
+Why MPCM? - Book MPCM Evolution 2014
+
+http://www.mpcm-evolution.com/OPM/Chapter5_OPM/OPM_chap5.pdf
+OPM_chap5.pdf
+Phylogenetic Generalized Least Squares in R
+
+----------
+## pgls
+
+https://lukejharmon.github.io/ilhabela/instruction/2015/07/03/PGLS/
+Phylogenetic Generalized Least Squares (PGLS) – Comparative methods in R - Ilhabela
+
+http://www.phytools.org/***SanJuan2016/ex/4/PGLS.html
+Exercise 4: Phylogenetic generalized least squares regression and phylogenetic generalized ANOVA
+
+17 March 2008
+https://www.r-phylo.org/wiki/HowTo/PGLS
+Phylogenetic Generalized Least Squares
+
+
+https://pubmed.ncbi.nlm.nih.gov/32047279/
+ISME J
+. 2020 May;14(5):1247-1259. doi: 10.1038/s41396-020-0600-z. Epub 2020 Feb 11.
+Disentangling the impact of environmental and phylogenetic constraints on prokaryotic within-species diversity
+Oleksandr M Maistrenko 1, Daniel R Mende 1 2, Mechthild Luetge 1 3, Falk Hildebrand 1 4 5, Thomas S B Schmidt 1, Simone S Li 1 6, João F Matias Rodrigues 7, Christian von Mering 7, Luis Pedro Coelho 1 8, Jaime Huerta-Cepas 1 9, Shinichi Sunagawa 1 10, Peer Bork 11 12 13 14
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7174425/
+https://www.nature.com/articles/s41396-020-0600-z
+
+Phylogenetic signal and phylogenetic generalized least squares
+
+To estimate the phylogenetic signal of genomic traits, we used the R package “phylosignal” [56] with Pagel’s Lambda [57], following guidelines for phylogenetic signal analysis [58, 59] (Supplementary Fig. 3). The “Caper” R package was used for phylogenetic generalized least squares regression [60].
+
+
+Fig. 3: Effect of ubiquity on core-genome size and functional content.
+
+a Species ubiquity (number of habitats a species was assigned to), a habitat feature, is linked to core-genome sizes after correction for phylogenetic effect (Phylogenetic generalized least squares, p value = 0.00005, λ = 0.98 (95% CI 0.957, 0.992), partial R-square (for ubiquity coefficient) 0.09, see also Supplementary Table 6). 
+
+
+https://pubmed.ncbi.nlm.nih.gov/25225383/
+Proc Natl Acad Sci U S A
+. 2014 Sep 30;111(39):E4096-102. doi: 10.1073/pnas.1321152111. Epub 2014 Sep 15.
+Ecological and evolutionary significance of genomic GC content diversity in monocots
+Petr Šmarda 1, Petr Bureš 2, Lucie Horová 2, Ilia J Leitch 3, Ladislav Mucina 4, Ettore Pacini 5, Lubomír Tichý 2, Vít Grulich 2, Olga Rotreklová 2
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4191780/
+
+Among the several traits and climate data shown to be significantly associated with changes in GC content in the phylogenetic analyses (Table 1 and Dataset S1, Tables S3 and S4), the strongest relationship was with genome size (with both absolute 2C genome size and 1Cx monoploid genome size, which remove the impact of polyploidy on genome size). In general, GC content increased with increasing genome size, although at both lower and higher genome sizes, there was a tendency for GC content to decrease, making the relationship between GC content and genome size quadratically curved (phylogenetic generalized least squares procedure; P < 0.001) (Fig. 4 and Table 1).
+
+Table 1.
+ANOVA showing the final phylogenetic generalized least squares model that explains the observed variation in GC content in monocots
+
+Significant episodes in the evolution of GC content and genome size were detected on the tree using generalized least squares and tip values reshuffling randomization calculated using the ape package (68) in R (69) (Fig. 1 and Figs. S1, S3, and S4, and Dataset S4). We compared GC contents with genome size, life history traits, and climatic niche data by applying multiple regressions using phylogenetic generalized least squares calculated in the caper package of R (70) and built an explanatory model for GC content variation, including six nonredundant variables (Table 1).
+
+
 
 ----------
 ## updates
