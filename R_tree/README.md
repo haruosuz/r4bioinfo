@@ -56,6 +56,24 @@ Last Update: 2020-08
 - [tree distance](#tree-distance)
 
 
+
+
+----------
+## treedater
+
+https://cran.r-project.org/package=treedater
+treedater: Fast Molecular Clock Dating of Phylogenetic Trees with Rate Variation
+Functions for estimating times of common ancestry and molecular clock rates of evolution using a variety of evolutionary models, parametric and nonparametric bootstrap confidence intervals, methods for detecting outlier lineages, root-to-tip regression, and a statistical test for selecting molecular clock models. The methods are described in Volz, E.M. and S.D.W. Frost (2017) <doi:10.1093/ve/vex025>.
+
+
+https://cran.r-project.org/web/packages/treedater/vignettes/h3n2.html
+Molecular Clock Dating of Influenza H3N2
+Erik Volz
+2020-01-26
+
+
+
+
 ----------
 ## featuring
 
