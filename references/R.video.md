@@ -8,14 +8,39 @@ Last Update: 2020-05-03
 - [danknights](#danknights) Dan Knights
 - [togotv](#togotv)
 
+
 ----------
+## updates
 
-## [updates](#updates)
+----------
+## lukanegoita
+https://twitter.com/lukanegoita
 
-Nov 12, 2017
-https://www.youtube.com/watch?v=ZCL4vwwpdgg
-Learn R in 20 Minutes: Basics, Statistics, Bioinformatics and Graphs
-19:16
+https://www.ecologygrad.com/courses.html
+Courses for Ecology Students - THE GRAD ECOLOGIST
+
+1:50 PM · Oct 11, 2020
+https://twitter.com/lukanegoita/status/1315152868861710337
+Luka Negoita, PhD on Twitter: "My course on the basics of R for ecologists is soon to launch! It's been many months, but it's finally ready. Here's a quick teaser of the first lesson in this course: https://t.co/pb3PzesBN9 #RStats #ecology #onlinecourse #DataVisualization Stay tuned for the launch date! https://t.co/otU5vQdF7y" / Twitter
+
+
+Oct 13, 2020
+https://www.youtube.com/watch?v=dYOs0Qn616s
+R for Ecologists (Lesson 3) Important RStudio Tweaks - YouTube
+
+Oct 14, 2020
+https://www.youtube.com/watch?v=dPLbyWXEG_E
+R for Ecologists (Lesson 2) Start using R and RStudio! - YouTube
+
+Oct 10, 2020
+https://www.youtube.com/watch?v=YKvkXKeGoa8
+R for Ecologists (lesson 1) Installing R and RStudio - YouTube
+
+May 25, 2020
+https://www.youtube.com/watch?v=fKI5xr_ZqjQ
+R for Ecologists (outline intro video)
+
+
 
 ----------
 ## Bioinformatics DotCa
@@ -85,19 +110,75 @@ Jan 3, 2016
 https://www.youtube.com/watch?v=hohf_z7FHgw
 Bioinformatics through R Language - 1 (Information on genome banks)
 
+
+----------
+## bootcamp
+
+https://darumalab.github.io/bootcamp/2017-07-16-tutorials/
+Rプログラミングの学習
+
+https://www.youtube.com/watch?v=jjkBsU4AChM&list=PLdNQOrt5fdN8P-vy1i6vep9OP4R1AZcEb
+Rプログラミングと統計 p.3: オブジェクト
+https://darumalab.github.io/bootcamp/2017-07-13-objects/
+R言語 オブジェクト - R Objects
+
+https://www.youtube.com/watch?v=fQc4gWjyoZc&list=PLdNQOrt5fdN8P-vy1i6vep9OP4R1AZcEb&index=3
+Rプログラミングと統計 p.4:  データのタイプ
+
+https://www.youtube.com/watch?v=Bbd-KBAndFA&list=PLdNQOrt5fdN8P-vy1i6vep9OP4R1AZcEb&index=4
+Rプログラミングと統計 p.5: ベクトルの扱い方
+https://darumalab.github.io/bootcamp/2017-07-17-vectors/
+R言語 ベクトル - R Vectors
+## Warning in sqrt(z): NaNs produced
+
+https://www.youtube.com/watch?v=afkMajzGYKw&list=PLdNQOrt5fdN8P-vy1i6vep9OP4R1AZcEb&index=5
+Rプログラミングと統計 p.6: NA 欠損値
+
+https://www.youtube.com/watch?v=GfT4kQX8Y0o&list=PLdNQOrt5fdN8P-vy1i6vep9OP4R1AZcEb&index=8
+Rプログラミングと統計 p.9: リストの扱い方
+
+https://www.youtube.com/watch?v=aFMfL-ZCeAo&list=PLdNQOrt5fdN8P-vy1i6vep9OP4R1AZcEb&index=9
+Rプログラミングと統計 p.10: エクセルデータの読み込み（csv, tabフォーマット）
+
+
 ----------
 ## togotv
 
 http://togotv.dbcls.jp/
 統合TV | 生命科学系DB・ツール使い倒し系チャンネル
 
-- http://togotv.dbcls.jp/tags.html?tag=R
-- http://togotv.dbcls.jp/tags.html?tag=Bioconductor
+統合TV | 関連するタグから検索
+- https://togotv.dbcls.jp/tags.html?tag=R
+- https://togotv.dbcls.jp/tags.html?tag=Bioconductor
+
+https://doi.org/10.7875/togotv.2018.110
+2018-05-24 R Graphical Manual を使って R で作図する
+5:46
+
+https://doi.org/10.7875/togotv.2018.098
+2018-04-08 統計解析ソフト「R」の使い方 〜Rの導入・パッケージの導入・作図・統計解析の基本編〜
+5:17
+
+https://doi.org/10.7875/togotv.2018.025
+2018-01-25 RStudioを使って階層的クラスタリングを行う 2018
+11:46
+
+https://doi.org/10.7875/togotv.2017.043
+2017-05-12 RStudioでRを直感的に使おう MacOS版 2017
+7:41
 
 https://doi.org/10.7875/togotv.2015.101
 2015-11-12 【NGSハンズオン2015】データ解析環境R - Bioconductorの利用法
+4:46:31
 
 https://doi.org/10.7875/togotv.2015.100
 2015-11-11 【NGSハンズオン2015】データ解析環境R - R基礎
+4:29:34
+
+https://doi.org/10.7875/togotv.2014.008
+2014-02-21 RStudioでRを直感的に使おう
+11:05
+
+
 
 ----------
