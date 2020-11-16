@@ -929,6 +929,8 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
+![https://present5.com/pairwise-sequence-alignments-volker-flegel-march-2003-page/](https://present5.com/presentation/5fb79cdbc978d9bf16b681387c276d17/image-20.jpg)
+
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける:  
 
 	# print out the optimal global alignment for the two sequences and its score:
@@ -948,12 +950,12 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
 
+	# get a list of the available scoring matrices that come with the Biostrings package:
+	data(package="Biostrings")
+
 	# load the BLOSUM50 matrix
 	data(BLOSUM50)
 	BLOSUM50 # Print out the data
-
-	# get a list of the available scoring matrices that come with the Biostrings package:
-	data(package="Biostrings")
 
 タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアラインメントを見つける:  
 
