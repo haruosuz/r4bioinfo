@@ -1191,7 +1191,7 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence
 
 	# write the sequences to a FASTA-format file
-	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+    write.fasta(sequences=seqs, names=seqnames, file.out="myseq.fasta")
 
 ### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
@@ -1202,36 +1202,36 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アラインメントの作成**
 ```
 # Read an XStringSet object from a file
-library(Biostrings)
-mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
+suppressMessages(library(Biostrings))
+myAAStringSet <- readAAStringSet(file = "myseq.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 library(msa)
 #?msa::msa
-myAlignment <- msa(inputSeqs=mySequences, method="ClustalW")
-myAlignment
+myMsaAAMultipleAlignment <- msa(inputSeqs=myAAStringSet, method="ClustalW")
+myMsaAAMultipleAlignment
 
 # write an XStringSet object to a file
-writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
+writeXStringSet(x = unmasked(myMsaAAMultipleAlignment), filepath = "mymsa.fasta")
 
 #getwd()
 #list.files()
 ```
+
+### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
+**多重アラインメントの表示**
+
+    print(myMsaAAMultipleAlignment, show="complete")
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アラインメントのファイルをRに読み込む**
 
 ```
 library(seqinr)
-myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
-names(myaln)
-myaln$seq
+mymsa <- read.alignment(file = "mymsa.fasta", format = "fasta")
+names(mymsa)
+mymsa$seq
 ```
-
-### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
-**多重アラインメントの表示**
-
-    print(myAlignment, show="complete")
 
 ### [Discarding very poorly conserved regions from an alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#discarding-very-poorly-conserved-regions-from-an-alignment)
 **アラインメントから保存度の低い領域を破棄する**
@@ -1242,12 +1242,12 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
 ```
 # install.packages("microseq")
 library(microseq)
-msa <- readFasta(in.file = "myaln.fasta")
+msa <- readFasta(in.file = "mymsa.fasta")
 print(nchar(msa$Sequence))
 msa.trimmed <- msaTrim(msa = msa, gap.end = 0.5, gap.mid = 0.9)
 print(nchar(msa.trimmed$Sequence))
-writeFasta(fdta = msa.trimmed, out.file = "msa.trimmed.fasta", width = 80)
-# myaln <- read.alignment(file = "msa.trimmed.fasta", format = "fasta")
+writeFasta(fdta = msa.trimmed, out.file = "mymsa.trimmed.fasta", width = 80)
+#mymsa <- read.alignment(file = "mymsa.trimmed.fasta", format = "fasta")
 ```
 
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
@@ -1255,7 +1255,7 @@ writeFasta(fdta = msa.trimmed, out.file = "msa.trimmed.fasta", width = 80)
 
 A common first step in performing a phylogenetic analysis is to calculate the pairwise genetic distances between sequences. The genetic distance is an estimate of the divergence between two sequences, and is usually measured in quantity of evolutionary change (an estimate of the number of mutations that have occurred since the two sequences shared a common ancestor).
 
-    mydist <- dist.alignment(myaln) # Calculate the genetic distances
+    mydist <- dist.alignment(mymsa) # Calculate the genetic distances
     mydist                          # Print out the genetic distance matrix
 
 距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
@@ -1313,30 +1313,31 @@ retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.
 seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
 
 # write out the sequences to a FASTA file
-write.fasta(seqs, seqnames, file="myseq.fasta")
+write.fasta(sequences=seqs, names=seqnames, file.out="myseq.fasta")
 
 # Read an XStringSet object from a file
 library(Biostrings)
-mySequences <- readAAStringSet(file = "myseq.fasta")
+myAAStringSet <- readAAStringSet(file = "myseq.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 library(msa)
-myAlignment <- msa(mySequences, "ClustalW")
+myMsaAAMultipleAlignment <- msa(inputSeqs=myAAStringSet, method="ClustalW")
+myMsaAAMultipleAlignment
 
 # write an XStringSet object to a file
-writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
+writeXStringSet(x = unmasked(myMsaAAMultipleAlignment), filepath = "mymsa.fasta")
 
 # read the FASTA-format alignment into R
-myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
+mymsa <- read.alignment(file = "mymsa.fasta", format = "fasta")
 
 # calculate the genetic distances between the protein sequences
-mydist <- dist.alignment(myaln)
+mydist <- dist.alignment(mymsa)
 mydist
 
 # construct a phylogenetic tree with the neighbor joining algorithm
 library(ape)
 mytree <- nj(mydist)
-mytree <- root(mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
+mytree <- root(phy = mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
 plot.phylo(mytree, main = "Phylogenetic Tree")
 
 # get sequence annotations
@@ -1346,7 +1347,7 @@ unlist(getAnnot(seqs))
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
 
-    write.tree(mytree, file="mytree.newick")
+    write.tree(phy = mytree, file = "mytree.newick")
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 **DNA/mRNA配列間の遺伝的距離を計算する**
@@ -1362,24 +1363,26 @@ seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store t
 unlist(getAnnot(seqs))
 
 # write out the sequences to a FASTA-format file
-write.fasta(seqs, seqnames, file="virusmRNA.fasta")
+write.fasta(seqs, seqnames, file="myseq.dna.fasta")
 
 # Read an XStringSet object from a file
-library(Biostrings)
-mySequences <- readDNAStringSet(file = "virusmRNA.fasta")
+#library(Biostrings)
+myDNAStringSet <- readDNAStringSet(file = "myseq.dna.fasta")
 
 # Multiple Sequence Alignment using ClustalW
-library(msa)
-myAlignment <- msa(mySequences)
+#library(msa)
+myMsaDNAMultipleAlignment <- msa(myDNAStringSet)
+myMsaDNAMultipleAlignment
+print(myMsaDNAMultipleAlignment, show="complete")
 
 # convert msa for the seqinr package
-virusmRNAaln <- msaConvert(myAlignment, type="seqinr::alignment")
+seqinr_alignment <- msaConvert(myMsaDNAMultipleAlignment, type="seqinr::alignment")
 
 # calculate a genetic distance for DNA/mRNA sequences
-library(ape)
-virusmRNAalnbin <- as.DNAbin(virusmRNAaln)              # Convert the alignment to "DNAbin" format
-virusmRNAdist <- dist.dna(virusmRNAalnbin, model="K80") # Calculate the genetic distance matrix
-virusmRNAdist                                           # Print out the genetic distance matrix
+#library(ape)
+myDNAbin <- as.DNAbin(seqinr_alignment)   # Convert the alignment to "DNAbin" format
+mydist <- dist.dna(myDNAbin, model="K80") # Calculate the genetic distance matrix
+mydist                                    # Print out the genetic distance matrix
 ```
 
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
