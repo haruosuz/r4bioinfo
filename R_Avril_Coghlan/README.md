@@ -929,8 +929,6 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
-![https://present5.com/pairwise-sequence-alignments-volker-flegel-march-2003-page/](https://present5.com/presentation/5fb79cdbc978d9bf16b681387c276d17/image-20.jpg)
-
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける:  
 
 	# print out the optimal global alignment for the two sequences and its score:
@@ -1150,21 +1148,6 @@ Parsimony
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
-[`msa`](https://bioconductor.org/packages/release/bioc/html/msa.html)パッケージのインストール:  
-```
-# Install the "msa" package:
-if (!requireNamespace("BiocManager", quietly = TRUE))
-     install.packages("BiocManager")
-
-BiocManager::install("msa")
-```
-
-[`ape`](http://ape-package.ird.fr/ape_installation.html)パッケージのインストール:  
-```
-# Install the "ape" package:
-install.packages("ape")
-```
-
 - [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview)
 
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
@@ -1178,12 +1161,14 @@ install.packages("ape")
 
 to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 and Q5VKP1 (the accessions for rabies virus phosphoprotein, Mokola virus phosphoprotein, Lagos bat virus phosphoprotein and Western Caucasian bat virus phosphoprotein, respectively):
 
-    library("seqinr")
     # create a function to retrieve several sequences from UniProt
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
+    library("seqinr") # This function requires the SeqinR R package
 
+    # retrieve several sequences from UniProt
 	seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences
     seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
+
 	length(seqs)      # Print out the number of sequences retrieved
 	seq1 <- seqs[[1]] # Get the 1st sequence
 	seq1[1:20]        # Print out the first 20 letters of the 1st sequence
@@ -1191,7 +1176,7 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence
 
 	# write the sequences to a FASTA-format file
-    write.fasta(sequences=seqs, names=seqnames, file.out="myseq.fasta")
+    write.fasta(sequences=seqs, names=seqnames, file.out="myseq.aa.fasta")
 
 ### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
@@ -1201,9 +1186,10 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アラインメントの作成**
 ```
-# Read an XStringSet object from a file
 suppressMessages(library(Biostrings))
-myAAStringSet <- readAAStringSet(file = "myseq.fasta")
+
+# Read an XStringSet object from a file
+myAAStringSet <- readAAStringSet(file = "myseq.aa.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 library(msa)
@@ -1223,11 +1209,19 @@ writeXStringSet(x = unmasked(myMsaAAMultipleAlignment), filepath = "mymsa.fasta"
 
     print(myMsaAAMultipleAlignment, show="complete")
 
+[msaR: Multiple Sequence Alignment for R Shiny](https://cran.r-project.org/package=msaR)
+Visualises multiple sequence alignments dynamically within the Shiny web application framework.
+```
+#install.packages("msaR")
+library(msaR)
+MAlign <- readAAMultipleAlignment("mymsa.fasta")
+msaR(MAlign, menu=FALSE, overviewbox=FALSE, colorscheme="clustal")
+```
+
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アラインメントのファイルをRに読み込む**
 
 ```
-library(seqinr)
 mymsa <- read.alignment(file = "mymsa.fasta", format = "fasta")
 names(mymsa)
 mymsa$seq
@@ -1244,7 +1238,7 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
 library(microseq)
 msa <- readFasta(in.file = "mymsa.fasta")
 print(nchar(msa$Sequence))
-msa.trimmed <- msaTrim(msa = msa, gap.end = 0.5, gap.mid = 0.9)
+msa.trimmed <- msaTrim(msa)
 print(nchar(msa.trimmed$Sequence))
 writeFasta(fdta = msa.trimmed, out.file = "mymsa.trimmed.fasta", width = 80)
 #mymsa <- read.alignment(file = "mymsa.trimmed.fasta", format = "fasta")
@@ -1273,26 +1267,28 @@ Once we have a distance matrix that gives the pairwise distances between all our
 
 タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
-    # construct a phylogenetic tree with the neighbor joining algorithm
-    library(ape)
-    mytree <- nj(mydist)
-    plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
+```
+#install.packages("ape")
+library(ape)
 
-    # get sequence annotations
-    unlist(getAnnot(seqs))
+# construct a phylogenetic tree with the neighbor joining algorithm
+mytree <- nj(mydist)
+
+plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
+
+# get sequence annotations
+unlist(getAnnot(seqs))
+```
 
 We can see that Q5VKP1 (Western Caucasian bat virus phosphoprotein) and P06747 (rabies virus phosphoprotein) have been grouped together in the tree, and that O56773 (Lagos bat virus phosphoprotein) and P0C569 (Mokola virus phosphoprotein) are grouped together in the tree.
 
 This is consistent with what we saw above in the genetic distance matrix, which showed that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is relatively small.
 
-
 The lengths of the branches in the plot of the tree are proportional to the amount of evolutionary change (estimated number of mutations) along the branches.
-
 
 The tree above of the virus phosphoproteins is an unrooted phylogenetic tree as it does not contain an outgroup sequence, that is a sequence of a protein that is known to be more distantly related to the other proteins in the tree than they are to each other.
 
 As a result, we cannot tell which direction evolutionary time ran in along the internal branches of the tree.
-
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
@@ -1306,36 +1302,39 @@ In order to convert the unrooted tree into a rooted tree, we need to add an outg
 3. The Zika virus is related to Dengue viruses, but is not a Dengue virus, and so therefore can be used as an outgroup in phylogenetic trees of Dengue virus sequences. UniProt accession Q32ZE1 consists of a sequence with similarity to the Dengue NS1 protein, so seems to be a related protein from Zika virus.
 
 ```
-seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1") # Make a vector containing the names of the sequences
 # retrieve several sequences from UniProt
-library("seqinr")
-retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
+seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1") # Make a vector containing the names of the sequences
 seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
 
 # write out the sequences to a FASTA file
-write.fasta(sequences=seqs, names=seqnames, file.out="myseq.fasta")
+write.fasta(sequences=seqs, names=seqnames, file.out="myseq.aa.fasta")
 
 # Read an XStringSet object from a file
-library(Biostrings)
-myAAStringSet <- readAAStringSet(file = "myseq.fasta")
+myAAStringSet <- readAAStringSet(file = "myseq.aa.fasta")
 
 # Multiple Sequence Alignment using ClustalW
-library(msa)
 myMsaAAMultipleAlignment <- msa(inputSeqs=myAAStringSet, method="ClustalW")
 myMsaAAMultipleAlignment
 
 # write an XStringSet object to a file
 writeXStringSet(x = unmasked(myMsaAAMultipleAlignment), filepath = "mymsa.fasta")
 
+# Trimming a multiple sequence alignment by discarding columns with too many gaps.
+msa <- readFasta(in.file = "mymsa.fasta")
+print(nchar(msa$Sequence))
+msa.trimmed <- msaTrim(msa)
+print(nchar(msa.trimmed$Sequence))
+writeFasta(fdta = msa.trimmed, out.file = "mymsa.trimmed.fasta", width = 80)
+
 # read the FASTA-format alignment into R
-mymsa <- read.alignment(file = "mymsa.fasta", format = "fasta")
+mymsa <- read.alignment(file = "mymsa.trimmed.fasta", format = "fasta")
+mymsa$seq
 
 # calculate the genetic distances between the protein sequences
 mydist <- dist.alignment(mymsa)
 mydist
 
 # construct a phylogenetic tree with the neighbor joining algorithm
-library(ape)
 mytree <- nj(mydist)
 mytree <- root(phy = mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
 plot.phylo(mytree, main = "Phylogenetic Tree")
@@ -1351,12 +1350,19 @@ unlist(getAnnot(seqs))
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 **DNA/mRNA配列間の遺伝的距離を計算する**
+
+Duvenhage virus, Mokola virus, Lagos bat virus v006株, Lagos bat virus V267株 の Phosphoprotein の mRNA配列（NCBI accession: 
+[AF049115](https://www.ncbi.nlm.nih.gov/nuccore/AF049115), 
+[AF049118](https://www.ncbi.nlm.nih.gov/nuccore/AF049118), 
+[AF049114](https://www.ncbi.nlm.nih.gov/nuccore/AF049114), 
+[AF049119](https://www.ncbi.nlm.nih.gov/nuccore/AF049119)）を取得し、FASTA形式で保存する:  
 ```
-library("seqinr")
 # create a function to retrieve several nucleotide sequences from NCBI
 retrieve_ncbi_fna <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), seqtype="DNA", strip.desc=TRUE)[[1]]
+library("seqinr") # This function requires the SeqinR R package
 
-seqnames <- c("AF049118", "AF049114", "AF049119", "AF049115")  # Make a vector containing the names of the sequences
+# retrieve several nucleotide sequences from NCBI
+seqnames <- c("AF049115", "AF049118", "AF049114", "AF049119") # Make a vector containing the names of the sequences
 seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store them in list variable "seqs"
 
 # get sequence annotations
@@ -1366,11 +1372,9 @@ unlist(getAnnot(seqs))
 write.fasta(seqs, seqnames, file="myseq.dna.fasta")
 
 # Read an XStringSet object from a file
-#library(Biostrings)
 myDNAStringSet <- readDNAStringSet(file = "myseq.dna.fasta")
 
 # Multiple Sequence Alignment using ClustalW
-#library(msa)
 myMsaDNAMultipleAlignment <- msa(myDNAStringSet)
 myMsaDNAMultipleAlignment
 print(myMsaDNAMultipleAlignment, show="complete")
@@ -1379,7 +1383,6 @@ print(myMsaDNAMultipleAlignment, show="complete")
 seqinr_alignment <- msaConvert(myMsaDNAMultipleAlignment, type="seqinr::alignment")
 
 # calculate a genetic distance for DNA/mRNA sequences
-#library(ape)
 myDNAbin <- as.DNAbin(seqinr_alignment)   # Convert the alignment to "DNAbin" format
 mydist <- dist.dna(myDNAbin, model="K80") # Calculate the genetic distance matrix
 mydist                                    # Print out the genetic distance matrix
@@ -1390,8 +1393,7 @@ mydist                                    # Print out the genetic distance matri
 
 ```
 # construct a phylogenetic tree with the neighbor joining algorithm
-library(ape)
-mytree <- nj(virusmRNAdist)
+mytree <- nj(mydist)
 plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 ```
 
