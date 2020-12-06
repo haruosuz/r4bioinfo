@@ -1153,13 +1153,13 @@ Parsimony
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
 
-[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession: 
+
+[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の 
+Phosphoprotein のタンパク質配列（UniProt accession: 
 [P06747](http://www.uniprot.org/uniprot/P06747), 
 [P0C569](http://www.uniprot.org/uniprot/P0C569), 
 [O56773](http://www.uniprot.org/uniprot/O56773), 
 [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得し、FASTA形式で保存する:  
-
-to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 and Q5VKP1 (the accessions for rabies virus phosphoprotein, Mokola virus phosphoprotein, Lagos bat virus phosphoprotein and Western Caucasian bat virus phosphoprotein, respectively):
 
     # create a function to retrieve several sequences from UniProt
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
@@ -1180,14 +1180,12 @@ to retrieve the protein sequences for UniProt accessions P06747, P0C569, O56773 
 
 ### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
-多重整列プログラム
-[Clustal](https://ja.wikipedia.org/wiki/Clustal)
+多重整列プログラム [Clustal](https://ja.wikipedia.org/wiki/Clustal)
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アラインメントの作成**
 ```
 suppressMessages(library(Biostrings))
-
 # Read an XStringSet object from a file
 myAAStringSet <- readAAStringSet(file = "myseq.aa.fasta")
 
@@ -1234,11 +1232,10 @@ Trimming a multiple sequence alignment by discarding columns with too many gaps.
 
 多重配列アラインメントからギャップの多い列を破棄する
 ```
-# install.packages("microseq")
 library(microseq)
 msa <- readFasta(in.file = "mymsa.fasta")
 print(nchar(msa$Sequence))
-msa.trimmed <- msaTrim(msa)
+msa.trimmed <- msaTrim(msa, gap.end = 0.5, gap.mid = 0.9)
 print(nchar(msa.trimmed$Sequence))
 writeFasta(fdta = msa.trimmed, out.file = "mymsa.trimmed.fasta", width = 80)
 #mymsa <- read.alignment(file = "mymsa.trimmed.fasta", format = "fasta")
@@ -1252,65 +1249,51 @@ A common first step in performing a phylogenetic analysis is to calculate the pa
     mydist <- dist.alignment(mymsa) # Calculate the genetic distances
     mydist                          # Print out the genetic distance matrix
 
-距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
-
-Based on the genetic distance matrix above, we can see that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is smallest (about 0.414).
-
-Similarly, the genetic distance between Western Caucasian bat virus phosphoprotein (Q5VKP1) and Lagos bat virus phosphoprotein (O56773) is the biggest (about 0.507).
-
-The larger the genetic distance between two sequences, the more amino acid changes or indels that have occurred since they shared a common ancestor, and the longer ago their common ancestor probably lived.
+距離行列より、遺伝的距離は、"O56773"と"P0C569"との間で最小（0.4142670）、"Q5VKP1"と"O56773"との間で最大（0.5067117）。
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
 
-Once we have a distance matrix that gives the pairwise distances between all our protein sequences, we can build a phylogenetic tree based on that distance matrix. One method for using this is the neighbour-joining algorithm.
-
-タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
+距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。
+系統樹では、"O56773"と"P0C569"が群を形成、"Q5VKP1"と"P06747"が群を形成した。
 
 ```
-#install.packages("ape")
 library(ape)
 
 # construct a phylogenetic tree with the neighbor joining algorithm
+# infer a tree
 mytree <- nj(mydist)
-
-plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
-
-# get sequence annotations
-unlist(getAnnot(seqs))
+# bootstrap the tree
+myboot <- boot.phylo(phy=mytree, x=as.matrix.alignment(mymsa), FUN=function(xx) nj(dist.alignment(as.alignment(xx))), B=100)
+mytree$node.label <- myboot # make the bootstrap values be the node labels
+# plot the tree:
+plot.phylo(mytree, type="unrooted", show.node.label=TRUE)
+#nodelabels(myboot, cex=0.7) # plot the bootstrap values
 ```
-
-We can see that Q5VKP1 (Western Caucasian bat virus phosphoprotein) and P06747 (rabies virus phosphoprotein) have been grouped together in the tree, and that O56773 (Lagos bat virus phosphoprotein) and P0C569 (Mokola virus phosphoprotein) are grouped together in the tree.
-
-This is consistent with what we saw above in the genetic distance matrix, which showed that the genetic distance between Lagos bat virus phosphoprotein (O56773) and Mokola virus phosphoprotein (P0C569) is relatively small.
-
-The lengths of the branches in the plot of the tree are proportional to the amount of evolutionary change (estimated number of mutations) along the branches.
-
-The tree above of the virus phosphoproteins is an unrooted phylogenetic tree as it does not contain an outgroup sequence, that is a sequence of a protein that is known to be more distantly related to the other proteins in the tree than they are to each other.
-
-As a result, we cannot tell which direction evolutionary time ran in along the internal branches of the tree.
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
-フラビウイルス属に属するジカウイルス (Zika virus) とデングウイルス (Dengue virus) の非構造タンパク質 (Nonstructural protein 1; NS1) の相同タンパク質配列を取得し、多重配列アラインメントに基づく有根系統樹を構築する。外群としてジカウイルスを選択し、系統樹に根をつける。
-
-In order to convert the unrooted tree into a rooted tree, we need to add an outgroup sequence. Normally, the outgroup sequence is a sequence that we know from some prior knowledge to be more distantly related to the other sequences under study than they are to each other.
-
-1. Calculate the genetic distances between the following NS1 proteins from different Dengue virus strains: Dengue virus 1 NS1 protein (Uniprot Q9YRR4), Dengue virus 2 NS1 protein (UniProt Q9YP96), Dengue virus 3 NS1 protein (UniProt B0LSS3), and Dengue virus 4 NS1 protein (UniProt Q6TFL5). 
-2. Build an unrooted phylogenetic tree of the NS1 proteins from Dengue virus 1, Dengue virus 2, Dengue virus 3 and Dengue virus 4, using the neighbour-joining algorithm.
-3. The Zika virus is related to Dengue viruses, but is not a Dengue virus, and so therefore can be used as an outgroup in phylogenetic trees of Dengue virus sequences. UniProt accession Q32ZE1 consists of a sequence with similarity to the Dengue NS1 protein, so seems to be a related protein from Zika virus.
+フラビウイルス属に属するジカウイルス (Zika virus) とデングウイルス (Dengue virus) 
+の非構造タンパク質 (Nonstructural protein 1; NS1) の相同タンパク質配列を取得し、
+多重配列アラインメントに基づく有根系統樹を構築する。
+[外群](https://ja.wikipedia.org/wiki/外群)としてジカウイルスを選択し、系統樹に根をつける。
 
 ```
 # retrieve several sequences from UniProt
-seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1") # Make a vector containing the names of the sequences
-seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
+# Make a vector containing the names of the sequences
+seqnames <- c("Q9YRR4", "Q9YP96", "B0LSS3", "Q6TFL5", "Q32ZE1"); outgroups <- c("Q32ZE1") # NS1
+# Retrieve the sequences and store them in list variable "seqs"
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)
+
+# get sequence annotations
+unlist(getAnnot(seqs))
 
 # write out the sequences to a FASTA file
-write.fasta(sequences=seqs, names=seqnames, file.out="myseq.aa.fasta")
+write.fasta(sequences=seqs, names=seqnames, file.out="myseq.fasta")
 
 # Read an XStringSet object from a file
-myAAStringSet <- readAAStringSet(file = "myseq.aa.fasta")
+myAAStringSet <- readAAStringSet(file = "myseq.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 myMsaAAMultipleAlignment <- msa(inputSeqs=myAAStringSet, method="ClustalW")
@@ -1322,25 +1305,28 @@ writeXStringSet(x = unmasked(myMsaAAMultipleAlignment), filepath = "mymsa.fasta"
 # Trimming a multiple sequence alignment by discarding columns with too many gaps.
 msa <- readFasta(in.file = "mymsa.fasta")
 print(nchar(msa$Sequence))
-msa.trimmed <- msaTrim(msa)
+msa.trimmed <- msaTrim(msa, gap.end = 0.5, gap.mid = 0.9)
 print(nchar(msa.trimmed$Sequence))
 writeFasta(fdta = msa.trimmed, out.file = "mymsa.trimmed.fasta", width = 80)
 
 # read the FASTA-format alignment into R
 mymsa <- read.alignment(file = "mymsa.trimmed.fasta", format = "fasta")
-mymsa$seq
+unlist(mymsa$seq)
 
 # calculate the genetic distances between the protein sequences
 mydist <- dist.alignment(mymsa)
 mydist
 
 # construct a phylogenetic tree with the neighbor joining algorithm
+# infer a tree
 mytree <- nj(mydist)
-mytree <- root(phy = mytree, outgroup = "Q32ZE1", resolve.root = TRUE)
-plot.phylo(mytree, main = "Phylogenetic Tree")
-
-# get sequence annotations
-unlist(getAnnot(seqs))
+mytree <- root(phy=mytree, outgroup=outgroups)
+# bootstrap the tree
+myboot <- boot.phylo(phy=mytree, x=as.matrix.alignment(mymsa), FUN=function(xx) root(phy=nj(dist.alignment(as.alignment(xx))), outgroup=outgroups), B=100)
+mytree$node.label <- myboot # make the bootstrap values be the node labels
+# plot the tree:
+plot.phylo(mytree, type="phylogram", show.node.label=TRUE)
+#nodelabels(myboot, cex=0.7) # plot the bootstrap values
 ```
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
@@ -1369,10 +1355,10 @@ seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store t
 unlist(getAnnot(seqs))
 
 # write out the sequences to a FASTA-format file
-write.fasta(seqs, seqnames, file="myseq.dna.fasta")
+write.fasta(seqs, seqnames, file="myseq.na.fasta")
 
 # Read an XStringSet object from a file
-myDNAStringSet <- readDNAStringSet(file = "myseq.dna.fasta")
+myDNAStringSet <- readDNAStringSet(file = "myseq.na.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 myMsaDNAMultipleAlignment <- msa(myDNAStringSet)
@@ -1393,8 +1379,14 @@ mydist                                    # Print out the genetic distance matri
 
 ```
 # construct a phylogenetic tree with the neighbor joining algorithm
+# infer a tree
 mytree <- nj(mydist)
-plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
+# bootstrap the tree
+myboot <- boot.phylo(phy=mytree, x=as.matrix.alignment(seqinr_alignment), FUN=function(xx) nj(dist.dna(as.DNAbin(xx), model="K80")), B=100)
+mytree$node.label <- myboot # make the bootstrap values be the node labels
+# plot the tree:
+plot.phylo(mytree, type="unrooted", show.node.label=TRUE)
+#nodelabels(myboot, cex=0.7) # plot the bootstrap values
 ```
 
 ### Summary
