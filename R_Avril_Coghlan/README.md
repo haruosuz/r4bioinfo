@@ -1138,9 +1138,6 @@ Guangchuang Yu
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
 - 2018-07-30 [How to read a phylogenetic tree](https://artic.network/how-to-read-a-tree.html) | Author: Andrew Rambaut
-- [Yang (2006) "Computational Molecular Evolution"](http://aracnologia.macn.gov.ar/st/biblio/Yang%202006%20Computational%20Molecular%20Evolution.pdf)
-3.4 Maximum parsimony
-Fig. 3.18
 - Sep 4, 2017
 https://www.youtube.com/watch?v=t0iAm-JQcrs
 Parsimony
@@ -1148,11 +1145,31 @@ Parsimony
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
+パッケージのインストール:  
+```
+#install.packages("seqinr")
+library(seqinr)
+
+#install.packages("ape")
+library(ape)
+
+#install.packages("microseq")
+library(microseq)
+
+# Installing the Bioconductor packages:
+#if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+
+#BiocManager::install("Biostrings")
+suppressMessages(library(Biostrings))
+
+#BiocManager::install("msa")
+library(msa)
+```
+
 - [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview)
 
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
-
 
 [狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の 
 Phosphoprotein のタンパク質配列（UniProt accession: 
@@ -1160,23 +1177,27 @@ Phosphoprotein のタンパク質配列（UniProt accession:
 [P0C569](http://www.uniprot.org/uniprot/P0C569), 
 [O56773](http://www.uniprot.org/uniprot/O56773), 
 [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得し、FASTA形式で保存する:  
+```
+# create a function to retrieve several sequences from UniProt
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
+library("seqinr") # This function requires the SeqinR R package
 
-    # create a function to retrieve several sequences from UniProt
-    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file=paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype="AA", strip.desc=TRUE)[[1]]
-    library("seqinr") # This function requires the SeqinR R package
+# retrieve several sequences from UniProt
+seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
 
-    # retrieve several sequences from UniProt
-	seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences
-    seqs <- lapply(seqnames,  retrieve_seqs_uniprot) # Retrieve the sequences and store them in list variable "seqs"
+length(seqs)      # Print out the number of sequences retrieved
+seq1 <- seqs[[1]] # Get the 1st sequence
+seq1[1:20]        # Print out the first 20 letters of the 1st sequence
+seq2 <- seqs[[2]] # Get the 2nd sequence
+seq2[1:20]        # Print out the first 20 letters of the 2nd sequence
 
-	length(seqs)      # Print out the number of sequences retrieved
-	seq1 <- seqs[[1]] # Get the 1st sequence
-	seq1[1:20]        # Print out the first 20 letters of the 1st sequence
-	seq2 <- seqs[[2]] # Get the 2nd sequence
-	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence
+# get sequence annotations
+unlist(getAnnot(seqs))
 
-	# write the sequences to a FASTA-format file
-    write.fasta(sequences=seqs, names=seqnames, file.out="myseq.aa.fasta")
+# write out the sequences to a FASTA file
+write.fasta(sequences=seqs, names=seqnames, file.out="myseq.fasta")
+```
 
 ### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
@@ -1187,7 +1208,7 @@ Phosphoprotein のタンパク質配列（UniProt accession:
 ```
 suppressMessages(library(Biostrings))
 # Read an XStringSet object from a file
-myAAStringSet <- readAAStringSet(file = "myseq.aa.fasta")
+myAAStringSet <- readAAStringSet(file = "myseq.fasta")
 
 # Multiple Sequence Alignment using ClustalW
 library(msa)
@@ -1389,20 +1410,7 @@ plot.phylo(mytree, type="unrooted", show.node.label=TRUE)
 #nodelabels(myboot, cex=0.7) # plot the bootstrap values
 ```
 
-### Summary
-```
-# library(seqinr)
-?read.alignment
-?dist.alignment
-
-# library(msa)
-#example(msa)
-
-# library(ape)
-?dist.dna
-#example(nj)
-?write.tree
-```
+### [Summary](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#summary)
 
 ### [Links and Further Reading](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#links-and-further-reading)
 
