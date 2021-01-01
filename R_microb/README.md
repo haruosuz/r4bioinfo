@@ -43,8 +43,101 @@ Checked
 - [treeWAS](#treeWAS)
 - [unclassified](#unclassified)
 
+https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan
+
+
+----------
+
+
+----------
+## microeco
+
+https://github.com/ChiLiubio/microeco
+ChiLiubio/microeco: An R package for data analysis in microbial community ecology
+
+See the detailed package tutorial (https://chiliubio.github.io/microeco/)
+
+https://cran.r-project.org/package=microeco
+microeco: Microbial Community Ecology Data Analysis
+
+https://academic.oup.com/femsec/advance-article/doi/10.1093/femsec/fiaa255/6041020
+microeco: An R package for data mining in microbial community ecology | FEMS Microbiology Ecology | Oxford Academic
+
+
+
 ----------
 ## 
+
+16/10/2017
+http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/122-multidimensional-scaling-essentials-algorithms-and-r-code/#non-metric-mds
+Multidimensional Scaling Essentials: Algorithms and R Code - Articles - STHDA
+Non-metric MDS
+
+
+https://fukamilab.github.io/BIO202/06-A-unconstrained-ordination.html
+Unconstrained ordination
+
+NMDS (Nonmetric multidimensional scaling) ranked order not original distances and based on distance measure.
+
+----------
+## updates
+
+## 2020
+
+### Kruchten_2020
+https://pubmed.ncbi.nlm.nih.gov/33013816/
+Front Microbiol
+. 2020 Sep 10;11:578600. doi: 10.3389/fmicb.2020.578600. eCollection 2020.
+A Curricular Bioinformatics Approach to Teaching Undergraduates to Analyze Metagenomic Datasets Using R
+Anne E Kruchten 1
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7511545/
+
+## 2019
+
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2744-2
+metamicrobiomeR: an R package for analysis of microbiome relative abundance data using zero-inflated beta GAMLSS and meta-analysis across studies using random effects models
+
+https://www.ncbi.nlm.nih.gov/pubmed/31757201
+BMC Bioinformatics. 2019 Nov 22;20(Suppl 9):347. doi: 10.1186/s12859-019-2887-1.
+STRAIN: an R package for multi-locus sequence typing from whole genome sequencing data.
+Dalsass M1,2, Bodini M1, Lambert C3, Mortier MC3, Romanelli M1,4, Medini D1, Muzzi A1, Brozzi A5.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6873635/
+STRAIN (ST Reduced Assembly IdentificatioN)
+Project home page: https://gitlab.com/DalsaMat/STRAIN
+ You need to sign in or sign up before continuing.
+
+https://www.ncbi.nlm.nih.gov/pubmed/30929407
+Genomics Inform. 2019 Mar;17(1):e6. doi: 10.5808/GI.2019.17.1.e6. Epub 2019 Mar 31.
+Statistical Analysis of Metagenomics Data.
+Calle ML1.
+In this review we outline some of the procedures that are most commonly used for microbiome analysis and that are implemented in R packages. We place particular emphasis on the compositional structure of microbiome data.
+
+## 2018
+
+https://www.ncbi.nlm.nih.gov/pubmed/29211828
+Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
+ASAR: visual analysis of metagenomes in R.
+Orakov AN1,2, Sakenova NK1,2, Sorokin A3,4, Goryanin II1,5,6.
+
+
+
+## 2017
+
+https://cran.r-project.org/package=StrainRanking
+StrainRanking: Ranking of Pathogen Strains
+Regression-based ranking of pathogen strains with respect to their contributions to natural epidemics, using demographic and genetic data sampled in the curse of the epidemics. This package also includes the GMCPIC test.
+Published:	2017-11-29
+
+
+## 2016
+
+https://www.ncbi.nlm.nih.gov/pubmed/26776185
+Pac Symp Biocomput. 2016;21:183-94.
+REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
+Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
+using R packages dada2, knitr, and phyloseq.
+
+
 
 ----------
 ## unclassified
@@ -122,27 +215,27 @@ Correspondance Analysis
 Phyla-specific abundance plot
 Next, we want to see which particular phyla differ between human and non-human samples. 
 
+### 2017-12-19
+https://rpubs.com/dillmcfarlan/R_microbiotaSOP
+Microbiota Analysis in R
+Kim Dill-McFarland
+March 20, 2017
+Updated December 19, 2017
+
+Categorical variables
+
 ### 2017-08-09
 http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
 microbiomeSeq: An R package for microbial community analysis in an environmental context
 Alfred Ssekagiri, William T. Sloan, * Umer Zeeshan Ijaz (* Correspondence: Umer.Ijaz@glasgow.ac.uk)
 August 09, 2017
 
+Details of format and comprehensive manipulations of phyloseq objects are available at https://github.com/joey711/phyloseq.
+
 Alpha diversity with ANOVA
 Beta diversity
 Canonical Correspondence Analysis
 Co-occurence pattern analysis
-
-### 2017-03-20
-https://rstudio-pubs-static.s3.amazonaws.com/268156_d3ea37937f4f4469839ab6fa2c483842.html
-Microbiota Analysis in R
-Kim Dill-McFarland
-March 20, 2017
-Updated April 15, 2017
-
-Categorical variables
-
-
 
 
 
@@ -446,17 +539,35 @@ https://digitalcommons.usu.edu/etd/1314/
 
 ----------
 ## DADA2
-https://benjjneb.github.io/dada2/index.html
+
+https://github.com/benjjneb/dada2
+the DADA2 website
+
+https://benjjneb.github.io/dada2/
+
 https://benjjneb.github.io/dada2/tutorial.html
 
-https://www.ncbi.nlm.nih.gov/pubmed/27214047
+https://github.com/spholmes/F1000_workflow/issues/36
+Error in R code · Issue #36 · spholmes/F1000_workflow
+haruosuz commented on Dec 28, 2019 • 
+
+https://www.bioconductor.org/packages/release/bioc/html/dada2.html
+Bioconductor - dada2
+Accurate, high-resolution sample inference from amplicon sequencing data
+HTML	R Script	Introduction to dada2
+https://www.bioconductor.org/packages/release/bioc/vignettes/dada2/inst/doc/dada2-intro.html
+27 October 2020
+More detailed documentation is available at the DADA2 Home Page. In particular, the online tutorial workflow is the most detailed and up-to-date demonstration of applying DADA2 to multi-sample amplicon datasets.
+
+https://pubmed.ncbi.nlm.nih.gov/27214047/
 Nat Methods. 2016 Jul;13(7):581-3. doi: 10.1038/nmeth.3869. Epub 2016 May 23.
 DADA2: High-resolution sample inference from Illumina amplicon data.
 Callahan BJ1, McMurdie PJ2, Rosen MJ3, Han AW2, Johnson AJ2, Holmes SP1.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4927377/
+https://www.nature.com/articles/nmeth.3869
 
-https://github.com/benjjneb/dada2
-
-https://github.com/spholmes/F1000_workflow/issues/36
+http://kazumaxneo.hatenablog.com/entry/2019/01/26/130937
+DADA2 - macでインフォマティクス
 
 ----------
 ## Biomartr
@@ -464,14 +575,21 @@ https://github.com/spholmes/F1000_workflow/issues/36
 https://github.com/ropensci/biomartr
 biomartr: Genomic Data Retrieval with R
 
-https://cran.r-project.org/web/packages/biomartr/index.html
+https://cran.r-project.org/package=biomartr
+biomartr: Genomic Data Retrieval
 ```
-Package ‘biomartr’ was removed from the CRAN repository.
-
-Formerly available versions can be obtained from the archive.
-
-Archived on 2019-12-12 for policy violation.
+Vignettes:	
+Ensembl BioMart Examples
+NCBI Database Retrieval
+Functional Annotation
+Meta-Genome Retrieval
+Sequence Retrieval
 ```
+
+https://cran.r-project.org/web/packages/biomartr/vignettes/MetaGenome_Retrieval.html
+Meta-Genome Retrieval
+2020-01-10
+
 
 https://www.ncbi.nlm.nih.gov/pubmed/28110292
 Bioinformatics. 2017 Apr 15;33(8):1216-1217. doi: 10.1093/bioinformatics/btw821.
@@ -536,63 +654,6 @@ https://www.ncbi.nlm.nih.gov/pubmed/29922519
 PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
 MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
 Ferrés I1, Iraola G1,2.
-
-----------
-## updates
-
-## 2019
-
-https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2744-2
-metamicrobiomeR: an R package for analysis of microbiome relative abundance data using zero-inflated beta GAMLSS and meta-analysis across studies using random effects models
-
-https://www.ncbi.nlm.nih.gov/pubmed/31757201
-BMC Bioinformatics. 2019 Nov 22;20(Suppl 9):347. doi: 10.1186/s12859-019-2887-1.
-STRAIN: an R package for multi-locus sequence typing from whole genome sequencing data.
-Dalsass M1,2, Bodini M1, Lambert C3, Mortier MC3, Romanelli M1,4, Medini D1, Muzzi A1, Brozzi A5.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6873635/
-STRAIN (ST Reduced Assembly IdentificatioN)
-Project home page: https://gitlab.com/DalsaMat/STRAIN
- You need to sign in or sign up before continuing.
-
-https://www.ncbi.nlm.nih.gov/pubmed/30929407
-Genomics Inform. 2019 Mar;17(1):e6. doi: 10.5808/GI.2019.17.1.e6. Epub 2019 Mar 31.
-Statistical Analysis of Metagenomics Data.
-Calle ML1.
-In this review we outline some of the procedures that are most commonly used for microbiome analysis and that are implemented in R packages. We place particular emphasis on the compositional structure of microbiome data.
-
-## 2018
-
-https://www.ncbi.nlm.nih.gov/pubmed/29211828
-Bioinformatics. 2018 Apr 15;34(8):1404-1405. doi: 10.1093/bioinformatics/btx775.
-ASAR: visual analysis of metagenomes in R.
-Orakov AN1,2, Sakenova NK1,2, Sorokin A3,4, Goryanin II1,5,6.
-
-2018-02-14
-http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
-microbiomeSeq: An R package for microbial community analysis in an environmental context
-**DISCLAIMER: microbiomeSeq is still in development phase and we do not recommend you to use it until a stable version is available and when this message disappears.**
-
-
-## 2017
-
-https://cran.r-project.org/package=StrainRanking
-StrainRanking: Ranking of Pathogen Strains
-Regression-based ranking of pathogen strains with respect to their contributions to natural epidemics, using demographic and genetic data sampled in the curse of the epidemics. This package also includes the GMCPIC test.
-Published:	2017-11-29
-
-http://rpubs.com/dillmcfarlan/R_microbiotaSOP
-Microbiota Analysis in R
-Kim Dill-McFarland
-March 20, 2017
-Updated December 19, 2017
-
-## 2016
-
-https://www.ncbi.nlm.nih.gov/pubmed/26776185
-Pac Symp Biocomput. 2016;21:183-94.
-REPRODUCIBLE RESEARCH WORKFLOW IN R FOR THE ANALYSIS OF PERSONALIZED HUMAN MICROBIOME DATA.
-Callahan B1, Proctor D, Relman D, Fukuyama J, Holmes S.
-using R packages dada2, knitr, and phyloseq.
 
 ----------
 ## MicrobeR
@@ -802,9 +863,17 @@ Bioinformatics. 2015 Apr 1;31(7):1130-2. doi: 10.1093/bioinformatics/btu781. Epu
 QuasR: quantification and annotation of short reads in R.
 Gaidatzis D1, Lerch A1, Hahne F2, Stadler MB1.
 
-
-
 ----------
+
+
+https://github.com/danknights/mice8992-2016
+
+http://metagenome.cs.umn.edu/microbiomecodebrowser/doc/index.html
+Discovering Patterns in the Microbiome
+
+http://metagenome.cs.umn.edu/microbiomecodebrowser/data/guerreronegro/ordination.html
+Ordination (Guerrero Negro)
+
 
 
 
