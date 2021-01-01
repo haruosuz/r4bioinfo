@@ -17,6 +17,7 @@ Last Update: 2020
   - [biopapyrus](#biopapyrus)
 - [Data](#data)
 - [wilcox](#wilcox)
+- [MDS](#mds)
 
 ----------
 ## unclassified
@@ -47,29 +48,13 @@ kohske on Twitter: "思い出した、シンプソンのパラドックスだ。
 https://twitter.com/h_okumura/status/930651352052715521
 Haruhiko Okumura on Twitter: "労働時間と知的好奇心には，国レベルでは非常に強い負の相関があるが，個人レベルでは逆に正の相関がある https://t.co/N8Z00ljFfB"
 
+Last modified: 2019-03-17 13:07:49
 https://oku.edu.mie-u.ac.jp/~okumura/stat/piaac.html
 奥村 晴彦
-Last modified: 2017-11-15 13:15:29
-
-
 
 
 
     # wh                0.001243   0.000180   6.904 5.08e-12 ***
-
-
-### 2017-09
-
-2017年09月16日 | 統計学
-http://blog.goo.ne.jp/r-de-r/e/019d0afc8e702b044768dd8eeaed3dcf
-wilcox.test と wilcox_test 前者だったら残念ですね！ - 裏 RjpWiki
-どんな場合でも，coin ライブラリの wilcox_test を使おうということだ。
-wilcox.test は使わない。
-
-
-
-
-
 
 ### 2016
 http://bioinfo-dojo.net/2016/11/21/chart_and_graph/
@@ -89,10 +74,14 @@ http://cse.naro.affrc.go.jp/takezawa/r-tips/r/65.html
 65. 二標本検定
 関数 wilcox.test() でウィルコクソンの順位和検定を行う．マン・ホイットニーの U 検定とも呼ばれる．correct=F で連続性の修正を行わないよう指定することも出来る．
 
+
+
 2017年09月16日
+http://blog.goo.ne.jp/r-de-r/e/019d0afc8e702b044768dd8eeaed3dcf
 wilcox.test と wilcox_test 前者だったら残念ですね！ - 裏 RjpWiki
 どんな場合でも，coin ライブラリの wilcox_test を使おうということだ。
 wilcox.test は使わない。
+
 
 https://data-science.gr.jp/implementation/ist_r_wilcoxon_rank_sum_test.html
 Rによるウィルコクソンの順位和検定
@@ -102,6 +91,23 @@ https://data-science.gr.jp/implementation/ist_r_wilcoxon_signed_rank_test.html
 Rによるウィルコクソンの符号順位検定
 
 Copyright © 2017 データ科学便覧 All Rights Reserved.
+
+----------
+## MDS
+
+16/10/2017
+http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/122-multidimensional-scaling-essentials-algorithms-and-r-code/#non-metric-mds
+Multidimensional Scaling Essentials: Algorithms and R Code - Articles - STHDA
+Non-metric MDS
+
+
+https://fukamilab.github.io/BIO202/06-A-unconstrained-ordination.html
+Unconstrained ordination
+Tad & Anna
+
+Ramette, A. 2007. Multivariate analyses in microbial ecology. FEMS Microbiology Ecology 62: 142-160. DOI: 10.1111/j.1574-6941.2007.00375.x
+
+NMDS (Nonmetric multidimensional scaling) ranked order not original distances and based on distance measure.
 
 ----------
 ## MIC
