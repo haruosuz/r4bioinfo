@@ -94,6 +94,15 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7511545/
 
 ## 2019
 
+2019年12月23日に更新
+https://qiita.com/xvtyzn/items/6a008b61d852dcbaed57
+Qiime2を使ったメタゲノム解析パイプライン
+```
+・microbeR (version 0.3.1)
+・phyloseq (version 1.26.1)
+・qiime2R (version 0.99.11)
+```
+
 https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2744-2
 metamicrobiomeR: an R package for analysis of microbiome relative abundance data using zero-inflated beta GAMLSS and meta-analysis across studies using random effects models
 
@@ -158,14 +167,6 @@ http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 - 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
 
 
-2019年12月23日に更新
-https://qiita.com/xvtyzn/items/6a008b61d852dcbaed57
-Qiime2を使ったメタゲノム解析パイプライン
-```
-・microbeR (version 0.3.1)
-・phyloseq (version 1.26.1)
-・qiime2R (version 0.99.11)
-```
 
 ----------
 rarefaction
@@ -335,58 +336,53 @@ By extending the popular phyloseq package and using the same data structures and
 https://bioconductor.org/packages/release/bioc/html/phyloseq.html
 Bioconductor - phyloseq
 Handling and analysis of high-throughput microbiome census data
-
-https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-analysis.html
-Vignette for phyloseq: Analysis of high-throughput microbiome census data
-29 October 2019
-
-https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-mixture-models.html
-Example using Negative Binomial in Microbiome Differential Abundance Testing
-29 October 2019
-
-https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-basics.html
-Basic storage, access, and manipulation of phylogenetic sequencing data with phyloseq
-29 October 2019
-
-https://bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-FAQ.html
-phyloseq Frequently Asked Questions (FAQ)
-Paul McMurdie and Susan Holmes
-Tue Oct 29 20:20:01 2019
+```
+HTML	R Script	analysis vignette
+HTML	R Script	phyloseq and DESeq2 on Colorectal Cancer Data
+HTML	R Script	phyloseq basics vignette
+HTML	R Script	phyloseq Frequently Asked Questions (FAQ)
+```
+27 October 2020
 
 https://www.ncbi.nlm.nih.gov/pubmed/23630581
 PLoS One. 2013 Apr 22;8(4):e61217. doi: 10.1371/journal.pone.0061217. Print 2013.
 phyloseq: an R package for reproducible interactive analysis and graphics of microbiome census data.
 McMurdie PJ1, Holmes S.
 
-
 https://github.com/joey711/phyloseq
 
 https://joey711.github.io/phyloseq/
 phyloseq: Import, share, and analyze microbiome census data using R
-
+```
 Tutorials
 
-https://joey711.github.io/phyloseq/import-data.html
-Importing phyloseq Data
-
-https://joey711.github.io/phyloseq/Example-Data.html
-Example Data in phyloseq
-Mon Mar 12 15:05:42 2018
-
-https://joey711.github.io/phyloseq/merge.html
-Merge Data
-
-https://joey711.github.io/phyloseq/preprocess.html
-Functions for Accessing and (Pre)Processing Data
-Mon Mar 12 15:08:48 2018
-
-https://joey711.github.io/phyloseq/distance.html
-The distance function in phyloseq
-Mon Mar 12 15:04:35 2018
-
-https://joey711.github.io/phyloseq/gap-statistic.html
+# Basics
+Data Import
+Example Data
+Merge
+Preprocess
+Distances
 Gap Statistic
 
+# Workflows
+DADA2
+Full Stack
+HMP-1
+Restroom Biogeography
+UniFrac
+
+# Graphics
+Plot Ordination
+Plot Alpha Diversity
+Plot Tree
+Plot Bars
+Plot Heatmap
+Plot Network
+
+# Differential Abundance
+DESeq2 (Recommended)
+edgeR
+```
 
 https://joey711.github.io/phyloseq-demo/phyloseq-demo.html
 Demo: phyloseq – An R package for microbiome census data
@@ -396,6 +392,11 @@ packageVersion("phyloseq")
 ## [1] '1.7.24'
 ```
 
+http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
+Microbial Community Diversity Analysis Tutorial with Phyloseq
+Author: Michelle Berry
+Updated: April 14, 2016
+
 https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
 Phyloseq - Draft of Pediatric Surgery
 ```
@@ -404,10 +405,9 @@ Phyloseq - Draft of Pediatric Surgery
 ## Phyloseqデータのメタデータの順番を指定する
 ```
 
-http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
-Microbial Community Diversity Analysis Tutorial with Phyloseq
-Author: Michelle Berry
-Updated: April 14, 2016
+2020年06月18日に更新
+https://qiita.com/akari5/items/6753d3addc28f719a0c5
+phyloseqオブジェクトの作成 - Qiita
 
 
 ----------
