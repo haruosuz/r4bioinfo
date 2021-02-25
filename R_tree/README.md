@@ -57,6 +57,96 @@ Last Update: 2020-08
   - [seqmagick](#seqmagick)
   - [treeio](#treeio)
 
+
+
+----------
+## QMaker
+
+https://doi.org/10.1093/sysbio/syab010
+QMaker: Fast and accurate method to estimate empirical models of protein evolution | Systematic Biology | Oxford Academic
+
+https://europepmc.org/article/MED/33616668
+QMaker: Fast and accurate method to estimate empirical models of protein evolution. - Abstract - Europe PMC
+
+
+7:28 AM · Feb 23, 2021
+https://twitter.com/RobLanfear/status/1363979095390912513
+Rob Social Distancing Lanfear on Twitter: "Pleased to announce the birth of QMaker, which allows you to easily estimate amino-acid replacement matrices from your own data. Doing this work with @bq_minh, Cuong Cao Dang, and Le Sy Vinh threw up a few surprises, so here's a little  https://t.co/wWlFi5pHAf" / Twitter
+
+![](https://pbs.twimg.com/media/Eu3SXdCVgAEGxhF?format=jpg&name=900x900)
+
+----------
+## TransPhylo
+
+https://cran.r-project.org/package=TransPhylo
+TransPhylo: Inference of Transmission Tree from a Dated Phylogeny
+Inference of transmission tree from a dated phylogeny. Includes methods to simulate and analyse outbreaks. The methodology is described in Didelot et al. (2014) <doi:10.1093/molbev/msu121>, Didelot et al. (2017) <doi:10.1093/molbev/msw275>.
+
+Published:	2020-06-08
+
+https://cran.r-project.org/web/packages/TransPhylo/vignettes/infer.html
+Inference of transmission tree from a dated phylogeny
+Xavier Didelot
+2020-06-04
+
+https://cran.r-project.org/web/packages/TransPhylo/vignettes/multitree.html
+Simultaneous Inference of Multiple Transmission Trees
+Yuanwei Xu
+2020-06-04
+
+https://cran.r-project.org/web/packages/TransPhylo/vignettes/simulate.html
+Simulation of outbreak data
+Xavier Didelot
+2020-06-04
+
+
+
+6:18 PM · Feb 24, 2021·TweetDeck
+https://twitter.com/XavierDidelot/status/1364504874432528387
+Xavier Didelot on Twitter: "If you ever had questions about how TransPhylo works or how to apply it to your data, then this article is for you! Thanks to all involved and funding from @HPRUged" / Twitter
+
+
+10:35 PM · Feb 23, 2021
+https://twitter.com/mishkendall/status/1364207145034665986
+mishkendall  on Twitter: "New in @CurrentProtocol: how to make the most of #RStats package #TransPhylo With @XavierDidelot, Yuanwei Xu, Peter White and Noel McCarthy of @WarwickLifeSci @warwickstats @IcgsUob @imperialcollege @PHE_uk &amp; @warwickmed  https://t.co/KuajAeP9FH  https://t.co/7v68HXA6mL https://t.co/iqJ3RDlUvj" / Twitter
+
+https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/cpz1.60
+Genomic Epidemiology Analysis of Infectious Disease Outbreaks Using TransPhylo - Didelot - 2021 - Current Protocols - Wiley Online Library
+
+
+
+----------
+## collapse
+
+http://search.r-project.org/library/castor/html/collapse_tree_at_resolution.html
+collapse_tree_at_resolution {castor}
+Collapse nodes of a tree at a phylogenetic resolution.
+
+https://rdrr.io/cran/ape/man/multi2di.html
+multi2di: Collapse and Resolve Multichotomies in ape: Analyses of Phylogenetics and Evolution
+
+https://www.biostars.org/p/114525/
+The function di2multi() in ape will collapse branches with lengths below a particular threshold into a hard polytomy.
+
+
+https://link.springer.com/chapter/10.1007/978-1-4614-1743-9_3
+Analysis of Phylogenetics and Evolution with R pp 29-80| 
+Phylogenetic Data in R
+As shown in the next chapters, some methods deal only with dichotomous (i.e., binary) trees, thus it is useful to resolve multichotomies into dichotomies with internal branches of length zero. On the other hand, when a dichoto- mous tree has internal branches of length zero it may be needed to collapse them in a multichotomy. These two operations may be performed with the functions multi2di and di2multi, respectively. They both take an object of class "phylo" as main argument; di2multi has a second argument tol that specifies the tolerance to consider branch lengths significantly greater than zero (10−8 by default).
+
+
+----------
+## seqLogo
+
+https://bioconductor.org/packages/release/bioc/html/seqLogo.html
+Bioconductor - seqLogo
+HTML	R Script	Sequence logos for DNA sequence alignments
+
+https://bioconductor.org/packages/release/bioc/vignettes/seqLogo/inst/doc/seqLogo.html
+27 October 2020
+https://bioconductor.org/packages/release/bioc/vignettes/seqLogo/inst/doc/seqLogo.R
+
+
 ----------
 ## multiple-sequence-alignment
 
@@ -88,6 +178,17 @@ Facilitates the evolutionary analysis and structure conservation study of specif
 Published:	2019-02-28
 
 https://github.com/stolarczyk/BALCONY/issues
+
+
+https://cran.r-project.org/web/packages/BALCONY/BALCONY.pdf
+
+CRE_conservativity Calculate cumulative relative entropy score
+
+hmmbuild program:
+This function uses hmmbuild program of HMMER suite for HMM profile generation for MSA.
+We recommend downloading and installing HMMER by following the instructions and steps in the
+HMMER installation website .
+
 
 Published: 14 August 2018
 https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2294-z
@@ -175,8 +276,7 @@ Curr Protoc Bioinformatics
 Using Ggtree to Visualize Data on Tree-Like Structures
 Guangchuang Yu 1
 
-
-2019年09月25日に更新
+2019年09月25日
 https://qiita.com/MaedaTaro_Umiushi/items/d3e04cf4e2f6e0588406
 ggtreeを使ってRで系統樹を扱う
 
@@ -313,6 +413,10 @@ babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecol
 
 ----------
 ## unclassified
+
+http://phyloworks.org/courses/exercises/W5-LTT-Plots.html
+Week 05: Lineage-through-time plots in R
+This tutorial will take you through the simple steps of simulating phylogenies under the Yule and birth-death models, then creating lineage-through-time (LTT) plots. The exercises presented here are based on tutorials written by Paul Lewis (http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_APE_Lab) and Liam Revell (http://www.phytools.org/mpma/Exercise_9.1/).
 
 
 https://www.youtube.com/channel/UCR0JAI5HJkXk5fHMNKhWHoQ
@@ -465,7 +569,13 @@ Brandon Güell, Dani Antos, Isabella Muratore (with modifications by Christopher
 ## martin.smith
 Martin R. Smith
 
+https://cran.r-project.org/web/checks/check_results_martin.smith_at_durham.ac.uk.html
+CRAN Package Check Results for Maintainer ‘Martin R. Smith <martin.smith at durham.ac.uk>’
+Last updated on 2021-01-08 11:49:32 CET.
+
+
 ### TreeSearch
+https://cran.r-project.org/package=TreeSearch
 TreeSearch: Phylogenetic Tree Search Using Custom Optimality Criteria
 Published:	2020-07-09
 Maintainer:	Martin R. Smith <martin.smith at durham.ac.uk>
@@ -476,9 +586,9 @@ Tree search with profile parsimony
 
 ### TreeTools
 
-2020-07-07
 https://cran.r-project.org/package=TreeTools
 TreeTools: Create, Modify and Analyse Phylogenetic Trees
+Published:	2020-12-09
 https://ms609.github.io/TreeTools/
 https://github.com/ms609/TreeTools/
 Vignettes:	
@@ -489,7 +599,7 @@ Load phylogenetic trees
 https://cran.r-project.org/web/packages/TreeTools/vignettes/load-trees.html
 Loading phylogenetic trees into R
 Martin R. Smith martin.smith@durham.ac.uk
-2020-07-06
+2020-12-08
 
 What next?
 You might want to:
@@ -499,14 +609,14 @@ Load phylogenetic data into R.
 https://cran.r-project.org/web/packages/TreeTools/vignettes/load-data.html
 Loading phylogenetic data into R
 Martin R. Smith martin.smith@durham.ac.uk
-2020-07-06
+2020-12-08
 
 Conduct parsimony search using Brazeau, Guillerme & Smith’s approach to inapplicable data, or using Profile parsimony.
 
 https://ms609.github.io/TreeSearch/articles/inapplicable.html
 Inapplicable data in morphological phylogenetics
 Martin R. Smith
-2020-07-08
+2020-09-25
 
 https://ms609.github.io/TreeSearch/articles/profile.html
 Tree Search with Profile Parsimony
@@ -521,9 +631,22 @@ Martin R. Smith
 2020-07-09
 
 ### TreeDist
+
+1:31 AM · Jan 8, 2021
+https://twitter.com/kfuku0502/status/1347219272184045575
+Kenji Fukushima on Twitter: "複数の系統樹の樹形を比べるとき、Robinson-Foulds distanceはbipartitionの有無だけを判定するのに対し、bipartitionがどれだけ似ているかまで調べることで、より好ましい性質を持った距離になる。 https://t.co/DZXNtwFVI2" / Twitter
+
+https://pubmed.ncbi.nlm.nih.gov/32619004/
+Bioinformatics
+. 2020 Dec 22;36(20):5007-5013. doi: 10.1093/bioinformatics/btaa614.
+Information theoretic generalized Robinson-Foulds metrics for comparing phylogenetic trees
+Martin R Smith 1
+https://academic.oup.com/bioinformatics/article-abstract/36/20/5007/5866976
+The methods discussed in this article are implemented in the R package ‘TreeDist’, archived at https://dx.doi.org/10.5281/zenodo.3528123.
+
 https://cran.r-project.org/package=TreeDist
 TreeDist: Distances Between Phylogenetic Trees
-Published:	2020-07-10
+Published:	2020-09-17
 URL:	https://ms609.github.io/TreeDist, https://github.com/ms609/TreeDist
 Vignettes:
 Generalized Robinson-Foulds distances
@@ -537,10 +660,11 @@ https://cran.r-project.org/web/packages/TreeDist/vignettes/information.html
 Contextualizing tree distances
 https://cran.r-project.org/web/packages/TreeDist/vignettes/using-distances.html
 
+
 ### Quartet
 https://cran.r-project.org/package=Quartet
 Quartet: Comparison of Phylogenetic Trees Using Quartet and Split Measures
-Published:	2020-01-28
+Published:	2020-12-09
 https://github.com/ms609/Quartet
 
 Vignettes:
@@ -567,11 +691,7 @@ Computes Robinson-Foulds distance between a set of trees
 ----------
 ## castor
 
-
-https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa031/5709039
-Simulating trees with millions of species | Bioinformatics | Oxford Academic
-The presented software is incorporated into the R package ‘castor’, which is available on The Comprehensive R Archive Network (CRAN).
-
+http://www.loucalab.com/archive/castor
 
 https://cran.r-project.org/package=castor
 castor: Efficient Phylogenetics on Large Trees
@@ -582,20 +702,7 @@ Published:	2019-12-20
 Maintainer:	Stilianos Louca <louca at zoology.ubc.ca>
 ```
 
-https://www.rdocumentation.org/packages/castor/versions/1.5.3
-castor package | R Documentation
-```
-asr_independent_contrasts	Ancestral state reconstruction via phylogenetic independent contrasts.
-asr_max_parsimony	Maximum-parsimony ancestral state reconstruction.
-asr_empirical_probabilities	Empirical ancestral state probabilities.
-castor-package	Efficient computations on large phylogenetic trees.
-asr_squared_change_parsimony	Squared-change parsimony ancestral state reconstruction.
-
-asr_subtree_averaging	Ancestral state reconstruction via subtree averaging.
-congruent_divergence_times	Extract dating anchors for a target tree, using a dated reference tree
-asr_mk_model	Ancestral state reconstruction with Mk models and rerooting
-extend_tree_to_height	Extend a rooted tree up to a specific height.
-```
+https://www.rdocumentation.org/packages/castor/versions/1.6.4
 
 https://www.ncbi.nlm.nih.gov/pubmed/29091997
 Bioinformatics. 2018 Mar 15;34(6):1053-1055. doi: 10.1093/bioinformatics/btx701.
@@ -668,6 +775,13 @@ This page was last edited on 23 May 2014, at 15:48.
 phylogenetic comparative methods
 
 https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#pcm
+
+
+https://pavelmatos.files.wordpress.com/2019/10/comparativephylogenetics_r_tutorial-1.pdf
+Introduction to phylogenetic comparative methods in R
+Pável Matos
+October 17, 2019
+
 
 
 ### slouch
@@ -858,6 +972,7 @@ Significant episodes in the evolution of GC content and genome size were detecte
 
 ----------
 ## updates
+
 
 ## 2020
 
