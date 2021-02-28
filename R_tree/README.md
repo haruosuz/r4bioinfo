@@ -57,24 +57,6 @@ Last Update: 2020-08
   - [seqmagick](#seqmagick)
   - [treeio](#treeio)
 
-
-
-----------
-## QMaker
-
-https://doi.org/10.1093/sysbio/syab010
-QMaker: Fast and accurate method to estimate empirical models of protein evolution | Systematic Biology | Oxford Academic
-
-https://europepmc.org/article/MED/33616668
-QMaker: Fast and accurate method to estimate empirical models of protein evolution. - Abstract - Europe PMC
-
-
-7:28 AM · Feb 23, 2021
-https://twitter.com/RobLanfear/status/1363979095390912513
-Rob Social Distancing Lanfear on Twitter: "Pleased to announce the birth of QMaker, which allows you to easily estimate amino-acid replacement matrices from your own data. Doing this work with @bq_minh, Cuong Cao Dang, and Le Sy Vinh threw up a few surprises, so here's a little  https://t.co/wWlFi5pHAf" / Twitter
-
-![](https://pbs.twimg.com/media/Eu3SXdCVgAEGxhF?format=jpg&name=900x900)
-
 ----------
 ## TransPhylo
 
