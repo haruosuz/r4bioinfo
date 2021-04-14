@@ -1,18 +1,20 @@
 Last Update: 2021-04-14
 
 ----------
-# multiple-sequence-alignment
+# alignment
+アラインメント
 
 **Table of Contents**
 - r4bioinfo/R_DECIPHER
 - [unclassified](#unclassified)
-- [BALCONY](#BALCONY)
 - [msa](#msa)
+- [BALCONY](#BALCONY)
 - [ggmsa](#ggmsa)
 - [ggseqlogo](#ggseqlogo)
 - [](#)
-- [seqLogo](#seqLogo)
-- [msaR](#msaR)
+- [AlignStat](#AlignStat) removed
+- [msaR](#msaR) x
+- [seqLogo](#seqLogo) x
 
 ----------
 ## unclassified
@@ -22,10 +24,44 @@ https://github.com/EricArcher/strataG
 EricArcher/strataG: strataG is a toolkit for haploid sequence and multilocus genetic data summaries, and analyses of population structure.
 The package also includes wrappers for several external programs like fastsimcoal2, STRUCTURE, and mafft.
 
+
+14th May, 2018
+https://www.researchgate.net/post/How_to_perform_Multiple_Sequence_Alignment_using_R_software
+How to perform Multiple Sequence Alignment using R software?
+
+
 on Jun 29, 2017
 https://github.com/mhahsler/rMSA
 mhahsler/rMSA: Interface to Popular Multiple Sequence Alignment Tools - R-package
 Seamlessly interfaces Multiple Sequence Alignment software packages including ClustalW, MAFFT, MUSCLE and Kalign (downloaded separately) with the Bioconductor infrastructure. A short guide with examples can be found here.
+
+----------
+## msa
+
+https://bioconductor.org/packages/msa/
+msa - An R Package for Multiple Sequence Alignment
+
+PDF	R Script	msa - An R Package for Multiple Sequence Alignment
+
+https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.pdf
+Version 1.22.0, August 12, 2020
+
+https://github.com/UBod/msa
+Further information and installation instructions are also available from http://www.bioinf.jku.at/software/msa/.
+
+https://pubmed.ncbi.nlm.nih.gov/26315911/
+Bioinformatics
+. 2015 Dec 15;31(24):3997-9. doi: 10.1093/bioinformatics/btv494. Epub 2015 Aug 26.
+msa: an R package for multiple sequence alignment
+Ulrich Bodenhofer 1, Enrico Bonatesta 1, Christoph Horejš-Kainrath 1, Sepp Hochreiter 1
+https://academic.oup.com/bioinformatics/article/31/24/3997/197486
+
+
+https://bioscryptome.t-ohashi.info/r/msa/
+[R] msa
+多重配列アライメントを行うためのパッケージ
+msaConvert
+msaパッケージで作製されたMsaMultipleAlignmentクラスのオブジェクトを、他のパッケージで使用できるクラスのオブジェクトに変換する。変換できるクラスは以下の通り。
 
 ----------
 ## ggseqlogo
@@ -112,9 +148,27 @@ Schneider - a normalized Shannon’s entropy by number of amino acid types [16];
 Kabat - the first widely accepted symbol frequency score for the analysis of aligned protein sequences [17]; Is similar to our provided score, but it has no place for managing gaps.
 
 ----------
+## AlignStat
+
+https://cran.r-project.org/package=AlignStat
+Package ‘AlignStat’ was removed from the CRAN repository.
+パッケージ「AlignStat」がCRANリポジトリから削除されました。
+
+https://github.com/TS404/AlignStat
+Online webtool: AlignStat.science.latrobe.edu.au
+
+https://pubmed.ncbi.nlm.nih.gov/27784265/
+BMC Bioinformatics
+. 2016 Oct 26;17(1):434. doi: 10.1186/s12859-016-1300-6.
+AlignStat: a web-tool and R package for statistical comparison of alternative multiple sequence alignments
+Thomas Shafee 1, Ira Cooke 2 3
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1300-6
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5081975/
+
+----------
 ## seqLogo
 
-DNA配列のみ。アミノ酸配列は非対応。
+DNA配列アラインメント用。アミノ酸配列アラインメントには非対応。
 
 https://bioconductor.org/packages/seqLogo/
 Bioconductor - seqLogo
@@ -133,7 +187,7 @@ position weight matrix (PWM)
 ----------
 ## msaR
 
-開発者が他のツールを推奨。
+開発者が、msaRパッケージの代わりのツール（seqlogoパッケージ、alignmentviewer）を推奨。
 
 https://cran.r-project.org/package=msaR
 msaR: Multiple Sequence Alignment for R Shiny
@@ -167,78 +221,9 @@ https://github.com/wilzbach/msa
 MSAViewer
 Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.
 
-
-
-
-
-
-
 ----------
-## msa
-
-https://bioconductor.org/packages/msa/
-msa - An R Package for Multiple Sequence Alignment
 
 
-PDF
-https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.pdf
-Version 1.18.0, October 17, 2019
 
-R Script
-https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.R
-
-http://bioconductor.org/packages/devel/bioc/vignettes/msa/inst/doc/msa.pdf
-Version 1.19.0, October 17, 2019
-
-http://www.ncbi.nlm.nih.gov/pubmed/26315911
-Bioinformatics. 2015 Dec 15;31(24):3997-9. doi: 10.1093/bioinformatics/btv494. Epub 2015 Aug 26.
-msa: an R package for multiple sequence alignment.
-Bodenhofer U1, Bonatesta E1, Horejš-Kainrath C1, Hochreiter S1.
-
------
-
-https://bioscryptome.t-ohashi.info/r/msa/
-[R] msa
-
-msa
-多重配列アライメントを行うためのパッケージ
-
-msaConvert
-msaパッケージで作製されたMsaMultipleAlignmentクラスのオブジェクトを、他のパッケージで使用できるクラスのオブジェクトに変換する。変換できるクラスは以下の通り。
-
------
-
-```
-# Install
-BiocManager::install("msa")
-
-
-# dir.create
-my_path <- "~/projects/r/my_msa" # assign a value to a variable
-if(!file_test("-d", my_path)) { dir.create(path=my_path, recursive=TRUE) }
-
-# download R Script.
-url <- "https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.R"
-filename <- file.path(my_path, basename(url))
-download.file(url=url, destfile=filename)
-
-# 
-sessionInfo()
-
-
-> ## ----IntegratePDF2---------------------------------------------
-> msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none",
-+                showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
-Error in texi2dvi(texfile, quiet = !verbose, pdf = identical(output, "pdf"),  : 
-  pdflatex is not available
-
-```
-
------
-
-# Acknowledgements
-I am grateful to Dr. Ulrich Bodenhofer for his technical advice on msa: an R package for multiple sequence alignment.
-
-----------
 
 
