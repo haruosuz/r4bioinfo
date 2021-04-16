@@ -1137,36 +1137,13 @@ Guangchuang Yu
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
-- 2018-07-30 [How to read a phylogenetic tree](https://artic.network/how-to-read-a-tree.html) | Author: Andrew Rambaut
-- Sep 4, 2017
-https://www.youtube.com/watch?v=t0iAm-JQcrs
-Parsimony
-6:25
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
-パッケージのインストール:  
-```
-#install.packages("seqinr")
-library(seqinr)
-
-#install.packages("ape")
-library(ape)
-
-#install.packages("microseq")
-library(microseq)
-
-# Installing the Bioconductor packages:
-#if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-
-#BiocManager::install("Biostrings")
-suppressMessages(library(Biostrings))
-
-#BiocManager::install("msa")
-library(msa)
-```
-
 - [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview)
+- [Download The Jalview Desktop | jalview.org](http://www.jalview.org/getdown/release/)
+  - 2013.07.05 [Jalviewを使って配列解析・系統樹作成をする 2013 | TogoTV](https://doi.org/10.7875/togotv.2013.049)
+- [WebLogo - Create Sequence Logos](http://weblogo.berkeley.edu/logo.cgi)
 
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
@@ -1227,15 +1204,6 @@ writeXStringSet(x = unmasked(myMsaAAMultipleAlignment), filepath = "mymsa.fasta"
 **多重アラインメントの表示**
 
     print(myMsaAAMultipleAlignment, show="complete")
-
-[msaR: Multiple Sequence Alignment for R Shiny](https://cran.r-project.org/package=msaR)
-Visualises multiple sequence alignments dynamically within the Shiny web application framework.
-```
-#install.packages("msaR")
-library(msaR)
-MAlign <- readAAMultipleAlignment("mymsa.fasta")
-msaR(MAlign, menu=FALSE, overviewbox=FALSE, colorscheme="clustal")
-```
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アラインメントのファイルをRに読み込む**
