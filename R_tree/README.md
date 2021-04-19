@@ -9,10 +9,7 @@ Last Update: 2020-08
 
 **Table of Contents**
 - [unclassified](#unclassified)
-- [babette](#babette)
-- [BactDating](#bactdating) 細菌の系統樹で分岐年代のベイズ推定
 - [castor](#castor)
-- [phangorn](#phangorn)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
 - [pcm](#pcm) phylogenetic comparative methods
   - [slouch](#slouch)
@@ -48,14 +45,402 @@ Last Update: 2020-08
   - [TreeDist](#treeDist)
   - [Quartet](#quartet)
 - [tree distance](#tree-distance)
-- [multiple-sequence-alignment](#multiple-sequence-alignment)
- - [BALCONY](#BALCONY)
- - [msaR](#msaR)
 - [guangchuangyu](#guangchuangyu) Guangchuang Yu
   - [ggmsa](#ggmsa)
   - [ggtree](#ggtree)
   - [seqmagick](#seqmagick)
   - [treeio](#treeio)
+- [babette](#babette)
+- [BactDating](#bactdating) 細菌の系統樹で分岐年代のベイズ推定
+- [treedater](#treedater)
+- [ips](#ips)
+- [](#)
+- [](#)
+
+
+----------
+
+
+
+
+
+
+----------
+## phylogram
+
+http://github.com/ropensci/phylogram
+
+https://CRAN.R-project.org/package=phylogram
+phylogram: Dendrograms for Evolutionary Analysis
+Contains functions for developing phylogenetic trees as deeply-nested lists ("dendrogram" objects). Enables bi-directional conversion between dendrogram and "phylo" objects (see Paradis et al (2004) <doi:10.1093/bioinformatics/btg412>), and features several tools for command-line tree manipulation and import/export via Newick parenthetic text.
+```
+Published:	2018-06-25
+Maintainer:	Shaun Wilkinson <shaunpwilkinson at gmail.com>
+Vignettes:	Introduction to the phylogram package
+```
+https://cran.r-project.org/web/packages/phylogram/vignettes/phylogram-vignette.html
+phylogram: an R package for phylogenetic analysis with dendrograms
+Shaun P. Wilkinson 1,2 and Simon K. Davy 1
+
+
+Example 1: Import and export a tree from a Newick string
+
+Example 2: Convert a “phylo” object to a dendrogram
+A common application requiring conversion between “phylo” and “dendrogram” objects involves plotting tanglegrams to visualize incongruence between two phylogenetic trees. 
+
+  Figure 2: Tanglegram showing incongruence between the left- and right-hand sections of the woodmouse alignment.
+
+Tree editing/manipulation
+
+----------
+## treespace
+
+https://cran.r-project.org/package=treespace
+treespace: Statistical Exploration of Landscapes of Phylogenetic Trees
+Tools for the exploration of distributions of phylogenetic trees. This package includes a 'shiny' interface which can be started from R using treespaceServer(). For further details see Jombart et al. (2017) <doi:10.1111/1755-0998.12676>.
+
+Vignettes:	
+treespace worked example: Dengue trees
+treespace worked example: Transmission trees
+Exploration of landscapes of phylogenetic trees
+Comparing trees by tip label categories
+
+https://thibautjombart.github.io/treespace/articles/DengueVignette.html
+treespace worked example: Dengue trees
+Michelle Kendall, Thibaut Jombart
+2021-03-23
+
+https://thibautjombart.github.io/treespace/articles/TransmissionTreesVignette.html
+treespace worked example: Transmission trees
+Michelle Kendall
+2021-03-23
+
+https://thibautjombart.github.io/treespace/articles/introduction.html
+Exploration of landscapes of phylogenetic trees
+Thibaut Jombart, Michelle Kendall
+2021-03-23
+
+Installing treespace
+
+Exploring trees with treespace
+
+Identifying clusters of trees
+
+Finding median trees
+
+Emphasising the placement of certain tips or clades
+
+Method: characterising a tree by a vector
+
+
+https://thibautjombart.github.io/treespace/articles/tipCategories.html
+Comparing trees by tip label categories
+Michelle Kendall
+2021-03-23
+
+https://github.com/thibautjombart/treespace/issues/5
+TreeConcordance - very sensitive to small changes in backbone · Issue #5 · thibautjombart/treespace
+
+https://github.com/thibautjombart/treespace
+
+https://thibautjombart.github.io/treespace/reference/treeConcordance.html
+
+
+
+----------
+## ips
+
+https://cran.r-project.org/package=ips
+ips: Interfaces to Phylogenetic Software in R
+Functions that wrap popular phylogenetic software for sequence alignment, masking of sequence alignments, and estimation of phylogenies and ancestral character states.
+
+https://cran.r-project.org/web/packages/ips/readme/README.html
+ips: interfaces to phylogenetic software
+NOTE: ips contains most functions that were formerly included in the phyloch package plus some more recent functions. Those phyloch functions related to tree plotting have been moved to the viper package.
+
+https://cran.r-project.org/web/packages/ips/news.html
+News and changes to the ips (formerly: phyloch) package
+
+
+----------
+## unclassified
+
+http://phyloworks.org/courses/exercises/W5-LTT-Plots.html
+Week 05: Lineage-through-time plots in R
+This tutorial will take you through the simple steps of simulating phylogenies under the Yule and birth-death models, then creating lineage-through-time (LTT) plots. The exercises presented here are based on tutorials written by Paul Lewis (http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_APE_Lab) and Liam Revell (http://www.phytools.org/mpma/Exercise_9.1/).
+
+
+https://www.youtube.com/channel/UCR0JAI5HJkXk5fHMNKhWHoQ
+phylogenetics1 - YouTube
+Jan 31, 2017
+https://www.youtube.com/watch?v=tWRan4P2OJU
+Demonstration of phytools::tree.drawer in R - YouTube
+
+
+https://www.trifields.jp/r-cran-task-views-639
+R言語 CRAN Task Views | トライフィールズ
+
+https://cran.r-project.org/web/views/Phylogenetics.html
+CRAN Task View: Phylogenetics, Especially Comparative Methods
+Maintainer:	Brian O'Meara
+Contact:	omeara.brian at gmail.com
+Version:	2020-03-04
+URL:	https://CRAN.R-project.org/view=Phylogenetics
+
+
+https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
+系統学、特に比較方法
+- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
+- geigerは、分類群の重複セットに木やデータを整理することができます。
+- phylolmは、ツリーに沿って連続またはバイナリ特性をシミュレートすることができます。
+Pagel（1999）のラムダ、
+
+
+https://github.com/haruosuz/books/tree/master/aper
+Analysis of Phylogenetics and Evolution with R
+
+
+10th Apr, 2017
+https://www.researchgate.net/post/How_to_construct_phylogenetic_tree_in_rstudio
+How to construct phylogenetic tree in rstudio?
+
+
+8:12 AM · May 30, 2020
+https://twitter.com/AedinCulhane/status/1266507676005142528
+Aedin Culhane on Twitter: "@guangchuangyu Other R tools for phylogenetics; ape, adephylo, phylobase and Treetools ( I know I am missing several more.. ) https://t.co/D3c14YGSQ9 https://t.co/Kk7YonMd5g https://t.co/3docsznizT" / Twitter
+
+
+
+
+
+----------
+## jackalope
+https://github.com/lucasnell/jackalope
+
+https://cran.r-project.org/package=jackalope
+jackalope: A Swift, Versatile Phylogenomic and High-Throughput Sequencing Simulator
+```
+Published:	2021-02-10
+
+Vignettes:	
+Intro to jackalope
+Models of nucleotide substitution
+```
+https://cran.r-project.org/web/packages/jackalope/vignettes/jackalope-intro.html
+Intro to jackalope
+This document provides brief examples of how jackalope can be used to generate sequencing data that can inform some common sampling decisions for HTS studies.
+
+https://cran.r-project.org/web/packages/jackalope/vignettes/sub-models.html
+
+----------
+## treeman
+
+https://github.com/DomBennett/treeman
+DomBennett/treeman: An R package for manipulating phylogentic trees
+
+https://cran.r-project.org/package=treeman
+treeman: Phylogenetic Tree Manipulation Class and Methods
+Published:	2020-05-26
+https://cran.r-project.org/web/packages/treeman/readme/README.html
+https://github.com/DomBennett/treeman/wiki
+
+07 January 2017
+https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2340-8
+treeman: an R package for efficient and intuitive manipulation of phylogenetic trees | BMC Research Notes | Full Text
+
+
+
+
+----------
+## ancestral reconstruction
+祖先推定
+https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#ancestral-reconstruction
+
+phangorn
+
+phytools
+
+
+23 May 2014
+https://www.r-phylo.org/wiki/HowTo/Ancestral_State_Reconstruction
+HowTo/Ancestral State Reconstruction - Comparative Phylogenetics in R
+
+----------
+
+### Rphylopars
+https://github.com/ericgoolsby/Rphylopars/wiki
+
+https://github.com/ericgoolsby/Rphylopars/wiki/Example-1:-Getting-Started
+
+https://github.com/ericgoolsby/Rphylopars/wiki/Example-2:-Missing-Data-Imputation-and-Ancestral-State-Reconstruction
+
+https://github.com/ericgoolsby/Rphylopars/wiki/Example-3:-Phylogenetic-Signal
+
+Phylogenetic Signal (Pagel's lambda)
+We may test for phylogenetic signal in the data by finding the tree transformation parameter lambda that maximizes the likelihood of the comparative model (Pagel 1997,1999; Revell 2010).
+
+
+
+https://cran.r-project.org/package=Rphylopars
+Rphylopars: Phylogenetic Comparative Tools for Missing Data and Within-Species Variation
+Tools for performing phylogenetic comparative methods for datasets with with multiple observations per species (intraspecific variation or measurement error) and/or missing data (Goolsby et al. 2017). Performs ancestral state reconstruction and missing data imputation on the estimated evolutionary model, which can be specified as Brownian Motion, Ornstein-Uhlenbeck, Early-Burst, Pagel's lambda, kappa, or delta, or a star phylogeny.
+
+
+https://pubmed.ncbi.nlm.nih.gov/28428869/
+Ecol Evol
+. 2017 Mar 21;7(8):2791-2797. doi: 10.1002/ece3.2837. eCollection 2017 Apr.
+Rapid maximum likelihood ancestral state reconstruction of continuous characters: A rerooting-free algorithm
+Eric W Goolsby 1
+https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.2837
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5395464/
+Rphylopars functions anc.recon and phylopars.
+
+
+1:57 PM · Oct 27, 2020
+https://twitter.com/RobLanfear/status/1320952684824805376
+Rob Social Distancing Lanfear on Twitter: "What’s the fastest ancestral state reconstruction software you know of for discrete traits? Can be likelihood/parsimony. Must be fast and able to deal with trees of 1,000,000 tips... This ppr is amazing for continuous traits, but not discrete: https://t.co/0ay3hELlfQ" / Twitter
+
+
+
+
+----------
+## castor
+
+http://www.loucalab.com/archive/castor
+
+https://cran.r-project.org/package=castor
+castor: Efficient Phylogenetics on Large Trees
+Efficient phylogenetic analyses on massive phylogenies comprising up to millions of tips. Functions include pruning, rerooting, calculation of most-recent common ancestors, calculating distances from the tree root and calculating pairwise distances. Calculation of phylogenetic signal and mean trait depth (trait conservatism), ancestral state reconstruction and hidden character prediction of discrete characters, simulating and fitting models of trait evolution, fitting and simulating diversification models, dating trees, comparing trees, and reading/writing trees in Newick format. Citation: Louca, Stilianos and Doebeli, Michael (2017) <doi:10.1093/bioinformatics/btx701>.
+```
+Version:	1.5.3
+Published:	2019-12-20
+Maintainer:	Stilianos Louca <louca at zoology.ubc.ca>
+```
+
+https://www.rdocumentation.org/packages/castor/versions/1.6.4
+
+https://www.ncbi.nlm.nih.gov/pubmed/29091997
+Bioinformatics. 2018 Mar 15;34(6):1053-1055. doi: 10.1093/bioinformatics/btx701.
+Efficient comparative phylogenetics on large trees.
+Louca S1,2, Doebeli M1,2,3.
+https://academic.oup.com/bioinformatics/article/34/6/1053/4582279
+Similarly, ancestral state reconstruction (ASR) for a binary trait with standard continuous-time Markov models (Mk models) takes several hours on the SILVA tree using ape.
+
+
+----------
+## babette
+
+https://github.com/ropensci/babette
+ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
+
+examples
+'babette' YouTube channel
+
+installation
+https://github.com/ropensci/babette/blob/master/doc/install.md
+
+https://ropensci.org/blog/2020/01/28/babette/
+Call BEAST2 for Bayesian evolutionary analysis from R
+
+https://methodsblog.com/2018/06/25/babette-beast2/
+The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
+
+27 May 2018
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
+babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
+
+
+
+
+----------
+
+https://twitter.com/search?q=BactDating
+
+5:33 PM · Jul 30, 2020
+https://twitter.com/XavierDidelot/status/1288754640033591296
+Xavier Didelot on Twitter: "New paper with @igococha and @erikmvolz in which we propose a new additive relaxed clock model with improved statistical and biological properties for genomic epidemiology. Implementations in BEAST2, BactDating and treedater. https://t.co/GSzoKwKWdc https://t.co/upqRI3MTSj" / Twitter
+
+https://pubmed.ncbi.nlm.nih.gov/32722797/
+Mol Biol Evol
+. 2021 Jan 4;38(1):307-317. doi: 10.1093/molbev/msaa193.
+Additive Uncorrelated Relaxed Clock Models for the Dating of Genomic Epidemiology Phylogenies
+Xavier Didelot 1 2, Igor Siveroni 3, Erik M Volz 3
+https://academic.oup.com/mbe/article/38/1/307/5877436
+All the data and code used to generate and analyze these simulations are available at https://github.com/xavierdidelot/ARC-examples.
+Implementation and Availability
+
+
+
+
+11:40 PM · Apr 16, 2020
+https://twitter.com/BallouxFrancois/status/1250796331867799554
+
+In terms of substitutions/site/year. 10 days old but still relevant. Credit: 
+@LucyvanDorp
+.
+
+NextStrain = 0.00087
+Us - BactDating regression = 0.0009
+Us - TreeDater (Lucy's “big tree”) = 0.00078
+Volz et al 2020 = 0.0005-0.00125 (https://tinyurl.com/ycwfk347)
+
+
+
+
+----------
+## BactDating
+細菌の系統樹で分岐年代のベイズ推定
+
+https://xavierdidelot.github.io/BactDating/
+
+https://github.com/xavierdidelot/BactDating
+
+https://github.com/xavierdidelot/BactDating/tree/master/vignettes
+
+
+https://pubmed.ncbi.nlm.nih.gov/30184106/
+Comparative Study Nucleic Acids Res
+. 2018 Dec 14;46(22):e134. doi: 10.1093/nar/gky783.
+Bayesian inference of ancestral dates on bacterial phylogenetic trees
+Xavier Didelot 1, Nicholas J Croucher 1, Stephen D Bentley 2, Simon R Harris 2, Daniel J Wilson 3
+https://academic.oup.com/nar/article/46/22/e134/5089898
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6294524/
+Our methodology is implemented in a R package called BactDating which is freely available for download at https://github.com/xavierdidelot/BactDating.
+
+INTRODUCTION
+
+A systematic comparison between LSD, TempEst and BEAST reported that they produced highly congruent estimates of evolutionary rates (14). More recently, three new optimization methods have been released based on maximum likelihood, namely node.dating (15), treedater (16) and TreeTime (17).
+
+Instead we show how the effect of recombination can be accounted for in the dating of ancestral nodes, by exploiting a scalable phylogenetic method that accounts for bacterial recombination such as ClonalFrameML (29) or Gubbins (30).
+
+Application to a recombining bacterial lineage
+
+Figure 6.
+Dating of Streptococcus pneumoniae PMEN1 before and after correcting for recombination. (A) Application of dating based on the RAxML tree uncorrected for recombination. (B) Application of dating based on the Gubbins tree corrected for recombination.
+
+
+----------
+
+## treedater
+レート変動を用いた系統樹の高速分子時計年代測定
+
+https://cran.r-project.org/package=treedater
+treedater: Fast Molecular Clock Dating of Phylogenetic Trees with Rate Variation
+Functions for estimating times of common ancestry and molecular clock rates of evolution using a variety of evolutionary models, parametric and nonparametric bootstrap confidence intervals, methods for detecting outlier lineages, root-to-tip regression, and a statistical test for selecting molecular clock models. The methods are described in Volz, E.M. and S.D.W. Frost (2017) <doi:10.1093/ve/vex025>.
+
+Vignettes:	H3N2
+インフルエンザH3N2の分子時計年代測定
+https://cran.r-project.org/web/packages/treedater/vignettes/h3n2.html
+Molecular Clock Dating of Influenza H3N2
+Erik Volz
+2020-01-26
+
+https://academic.oup.com/ve/article/3/2/vex025/4100592
+Scalable relaxed clock phylogenetic dating 
+E. M. Volz, S. D. W. Frost
+Virus Evolution, Volume 3, Issue 2, July 2017, vex025, https://doi.org/10.1093/ve/vex025
+Published: 31 August 2017
+
 
 ----------
 ## TransPhylo
@@ -118,105 +503,13 @@ As shown in the next chapters, some methods deal only with dichotomous (i.e., bi
 
 
 ----------
-## seqLogo
-
-https://bioconductor.org/packages/release/bioc/html/seqLogo.html
-Bioconductor - seqLogo
-HTML	R Script	Sequence logos for DNA sequence alignments
-
-https://bioconductor.org/packages/release/bioc/vignettes/seqLogo/inst/doc/seqLogo.html
-27 October 2020
-https://bioconductor.org/packages/release/bioc/vignettes/seqLogo/inst/doc/seqLogo.R
-
-
-----------
-## multiple-sequence-alignment
-
-[ggmsa](#ggmsa)
-
-https://bioconductor.org/packages/release/bioc/html/msa.html
-msa - An R Package for Multiple Sequence Alignment
-
-https://github.com/wilzbach/msa
-MSAViewer
-Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.
-
-
-http://www2.decipher.codes/Documentation.html
-https://bioconductor.org/packages/release/bioc/html/DECIPHER.html
-PDF	R Script	The Art of Multiple Sequence Alignment in R
-https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
-Erik S. Wright
-October 29, 2020
-
------
-### BALCONY
-
-https://cran.r-project.org/web/packages/BALCONY/readme/README.html
-
-https://cran.r-project.org/package=BALCONY
-BALCONY: Better ALignment CONsensus analYsis
-Facilitates the evolutionary analysis and structure conservation study of specified amino acids in proteins.
-Published:	2019-02-28
-
-https://github.com/stolarczyk/BALCONY/issues
-
-
-https://cran.r-project.org/web/packages/BALCONY/BALCONY.pdf
-
-CRE_conservativity Calculate cumulative relative entropy score
-
-hmmbuild program:
-This function uses hmmbuild program of HMMER suite for HMM profile generation for MSA.
-We recommend downloading and installing HMMER by following the instructions and steps in the
-HMMER installation website .
-
-
-Published: 14 August 2018
-https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2294-z
-BALCONY: an R package for MSA and functional compartments of protein variability analysis
-
-Estimating residue conservation - variability scores
-BALCONY is the R package that calculates entropy scores for protein conservation studies. The following different metrics are available:
-
-1.
-Landgraf - a metric applying the evolutionary information from substitution matrices [12]; This score allows to weigh sequences and uses Gonnet substitution matrix, which provides asymmetrical values for residue substitutions.
-
-2.
-Cumulative relative entropy - this metric takes into account the evolutionary relationship between sequences measured by pairwise distances [13].
-
-3.
-Real-valued Evolutionary Trace (RET) – the score which combines the evolutionary trace score and entropy measure [14]. This score cumulates information about variability in subgroups created by dividing the evolutionary tree of sequences present in MSA.
-
-4.
-Shannon - a metric derived from information theory, which is simple but non intuitive for amino acids purposes [15];
-
-5.
-Schneider - a normalized Shannon’s entropy by number of amino acid types [16]; This is intuitive score for measure entropy with range 0–1, but it may not play well if the number of sequences is smaller than the number of residue types.
-
-6.
-Kabat - the first widely accepted symbol frequency score for the analysis of aligned protein sequences [17]; Is similar to our provided score, but it has no place for managing gaps.
-
------
-### msaR
-
-https://cran.r-project.org/package=msaR
-msaR: Multiple Sequence Alignment for R Shiny
-Visualises multiple sequence alignments dynamically within the Shiny web application framework.
-
-https://cran.r-project.org/web/packages/msaR/vignettes/msaR.html
-Using msaR
-Zach Charlop-Powers
-2017-10-01
-
-https://twitter.com/zach_cp
-zach charlop-powers (@zach_cp) / Twitter
-
-
-----------
 ## guangchuangyu
+
 https://twitter.com/guangchuangyu
 Guangchuang Yu (@guangchuangyu) / Professor of Bioinformatics at Southern Medical University.  Author of #ChIPseeker #clusterProfiler, #ggtree #GOSemSim #tidytree #treeio
+
+http://yulab-smu.top/treedata-book/
+This is the online work-in-progress book of “Data Integration, Manipulation and Visualization of Phylogenetic Trees”. This book gives your all the details of using the ggtree package suit to handle tree with data. The book is written by Guangchuang Yu.
 
 https://bioconductor.org/packages/release/bioc/vignettes/treeio/inst/doc/treeio.html
 2019-10-29
@@ -236,12 +529,12 @@ sequence alignment program written in R
 https://cran.r-project.org/package=ggmsa
 ggmsa: Plot Multiple Sequence Alignment using 'ggplot2'
 
-Published:	2020-05-28
+Published:	2021-02-02
 Maintainer:	Guangchuang Yu <guangchuangyu at gmail.com>
 
 https://cran.r-project.org/web/packages/ggmsa/vignettes/ggmsa.html
 ggmsa: Plot multiple sequence alignment using ggplot2
-2020-05-28
+2021-02-02
 
 -----
 ### ggtree
@@ -311,9 +604,6 @@ Maintainer:	Guangchuang Yu <guangchuangyu at gmail.com>
 -----
 ### treeio
 
-https://twitter.com/kfuku0502/status/1224428158440611840
-Kenji Fukushima on Twitter: "お、treeioのパッケージ論文が出ている。ggtreeを使うときと、Rにnhx形式の系統樹を読み込ませるときにお世話になっています。 https://t.co/0jvBTzffVx" / Twitter
-
 https://www.ncbi.nlm.nih.gov/pubmed/31633786
 Mol Biol Evol. 2019 Oct 21. pii: msz240. doi: 10.1093/molbev/msz240. [Epub ahead of print]
 treeio: an R package for phylogenetic tree input and output with richly annotated and associated data.
@@ -325,155 +615,11 @@ https://www.bioconductor.org/packages/treeio/
 Base Classes and Functions for Phylogenetic Tree Input and Output
 Maintainer: Guangchuang Yu <guangchuangyu at gmail.com>
 
-
-----------
-## phylogram
-
-http://github.com/ropensci/phylogram
-
-https://CRAN.R-project.org/package=phylogram
-phylogram: Dendrograms for Evolutionary Analysis
-Contains functions for developing phylogenetic trees as deeply-nested lists ("dendrogram" objects). Enables bi-directional conversion between dendrogram and "phylo" objects (see Paradis et al (2004) <doi:10.1093/bioinformatics/btg412>), and features several tools for command-line tree manipulation and import/export via Newick parenthetic text.
-```
-Published:	2018-06-25
-Maintainer:	Shaun Wilkinson <shaunpwilkinson at gmail.com>
-Vignettes:	Introduction to the phylogram package
-```
-https://cran.r-project.org/web/packages/phylogram/vignettes/phylogram-vignette.html
-phylogram: an R package for phylogenetic analysis with dendrograms
-Shaun P. Wilkinson 1,2 and Simon K. Davy 1
+5:23 AM · Feb 4, 2020
+https://twitter.com/kfuku0502/status/1224428158440611840
+Kenji Fukushima on Twitter: "お、treeioのパッケージ論文が出ている。ggtreeを使うときと、Rにnhx形式の系統樹を読み込ませるときにお世話になっています。 https://t.co/0jvBTzffVx" / Twitter
 
 
-----------
-## treedater
-
-https://cran.r-project.org/package=treedater
-treedater: Fast Molecular Clock Dating of Phylogenetic Trees with Rate Variation
-Functions for estimating times of common ancestry and molecular clock rates of evolution using a variety of evolutionary models, parametric and nonparametric bootstrap confidence intervals, methods for detecting outlier lineages, root-to-tip regression, and a statistical test for selecting molecular clock models. The methods are described in Volz, E.M. and S.D.W. Frost (2017) <doi:10.1093/ve/vex025>.
-
-
-https://cran.r-project.org/web/packages/treedater/vignettes/h3n2.html
-Molecular Clock Dating of Influenza H3N2
-Erik Volz
-2020-01-26
-
-----------
-## BactDating
-細菌の系統樹で分岐年代のベイズ推定
-https://twitter.com/search?q=BactDating
-
-https://github.com/xavierdidelot/BactDating
-
-https://www.ncbi.nlm.nih.gov/pubmed/30184106
-Nucleic Acids Res. 2018 Dec 14;46(22):e134. doi: 10.1093/nar/gky783.
-Bayesian inference of ancestral dates on bacterial phylogenetic trees.
-Didelot X1, Croucher NJ1, Bentley SD2, Harris SR2, Wilson DJ3.
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6294524/
-- Figure 6.
-Dating of Streptococcus pneumoniae PMEN1 before and after correcting for recombination. 
-
-
-
-
-----------
-## babette
-
-https://github.com/ropensci/babette
-ropensci/babette: babette is an R package that combines beautier, beastier and tracerer
-https://github.com/ropensci/babette/blob/master/doc/install.md
-
-https://ropensci.org/blog/2020/01/28/babette/
-Call BEAST2 for Bayesian evolutionary analysis from R
-
-https://methodsblog.com/2018/06/25/babette-beast2/
-The babette R Package: How to Sooth the Phylogenetic BEAST2 | methods.blog
-
-27 May 2018
-https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13032
-babette: BEAUti 2, BEAST2 and Tracer for R - Bilderbeek - 2018 - Methods in Ecology and Evolution
-
-
-----------
-## unclassified
-
-http://phyloworks.org/courses/exercises/W5-LTT-Plots.html
-Week 05: Lineage-through-time plots in R
-This tutorial will take you through the simple steps of simulating phylogenies under the Yule and birth-death models, then creating lineage-through-time (LTT) plots. The exercises presented here are based on tutorials written by Paul Lewis (http://hydrodictyon.eeb.uconn.edu/eebedia/index.php/Phylogenetics:_APE_Lab) and Liam Revell (http://www.phytools.org/mpma/Exercise_9.1/).
-
-
-https://www.youtube.com/channel/UCR0JAI5HJkXk5fHMNKhWHoQ
-phylogenetics1 - YouTube
-Jan 31, 2017
-https://www.youtube.com/watch?v=tWRan4P2OJU
-Demonstration of phytools::tree.drawer in R - YouTube
-
-
-https://www.trifields.jp/r-cran-task-views-639
-R言語 CRAN Task Views | トライフィールズ
-
-https://cran.r-project.org/web/views/Phylogenetics.html
-CRAN Task View: Phylogenetics, Especially Comparative Methods
-Maintainer:	Brian O'Meara
-Contact:	omeara.brian at gmail.com
-Version:	2020-03-04
-URL:	https://CRAN.R-project.org/view=Phylogenetics
-
-
-https://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
-系統学、特に比較方法
-- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
-- geigerは、分類群の重複セットに木やデータを整理することができます。
-- phylolmは、ツリーに沿って連続またはバイナリ特性をシミュレートすることができます。
-Pagel（1999）のラムダ、
-
-
-https://github.com/haruosuz/books/tree/master/aper
-Analysis of Phylogenetics and Evolution with R
-
-
-10th Apr, 2017
-https://www.researchgate.net/post/How_to_construct_phylogenetic_tree_in_rstudio
-How to construct phylogenetic tree in rstudio?
-
-
-8:12 AM · May 30, 2020
-https://twitter.com/AedinCulhane/status/1266507676005142528
-Aedin Culhane on Twitter: "@guangchuangyu Other R tools for phylogenetics; ape, adephylo, phylobase and Treetools ( I know I am missing several more.. ) https://t.co/D3c14YGSQ9 https://t.co/Kk7YonMd5g https://t.co/3docsznizT" / Twitter
-
-
-
-
-
-----------
-## jackalope
-https://github.com/lucasnell/jackalope
-
-https://cran.r-project.org/package=jackalope
-jackalope: A Swift, Versatile Phylogenomic and High-Throughput Sequencing Simulator
-```
-Published:	2020-06-15
-Vignettes:
-```
-Intro to jackalope
-https://cran.r-project.org/web/packages/jackalope/vignettes/jackalope-intro.html
-
-Models of nucleotide substitution
-https://cran.r-project.org/web/packages/jackalope/vignettes/sub-models.html
-
-----------
-## treeman
-
-https://github.com/DomBennett/treeman
-DomBennett/treeman: An R package for manipulating phylogentic trees
-
-https://cran.r-project.org/package=treeman
-treeman: Phylogenetic Tree Manipulation Class and Methods
-Published:	2020-05-26
-https://cran.r-project.org/web/packages/treeman/readme/README.html
-https://github.com/DomBennett/treeman/wiki
-
-https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2340-8
-treeman: an R package for efficient and intuitive manipulation of phylogenetic trees | BMC Research Notes | Full Text
 
 ----------
 ## bioinformatics_tutorials
@@ -669,89 +815,6 @@ http://www.phytools.org/static.help/multiRF.html
 Computes Robinson-Foulds distance between a set of trees
 
 
-
-----------
-## castor
-
-http://www.loucalab.com/archive/castor
-
-https://cran.r-project.org/package=castor
-castor: Efficient Phylogenetics on Large Trees
-Efficient phylogenetic analyses on massive phylogenies comprising up to millions of tips. Functions include pruning, rerooting, calculation of most-recent common ancestors, calculating distances from the tree root and calculating pairwise distances. Calculation of phylogenetic signal and mean trait depth (trait conservatism), ancestral state reconstruction and hidden character prediction of discrete characters, simulating and fitting models of trait evolution, fitting and simulating diversification models, dating trees, comparing trees, and reading/writing trees in Newick format. Citation: Louca, Stilianos and Doebeli, Michael (2017) <doi:10.1093/bioinformatics/btx701>.
-```
-Version:	1.5.3
-Published:	2019-12-20
-Maintainer:	Stilianos Louca <louca at zoology.ubc.ca>
-```
-
-https://www.rdocumentation.org/packages/castor/versions/1.6.4
-
-https://www.ncbi.nlm.nih.gov/pubmed/29091997
-Bioinformatics. 2018 Mar 15;34(6):1053-1055. doi: 10.1093/bioinformatics/btx701.
-Efficient comparative phylogenetics on large trees.
-Louca S1,2, Doebeli M1,2,3.
-https://academic.oup.com/bioinformatics/article/34/6/1053/4582279
-Similarly, ancestral state reconstruction (ASR) for a binary trait with standard continuous-time Markov models (Mk models) takes several hours on the SILVA tree using ape.
-
-----------
-## phangorn
-https://github.com/KlausVigo/phangorn
-
-https://cran.r-project.org/package=phangorn
-phangorn: Phylogenetic Reconstruction and Analysis
-Package contains methods for estimation of phylogenetic trees and networks using Maximum Likelihood, Maximum Parsimony, distance methods and Hadamard conjugation. Allows to compare trees, models selection and offers visualizations for trees and split networks.
-```
-Version:	2.5.5
-Published:	2019-06-19
-Maintainer:	Klaus Schliep <klaus.schliep at gmail.com>
-
-Vignettes:
-Ancestral Sequence Reconstruction
-Constructing phylogenetic trees
-Advanced features
-IntertwiningTreesAndNetworks
-Splits and Networx
-```
-
-https://rdrr.io/cran/phangorn/man/codonTest.html
-codonTest: codonTest in phangorn: Phylogenetic Reconstruction and Analysis
-codonTest allows to test for positive selection similar to programs like PAML (Yang ) or HyPhy (Kosakovsky Pond et al. 2005).
-
-----------
-## ancestral reconstruction
-祖先推定
-https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#ancestral-reconstruction
-
-https://cran.r-project.org/web/packages/phangorn/vignettes/Ancestral.pdf
-Ancestral sequence reconstruction with phangorn
-(Version 2.5.5)
-Klaus P. Schliep∗
-June 18, 2019
-
-August 14, 2015
-http://www.phytools.org/eqg2015/asr.html
-Ancestral state reconstruction & visualizing ancestral states on a phylogeny
-|
-Written by Liam J. Revell. Last updated August 14, 2015
-
-MAY 14, 2015
-http://blog.phytools.org/2015/05/about-how-acemarginaltrue-does-not.html
-Phylogenetic Tools for Comparative Biology: About how ace(...,marginal=TRUE) does not compute marginal ancestral states [but ace(...,marginal=FALSE) does]
-Finally, we can use Klaus Schliep's phangorn package as follows (code snippet provided here by Klaus):
-|
-Posted by Liam Revell at 4:10 PM
-
-Aug. 6, 2013
-http://www.phytools.org/eqg/Exercise_5.2/
-Ancestral state reconstruction
-Written by Liam J. Revell. Last updated Aug. 6, 2013
-
-
-23 May 2014
-https://www.r-phylo.org/wiki/HowTo/Ancestral_State_Reconstruction
-HowTo/Ancestral State Reconstruction - Comparative Phylogenetics in R
-This page was last edited on 23 May 2014, at 15:48.
-
 ----------
 ## pcm
 phylogenetic comparative methods
@@ -799,11 +862,9 @@ https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods#Phylogenetically_
 jul 24 , 2017
 https://clubedaciencia.com.br/phylogenetic-comparative-methods-pcms/
 Phylogenetic Comparative Methods (PCMs) in R | Clube da Ciência
+ José Hidasi Neto
 
-- my_phytools_Cordoba2017_ex_3_PICs.R
-31 July 2017
-http://www.phytools.org/Cordoba2017/ex/3/PICs.html
-Exercise 3: Phylogenetically independent contrasts
+phytools
 
 13 December 2016
 http://www.phytools.org/Bariloche2016/lec/3/PICs.pdf
@@ -865,7 +926,6 @@ The question is often raised whether it is statistically necessary to control fo
 #### phylosig {phytools}
 
 https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md#phylosig
-Jamie Winternitz, Sept 2016
 
 #### phyloglm {phylolm}
 ```
