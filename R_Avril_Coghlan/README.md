@@ -21,8 +21,9 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 **R言語入門**
 
+- 2019.08.16 biostatistics [R を利用した統計解析およびデータの視覚化](https://stats.biopapyrus.jp/r/)
+- 2019-04-22 奥村 晴彦 [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-- [R | R を利用した統計解析およびデータの視覚化](https://stats.biopapyrus.jp/r/)
 
 ### [Installing R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r)
 
@@ -48,7 +49,7 @@ https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rs
 
 #### [How to install a Bioconductor R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-a-bioconductor-r-package)
 
-Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
+Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/Biostrings/)のインストール:  
 ```
 # install the Bioconductor package called "Biostrings"
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -341,7 +342,6 @@ seq1 <- read.fasta(file=filename, seqtype="DNA", strip.desc=TRUE)[[1]]
 ```
 #getwd() # Get Working Directory
 #list.files() # List the Files in a Directory/Folder
-#system("open .") # Invoke a System Command
 ```
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
