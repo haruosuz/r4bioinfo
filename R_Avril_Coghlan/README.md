@@ -834,9 +834,9 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 ```
 #library(seqinr)
-#seqMleprae <- read.fasta(file = "Q9CD83.fasta")[[1]]
-#seqMulcerans <- read.fasta(file = "A0PQ23.fasta")[[1]]
-#seqMleprae # Display the contents of the vector "seqMleprae"
+#c1M <- read.fasta(file = "Q9CD83.fasta")[[1]]
+#c2M <- read.fasta(file = "A0PQ23.fasta")[[1]]
+#c1M # Display the contents of the vector of chars
 ```
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
@@ -845,9 +845,9 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 [How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
 ```
 library(seqinr)
-seqMleprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-seqMulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
-seqMleprae # Display the contents of "seqMleprae"
+c1M <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+c2M <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+c1M # Display the contents of the vector of chars
 ```
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
@@ -866,18 +866,26 @@ seqMleprae # Display the contents of "seqMleprae"
 ```
 # Create tests
 library(seqinr)
-
-testseq <- s2c("tgca")
-testseq
-
+s2c("tgca")
 par(mfrow=c(2,2))
-dotPlot(testseq, testseq)
-dotPlot(rep(testseq,2), rep(testseq,2))
+
+# Identity is on the main diagonal:
+dotPlot(s2c("tgca"), s2c("tgca"))
+
+# Gap in the 2nd sequence yields a vertical jump:
+dotPlot(s2c("tgca"), s2c("tg-ca"))
+
+# Gap in the 1st sequence yields an horizontal jump:
+dotPlot(s2c("tg-ca"), s2c("tgca"))
+
+# Internal repeats are off the main diagonal:
+dotPlot(rep(s2c("tgca"),2), rep(s2c("tgca"),2))
 ```
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
-dotPlot(seqMleprae, seqMulcerans)
+par(mfrow=c(1,1))
+dotPlot(c1M, c2M)
 ```
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
@@ -930,13 +938,14 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける:  
-
-	# print out the optimal global alignment for the two sequences and its score:
-	s1 <- "GAATTC"
-	s2 <- "GATTA"
-	globalAligns1s2 <- pairwiseAlignment(s1, s2, substitutionMatrix = sigma, 
-	                    gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-	globalAligns1s2 # Print out the optimal alignment and its score
+```
+# print out the optimal global alignment for the two sequences and its score:
+S1 <- "GAATTC"
+S2 <- "GATTA"
+globalAlign_S1_S2 <- pairwiseAlignment(S1, S2, substitutionMatrix = sigma, 
+                      gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlign_S1_S2 # Print out the optimal alignment and its score
+```
 
 Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. Here the alignment contains four matches, one mismatch, and one gap of length 1, so its score is (4\*2)+(1\*-1)+(1\*-10) = -3.
 
@@ -956,14 +965,15 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 	BLOSUM50 # Print out the data
 
 タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアラインメントを見つける:  
-
-	# find the optimal global alignment between two protein sequences using the BLOSUM50 matrix:
-	data(BLOSUM50)
-	s3 <- "PAWHEAE"
-	s4 <- "HEAGAWGHEE"
-	globalAligns3s4 <- pairwiseAlignment(s3, s4, substitutionMatrix = "BLOSUM50", 
-	                    gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-	globalAligns3s4 # Print out the optimal global alignment and its score
+```
+# find the optimal global alignment between two protein sequences using the BLOSUM50 matrix:
+data(BLOSUM50)
+S3 <- "PAWHEAE"
+S4 <- "HEAGAWGHEE"
+globalAlign_S3_S4 <- pairwiseAlignment(S3, S4, substitutionMatrix = "BLOSUM50", 
+                    gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlign_S3_S4 # Print out the optimal global alignment and its score
+```
 
 We set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. This means that the gap will be given a score of -10-8-8 = -26.
 
@@ -973,35 +983,35 @@ We set “gapOpening” to be -2 and “gapExtension” to be -8, which means th
 **UniProt配列のアラインメント**
 ```
 library(seqinr)
-seqMleprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-seqMulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+c1M <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+c2M <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 
 # 文字ベクトルを文字列に変換
 # convert vectors of characters into strings
-sMleprae <- c2s(seqMleprae) # Make a string that contains the sequence in "seqMleprae"
-sMulcerans <- c2s(seqMulcerans) # Make a string that contains the sequence in "seqMulcerans"
+s1M <- c2s(c1M)
+s2M <- c2s(c2M)
 
 # 大文字に変換
 # convert strings to uppercase 
-sMleprae <- toupper(sMleprae)
-sMulcerans <- toupper(sMulcerans)
-sMleprae # Print out the content of "sMleprae"
+S1M <- toupper(s1M)
+S2M <- toupper(s2M)
+S1M # Print out the content of the string
 
 # align the two protein sequences
 # library(Biostrings); data(BLOSUM50)
-globalAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
-                                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-globalAlignMlepraeMulcerans # Print out the optimal global alignment and its score
+globalAlign_S1M_S2M <- pairwiseAlignment(S1M, S2M, substitutionMatrix = BLOSUM50, 
+                        gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlign_S1M_S2M # Print out the optimal global alignment and its score
 ```
 
 ### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
 **2つの配列間のアラインメントの表示と出力**
 ```
 # print out the alignment
-writePairwiseAlignments(globalAlignMlepraeMulcerans)
+writePairwiseAlignments(globalAlign_S1M_S2MM)
 
 # Write a PairwiseAlignments object to a file
-writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMulcerans.txt")
+writePairwiseAlignments(globalAlign_S1M_S2M, file="globalAlign_S1M_S2M.txt")
 
 #getwd()
 #list.files()
@@ -1011,10 +1021,10 @@ writePairwiseAlignments(globalAlignMlepraeMulcerans, file="globalAlignMlepraeMul
 **2つのタンパク質配列間のローカル・アラインメント**
 ```
 # find the best local alignment between the two protein sequences
-localAlignMlepraeMulcerans <- pairwiseAlignment(sMleprae, sMulcerans, substitutionMatrix = BLOSUM50, 
+localAlign_S1M_S2M <- pairwiseAlignment(S1M, S2M, substitutionMatrix = BLOSUM50, 
                                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
-localAlignMlepraeMulcerans # Print out the optimal local alignment and its score
-writePairwiseAlignments(localAlignMlepraeMulcerans)
+localAlign_S1M_S2M # Print out the optimal local alignment and its score
+writePairwiseAlignments(localAlign_S1M_S2M)
 ```
 
 We see that the optimal local alignment is quite similar to the optimal global alignment in this case, except that it excludes a short region of poorly aligned sequence at the start and at the ends of the two proteins.
