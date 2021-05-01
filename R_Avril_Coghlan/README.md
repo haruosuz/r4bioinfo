@@ -834,9 +834,9 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 ```
 #library(seqinr)
-#c1M <- read.fasta(file = "Q9CD83.fasta")[[1]]
-#c2M <- read.fasta(file = "A0PQ23.fasta")[[1]]
-#c1M # Display the contents of the vector of chars
+#chars1 <- read.fasta(file = "Q9CD83.fasta")[[1]]
+#chars2 <- read.fasta(file = "A0PQ23.fasta")[[1]]
+#chars1 # Display the contents of the vector of chars
 ```
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
@@ -845,9 +845,9 @@ The different types of mutations | Biomolecules | MCAT | Khan Academy
 [How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
 ```
 library(seqinr)
-c1M <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-c2M <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
-c1M # Display the contents of the vector of chars
+chars1 <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+chars2 <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+chars1 # Display the contents of the vector of chars
 ```
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
@@ -885,7 +885,7 @@ dotPlot(rep(s2c("tgca"),2), rep(s2c("tgca"),2))
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 ```
 par(mfrow=c(1,1))
-dotPlot(c1M, c2M)
+dotPlot(chars1, chars2)
 ```
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
@@ -942,9 +942,9 @@ The reason for doing this is that it is likely that adjacent gap positions were 
 # print out the optimal global alignment for the two sequences and its score:
 S1 <- "GAATTC"
 S2 <- "GATTA"
-globalAlign_S1_S2 <- pairwiseAlignment(S1, S2, substitutionMatrix = sigma, 
-                      gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-globalAlign_S1_S2 # Print out the optimal alignment and its score
+globalAlignNT <- pairwiseAlignment(S1, S2, substitutionMatrix = sigma, 
+                  gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlignNT # Print out the optimal alignment and its score
 ```
 
 Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. Here the alignment contains four matches, one mismatch, and one gap of length 1, so its score is (4\*2)+(1\*-1)+(1\*-10) = -3.
@@ -970,9 +970,9 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 data(BLOSUM50)
 S3 <- "PAWHEAE"
 S4 <- "HEAGAWGHEE"
-globalAlign_S3_S4 <- pairwiseAlignment(S3, S4, substitutionMatrix = "BLOSUM50", 
-                    gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-globalAlign_S3_S4 # Print out the optimal global alignment and its score
+globalAlignAA <- pairwiseAlignment(S3, S4, substitutionMatrix = "BLOSUM50", 
+                  gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlignAA # Print out the optimal global alignment and its score
 ```
 
 We set “gapOpening” to be -2 and “gapExtension” to be -8, which means that the first position of a gap is assigned a score of (-8-2=)-10, and every subsequent position in a gap is given a score of -8. This means that the gap will be given a score of -10-8-8 = -26.
@@ -983,35 +983,35 @@ We set “gapOpening” to be -2 and “gapExtension” to be -8, which means th
 **UniProt配列のアラインメント**
 ```
 library(seqinr)
-c1M <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
-c2M <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
+chars1 <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+chars2 <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 
 # 文字ベクトルを文字列に変換
-# convert vectors of characters into strings
-s1M <- c2s(c1M)
-s2M <- c2s(c2M)
+# conversion of a vector of chars into a string
+string1 <- c2s(chars1)
+string2 <- c2s(chars2)
 
 # 大文字に変換
-# convert strings to uppercase 
-S1M <- toupper(s1M)
-S2M <- toupper(s2M)
-S1M # Print out the content of the string
+# convert strings to uppercase
+STRING1 <- toupper(string1)
+STRING2 <- toupper(string2)
+STRING1 # Print out the content of the string
 
 # align the two protein sequences
 # library(Biostrings); data(BLOSUM50)
-globalAlign_S1M_S2M <- pairwiseAlignment(S1M, S2M, substitutionMatrix = BLOSUM50, 
-                        gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
-globalAlign_S1M_S2M # Print out the optimal global alignment and its score
+globalAlign <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM50, 
+                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+globalAlign # Print out the optimal global alignment and its score
 ```
 
 ### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
 **2つの配列間のアラインメントの表示と出力**
 ```
 # print out the alignment
-writePairwiseAlignments(globalAlign_S1M_S2MM)
+writePairwiseAlignments(globalAlign)
 
 # Write a PairwiseAlignments object to a file
-writePairwiseAlignments(globalAlign_S1M_S2M, file="globalAlign_S1M_S2M.txt")
+writePairwiseAlignments(globalAlign, file="globalAlign.txt")
 
 #getwd()
 #list.files()
@@ -1021,10 +1021,10 @@ writePairwiseAlignments(globalAlign_S1M_S2M, file="globalAlign_S1M_S2M.txt")
 **2つのタンパク質配列間のローカル・アラインメント**
 ```
 # find the best local alignment between the two protein sequences
-localAlign_S1M_S2M <- pairwiseAlignment(S1M, S2M, substitutionMatrix = BLOSUM50, 
-                               gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
-localAlign_S1M_S2M # Print out the optimal local alignment and its score
-writePairwiseAlignments(localAlign_S1M_S2M)
+localAlign <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM50, 
+               gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
+localAlign # Print out the optimal local alignment and its score
+writePairwiseAlignments(localAlign)
 ```
 
 We see that the optimal local alignment is quite similar to the optimal global alignment in this case, except that it excludes a short region of poorly aligned sequence at the start and at the ends of the two proteins.
