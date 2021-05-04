@@ -495,7 +495,7 @@ myfunction
 	log10(x) # Finds the log to the base 10 of variable x.
 
 ### [Reading sequence data with SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#reading-sequence-data-with-seqinr)
-**Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で配列データを読み込み**
+**Rパッケージ`seqinr`で配列データを読み込み**
 
 DEN-1デング熱ウイルスのゲノム配列を取得する:  
 ```
