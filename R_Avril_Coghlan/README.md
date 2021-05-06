@@ -856,7 +856,7 @@ chars1 # Display the contents of the vector of chars
 タンパク質のアミノ酸配列や核酸の塩基配列の
 [相同性](https://ja.wikipedia.org/wiki/相同)
 [homology](https://en.wikipedia.org/wiki/Homology_%28biology%29)
-（共通の祖先に由来すること）は、配列類似性に基づいて判断される。  
+（共通の祖先に由来すること）を配列類似性に基づいて判断する。  
 [ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)
 [Dot plot](https://en.wikipedia.org/wiki/Dot_plot_%28bioinformatics%29)
 とは、2本の配列を比較するためのグラフである。
@@ -956,21 +956,24 @@ Note that we set “gapOpening” to be -2 and “gapExtension” to be -8, whic
 **2つのタンパク質配列間のグローバル・アラインメント**
 
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
+BLOSUM62 is the default matrix for protein BLAST.
+BLOSUM80 is used for more closely related alignments, and 
+BLOSUM45 is used for more distantly related alignments.
+```
+# get a list of the available scoring matrices that come with the Biostrings package:
+data(package="Biostrings")
 
-	# get a list of the available scoring matrices that come with the Biostrings package:
-	data(package="Biostrings")
-
-	# load the BLOSUM50 matrix
-	data(BLOSUM50)
-	BLOSUM50 # Print out the data
+data(BLOSUM62) # load the BLOSUM62 matrix
+BLOSUM62 # Print out the data
+```
 
 タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアラインメントを見つける:  
 ```
-# find the optimal global alignment between two protein sequences using the BLOSUM50 matrix:
-data(BLOSUM50)
+# find the optimal global alignment between two protein sequences using the BLOSUM62 matrix:
+data(BLOSUM62)
 S3 <- "PAWHEAE"
 S4 <- "HEAGAWGHEE"
-globalAlignAA <- pairwiseAlignment(S3, S4, substitutionMatrix = "BLOSUM50", 
+globalAlignAA <- pairwiseAlignment(S3, S4, substitutionMatrix = "BLOSUM62", 
                   gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 globalAlignAA # Print out the optimal global alignment and its score
 ```
@@ -998,8 +1001,8 @@ STRING2 <- toupper(string2)
 STRING1 # Print out the content of the string
 
 # align the two protein sequences
-# library(Biostrings); data(BLOSUM50)
-globalAlign <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM50, 
+# library(Biostrings); data(BLOSUM62)
+globalAlign <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM62, 
                 gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 globalAlign # Print out the optimal global alignment and its score
 ```
@@ -1021,7 +1024,7 @@ writePairwiseAlignments(globalAlign, file="globalAlign.txt")
 **2つのタンパク質配列間のローカル・アラインメント**
 ```
 # find the best local alignment between the two protein sequences
-localAlign <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM50, 
+localAlign <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM62, 
                gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
 localAlign # Print out the optimal local alignment and its score
 writePairwiseAlignments(localAlign)
@@ -1081,13 +1084,13 @@ We can use this function to generate 1000 7-letter amino acid sequences using a 
 For example, to align ‘HEAGAWGHEE’ to the first of the 1000 random sequences (‘EEHAAAE’), we type:
 
 	s4 <- "HEAGAWGHEE"
-	pairwiseAlignment(s4, randomseqs[1], substitutionMatrix = "BLOSUM50", gapOpening = -2,
+	pairwiseAlignment(s4, randomseqs[1], substitutionMatrix = "BLOSUM62", gapOpening = -2,
 	gapExtension = -8, scoreOnly = FALSE)
 
 
 If we use the pairwiseAlignment() function with the argument ‘scoreOnly=TRUE’, it will just give us the score for the alignment:
 
-	pairwiseAlignment(s4, randomseqs[1], substitutionMatrix = "BLOSUM50", gapOpening = -2,
+	pairwiseAlignment(s4, randomseqs[1], substitutionMatrix = "BLOSUM62", gapOpening = -2,
 	gapExtension = -8, scoreOnly = TRUE)
 
 
@@ -1096,7 +1099,7 @@ We can then compare the actual score for aligning ‘PAWHEAE’ to ‘HEAGAWGHEE
 	randomscores <- double(1000) # Create a numeric vector with 1000 elements
 	for (i in 1:1000)
 	  {
-	     score <- pairwiseAlignment(s4, randomseqs[i], substitutionMatrix = "BLOSUM50",
+	     score <- pairwiseAlignment(s4, randomseqs[i], substitutionMatrix = "BLOSUM62",
 	       gapOpening = -2, gapExtension = -8, scoreOnly = TRUE)
 	     randomscores[i] <- score
 	  }
