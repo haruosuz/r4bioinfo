@@ -529,9 +529,9 @@ GC(seq1[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 ```
 
 配列を固定長（ここでは 2000 bp）の断片に分け、各配列断片のGC含量を計算する。このような方法はスライディングウィンドウ（sliding window）と呼ばれ、配列断片のサイズはウィンドウサイズ（window size）、配列断片を移動させるサイズはステップサイズ（step size）と呼ばれる。
-- [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
-p.86
-GC skew
+
+- [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)  
+p. 86: GC skew
 
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 **GC含量のスライディングウィンドウプロット**
@@ -799,22 +799,10 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 [変異](https://ja.wikipedia.org/wiki/突然変異)
 [Mutation](https://en.wikipedia.org/wiki/Mutation)
 
-- Dec 8, 2014
-https://www.youtube.com/watch?v=MOtRqBs0jxE
-Mutations in DNA
-1:44
-- Apr 25, 2012
-https://www.youtube.com/watch?v=yobHMYhHAXE
-4.1.4 Explain the consequences of a base substitution mutation
-2:36
-- Aug 28, 2014
-https://www.youtube.com/watch?v=JGDPZrQsMXI
-Substitution Mutations
-2:36
-- Apr 2, 2014
-https://www.youtube.com/watch?v=xYOK-yzUWSI
-The different types of mutations | Biomolecules | MCAT | Khan Academy
-5:51
+- [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)  
+pp. 4-7: 1.1.2 変異と置換および分子進化  
+図 1.5 点変異・挿入変異・欠失変異  
+図 1.6 変異 (mutation) と 置換 (substitution)  
 
 ### [UniProt](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
