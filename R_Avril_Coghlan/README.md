@@ -950,6 +950,10 @@ so its score is (4\*2)+(1\*-1)+(1\*-14) = -7.
 ギャップの最初の位置は (-10-4=)-14 のスコアが割り当てられ、
 ギャップの後続の位置は -4 のスコアが与えられることを意味する。
 
+```
+#dotPlot(s2c("GAATTC"), s2c("GATTA"))
+```
+
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
 **2つのタンパク質配列間のグローバル・アラインメント**
 
@@ -979,6 +983,13 @@ AlignGlobalAA # Print out the optimal global alignment and its score
 The gap (`---`) will be given a score of -14-4-4 = -22.
 
 ギャップ (`---`) は -14-4-4 = -22 のスコアが与えられる。
+
+```
+BLOSUM50["P","H"] +  ( -10-4 -4 -4 )  + BLOSUM50["A","A"] + BLOSUM50["W","W"] + 
+BLOSUM50["H","G"] + BLOSUM50["E","H"] + BLOSUM50["A","E"] + BLOSUM50["E","E"]
+
+#dotPlot(s2c("PAWHEAE"), s2c("HEAGAWGHEE"))
+```
 
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
 **UniProt配列のアラインメント**
