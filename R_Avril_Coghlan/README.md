@@ -886,20 +886,21 @@ dotPlot(chars1, chars2)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
-【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける。
+【例題】DNA配列 ("TGGCA"と"TGCA") 間の最適なグローバルアラインメントを見つける。
 
 例えば、塩基の一致 (match) に+2のスコア、不一致 (mismatch) に-1のペナルティ、ギャップ (gap) に-2のペナルティを与える。
 以下のアラインメントのスコアは？
+
 ```
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
-# the score for the following alignment is 2 + 2 + (-1) + 2 + (-2) + (-1) = 2:
-GAATTC
-GATT-A
+# the score for the following alignment is 2 + 2 + (-1) + (-1) + (-2) = 0:
+TGGCA
+TGCA-
 
 # What is the score for the following alignment?
-GAATTC
-GA-TTA
+TGGCA
+TG-CA
 ```
 
 *scoring matrix (substitution matrix)*
@@ -927,11 +928,11 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
-`pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアラインメントを見つける:  
+`pairwiseAlignment()`関数で、DNA配列 ("TGGCA"と"TGCA") 間の最適なグローバルアラインメントを見つける:  
 ```
 # print out the optimal global alignment for the two sequences and its score:
-P1NT <- "GAATTC"
-S1NT <- "GATTA"
+P1NT <- "TGGCA"
+S1NT <- "TGCA"
 AlignGlobalNT <- pairwiseAlignment(P1NT, S1NT, substitutionMatrix = sigma, 
                   gapOpening = 10, gapExtension = 4, scoreOnly = FALSE)
 AlignGlobalNT # Print out the optimal alignment and its score
@@ -940,18 +941,18 @@ AlignGlobalNT # Print out the optimal alignment and its score
 Note that we set “gapOpening” to be 10 and “gapExtension” to be 4, 
 which means that the first position of a gap is assigned a score of (-10-4=)-14, 
 and every subsequent position in a gap is given a score of -4. 
-Here the alignment contains four matches, one mismatch, and one gap of length 1, 
-so its score is (4\*2)+(1\*-1)+(1\*-14) = -7.
+Here the alignment contains four matches, no mismatch, and one gap of length 1, 
+so its score is (4\*2)+(0\*-1)+(1\*-14) = -6.
 
-このアラインメントは、4個の一致 (match)、1個の不一致 (mismatch)、
+このアラインメントは、4個の一致 (match)、0個の不一致 (mismatch)、
 長さ1の1個のギャップ (gap) が含まれているので、
-スコアは (4\*2)+(1\*-1)+(1\*-14) = -7 となる。  
+スコアは (4\*2)+(0\*-1)+(1\*-14) = -6 となる。  
 【注意】gapOpening = 10, gapExtension = 4 は、
 ギャップの最初の位置は (-10-4=)-14 のスコアが割り当てられ、
 ギャップの後続の位置は -4 のスコアが与えられることを意味する。
 
 ```
-#dotPlot(s2c("GAATTC"), s2c("GATTA"))
+#dotPlot(s2c("TGGCA"), s2c("TGCA"))
 ```
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
