@@ -792,7 +792,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 ----------
 
 ## [Pairwise Sequence Alignment](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html)
-**[2つの配列間でのアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
+**[2本の配列間でのアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#ペアワイズアラインメント)**
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
 
@@ -839,7 +839,7 @@ chars1 # Display the contents of the vector of chars
 ```
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
-**ドットプロットで2つの配列を比較**
+**ドットプロットで2本の配列を比較**
 
 タンパク質のアミノ酸配列や核酸の塩基配列の
 [相同性](https://ja.wikipedia.org/wiki/相同)
@@ -879,14 +879,14 @@ dotPlot(chars1, chars2)
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
-**2つのDNA配列間のグローバル・アラインメント**
+**2本のDNA配列間の大域アラインメント**
 
-[**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
+[**大域アラインメントと局所アラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#グローバルアラインメントとローカルアラインメント)
 [*global* alignment and *local* alignment](https://towardsdatascience.com/pairwise-sequence-alignment-using-biopython-d1a9d0ba861f)
 
-![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
+![https://www.researchgate.net/figure/Global-and-local-alignments-of-a-pair-of-DNA-sequences_fig2_224580735](https://www.researchgate.net/profile/Nicola-Conci/publication/224580735/figure/fig2/AS:667774481346569@1536221251343/Global-and-local-alignments-of-a-pair-of-DNA-sequences.png)
 
-【例題】DNA配列 ("TGGCA"と"TGCA") 間の最適なグローバルアラインメントを見つける。
+【例題】DNA配列 ("TGGCA"と"TGCA") 間の最適な大域アラインメントを見つける。
 
 例えば、塩基の一致 (match) に+2のスコア、不一致 (mismatch) に-1のペナルティ、ギャップ (gap) に-2のペナルティを与える。
 以下のアラインメントのスコアは？
@@ -894,7 +894,7 @@ dotPlot(chars1, chars2)
 ```
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
-# the score for the following alignment is 2 + 2 + (-1) + (-1) + (-2) = 0:
+# The score for the following alignment is 2 + 2 + (-1) + (-1) + (-2) = 0:
 TGGCA
 TGCA-
 
@@ -928,7 +928,7 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
-`pairwiseAlignment()`関数で、DNA配列 ("TGGCA"と"TGCA") 間の最適なグローバルアラインメントを見つける:  
+`pairwiseAlignment()`関数で、DNA配列 ("TGGCA"と"TGCA") 間の最適な大域アラインメントを見つける:  
 ```
 # print out the optimal global alignment for the two sequences and its score:
 P1NT <- "TGGCA"
@@ -956,7 +956,7 @@ so its score is (4\*2)+(0\*-1)+(1\*-14) = -6.
 ```
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
-**2つのタンパク質配列間のグローバル・アラインメント**
+**2本のタンパク質配列間の大域アラインメント**
 
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
 BLOSUM62 is the default matrix for protein BLAST.
@@ -970,7 +970,7 @@ data(BLOSUM50) # load the BLOSUM50 matrix
 BLOSUM50 # Print out the data
 ```
 
-タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアラインメントを見つける:  
+タンパク質配列 ("PAWHEAE"と"HEAGAWGHEE") 間の最適な大域アラインメントを見つける:  
 ```
 # find the optimal global alignment between two protein sequences using the BLOSUM62 matrix:
 data(BLOSUM50)
@@ -1018,7 +1018,7 @@ AlignGlobal # Print out the optimal global alignment and its score
 ```
 
 ### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
-**2つの配列間のアラインメントの表示と出力**
+**2本の配列間のアラインメントの表示と出力**
 ```
 # print out the alignment
 writePairwiseAlignments(AlignGlobal)
@@ -1031,7 +1031,7 @@ writePairwiseAlignments(AlignGlobal, file="AlignGlobal.txt")
 ```
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
-**2つのタンパク質配列間のローカル・アラインメント**
+**2本のタンパク質配列間の局所アラインメント**
 ```
 # find the best local alignment between the two protein sequences
 AlignLocal <- pairwiseAlignment(STRING1, STRING2, substitutionMatrix = BLOSUM50, 
@@ -1043,7 +1043,7 @@ writePairwiseAlignments(AlignLocal)
 We see that the optimal local alignment is quite similar to the optimal global alignment in this case, except that it excludes a short region of poorly aligned sequence at the start and at the ends of the two proteins.
 
 ### [Calculating the statistical significance of a pairwise global alignment](https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
-**ペアワイズグローバルアラインメントの統計的有意性の計算**
+**ペアワイズ大域アラインメントの統計的有意性の計算**
 
 タンパク質配列の多項式モデル
 multinomial model for protein sequences
