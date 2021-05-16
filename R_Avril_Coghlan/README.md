@@ -886,7 +886,7 @@ dotPlot(chars1, chars2)
 
 ![https://www.researchgate.net/figure/Global-and-local-alignments-of-a-pair-of-DNA-sequences_fig2_224580735](https://www.researchgate.net/profile/Nicola-Conci/publication/224580735/figure/fig2/AS:667774481346569@1536221251343/Global-and-local-alignments-of-a-pair-of-DNA-sequences.png)
 
-【例題】DNA配列 ("TGGCA"と"TGCA") 間の最適な大域アラインメントを見つける。
+【例題】DNA配列 ("ATTGC"と"ATGC") 間の最適な大域アラインメントを見つける。
 
 例えば、塩基の一致 (match) に+2のスコア、不一致 (mismatch) に-1のペナルティ、ギャップ (gap) に-2のペナルティを与える。
 以下のアラインメントのスコアは？
@@ -895,12 +895,12 @@ dotPlot(chars1, chars2)
 # give a score of +2 to a match and a penalty of -1 to a mismatch, and a penalty of -2 to a gap.
 
 # The score for the following alignment is 2 + 2 + (-1) + (-1) + (-2) = 0:
-TGGCA
-TGCA-
+ATTGC
+ATGC-
 
 # What is the score for the following alignment?
-TGGCA
-TG-CA
+ATTGC
+AT-GC
 ```
 
 *scoring matrix (substitution matrix)*
@@ -928,11 +928,11 @@ Instead of assigning the same penalty (eg. -8) to every gap position, it is comm
 
 The reason for doing this is that it is likely that adjacent gap positions were created by the same insertion or deletion event, rather than by several independent insertion or deletion events. 
 
-`pairwiseAlignment()`関数で、DNA配列 ("TGGCA"と"TGCA") 間の最適な大域アラインメントを見つける:  
+`pairwiseAlignment()`関数で、DNA配列 ("ATTGC"と"ATGC") 間の最適な大域アラインメントを見つける:  
 ```
 # print out the optimal global alignment for the two sequences and its score:
-P1NT <- "TGGCA"
-S1NT <- "TGCA"
+P1NT <- "ATTGC"
+S1NT <- "ATGC"
 AlignGlobalNT <- pairwiseAlignment(P1NT, S1NT, substitutionMatrix = sigma, 
                   gapOpening = 10, gapExtension = 4, scoreOnly = FALSE)
 AlignGlobalNT # Print out the optimal alignment and its score
@@ -952,7 +952,7 @@ so its score is (4\*2)+(0\*-1)+(1\*-14) = -6.
 ギャップの後続の位置は -4 のスコアが与えられることを意味する。
 
 ```
-#dotPlot(s2c("TGGCA"), s2c("TGCA"))
+#dotPlot(s2c("ATTGC"), s2c("ATGC"))
 ```
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
