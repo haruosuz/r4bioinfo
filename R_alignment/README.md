@@ -8,13 +8,14 @@ Last Update: 2021-04-14
 - r4bioinfo/R_DECIPHER
 - [unclassified](#unclassified)
 - [msa](#msa)
-- [BALCONY](#BALCONY)
 - [ggmsa](#ggmsa)
+- [alignfigR](#alignfigr)
 - [ggseqlogo](#ggseqlogo)
 - [](#)
-- [AlignStat](#AlignStat) removed
-- [msaR](#msaR) x
-- [seqLogo](#seqLogo) x
+- [BALCONY](#BALCONY) Vignettes not available
+- [AlignStat](#AlignStat) removed from the CRAN repository
+- [seqLogo](#seqLogo) only 'DNA' and 'RNA' is supported.
+- [msaR](#msaR) relatively thin wrapper
 
 ----------
 ## unclassified
@@ -34,6 +35,25 @@ on Jun 29, 2017
 https://github.com/mhahsler/rMSA
 mhahsler/rMSA: Interface to Popular Multiple Sequence Alignment Tools - R-package
 Seamlessly interfaces Multiple Sequence Alignment software packages including ClustalW, MAFFT, MUSCLE and Kalign (downloaded separately) with the Bioconductor infrastructure. A short guide with examples can be found here.
+
+----------
+## pafr
+
+https://cran.r-project.org/package=pafr
+pafr: Read, Manipulate and Visualize 'Pairwise mApping Format' Data
+Provides functions to read, process and visualize pairwise sequence alignments in the 'PAF' format used by 'minimap2' and other whole-genome aligners. 'minimap2' is described by Li H. (2018) <doi:10.1093/bioinformatics/bty191>.
+
+Vignettes:	pafr_tutorial
+https://cran.r-project.org/web/packages/pafr/vignettes/Introduction_to_pafr.html
+pafr: reading, manipulating and plotting genome alignments in the PAF format
+David Winter
+2020-12-07
+
+
+12:35 PM · Apr 23, 2021
+https://twitter.com/PhilippBayer/status/1385437237555261442
+Cool R-package find of he day: pafr! read, manipulate, visualise genome alignments in PAF
+
 
 ----------
 ## msa
@@ -62,6 +82,25 @@ https://bioscryptome.t-ohashi.info/r/msa/
 多重配列アライメントを行うためのパッケージ
 msaConvert
 msaパッケージで作製されたMsaMultipleAlignmentクラスのオブジェクトを、他のパッケージで使用できるクラスのオブジェクトに変換する。変換できるクラスは以下の通り。
+
+----------
+## alignfigR
+
+https://cran.r-project.org/package=alignfigR
+alignfigR: Visualizing Multiple Sequence Alignments with 'ggplot2'
+Create extensible figures of multiple sequence alignments, using the 'ggplot2' plotting engine. 'alignfigr' will create a baseline figure of a multiple sequence alignment which can be fully customized to the user's liking with standard 'ggplot2' features.
+```
+Published:	2018-07-05
+Vignettes:	Introduction to alignfigR
+```
+https://cran.r-project.org/web/packages/alignfigR/vignettes/my-vignette.html
+Introduction to alignfigR
+Stephanie J. Spielman
+2018-07-03
+
+https://rdrr.io/cran/alignfigR/man/extract_subalign.html
+extract_subalign: Extract subset of sequence alignment
+
 
 ----------
 ## ggseqlogo
@@ -98,7 +137,8 @@ ggmsa: Plot multiple sequence alignment using ggplot2
 ----------
 ## BALCONY
 
-チュートリアル（vignette）が無い。
+チュートリアルが無い。
+Vignettes not available
 
 https://cran.r-project.org/web/packages/BALCONY/readme/README.html
 
@@ -170,6 +210,13 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5081975/
 
 DNA配列アラインメント用。アミノ酸配列アラインメントには非対応。
 
+```
+library(seqLogo)
+?makePWM
+#' alphabet	
+#' character. The alphabet making up the sequence. Currently, only 'DNA' and 'RNA' is supported.
+```
+
 https://bioconductor.org/packages/seqLogo/
 Bioconductor - seqLogo
 
@@ -192,8 +239,10 @@ position weight matrix (PWM)
 https://cran.r-project.org/package=msaR
 msaR: Multiple Sequence Alignment for R Shiny
 Visualises multiple sequence alignments dynamically within the Shiny web application framework.
+```
 Published:	2021-01-05
-
+Vignettes:	Using msaR
+```
 https://cran.r-project.org/web/packages/msaR/vignettes/msaR.html
 Using msaR
 Zach Charlop-Powers
