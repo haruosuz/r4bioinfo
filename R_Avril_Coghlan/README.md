@@ -886,8 +886,6 @@ dotPlot(chars1, chars2)
 
 ![https://www.researchgate.net/figure/Global-and-local-alignments-of-a-pair-of-DNA-sequences_fig2_224580735](https://www.researchgate.net/profile/Nicola-Conci/publication/224580735/figure/fig2/AS:667774481346569@1536221251343/Global-and-local-alignments-of-a-pair-of-DNA-sequences.png)
 
-![https://bi.biopapyrus.jp/seq/alignment/needleman%E2%80%93wunsch.html](https://bi.biopapyrus.jp/media/nw-001.png)
-
 【例題】DNA配列 ("ATTGC"と"ATGC") 間の最適な大域アラインメントを見つける。
 
 例えば、塩基の一致 (match) に+2のスコア、不一致 (mismatch) に-1のペナルティ、ギャップ (gap) に-2のペナルティを与える。
@@ -904,6 +902,8 @@ ATGC-
 ATTGC
 AT-GC
 ```
+
+![https://bi.biopapyrus.jp/seq/alignment/needleman%E2%80%93wunsch.html](https://bi.biopapyrus.jp/media/nw-001.png)
 
 *scoring matrix (substitution matrix)*
 [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
