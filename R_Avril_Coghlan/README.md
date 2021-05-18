@@ -965,7 +965,8 @@ BLOSUM62 is the default matrix for protein BLAST.
 BLOSUM80 is used for more closely related alignments, and 
 BLOSUM45 is used for more distantly related alignments.
 
-- https://www.ddbj.nig.ac.jp/ddbj/code-e.html#amino
+- [Codes Used in Sequence Description | Amino Acid](https://www.ddbj.nig.ac.jp/ddbj/code-e.html#amino)
+
 ```
 # The physico-chemical classes for amino acids are given in 
 #SEQINR.UTIL$AA.PROPERTY
@@ -1036,6 +1037,8 @@ writePairwiseAlignments(AlignGlobal, file="AlignGlobal.txt")
 #getwd()
 #list.files()
 ```
+
+![https://bi.biopapyrus.jp/seq/alignment/needleman%E2%80%93wunsch.html](https://bi.biopapyrus.jp/media/nw-005.png)
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
 **2本のタンパク質配列間の局所アラインメント**
