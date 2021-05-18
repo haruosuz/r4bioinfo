@@ -916,12 +916,7 @@ AT-GC
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 	sigma # Print out the matrix
 
-![http://csbio.unc.edu/mcmillan/Comp555S16/Lecture14.html](http://csbio.unc.edu/mcmillan/Comp555S16/Media/AffineGapPenalties.png)
-
-
 <img alt="http://csbio.unc.edu/mcmillan/Comp555S16/Lecture14.html" src="http://csbio.unc.edu/mcmillan/Comp555S16/Media/AffineGapPenalties.png" width=50%>
-
-
 
 - [Gap penalty](https://en.wikipedia.org/wiki/Gap_penalty)
 - [ClustalW ヘルプ | DDBJ](https://www.ddbj.nig.ac.jp/clustalw-help.html)
