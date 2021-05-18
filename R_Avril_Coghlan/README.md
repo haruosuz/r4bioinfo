@@ -942,16 +942,16 @@ AlignGlobalNT # Print out the optimal alignment and its score
 
 Note that we set “gapOpening” to be 10 and “gapExtension” to be 4, 
 which means that the first position of a gap is assigned a score of (-10-4=)-14, 
-and every subsequent position in a gap is given a score of -4. 
+and every subsequent position in a gap is given a score of -4.  
 Here the alignment contains four matches, no mismatch, and one gap of length 1, 
 so its score is (4\*2)+(0\*-1)+(1\*-14) = -6.
 
-このアラインメントは、4個の一致 (match)、0個の不一致 (mismatch)、
-長さ1の1個のギャップ (gap) が含まれているので、
-スコアは (4\*2)+(0\*-1)+(1\*-14) = -6 となる。  
 【注意】gapOpening = 10, gapExtension = 4 は、
 ギャップの最初の位置は (-10-4=)-14 のスコアが割り当てられ、
-ギャップの後続の位置は -4 のスコアが与えられることを意味する。
+ギャップの後続の位置は -4 のスコアが与えられることを意味する。  
+このアラインメントは、4個の一致 (match)、0個の不一致 (mismatch)、
+長さ1の1個のギャップ (gap) が含まれているので、
+スコアは (4\*2)+(0\*-1)+(1\*-14) = -6 となる。
 
 ```
 #dotPlot(s2c("ATTGC"), s2c("ATGC"))
