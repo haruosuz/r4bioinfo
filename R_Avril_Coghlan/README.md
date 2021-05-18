@@ -1146,23 +1146,23 @@ library(seqinr)
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#links-and-further-reading)
 
-#' - 2021.03.30 [配列解析 | 塩基配列解析とアミノ酸配列解析](https://bi.biopapyrus.jp/seq/)
-#'   - [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](https://bi.biopapyrus.jp/seq/alignment/)
-#'     - [グローバルアライメント | グローバルアライメントを求める Needleman–Wunsch アルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
-#'     - [ローカルアラインメント | ローカルアラインメントを求める Smith-Waterman アルゴリズム](https://bi.biopapyrus.jp/seq/alignment/smith-waterman.html)
-#' - 2021 榊原康文 [バイオインフォマティクス (第3回) | 配列解析（ペアワイズアライメント）](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
-#' - 2018/11/19 藤博幸・編 [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
-#' pp. 11-13: 1.3 配列アラインメント | 1.3.1 ペアワイズアラインメント
-#' - 2018-09-04 [PAM vs BLOSUM score matrices](https://www.cs.rice.edu/~ogilvie/comp571/2018/09/04/pam-vs-blosum.html)
-#' - 2015/08/31 日本バイオインフォマティクス学会【編】[バイオインフォマティクス入門](https://www.keio-up.co.jp/np/detail_contents.do?goods_id=3064)  
-#' 第3章　配列解析
-#'   - 3-2　配列アラインメント | 動的計画法による配列アラインメントの計算
-#'   - 3-3　スコア行列 | アミノ酸の類似性スコアとその統計的評価
-#'   - 3-4　高速な類似配列検索 | 高速に配列を比較するための計算技術
-#'   - 3-5　ホモロジー検索 | 高速にホモロジー検索するためのプログラム
-#' - 2009.9.12 川端 猛 [バイオインフォマティクス基礎講座 | 配列解析](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
-#' - 2008-08-07 Guangchuang Yu [sequence alignment program written in R](https://guangchuangyu.github.io/2008/08/sequence-alignment-program-written-in-r/)
-#' Sequence alignment by dynamic programming.
+- 2021.03.30 [配列解析 | 塩基配列解析とアミノ酸配列解析](https://bi.biopapyrus.jp/seq/)
+  - [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](https://bi.biopapyrus.jp/seq/alignment/)
+    - [グローバルアライメント | グローバルアライメントを求める Needleman–Wunsch アルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
+    - [ローカルアラインメント | ローカルアラインメントを求める Smith-Waterman アルゴリズム](https://bi.biopapyrus.jp/seq/alignment/smith-waterman.html)
+- 2021 榊原康文 [バイオインフォマティクス (第3回) | 配列解析（ペアワイズアライメント）](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
+- 2018/11/19 藤博幸・編 [よくわかるバイオインフォマティクス入門](https://www.kspub.co.jp/book/detail/5138212.html)
+pp. 11-13: 1.3 配列アラインメント | 1.3.1 ペアワイズアラインメント
+- 2018-09-04 [PAM vs BLOSUM score matrices](https://www.cs.rice.edu/~ogilvie/comp571/2018/09/04/pam-vs-blosum.html)
+- 2015/08/31 日本バイオインフォマティクス学会【編】[バイオインフォマティクス入門](https://www.keio-up.co.jp/np/detail_contents.do?goods_id=3064)  
+第3章　配列解析
+  - 3-2　配列アラインメント | 動的計画法による配列アラインメントの計算
+  - 3-3　スコア行列 | アミノ酸の類似性スコアとその統計的評価
+  - 3-4　高速な類似配列検索 | 高速に配列を比較するための計算技術
+  - 3-5　ホモロジー検索 | 高速にホモロジー検索するためのプログラム
+- 2009.9.12 川端 猛 [バイオインフォマティクス基礎講座 | 配列解析](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
+- 2008-08-07 Guangchuang Yu [sequence alignment program written in R](https://guangchuangyu.github.io/2008/08/sequence-alignment-program-written-in-r/)
+Sequence alignment by dynamic programming.
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
 **演習**
