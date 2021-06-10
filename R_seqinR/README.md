@@ -1,14 +1,12 @@
-Last Update: 2021-04-11
+Last Update: 2021-06
 
-----------
 # SeqinR
-生物配列の検索と解析
 
 https://cran.r-project.org/package=seqinr
 seqinr: Biological Sequences Retrieval and Analysis
 Exploratory data analysis and data visualization for biological sequence (DNA and protein) data. Seqinr includes utilities for sequence data management under the ACNUC system described in Gouy, M. et al. (1984) Nucleic Acids Res. 12:121-127 <doi:10.1093/nar/12.1Part1.121>.
 
-https://seqinr.r-forge.r-project.org/
+http://seqinr.r-forge.r-project.org/
 Welcome to SeqinR: Biological Sequences in R project!
 
 ## manual
