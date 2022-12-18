@@ -5,12 +5,12 @@ Last Update: 2022-12-11
 
 **Table of Contents**
 - [unclassified](#unclassified)
-- [gRodon](#grodon)
 - [seqinr](#seqinr)
 - [tAI](#tai)
 - [tRNA](#trna)
-- [coRdon](#cordon)
 - [sscu](#sscu)
+- [gRodon](#grodon)
+- [coRdon](#cordon)
 - [vhica](#vhica)
 - [vhcub](#vhcub)
 - [SADEG](#sadeg)
@@ -36,6 +36,59 @@ http://rpubs.com/dbg/3351
 Step 10 - Looking at amino acid and codon usage
 
 ----------
+## seqinr
+
+https://cran.r-project.org/package=seqinr
+
+https://seqinr.r-forge.r-project.org/
+
+https://search.r-project.org/CRAN/refmans/seqinr/html/00Index.html
+cai	Codon Adaptation Index
+https://search.r-project.org/CRAN/refmans/seqinr/html/cai.html
+```
+  cai(seq, w, numcode = 1, zero.threshold = 0.0001, zero.to = 0.01)
+```
+
+----------
+## tAI
+The tRNA adaptation index
+
+Jun 6
+https://github.com/mariodosreis/tai
+
+https://github.com/haruosuz/codon/blob/master/README.md#tai
+
+----------
+## tRNA
+
+https://www.bioconductor.org/packages/tRNA/
+
+Ernst F (2022). tRNA: Analyzing tRNA sequences and structures. R package version 1.14.0.
+
+HTML	R Script	tRNA
+https://www.bioconductor.org/packages/release/bioc/vignettes/tRNA/inst/doc/tRNA.html
+Analyzing tRNA sequences and structures
+Felix G.M. Ernst
+2022-04-26
+
+----------
+## sscu
+https://www.bioconductor.org/packages/sscu/
+Sun Y (2021). sscu: Strength of Selected Codon Usage. R package version 2.22.0.
+
+the strength of selected codon usage bias (sscu, also named as s_index) based on Paul Sharp's method.
+
+22 Aug 2018
+https://arxiv.org/abs/1808.07259
+[1808.07259] SSCU: an R/Bioconductor package for analyzing selective profile in synonymous codon usage
+https://arxiv.org/pdf/1808.07259.pdf
+
+http://www.imsbio.co.jp/RGM-files/R_BC/download/sscu/vignettes/sscu.html
+sscu user manual (0.99.3)
+Yu Sun
+2016-03-10
+
+----------
 ## gRodon
 
 https://github.com/jlw-ecoevo/gRodon2
@@ -59,43 +112,6 @@ https://www.pnas.org/content/118/12/e2016810118.long
 https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8000110/
 MATERIALS AND METHODS
 All scripts used to generate figures and analysis, as well as predicted growth rates for various genomic datasets and the full EGGO database, are available at https://github.com/jlw-ecoevo/eggo. The gRodon package, including documentation and a vignette, can be downloaded at https://github.com/jlw-ecoevo/gRodon.
-
-
-----------
-## seqinr
-
-https://cran.r-project.org/package=seqinr
-
-https://seqinr.r-forge.r-project.org/
-
-https://search.r-project.org/CRAN/refmans/seqinr/html/00Index.html
-cai	Codon Adaptation Index
-https://search.r-project.org/CRAN/refmans/seqinr/html/cai.html
-```
-  cai(seq, w, numcode = 1, zero.threshold = 0.0001, zero.to = 0.01)
-```
-
-----------
-## tRNA
-
-https://www.bioconductor.org/packages/tRNA/
-
-Ernst F (2022). tRNA: Analyzing tRNA sequences and structures. R package version 1.14.0.
-
-HTML	R Script	tRNA
-https://www.bioconductor.org/packages/release/bioc/vignettes/tRNA/inst/doc/tRNA.html
-Analyzing tRNA sequences and structures
-Felix G.M. Ernst
-2022-04-26
-
-----------
-## tAI
-The tRNA adaptation index
-
-Jun 6
-https://github.com/mariodosreis/tai
-
-https://github.com/haruosuz/codon/blob/master/README.md#tai
 
 ----------
 ## coRdon
@@ -138,23 +154,6 @@ https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC3799439/
 https://phylogenomics.blogspot.jp/2013/08/great-use-of-metagenomic-data-community.html
 August 09, 2013
 Great use of metagenomic data: community wide adaptation signatures
-
-----------
-## sscu
-https://www.bioconductor.org/packages/sscu/
-Sun Y (2021). sscu: Strength of Selected Codon Usage. R package version 2.22.0.
-
-the strength of selected codon usage bias (sscu, also named as s_index) based on Paul Sharp's method.
-
-22 Aug 2018
-https://arxiv.org/abs/1808.07259
-[1808.07259] SSCU: an R/Bioconductor package for analyzing selective profile in synonymous codon usage
-https://arxiv.org/pdf/1808.07259.pdf
-
-http://www.imsbio.co.jp/RGM-files/R_BC/download/sscu/vignettes/sscu.html
-sscu user manual (0.99.3)
-Yu Sun
-2016-03-10
 
 ----------
 ## vhica
