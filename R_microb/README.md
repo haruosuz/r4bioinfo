@@ -54,6 +54,7 @@ Checked
 - [Washburne](#washburne) Alex_Washburne
   - [phylofactor](#phylofactor)
 - [metamicrobiomeR](#metamicrobiomer) Meta-Analysis
+- [AMR](#amr)
 
 https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan
 
@@ -64,6 +65,44 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan
 
 https://microsud.github.io/Tools-Microbiome-Analysis/
 List of R tools for microbiome data analysis | A list of R environment based tools for microbiome data exploration, statistical analysis and visualization
+
+
+----------
+### amr
+
+https://cran.r-project.org/package=AMR
+AMR: Antimicrobial Resistance Data Analysis
+Functions to simplify and standardise antimicrobial resistance (AMR) data analysis and to work with microbial and antimicrobial properties by using evidence-based methods, as described in <doi:10.18637/jss.v104.i03>.
+```
+Version:	1.8.2
+
+Published:	2022-09-29
+
+Vignettes:	Welcome to the 'AMR' package
+```
+https://cran.r-project.org/web/packages/AMR/vignettes/welcome_to_AMR.html
+
+
+https://msberends.github.io/AMR/
+Antimicrobial Resistance Data Analysis • AMR (for R)
+
+This work was published in the Journal of Statistical Software (Volume 104(3); DOI 10.18637/jss.v104.i03) and formed the basis of two PhD theses (DOI 10.33612/diss.177417131 and DOI 10.33612/diss.192486375).
+
+After installing this package, R knows ~52,000 distinct microbial species (updated December 2022) and all
+
+
+https://www.jstatsoft.org/article/view/v104i03
+AMR: An R Package for Working with Antimicrobial Resistance Data | Journal of Statistical Software
+
+How to Cite
+Berends, M. S., Luz, C. F., Friedrich, A. W., Sinha, B. N. M., Albers, C. J., & Glasner, C. (2022). AMR: An R Package for Working with Antimicrobial Resistance Data. Journal of Statistical Software, 104(1), 1–31. https://doi.org/10.18637/jss.v104.i03
+
+
+on Oct 1, 2018
+https://github.com/ceefluz/AMR
+AMR
+An R package to simplify the analysis and prediction of Antimicrobial Resistance (AMR) and work with antibiotic properties by using evidence-based methods.
+
 
 ----------
 ### metamicrobiomeR
