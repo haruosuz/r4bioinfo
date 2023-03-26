@@ -115,11 +115,19 @@ How to Cite
 Berends, M. S., Luz, C. F., Friedrich, A. W., Sinha, B. N. M., Albers, C. J., & Glasner, C. (2022). AMR: An R Package for Working with Antimicrobial Resistance Data. Journal of Statistical Software, 104(1), 1–31. https://doi.org/10.18637/jss.v104.i03
 
 
-on Oct 1, 2018
+Oct 1, 2018
 https://github.com/ceefluz/AMR
 AMR
 An R package to simplify the analysis and prediction of Antimicrobial Resistance (AMR) and work with antibiotic properties by using evidence-based methods.
 
+https://github.com/ceefluz/AMR#itis
+This package contains the complete microbial taxonomic data (with all seven taxonomic ranks - from subkingdom to subspecies) from the publicly available Integrated Taxonomic Information System (ITIS, https://www.itis.gov).
+
+December 15, 2022.
+https://www.biorxiv.org/content/10.1101/2022.12.15.520556v1.full
+Restriction-modification systems have shaped the evolution and distribution of plasmids across bacteria | bioRxiv
+
+We then used the AMR package in R to generate taxonomic classifications for all species. For a given species, we can therefore define the set of motifs that are targeted by R-M systems observed within-species, within-genus, within-family etc. up to the order of phylum. This ‘taxonomic dictionary’ allows us to explore how the distribution of R-M systems is linked to avoidance of their associated targets in bacterial genomes and plasmids.
 
 ----------
 ### metamicrobiomeR
