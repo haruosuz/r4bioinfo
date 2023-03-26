@@ -81,15 +81,30 @@ Published:	2022-09-29
 Vignettes:	Welcome to the 'AMR' package
 ```
 https://cran.r-project.org/web/packages/AMR/vignettes/welcome_to_AMR.html
+Reference for the taxonomy of microorganisms, since the package contains all microbial (sub)species from the List of Prokaryotic names with Standing in Nomenclature (LPSN) and the Global Biodiversity Information Facility (GBIF)
 
 
 https://msberends.github.io/AMR/
 Antimicrobial Resistance Data Analysis • AMR (for R)
 
+https://msberends.github.io/AMR/#introduction
 This work was published in the Journal of Statistical Software (Volume 104(3); DOI 10.18637/jss.v104.i03) and formed the basis of two PhD theses (DOI 10.33612/diss.177417131 and DOI 10.33612/diss.192486375).
 
 After installing this package, R knows ~52,000 distinct microbial species (updated December 2022) and all
 
+https://msberends.github.io/AMR/#what-else-can-you-do-with-this-package
+Reference for the taxonomy of microorganisms, since the package contains all microbial (sub)species from the List of Prokaryotic names with Standing in Nomenclature (LPSN) and the Global Biodiversity Information Facility (GBIF) (manual)
+https://msberends.github.io/AMR/reference/mo_property.html
+Get Properties of a Microorganism — mo_property • AMR (for R)
+https://msberends.github.io/AMR/reference/mo_property.html#ref-examples
+```
+# get a list with the complete taxonomy (from kingdom to subspecies)
+mo_taxonomy("Klebsiella pneumoniae")
+
+# get a list with the taxonomy, the authors, Gram-stain,
+# SNOMED codes, and URL to the online database
+mo_info("Klebsiella pneumoniae")
+```
 
 https://www.jstatsoft.org/article/view/v104i03
 AMR: An R Package for Working with Antimicrobial Resistance Data | Journal of Statistical Software
