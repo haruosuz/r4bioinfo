@@ -94,8 +94,10 @@ After installing this package, R knows ~52,000 distinct microbial species (updat
 
 https://msberends.github.io/AMR/#what-else-can-you-do-with-this-package
 Reference for the taxonomy of microorganisms, since the package contains all microbial (sub)species from the List of Prokaryotic names with Standing in Nomenclature (LPSN) and the Global Biodiversity Information Facility (GBIF) (manual)
+
 https://msberends.github.io/AMR/reference/mo_property.html
 Get Properties of a Microorganism — mo_property • AMR (for R)
+
 https://msberends.github.io/AMR/reference/mo_property.html#ref-examples
 ```
 # get a list with the complete taxonomy (from kingdom to subspecies)
