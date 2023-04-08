@@ -73,7 +73,11 @@ Quick Introduction to R Studio Cloud
 ----------
 ## unclassified
 
-https://twitter.com/search?q=RStudio%20Cloud%20lang%3Aja%20-%22mana_bi_bot%22&src=typed_query&f=live
+https://twitter.com/search?q=RStudio%20Cloud%20lang%3Aja&src=typed_query&f=live
+
+https://www.yodosha.co.jp/yodobook/book/9784758104067/
+実験医学増刊：バイオDBとウェブツール　ラボで使える最新70選〜知る・学ぶ・使う、バイオDX時代の羅針盤 - 羊土社
+6．RStudio Cloud ─ オンラインでデータサイエンスを行い，共有し，教え，学ぶ【鈴木治夫】
 
 https://www.kitp.org/class/doku.php?id=r:rstudiocloud
 r/rstudiocloud.txt · 最終更新: 2022/04/14 16:19 by yuki
