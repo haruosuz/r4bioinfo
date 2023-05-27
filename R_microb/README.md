@@ -40,7 +40,6 @@ Checked
 - [unclassified](#unclassified)
 - [](#)
 - [tidyMicro](#tidyMicro)
-- [MicrobiomeExplorer](#MicrobiomeExplorer)
 - [microeco](#microeco)
 - [](#)
 - [EasyMicroPlot](#EasyMicroPlot)
@@ -54,6 +53,7 @@ Checked
 - [Washburne](#washburne) Alex_Washburne
   - [phylofactor](#phylofactor)
 - [metamicrobiomeR](#metamicrobiomer) Meta-Analysis
+- [MicrobiomeExplorer](#MicrobiomeExplorer)
 - [AMR](#amr)
 
 https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan
@@ -68,7 +68,7 @@ List of R tools for microbiome data analysis | A list of R environment based too
 
 
 ----------
-### amr
+### AMR
 
 https://cran.r-project.org/package=AMR
 AMR: Antimicrobial Resistance Data Analysis
@@ -128,6 +128,25 @@ https://www.biorxiv.org/content/10.1101/2022.12.15.520556v1.full
 Restriction-modification systems have shaped the evolution and distribution of plasmids across bacteria | bioRxiv
 
 We then used the AMR package in R to generate taxonomic classifications for all species. For a given species, we can therefore define the set of motifs that are targeted by R-M systems observed within-species, within-genus, within-family etc. up to the order of phylum. This ‘taxonomic dictionary’ allows us to explore how the distribution of R-M systems is linked to avoidance of their associated targets in bacterial genomes and plasmids.
+
+----------
+## MicrobiomeExplorer
+
+on Sep 2, 2022
+https://github.com/zoecastillo/microbiomeExplorer
+
+
+https://pubmed.ncbi.nlm.nih.gov/32960962/
+Bioinformatics
+. 2021 Jun 9;37(9):1317-1318. doi: 10.1093/bioinformatics/btaa838.
+MicrobiomeExplorer: an R package for the analysis and visualization of microbial communities
+Janina Reeder 1, Mo Huang 2 3, Joshua S Kaminker 1, Joseph N Paulson 3
+https://academic.oup.com/bioinformatics/article/37/9/1317/5909986
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8193707/
+
+11:30 PM · Jan 7, 2021
+https://twitter.com/strnr/status/1347188788817244162
+Stephen Turner on Twitter: "MicrobiomeExplorer : An R package for the analysis and visualization of microbial communities https://t.co/0VdPXqQplG https://t.co/Xvo8HNTso1 https://t.co/ieyE75g08c" / Twitter
 
 ----------
 ### metamicrobiomeR
@@ -393,19 +412,6 @@ tidyMicro : a pipeline for microbiome data analysis and visualization using the 
 Availability of data and materials
 The datasets generated and/or analyzed during the current study are available in the [data] repository, https://github.com/CharlieCarpenter/tidyMicro. The package and data are also available through the CRAN repository https://cran.r-project.org/web/packages/tidyMicro/index.html
 
-
-----------
-## MicrobiomeExplorer
-
-https://github.com/zoecastillo/microbiomeExplorer
-
-https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa838/5909986
-MicrobiomeExplorer: an R package for the analysis and visualization of microbial communities | Bioinformatics | Oxford Academic
-
-11:30 PM · Jan 7, 2021
-https://twitter.com/strnr/status/1347188788817244162
-Stephen Turner on Twitter: "MicrobiomeExplorer : An R package for the analysis and visualization of microbial communities https://t.co/0VdPXqQplG https://t.co/Xvo8HNTso1 https://t.co/ieyE75g08c" / Twitter
-
 ----------
 ## microeco
 
@@ -502,21 +508,33 @@ Phyloseq - Draft of Pediatric Surgery
 https://qiita.com/akari5/items/6753d3addc28f719a0c5
 phyloseqオブジェクトの作成 - Qiita
 
-
-
-
 ----------
 ## updates
 
 ## 2020
 
-### Kruchten_2020
+### 2020-09-10
+
 https://pubmed.ncbi.nlm.nih.gov/33013816/
 Front Microbiol
 . 2020 Sep 10;11:578600. doi: 10.3389/fmicb.2020.578600. eCollection 2020.
 A Curricular Bioinformatics Approach to Teaching Undergraduates to Analyze Metagenomic Datasets Using R
 Anne E Kruchten 1
+https://www.frontiersin.org/articles/10.3389/fmicb.2020.578600/full
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7511545/
+Supplementary Materials
+
+Data_Sheet_1.PDF (31K)
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7511545/bin/Data_Sheet_1.PDF
+
+Data_Sheet_2.PDF (156K)
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7511545/bin/Data_Sheet_2.PDF
+3. Video playlist for teaching R
+
+2019/01/29
+https://www.youtube.com/watch?v=orjLGFmx6l4&list=PLtL57Fdbwb_Chn-dNR0qBjH3esKS2MXY3&index=2
+How to install R and install R Studio. How to use R studio | R programming for beginners - YouTube
+
 
 ## 2019
 
@@ -528,7 +546,6 @@ Qiime2を使ったメタゲノム解析パイプライン
 ・phyloseq (version 1.26.1)
 ・qiime2R (version 0.99.11)
 ```
-
 
 https://www.ncbi.nlm.nih.gov/pubmed/31757201
 BMC Bioinformatics. 2019 Nov 22;20(Suppl 9):347. doi: 10.1186/s12859-019-2887-1.
