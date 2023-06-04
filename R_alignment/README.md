@@ -13,7 +13,7 @@ Last Update: 2023-06-04
 - [pafr](#pafr)
 - [](#)
 - [seqLogo](#seqLogo) only 'DNA' and 'RNA' is supported.
-- [msaR](#msaR) "thin wrapper" "seqlogo package is a better option"
+- [msaR](#msaR) "seqlogo package is a better option"
 - [BALCONY](#BALCONY) removed from the CRAN repository. Archived on 2023-03-02
 - [aaSEA](#aaSEA) removed from the CRAN repository. Archived on 2022-06-21
 - [alignfigR](#alignfigr) removed from the CRAN repository. Archived on 2022-04-27
@@ -172,14 +172,12 @@ position weight matrix (PWM)
 ----------
 ## msaR
 
-開発者が、msaRパッケージの代わりのツール（seqlogoパッケージ、alignmentviewer）を推奨。
-
 https://cran.r-project.org/package=msaR
 msaR: Multiple Sequence Alignment for R Shiny
 Visualises multiple sequence alignments dynamically within the Shiny web application framework.
 ```
 Published:	2021-09-22
-Published:	2021-01-05
+
 Vignettes:	Using msaR
 ```
 https://cran.r-project.org/web/packages/msaR/vignettes/msaR.html
@@ -187,33 +185,12 @@ Using msaR
 Zach Charlop-Powers
 2017-10-01
 
-https://twitter.com/zach_cp
-zach charlop-powers (@zach_cp) / Twitter
-
 https://github.com/zachcp/msaR/issues/10#issuecomment-734003530
-
-Thanks for your interest in this package. It is a relatively thin wrapper around the msa javascript library and as such does little more than pass along the correct arguments/data to the JS instantiation.
-本パッケージは、MSA JavaScriptライブラリの比較的薄いラッパーで、JSのインスタンスに正しい引数データを渡すだけのものです。
-
-I implemented the seqlogo option because that is what the javascript library accepts but any issues with the internals is more than I can support maintenance for. I can replicate your issues but I cannot solve the underlying JS. Considering that the JS library has also not been updated in 4 years, I think this might not be the way to go.
-seqlogoのオプションを実装したのは、javascriptライブラリが受け入れるものだったからですが、内部の問題は私がメンテナンスをサポートできる範囲を超えています。あなたの問題を再現することはできますが、根本的なJSを解決することはできません。JSライブラリも4年前から更新されていないことを考えると、これではいけないのではないかと思います。
-
+zachcp commented on Nov 26, 2020
 If you are looking for seqlogo features from R, perhaps the seqlogo package is a better option. An alternative JS library that seems to be under current development is available here.
-Rからseqlogoの機能を求めているのであれば、seqlogoパッケージの方が良いかもしれません。現在開発中と思われるJSライブラリの代替品は、こちらにあります。
 
-https://alignmentviewer.org/
-https://github.com/sanderlab/alignmentviewer
-
-
-https://github.com/wilzbach/msa
-This repository has been archived by the owner on May 23, 2022. It is now read-only.
-
-MSAViewer
-Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.
+開発者が、msaRパッケージの代わりのツール（seqlogoパッケージ、alignmentviewer）を推奨。
 
 ----------
-
-
-
 
 
