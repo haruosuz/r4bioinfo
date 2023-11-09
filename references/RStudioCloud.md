@@ -102,6 +102,17 @@ RStudio Cloud in the Classroom - Speaker Deck
 ----------
 ## Upload
 
+https://posit.cloud/learn/guide#data
+To upload data files, press the Upload button in the files area of your RStudio Project
+
+![https://posit.cloud/learn/guide#data](https://posit.cloud/images/guide/uploadRStudio.jpg)
+
+http://derekogle.com/NCGraphing/modules/Setup/R_RStudio_Cloud
+RStudio in the Cloud
+To upload a file (e.g., a CSV data file) from your computer, select the “Upload” button in the “Files” tab in the lower-right pane of RStudio. Then “Browse …” to where your file is located on your computer and select OK. 
+
+<img src="https://derekogle.com/NCGraphing/modules/zimgs/RStudioCloud_Data.JPG" alt="http://derekogle.com/NCGraphing/modules/Setup/R_RStudio_Cloud" width=50%>
+
 @purple_jp(株式会社インテック)
 投稿日 2019年06月20日
 更新日 2020年12月02日
@@ -111,13 +122,11 @@ RStudio Cloudの基本的な使い方 - Qiita
 ファイルのアップロード
 サーバ版と同じように右下のウィンドウの上にあるメニューのFile->Uploadを選び、ファイルを選択しアップロードするだけです。
 
-
-http://derekogle.com/NCGraphing/modules/Setup/R_RStudio_Cloud
-RStudio in the Cloud
-To upload a file (e.g., a CSV data file) from your computer, select the “Upload” button in the “Files” tab in the lower-right pane of RStudio. Then “Browse …” to where your file is located on your computer and select OK. 
-
 ----------
 ## Export
+
+https://posit.cloud/learn/guide#project-actions
+Export
 
 2020/05/19
 https://www.youtube.com/watch?v=l5-QbDeLbZc
