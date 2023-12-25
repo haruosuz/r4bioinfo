@@ -13,9 +13,26 @@ Last Update: 2023-10-02
 - [](#)
 - [katy](#katy) Katy Frederick-Hudson
 - [bioinformaticswithease2904](#bioinformaticswithease2904) Bioinformatics With Ease
-
+- [classroom_vipin](#classroom_vipin) Dr. Vipin's Classroom
 
 ----------
+## classroom_vipin
+
+https://www.youtube.com/@classroom_vipin
+Dr. Vipin's Classroom
+
+https://www.youtube.com/playlist?list=PLRbOsyrFi8C6p6txwl57Gjr5_ZBKzO-qh
+R for beginners and Biologists
+
+2022/04/26
+https://www.youtube.com/watch?v=NRGZb9fDEZw&list=PLRbOsyrFi8C6p6txwl57Gjr5_ZBKzO-qh&index=1
+R_1 - R for beginners/Biologists - Why R, Installing RStudio - 
+
+2022/08/14
+https://www.youtube.com/watch?v=6kTz11RytOQ&list=PLRbOsyrFi8C6p6txwl57Gjr5_ZBKzO-qh&index=21
+R_20_Level 2 - DNA Sequence analysis with seqinr - 
+In this video, I demonstrate the utility of seqinr library for analysis of multi fasta files. The basic functions in seqinr are explained in details.
+
 
 ----------
 ## bioinformaticswithease2904
