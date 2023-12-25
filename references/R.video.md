@@ -32,36 +32,44 @@ Liam Revell
 https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md
 
 2021/06/28
-https://www.youtube.com/watch?v=idfMedKUbDU
-A variable-rate quantitative trait evolution model using penalized-likelihood
 10:25
+https://www.youtube.com/watch?v=idfMedKUbDU
+A variable-rate quantitative trait evolution model using penalized-likelihood -
+Virtual Evolution Meeting 2021 presentation
 
 2021/03/13
+16:06
 https://www.youtube.com/watch?v=OgwOjeSXjTE
 My COVID19-Explorer talk - 
-16:06
 This is a short talk I gave @UMassBoston as part of a Scientific Communication graduate class I'm teaching in the Spring term of 2020. It describes work based, in part, on my COVID-19 Explorer project. 
 For more information, see this medRxiv pre-print: https://doi.org/10.1101/2021.02.15.21....
 
 2017/02/01
-https://www.youtube.com/watch?v=tWRan4P2OJU
-Demonstration of phytools::tree.drawer in R - YouTube
 2:34
-
+https://www.youtube.com/watch?v=tWRan4P2OJU
+Demonstration of phytools::tree.drawer in R
 
 2015/10/21
+1:15:54
 https://www.youtube.com/watch?v=VDQ-9fwtlqc
-Ancestral state reconstruction for discrete & continuous traits
+Ancestral state reconstruction for discrete & continuous traits -
+Tutorial: Evolutionary Quantitative Genetics 2015
+Liam Revell (Univ. of Massachusetts) gives a talk entitled "Ancestral state reconstruction for discrete & continuous traits" at the Evolutionary Quantitative Genetics 2015 Tutorial held at NIMBioS August 10–15, 2015. For more information, please follow the link: 
 http://www.nimbios.org/tutorials/TT_eqg2015
 
 2014/10/06
+31:43
 https://www.youtube.com/watch?v=oI43zsIWC2k
-Ancestral state reconstruction I: Continuous characters
+Ancestral state reconstruction I: Continuous characters -
+Liam Revell (Univ. of Massachusetts) gave a talk entitled "Ancestral state reconstruction I: Continuous characters" at the Evolutionary Quantitative Genetics Tutorial, held August 4-9, 2014, at NIMBioS. To read more about the workshop, click the following link: 
 http://www.nimbios.org/tutorials/TT_eqg
 
 2013/10/05
+59:37
 https://www.youtube.com/watch?v=_oEvbcmyVDQ
-Introduction to phytools and phangorn: Phylogenetics tools for R
+Introduction to phytools and phangorn: Phylogenetics tools for R -
+Liam Revell, UMass Boston and Klaus Schliep, University of Paris
+December 15, 2011
 
 ----------
 ## profbiot
