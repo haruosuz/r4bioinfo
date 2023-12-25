@@ -7,7 +7,6 @@ Last Update: 2023-10-02
 - [updates](#updates)
 - [danknights](#danknights) Dan Knights
 - [lukanegoita](#lukanegoita) R for Ecologists
-- [phytools](#phytools) Liam Revell
 - [togotv](#togotv)
 - [Riffomonas](#riffomonas)
 - [](#)
@@ -15,6 +14,7 @@ Last Update: 2023-10-02
 - [classroom_vipin](#classroom_vipin) Dr. Vipin's Classroom
 - [profbiot](#profbiot)
 - [katy](#katy) Katy Frederick-Hudson
+- [phytools](#phytools) Liam Revell
 
 ----------
 
@@ -22,6 +22,46 @@ https://twitter.com/copypasteusa/status/1465869796025585664
 DECIPHERは、R言語における配列解析ツールセット（配列の分類、プローブ・プライマーの設計、キメラ配列の発見、多重配列アラインメント、ab initio遺伝子予測）
 https://github.com/haruosuz/r4bioinfo/tree/master/R_DECIPHER
 http://www2.decipher.codes/Bioinformatics.html Video tutorials
+
+----------
+# phytools
+https://www.youtube.com/@phylogenetics1
+
+Liam Revell
+
+https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md
+
+2021/06/28
+https://www.youtube.com/watch?v=idfMedKUbDU
+A variable-rate quantitative trait evolution model using penalized-likelihood
+10:25
+
+2021/03/13
+https://www.youtube.com/watch?v=OgwOjeSXjTE
+My COVID19-Explorer talk - 
+16:06
+This is a short talk I gave @UMassBoston as part of a Scientific Communication graduate class I'm teaching in the Spring term of 2020. It describes work based, in part, on my COVID-19 Explorer project. 
+For more information, see this medRxiv pre-print: https://doi.org/10.1101/2021.02.15.21....
+
+2017/02/01
+https://www.youtube.com/watch?v=tWRan4P2OJU
+Demonstration of phytools::tree.drawer in R - YouTube
+2:34
+
+
+2015/10/21
+https://www.youtube.com/watch?v=VDQ-9fwtlqc
+Ancestral state reconstruction for discrete & continuous traits
+http://www.nimbios.org/tutorials/TT_eqg2015
+
+2014/10/06
+https://www.youtube.com/watch?v=oI43zsIWC2k
+Ancestral state reconstruction I: Continuous characters
+http://www.nimbios.org/tutorials/TT_eqg
+
+2013/10/05
+https://www.youtube.com/watch?v=_oEvbcmyVDQ
+Introduction to phytools and phangorn: Phylogenetics tools for R
 
 ----------
 ## profbiot
@@ -184,30 +224,6 @@ The Riffomonas YouTube Channel: An Educational Resource To Foster Reproducible R
 Patrick D Schloss 1
 https://journals.asm.org/doi/full/10.1128/mra.01310-22
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9933679/
-
-----------
-# phytools
-Liam Revell
-
-https://github.com/haruosuz/r4bioinfo/blob/master/R_phytools/README.md
-
-2021/06/28
-https://www.youtube.com/watch?v=idfMedKUbDU
-A variable-rate quantitative trait evolution model using penalized-likelihood
-
-2015/10/21
-https://www.youtube.com/watch?v=VDQ-9fwtlqc
-Ancestral state reconstruction for discrete & continuous traits
-http://www.nimbios.org/tutorials/TT_eqg2015
-
-2014/10/06
-https://www.youtube.com/watch?v=oI43zsIWC2k
-Ancestral state reconstruction I: Continuous characters
-http://www.nimbios.org/tutorials/TT_eqg
-
-2013/10/05
-https://www.youtube.com/watch?v=_oEvbcmyVDQ
-Introduction to phytools and phangorn: Phylogenetics tools for R
 
 ----------
 ## lukanegoita
