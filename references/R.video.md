@@ -11,9 +11,58 @@ Last Update: 2023-10-02
 - [togotv](#togotv)
 - [Riffomonas](#riffomonas)
 - [](#)
-- [katy](#katy) Katy Frederick-Hudson
 - [bioinformaticswithease2904](#bioinformaticswithease2904) Bioinformatics With Ease
 - [classroom_vipin](#classroom_vipin) Dr. Vipin's Classroom
+- [profbiot](#profbiot)
+- [katy](#katy) Katy Frederick-Hudson
+
+----------
+
+https://twitter.com/copypasteusa/status/1465869796025585664
+DECIPHERは、R言語における配列解析ツールセット（配列の分類、プローブ・プライマーの設計、キメラ配列の発見、多重配列アラインメント、ab initio遺伝子予測）
+https://github.com/haruosuz/r4bioinfo/tree/master/R_DECIPHER
+http://www2.decipher.codes/Bioinformatics.html Video tutorials
+
+----------
+## profbiot
+https://www.youtube.com/@profbiot
+
+2020/04/24
+https://www.youtube.com/watch?v=UFASMp5Lk_A
+BIO340_Unit4_Step4
+Step by step instructions to calculate distance from root to each leaf and analyze distribution from 2 countries.
+
+2020/04/22
+https://www.youtube.com/watch?v=uAf0DCGynTk
+1.6 Phylogenetic trees with R/ape
+
+https://www.youtube.com/playlist?list=PL4JYBQlidL7r0_Ab3a1hP6zzF1ElMxGw_
+
+2020/03/24
+https://www.youtube.com/watch?v=3-7yfdh2eDE
+1.8 Get data from Genbank using R
+
+----------
+## katy
+
+https://www.youtube.com/channel/UCPBgIuwombM_h2sk8LmZElg
+Katy Frederick-Hudson
+
+2019/07/25
+https://www.youtube.com/watch?v=w8CqtxoH-lI
+Making your own phylogeny. Part 2 of the Recording!!! Finishing out the Maximum likelihood Tree.
+This is the second part. 
+
+2019/07/24
+https://www.youtube.com/watch?v=wSwhRSLufyU
+Making your own dataset for R. PART 1
+This is only PART 1
+These video goes from NCBI/BLAST to MUSCLE to R.
+Finding sequences, aligning sequences, running a model test, and making a phylogeny. 
+
+2019/07/09
+https://www.youtube.com/watch?v=6SRS8vyvxcc
+Building a phylogeny with R
 
 ----------
 ## classroom_vipin
@@ -73,70 +122,14 @@ In this video I show you how to import UniProt sequences to a dataframe in R so 
 https://github.com/Proteomicslab57357/UniprotR
 
 ----------
-## profbiot
-https://www.youtube.com/@profbiot
-
-2020/04/24
-https://www.youtube.com/watch?v=UFASMp5Lk_A
-BIO340_Unit4_Step4
-Step by step instructions to calculate distance from root to each leaf and analyze distribution from 2 countries.
-
-2020/04/22
-https://www.youtube.com/watch?v=uAf0DCGynTk
-1.6 Phylogenetic trees with R/ape
-
-
-https://www.youtube.com/playlist?list=PL4JYBQlidL7r0_Ab3a1hP6zzF1ElMxGw_
-
-
-2020/03/24
-https://www.youtube.com/watch?v=3-7yfdh2eDE
-1.8 Get data from Genbank using R
-
-
-
-----------
-## katy
-
-https://www.youtube.com/channel/UCPBgIuwombM_h2sk8LmZElg
-Katy Frederick-Hudson
-
-2019/07/25
-https://www.youtube.com/watch?v=w8CqtxoH-lI
-Making your own phylogeny. Part 2 of the Recording!!! Finishing out the Maximum likelihood Tree.
-This is the second part. 
-
-2019/07/24
-https://www.youtube.com/watch?v=wSwhRSLufyU
-Making your own dataset for R. PART 1
-This is only PART 1
-These video goes from NCBI/BLAST to MUSCLE to R.
-Finding sequences, aligning sequences, running a model test, and making a phylogeny. 
-
-2019/07/09
-https://www.youtube.com/watch?v=6SRS8vyvxcc
-Building a phylogeny with R
-
-
-
-----------
-
-https://twitter.com/copypasteusa/status/1465869796025585664
-DECIPHERは、R言語における配列解析ツールセット（配列の分類、プローブ・プライマーの設計、キメラ配列の発見、多重配列アラインメント、ab initio遺伝子予測）
-https://github.com/haruosuz/r4bioinfo/tree/master/R_DECIPHER
-http://www2.decipher.codes/Bioinformatics.html Video tutorials
-
-
-----------
 ## updates
-
 
 ## 2022
 
 2022/05/27
 https://www.youtube.com/watch?v=SPBnAkic_ok
 Genomic Data Analysis in R | Omics Logic
-
+10:00
 
 ## 2020
 
@@ -149,7 +142,15 @@ https://github.com/RussellGrayxd/Phylogenetics
 
 ## 2019
 
-## 
+## 2017
+
+
+https://www.youtube.com/@johnlapage599
+John Lapage
+2017/12/14
+https://www.youtube.com/watch?v=L7ZgW39zA98
+Making a Pretty Tree with R and FigTree - 
+9:00
 
 ## 2015
 
@@ -162,7 +163,6 @@ Length of DNA words and RE sites in R/Rstudio
 	library("seqinr")
 
 ## 
-
 
 ----------
 ## Riffomonas
@@ -208,9 +208,6 @@ http://www.nimbios.org/tutorials/TT_eqg
 2013/10/05
 https://www.youtube.com/watch?v=_oEvbcmyVDQ
 Introduction to phytools and phangorn: Phylogenetics tools for R
-
-
-
 
 ----------
 ## lukanegoita
