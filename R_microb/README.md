@@ -74,9 +74,9 @@ https://cran.r-project.org/package=AMR
 AMR: Antimicrobial Resistance Data Analysis
 Functions to simplify and standardise antimicrobial resistance (AMR) data analysis and to work with microbial and antimicrobial properties by using evidence-based methods, as described in <doi:10.18637/jss.v104.i03>.
 ```
-Version:	1.8.2
+Version:	2.1.1
 
-Published:	2022-09-29
+Published:	2023-10-21
 
 Vignettes:	Welcome to the 'AMR' package
 ```
