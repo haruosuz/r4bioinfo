@@ -3,32 +3,53 @@
 http://www2.decipher.codes/
 DECIPHER R package - Home
 
+http://www2.decipher.codes/Downloads.html
+
 https://bioconductor.org/packages/DECIPHER/
 Bioconductor - DECIPHER
 
 Tools for curating, analyzing, and manipulating biological sequences
 ```
-PDF	R Script	Classify Sequences
-PDF	R Script	Design Group-Specific FISH Probes
-PDF	R Script	Design Group-Specific Primers
-PDF	R Script	Design Microarray Probes
-PDF	R Script	Design Primers That Yield Group-Specific Signatures
-PDF	R Script	Finding Chimeric Sequences
-PDF	R Script	Getting Started DECIPHERing
-PDF	R Script	The Art of Multiple Sequence Alignment in R
-PDF	R Script	The Double Life of RNA: Uncovering Non-Coding RNAs
-PDF	R Script	The Magic of Gene Finding
-PDF	 	Reference Manual
+Classify Sequences	PDF	R Script
+Design Group-Specific FISH Probes	PDF	R Script
+Design Group-Specific Primers	PDF	R Script
+Design Microarray Probes	PDF	R Script
+Design Primers That Yield Group-Specific Signatures	PDF	R Script
+Detecting Obscure Tandem Repeats in Sequences	PDF	R Script
+Finding Chimeric Sequences	PDF	R Script
+Getting Started DECIPHERing	PDF	R Script
+Growing Phylogenetic Trees with TreeLine	PDF	R Script
+The Art of Multiple Sequence Alignment in R	PDF	R Script
+The Double Life of RNA: Uncovering Non-Coding RNAs	PDF	R Script
+The Magic of Gene Finding	PDF	R Script
+Upsize Your Clustering with Clusterize	PDF	R Script
+Reference Manual	PDF
 ```
 
 Erik S. Wright
-October 26, 2021
+October 24, 2023
 
-https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/DECIPHERing.pdf
 Getting Started DECIPHERing
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/DECIPHERing.pdf
 
-https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
+Growing Phylogenetic Trees with TreeLine
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/GrowingTrees.pdf
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/GrowingTrees.R
+
 The Art of Multiple Sequence Alignment in R
+https://bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
+
+----------
+## 2020-05
+
+https://pubmed.ncbi.nlm.nih.gov/32005745/
+RNA
+. 2020 May;26(5):531-540. doi: 10.1261/rna.073015.119. Epub 2020 Jan 31.
+RNAconTest: comparing tools for noncoding RNA multiple sequence alignment based on structural consistency
+Erik S Wright 1
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7161358/
+https://rnajournal.cshlp.org/content/26/5/531.long
+RNAconTest is available from the DECIPHER website (http://DECIPHER.codes/Downloads.html).
 
 ----------
 ## 2018-07-18
