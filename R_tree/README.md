@@ -27,7 +27,6 @@ Last Update: 2024-03-05
 - [molecularecologist](#molecularecologist)
 - [dragonphylogeny](#dragonphylogeny)
 - [bioinformatics_tutorials](#bioinformatics_tutorials)
-- [treeman](#treeman)
 - [2019-11-11](#2019-11-11) Unlinked rRNA genes | phylosig {phytools} | phyloglm {phylolm}
 - [jackalope](#jackalope)
 - [](#)
@@ -59,10 +58,26 @@ Last Update: 2024-03-05
 - [castor](#castor)
 - [Rphylopars](rphylopars)
 - [epirhandbook](#epirhandbook)
+- [phruta](#phruta)
 
 
 ----------
+
 ## twitter
+
+----------
+
+## phruta
+https://github.com/ropensci/phruta
+https://github.com/ropensci/phruta/blob/main/README.md
+
+12 June 2023
+https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14147
+The phruta r package: Increasing access, reproducibility and transparency in phylogenetic analyses
+Cristian Román-Palacios
+新しく開発されたRパッケージであるphrutaは、主にGenBankに保存されている遺伝子データへのアクセスを改善することを目的としています。phrutaの関数は、ユーザーがR内で単一または複数の遺伝子分子データセットを組み立て、基本的な系統樹解析を実行することを可能にします。
+
+
 
 ----------
 ## epirhandbook
@@ -296,6 +311,129 @@ Or, even better, we can make a root for the tree. The best rooting would be any 
 
 
 
+----------
+## martin.smith
+Martin R. Smith <martin.smith at durham.ac.uk>
+
+
+https://cran.r-project.org/web/checks/check_results_martin.smith_at_durham.ac.uk.html
+CRAN Package Check Results for Maintainer ‘Martin R. Smith <martin.smith at durham.ac.uk>’
+Last updated on 2021-01-08 11:49:32 CET.
+
+
+### TreeSearch
+https://cran.r-project.org/package=TreeSearch
+TreeSearch: Phylogenetic Analysis with Discrete Character Data
+Published:	2023-08-26
+
+Vignettes:	Tree search with custom optimality criteria
+Getting started: Installing R and TreeSearch
+Profile parsimony
+Tree search with Profile parsimony
+Getting started: Simple tree searches
+Getting started: Exploring tree space
+
+### TreeTools
+
+https://cran.r-project.org/package=TreeTools
+TreeTools: Create, Modify and Analyse Phylogenetic Trees
+Published:	2020-12-09
+https://ms609.github.io/TreeTools/
+https://github.com/ms609/TreeTools/
+Vignettes:	
+Navigating the file system in R
+Load phylogenetic data
+Load phylogenetic trees
+
+https://cran.r-project.org/web/packages/TreeTools/vignettes/load-trees.html
+Loading phylogenetic trees into R
+Martin R. Smith martin.smith@durham.ac.uk
+2021-04-20
+
+What next?
+You might want to:
+
+Load phylogenetic data into R.
+
+https://cran.r-project.org/web/packages/TreeTools/vignettes/load-data.html
+Loading phylogenetic data into R
+Martin R. Smith martin.smith@durham.ac.uk
+2020-12-08
+
+Conduct parsimony search using Brazeau, Guillerme & Smith’s approach to inapplicable data, or using Profile parsimony.
+
+https://ms609.github.io/TreeSearch/articles/inapplicable.html
+Inapplicable data in morphological phylogenetics
+Martin R. Smith
+2020-09-25
+
+https://ms609.github.io/TreeSearch/articles/profile.html
+Tree Search with Profile Parsimony
+Martin R. Smith
+2020-07-08
+
+Calculate distances between pairs of trees.
+
+https://ms609.github.io/TreeDist/articles/Using-TreeDist.html
+Calculate tree similarity with ‘TreeDist’
+Martin R. Smith
+2020-07-09
+
+https://ms609.github.io/TreeTools/index.html
+Applications include: generation of trees with specified shapes; analysis of tree shape; rooting of trees and extraction of subtrees; calculation and depiction of node support; calculation of ancestor-descendant relationships; import and export of trees from Newick, Nexus and TNT formats; and analysis of partitions and cladistic information.
+
+
+### TreeDist
+
+1:31 AM · Jan 8, 2021
+https://twitter.com/kfuku0502/status/1347219272184045575
+Kenji Fukushima on Twitter: "複数の系統樹の樹形を比べるとき、Robinson-Foulds distanceはbipartitionの有無だけを判定するのに対し、bipartitionがどれだけ似ているかまで調べることで、より好ましい性質を持った距離になる。 https://t.co/DZXNtwFVI2" / Twitter
+
+https://pubmed.ncbi.nlm.nih.gov/32619004/
+Bioinformatics
+. 2020 Dec 22;36(20):5007-5013. doi: 10.1093/bioinformatics/btaa614.
+Information theoretic generalized Robinson-Foulds metrics for comparing phylogenetic trees
+Martin R Smith 1
+https://academic.oup.com/bioinformatics/article-abstract/36/20/5007/5866976
+The methods discussed in this article are implemented in the R package ‘TreeDist’, archived at https://dx.doi.org/10.5281/zenodo.3528123.
+
+https://cran.r-project.org/package=TreeDist
+TreeDist: Distances Between Phylogenetic Trees
+Published:	2020-09-17
+URL:	https://ms609.github.io/TreeDist, https://github.com/ms609/TreeDist
+Vignettes:
+Generalized Robinson-Foulds distances
+https://cran.r-project.org/web/packages/TreeDist/vignettes/Generalized-RF.html
+Extending the Robinson-Foulds metric
+https://cran.r-project.org/web/packages/TreeDist/vignettes/Robinson-Foulds.html
+Calculate tree similarity with 'TreeDist'
+https://cran.r-project.org/web/packages/TreeDist/vignettes/Using-TreeDist.html
+Comparing splits using information theory
+https://cran.r-project.org/web/packages/TreeDist/vignettes/information.html
+Contextualizing tree distances
+https://cran.r-project.org/web/packages/TreeDist/vignettes/using-distances.html
+
+### Quartet
+https://cran.r-project.org/package=Quartet
+Quartet: Comparison of Phylogenetic Trees Using Quartet and Split Measures
+Published:	2020-12-09
+https://github.com/ms609/Quartet
+
+Vignettes:
+Interpreting large quartet distances
+https://cran.r-project.org/web/packages/Quartet/vignettes/Critical-distances.pdf
+Tree distance metrics
+https://cran.r-project.org/web/packages/Quartet/vignettes/Tree-distance-metrics.pdf
+
+
+----------
+## tree distance
+
+https://rdrr.io/cran/phangorn/man/treedist.html
+treedist: Distances between trees in phangorn: Phylogenetic Reconstruction and Analysis
+
+http://www.phytools.org/static.help/multiRF.html
+Computes Robinson-Foulds distance between a set of trees
 
 ----------
 ## treedata.table
@@ -732,7 +870,6 @@ transmission trees: worked example using transmission trees.
 tip categories: introduction to the measures for comparing trees with shared tip label “categories”
 
 
-
 ### introduction: general introduction using a worked example.
 https://thibautjombart.github.io/treespace/articles/introduction.html
 Exploration of landscapes of phylogenetic trees
@@ -754,144 +891,6 @@ Method: characterising a tree by a vector
 
 
 ----------
-## martin.smith
-Martin R. Smith
-
-https://cran.r-project.org/web/checks/check_results_martin.smith_at_durham.ac.uk.html
-CRAN Package Check Results for Maintainer ‘Martin R. Smith <martin.smith at durham.ac.uk>’
-Last updated on 2021-01-08 11:49:32 CET.
-
-
-### TreeSearch
-https://cran.r-project.org/package=TreeSearch
-TreeSearch: Phylogenetic Tree Search Using Custom Optimality Criteria
-Published:	2020-07-09
-Maintainer:	Martin R. Smith <martin.smith at durham.ac.uk>
-Vignettes:	Getting started: installation and setup
-Tree search with inapplicable data
-Calculating concavity profiles for profile parsimony
-Tree search with profile parsimony
-
-### TreeTools
-
-https://cran.r-project.org/package=TreeTools
-TreeTools: Create, Modify and Analyse Phylogenetic Trees
-Published:	2020-12-09
-https://ms609.github.io/TreeTools/
-https://github.com/ms609/TreeTools/
-Vignettes:	
-Navigating the file system in R
-Load phylogenetic data
-Load phylogenetic trees
-
-https://cran.r-project.org/web/packages/TreeTools/vignettes/load-trees.html
-Loading phylogenetic trees into R
-Martin R. Smith martin.smith@durham.ac.uk
-2021-04-20
-
-What next?
-You might want to:
-
-Load phylogenetic data into R.
-
-https://cran.r-project.org/web/packages/TreeTools/vignettes/load-data.html
-Loading phylogenetic data into R
-Martin R. Smith martin.smith@durham.ac.uk
-2020-12-08
-
-Conduct parsimony search using Brazeau, Guillerme & Smith’s approach to inapplicable data, or using Profile parsimony.
-
-https://ms609.github.io/TreeSearch/articles/inapplicable.html
-Inapplicable data in morphological phylogenetics
-Martin R. Smith
-2020-09-25
-
-https://ms609.github.io/TreeSearch/articles/profile.html
-Tree Search with Profile Parsimony
-Martin R. Smith
-2020-07-08
-
-Calculate distances between pairs of trees.
-
-https://ms609.github.io/TreeDist/articles/Using-TreeDist.html
-Calculate tree similarity with ‘TreeDist’
-Martin R. Smith
-2020-07-09
-
-https://ms609.github.io/TreeTools/index.html
-Applications include: generation of trees with specified shapes; analysis of tree shape; rooting of trees and extraction of subtrees; calculation and depiction of node support; calculation of ancestor-descendant relationships; import and export of trees from Newick, Nexus and TNT formats; and analysis of partitions and cladistic information.
-
-
-### TreeDist
-
-1:31 AM · Jan 8, 2021
-https://twitter.com/kfuku0502/status/1347219272184045575
-Kenji Fukushima on Twitter: "複数の系統樹の樹形を比べるとき、Robinson-Foulds distanceはbipartitionの有無だけを判定するのに対し、bipartitionがどれだけ似ているかまで調べることで、より好ましい性質を持った距離になる。 https://t.co/DZXNtwFVI2" / Twitter
-
-https://pubmed.ncbi.nlm.nih.gov/32619004/
-Bioinformatics
-. 2020 Dec 22;36(20):5007-5013. doi: 10.1093/bioinformatics/btaa614.
-Information theoretic generalized Robinson-Foulds metrics for comparing phylogenetic trees
-Martin R Smith 1
-https://academic.oup.com/bioinformatics/article-abstract/36/20/5007/5866976
-The methods discussed in this article are implemented in the R package ‘TreeDist’, archived at https://dx.doi.org/10.5281/zenodo.3528123.
-
-https://cran.r-project.org/package=TreeDist
-TreeDist: Distances Between Phylogenetic Trees
-Published:	2020-09-17
-URL:	https://ms609.github.io/TreeDist, https://github.com/ms609/TreeDist
-Vignettes:
-Generalized Robinson-Foulds distances
-https://cran.r-project.org/web/packages/TreeDist/vignettes/Generalized-RF.html
-Extending the Robinson-Foulds metric
-https://cran.r-project.org/web/packages/TreeDist/vignettes/Robinson-Foulds.html
-Calculate tree similarity with 'TreeDist'
-https://cran.r-project.org/web/packages/TreeDist/vignettes/Using-TreeDist.html
-Comparing splits using information theory
-https://cran.r-project.org/web/packages/TreeDist/vignettes/information.html
-Contextualizing tree distances
-https://cran.r-project.org/web/packages/TreeDist/vignettes/using-distances.html
-
-### Quartet
-https://cran.r-project.org/package=Quartet
-Quartet: Comparison of Phylogenetic Trees Using Quartet and Split Measures
-Published:	2020-12-09
-https://github.com/ms609/Quartet
-
-Vignettes:
-Interpreting large quartet distances
-https://cran.r-project.org/web/packages/Quartet/vignettes/Critical-distances.pdf
-Tree distance metrics
-https://cran.r-project.org/web/packages/Quartet/vignettes/Tree-distance-metrics.pdf
-
-
-----------
-## tree distance
-
-https://rdrr.io/cran/phangorn/man/treedist.html
-treedist: Distances between trees in phangorn: Phylogenetic Reconstruction and Analysis
-
-https://rdrr.io/cran/treeman/man/calcDstRF.html
-calcDstRF: Calculate the Robinson-Foulds distance between two trees in treeman: Phylogenetic Tree Manipulation Class and Methods
-
-http://www.phytools.org/static.help/multiRF.html
-Computes Robinson-Foulds distance between a set of trees
-
-----------
-## treeman
-
-https://github.com/DomBennett/treeman
-DomBennett/treeman: An R package for manipulating phylogentic trees
-
-https://cran.r-project.org/package=treeman
-treeman: Phylogenetic Tree Manipulation Class and Methods
-Published:	2020-05-26
-https://cran.r-project.org/web/packages/treeman/readme/README.html
-https://github.com/DomBennett/treeman/wiki
-
-07 January 2017
-https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-016-2340-8
-treeman: an R package for efficient and intuitive manipulation of phylogenetic trees | BMC Research Notes | Full Text
 
 
 ----------
@@ -1864,11 +1863,6 @@ Philos Trans R Soc Lond B Biol Sci. 1989 Dec 21;326(1233):119-57.
 The phylogenetic regression.
 Grafen A1.
 
-https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
-田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
-生物学における系統樹の必要性
-系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
-
 ### patristic distance
 http://dendropy.readthedocs.io/en/latest/tutorial/treestats.html#patristic-distances
 
@@ -1893,5 +1887,15 @@ http://feynmanino.watson.jp/4500_model-organisms.html
 http://bioinf.mind.meiji.ac.jp/lab/index.php?itemid=12
 patristic distance 推定距離 
 
+
 ----------
+## treeman
+Package ‘treeman’ was removed from the CRAN repository.
+
+
+----------
+
+
+
+
 
