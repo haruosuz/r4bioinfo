@@ -1,7 +1,3 @@
-Last Update: 2024-03-05
-
-----------
-
 # R_tree
 
 ----------
@@ -65,6 +61,35 @@ Last Update: 2024-03-05
 ## pcm
 
 https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.md#pcm
+
+----------
+
+2022
+https://rpubs.com/hiroiwata/
+Hiroyoshi Iwata
+Lecture 09 in Biometrics 2022
+Construction of a phylogenetic tree
+https://rpubs.com/hiroiwata/981939
+RPubs - Lecture 09 in Biometrics 2022
+バイオメトリックス第9回　系統樹作成
+岩田洋佳 hiroiwata@g.ecc.u-tokyo.ac.jp
+2022/12/12
+必要なパッケージ
+require(DECIPHER) # bioconductorからインストールする必要がある
+require(seqinr)
+require(ape)
+はじめに
+　ここでは、微生物叢のメタゲノムデータの解析（https://www.biorxiv.org/content/10.1101/2021.10.04.462986v2.full.pdf ）に用いられた、ダイズの根圏微生物の16S rRNA（リボゾーマルRNA）のデータの一部を用いて解析を行う。なお、rRNAは、ウィルスを除く全生物に存在して、進化速度が比較的遅いことから、種分類などによく用いられている。メタゲノム解析では、微生物叢の多様性と系統間の関係を把握するために16S rRNAを用いられることが多い（https://bifidus-fund.jp/keyword/kw009.shtml ）。
+
+----------
+
+2021 年
+https://www.jstage.jst.go.jp/article/jsbibr/2/1/2_jsbibr.2021.7/_html/-char/ja
+分子系統解析の最前線
+松井 求 
+4.6　可視化
+iTOL［137］は美しい系統樹を簡単に描画することができるWebアプリケーションである。ただし、iTOLは描画をするだけなら無料だが、構築した系統樹を保存するためには課金する必要がある。他にも、プログラミング言語ごとに優れた可視化ソフトウェアがある。Rではggtree［138］が定番ツールであり、より高度な解析と組み合わせる場合はphangorn［139］やape［140］も有力な選択肢になる。
+
 
 ----------
 

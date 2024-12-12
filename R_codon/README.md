@@ -93,6 +93,8 @@ Yu Sun
 
 https://github.com/jlw-ecoevo/gRodon2
 
+http://microbialgamut.com/gRodon-vignette
+Predicting maximal growth rates with gRodon
 
 https://pubmed.ncbi.nlm.nih.gov/36190138/
 mSystems
@@ -100,7 +102,7 @@ mSystems
 Benchmarking Community-Wide Estimates of Growth Potential from Metagenomes Using Codon Usage Statistics
 J L Weissman 1, Marie Peras 2, Tyler P Barnum 2, Jed A Fuhrman 1
 https://journals.asm.org/doi/10.1128/msystems.00745-22
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9600850/
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9600850/
 Code for all analyses presented can be found at: https://github.com/jlw-ecoevo/gRodon2-benchmarking. The R package gRodon with MMv2 implemented can be found at https://github.com/jlw-ecoevo/gRodon2.
 
 https://pubmed.ncbi.nlm.nih.gov/33723043/
@@ -109,7 +111,7 @@ Proc Natl Acad Sci U S A
 Estimating maximal microbial growth rates from cultures, metagenomes, and single cells via codon usage patterns
 Jake L Weissman 1, Shengwei Hou 2, Jed A Fuhrman 2
 https://www.pnas.org/content/118/12/e2016810118.long
-https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8000110/
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8000110/
 MATERIALS AND METHODS
 All scripts used to generate figures and analysis, as well as predicted growth rates for various genomic datasets and the full EGGO database, are available at https://github.com/jlw-ecoevo/eggo. The gRodon package, including documentation and a vignette, can be downloaded at https://github.com/jlw-ecoevo/gRodon.
 
