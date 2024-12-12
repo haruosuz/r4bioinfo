@@ -55,6 +55,8 @@
 - [Rphylopars](rphylopars)
 - [epirhandbook](#epirhandbook)
 - [phruta](#phruta)
+- [hiroiwata](#hiroiwata) 岩田洋佳 Hiroyoshi Iwata
+- [](#)
 
 ----------
 
@@ -74,14 +76,7 @@ Construction of a phylogenetic tree
 https://rpubs.com/hiroiwata/981939
 RPubs - Lecture 09 in Biometrics 2022
 バイオメトリックス第9回　系統樹作成
-岩田洋佳 hiroiwata@g.ecc.u-tokyo.ac.jp
-2022/12/12
-必要なパッケージ
-require(DECIPHER) # bioconductorからインストールする必要がある
-require(seqinr)
-require(ape)
-はじめに
-　ここでは、微生物叢のメタゲノムデータの解析（https://www.biorxiv.org/content/10.1101/2021.10.04.462986v2.full.pdf ）に用いられた、ダイズの根圏微生物の16S rRNA（リボゾーマルRNA）のデータの一部を用いて解析を行う。なお、rRNAは、ウィルスを除く全生物に存在して、進化速度が比較的遅いことから、種分類などによく用いられている。メタゲノム解析では、微生物叢の多様性と系統間の関係を把握するために16S rRNAを用いられることが多い（https://bifidus-fund.jp/keyword/kw009.shtml ）。
+岩田洋佳
 
 ----------
 
