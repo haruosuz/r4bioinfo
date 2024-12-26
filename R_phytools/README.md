@@ -183,14 +183,26 @@ Córdoba, Argentina. 1 August — 4 August, 2017
 
 Course co-taught by Ricardo Betancur, Luke Harmon, & Liam Revell. 1 August - 4 August 2017.
 
-```
-## Computer programs and packages
+Computer programs and packages
+http://www.phytools.org/Cordoba2017/install/
+
 - my_phytools_Cordoba2017_install.R
 
-## Tuesday 1 August 2017.
+Tuesday 1 August 2017.
 
 Exercise 2: Introduction to reading, writing, manipulating, and visualizing phylogenies and comparative data in R. [URL]
 - my_phytools_Cordoba2017_ex_2_Intro-to-phylogenies.R
+
+
+Brownian motion and phylogenetically independent contrasts. [PDF]
+http://www.phytools.org/Cordoba2017/pdf/2.BM_and_PICs.pdf
+
+Felsenstein’s “Worst Case”
+
+Phylogenetic Independent Contrasts
+
+We can think of PICs as a statistical transformation that creates independent data points
+
 
 Exercise 3: Phylogenetically independent contrasts in R. [URL]
 http://www.phytools.org/Cordoba2017/ex/3/PICs.html
@@ -202,18 +214,15 @@ Challenge problem 1: Challenge problem on contrasts regression. [solution]
 Excerise 4: Phylogenetic generalized least squares regression. [URL]
 
 
+Wednesday 2 August 2017.
+
+
+
+Friday 4 August 2017.
+
 Exercise 15: Visualizing phylogenies and comparative data in R. [URL]
 - my_phytools_Cordoba2017_ex_15_Plotting-methods.R
-```
 
-
-http://www.phytools.org/Cordoba2017/pdf/2.BM_and_PICs.pdf
-
-Felsenstein’s “Worst Case”
-
-Phylogenetic Independent Contrasts
-
-We can think of PICs as a statistical transformation that creates independent data points
 
 ----------
 ## 2015
