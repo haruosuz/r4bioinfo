@@ -11,39 +11,43 @@
 ----------
 ## official
 
-https://rstudio.cloud/
-RStudio Cloud
+https://posit.cloud/
+Posit - Log In
 
-https://www.rstudio.com/products/cloud/
-RStudio Cloud - RStudio
-Data science without the hardware hassles
+https://posit.co/products/cloud/cloud/
 
-https://docs.rstudio.com/other/rstudio-cloud/
-RStudio Cloud Overview - RStudio Documentation
+https://docs.posit.co/cloud-products/index.html
+Cloud Products – Posit Docs
 
-RStudio Cloud#
-RStudio Cloud is a hosted version of RStudio in the cloud that makes it easy for professionals, hobbyists, trainers, teachers and students to do, share, teach and learn data science using R.
+https://posit.cloud/learn/recipes
+Recipes - Posit Cloud
 
-Create your analyses using RStudio directly from your browser - there is no software to install and nothing to configure on your computer.
+https://posit.co/resources/cheatsheets/
+Cheatsheets - Posit
 
-Resources#
-RStudio Cloud provides many learning materials: interactive tutorials covering the basics of data science, cheatsheets for working with popular R packages and a guide to using RStudio Cloud.
+----------
 
-interactive tutorials
-https://rstudio.cloud/learn/primers
+https://docs.posit.co/cloud/
+Posit Cloud Documentation
 
-cheatsheets
-https://rstudio.cloud/learn/cheat-sheets
+Get Started with Posit Cloud
 
-guide to using RStudio Cloud
-https://rstudio.cloud/learn/guide
+https://docs.posit.co/cloud/get_started/
+One final note: when you share a project this way, anyone who follows the link will get their own temporary copy of the project. They will be able to make changes to it and can save a permanent copy of their own, but they will not be able to make changes to your original project. See Content Access in the Share & Collaborate in Spaces section of the Guide for details and more comprehensive sharing options.
+https://docs.posit.co/cloud/guide/collaborate/
+https://docs.posit.co/cloud/guide/collaborate/#content-access
+temporary copy
+https://docs.posit.co/cloud/guide/images/collaborate/forkProject.png
+Save a Permanent Copy
+ボタンを押す。
 
 ----------
 ## video
 
-2022/03/23
-https://www.youtube.com/watch?v=nLDrahX749k
-Rstudio cloudの使い方（医療統計）
+2022/11/22
+https://www.youtube.com/watch?v=OK060EXasIQ
+Posit cloudの使い方（医療統計）
+臨床研究・ピアサポートグループ:誰でもできる臨床研究
 
 2021/08/19
 https://www.youtube.com/watch?v=gCZ7oueZw6Q
@@ -54,7 +58,6 @@ RStudio Cloud Instructor View
 2021/08/12
 https://www.youtube.com/watch?v=VV_3MvJmwG4&list=RDCMUC3xfbCMLCw1Hh4dWop3XtHg
 RStudio Cloud | Overview | Instructor View - YouTube
-
 
 2021.03.18
 https://doi.org/10.7875/togotv.2021.022
