@@ -105,9 +105,6 @@ https://journals.asm.org/doi/10.1128/msystems.00745-22
 https://pmc.ncbi.nlm.nih.gov/articles/PMC9600850/
 Code for all analyses presented can be found at: https://github.com/jlw-ecoevo/gRodon2-benchmarking. The R package gRodon with MMv2 implemented can be found at https://github.com/jlw-ecoevo/gRodon2.
 
-https://colil.dbcls.jp/browse/papers/33723043/1/100/year
-    is cited by the following papers.
- 合計: 15, 
 https://pubmed.ncbi.nlm.nih.gov/33723043/
 Proc Natl Acad Sci U S A
 . 2021 Mar 23;118(12):e2016810118. doi: 10.1073/pnas.2016810118.
