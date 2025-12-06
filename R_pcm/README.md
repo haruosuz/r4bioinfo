@@ -1,7 +1,4 @@
-Last Update: 2025-09-20
-
-----------
-## pcm
+# PCM
 phylogenetic comparative methods
 
 - [pcm](#pcm) phylogenetic comparative methods
@@ -15,7 +12,6 @@ phylogenetic comparative methods
 - [](#)
 - [ancestral reconstruction](#ancestral-reconstruction) 祖先推定
 
-
 ----------
 
 ## 2018-05-11
@@ -27,6 +23,15 @@ Pedro Henrique Pereira Braga
 Phylogenetic resemblance matrix
 An important step prior to the estimation of the phylogenetic structure of communities is to create a phylogenetic resemblance matrix, or a phylogenetic variance-covariance matrix. A phylogenetic variance-covariance matrix is nothing more than the calculated distances between taxa in a tree.
 
+# Trait Evolution
+## Phylogenetic signal
+### Moran’s I and Moran’s Correlogram
+### Blomberg’s K
+## Evolutionary models
+### Brownian motion model
+### Ornstein-Uhlenbeck model
+### Early-burst model
+## Fitting evolutionary models to trait data
 
 
 ----------
