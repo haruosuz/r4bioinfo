@@ -22,7 +22,7 @@ Pedro Henrique Pereira Braga
 
 Phylogenetic resemblance matrix
 An important step prior to the estimation of the phylogenetic structure of communities is to create a phylogenetic resemblance matrix, or a phylogenetic variance-covariance matrix. A phylogenetic variance-covariance matrix is nothing more than the calculated distances between taxa in a tree.
-
+```
 # Trait Evolution
 ## Phylogenetic signal
 ### Moran’s I and Moran’s Correlogram
@@ -32,7 +32,7 @@ An important step prior to the estimation of the phylogenetic structure of commu
 ### Ornstein-Uhlenbeck model
 ### Early-burst model
 ## Fitting evolutionary models to trait data
-
+```
 
 ----------
 ## ancestral reconstruction
@@ -53,9 +53,16 @@ https://github.com/haruosuz/evolve/blob/master/references/README.evolve.jargon.m
 
 ----------
 
-© 2009-2024 Dolph Schluter
+2024?
 https://www.zoology.ubc.ca/~schluter/R/Phylogenetic.html
-Phylogenetic comparative methods
+# Phylogenetic comparative methods
+## General least squares method
+
+### Phylogenetic correlation matrix
+`vcv()`
+
+### Diagnostic plots for GLS
+
 I illustrate using data from Rolland et al (2020) “Vulnerability to fishing and life history traits correlate with the load of deleterious mutations in teleosts”, Molecular Biology and Evolution 37: 2192–2196.
 ```
 # read the tree
@@ -66,12 +73,12 @@ fishdat <- read.csv(url("https://www.zoology.ubc.ca/~schluter/R/csv/fishdat.csv"
                   row.names = 1)
 ```
 
+© 2009-2025 Dolph Schluter
+
 ----------
 
-
-
 https://www.zoology.ubc.ca/~bio501/R/lectures.html
-Lectures 2024
+Lectures 2025/2026 (January term)
 
 Lecture overheads and videos from previous years are below.
 https://www.zoology.ubc.ca/~bio501/R/lectures.html#lectures_previous
@@ -105,10 +112,6 @@ https://www.zoology.ubc.ca/~bio501/R/lecturepdf/2022/13.Phylogenetic_video.mp4
 
 
 https://www.zoology.ubc.ca/~schluter/R/Phylogenetic.html
-
-
-
-
 
 
 ----------
@@ -195,9 +198,10 @@ https://github.com/MegaPast2Future/PHYLACINE_1.2/releases/download/v1.2.1/PHYLAC
 ----------
 ### 2017-07-19
 https://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
+
+https://rfunctions.blogspot.com/2017/07/phylogenetic-comparative-methods-pcms.html
+
 Phylogenetic Comparative Methods (PCMs) in R | R Functions
-
-
 
 Ancestral State Reconstruction in R
 
@@ -212,10 +216,6 @@ http://www.mediafire.com/file/b01369d27shgvbo/geodata.zip
 ### PHYLOGENETIC INDEPENDENT CONTRASTS (PIC) ###
 
 ### PHYLOGENETIC GENERALIZED LEAST SQUARES (PGLS) ###
-
-
-
-
 
 19th July 2017 by José Hidasi Neto
 
@@ -237,23 +237,12 @@ A Primer on Phylogenetic Generalised Least Squares
 Matthew R. E. Symonds & Simon P. Blomberg 
 Phylogenetic generalised least squares (PGLS)
 
-https://www.mpcm-evolution.com/
-Why MPCM? - Book MPCM Evolution 2014
 
-ONLINE PRACTICAL MATERIAL
-CHAPTER 5
-https://www.mpcm-evolution.com/practice/online-practical-material-chapter-5
+https://github.com/MPCMEvolution/MPCMArchive
+MPCMEvolution/MPCMArchive: Archive of Online Practical Materials for the book of Modern Phylogenetic Comparative Methods (ed. Garamszegi, 2014)
 
-Exercises and tutorials
-1) Phylogenetic Generalized Least Squares in R (pdf file)
-
-Sources and example data (you need to download them to execute the materials above)
-1) vcv2phylo.R
-
-https://www.mpcm-evolution.com/OPM/Chapter5_OPM/OPM_chap5.pdf
-OPM_chap5.pdf
-Phylogenetic Generalized Least Squares in R
-
+Online Practical Materials
+https://github.com/MPCMEvolution/MPCMArchive/wiki
 
 ----------
 ## 
@@ -395,12 +384,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4799788/
 ----------
 ## pgls
 
-
-
 ### 2015-07-03
 https://lukejharmon.github.io/ilhabela/instruction/2015/07/03/PGLS/
 https://michaelalfaro.github.io/eeb201/instruction/2015/07/03/PGLS/
-
 
 https://lukejharmon.github.io/ilhabela/
 Comparative methods in R - Ilhabela
@@ -408,7 +394,7 @@ Friday 3 July
 PGLS exercise - Harmon
 https://lukejharmon.github.io/ilhabela/instruction/2015/07/03/PGLS/
 Phylogenetic Generalized Least Squares (PGLS) – Comparative methods in R - Ilhabela
-
+Jul 3, 2015
 
 
 https://michaelalfaro.github.io/eeb201/
