@@ -1,6 +1,3 @@
-Last Update: 2022-12-11
-
-----------
 # R_codon
 
 **Table of Contents**
@@ -9,6 +6,7 @@ Last Update: 2022-12-11
 - [tAI](#tai)
 - [tRNA](#trna)
 - [sscu](#sscu)
+- [phydon](#Phydon)
 - [gRodon](#grodon)
 - [coRdon](#cordon)
 - [vhica](#vhica)
@@ -95,6 +93,21 @@ Yu Sun
 2016-03-10
 
 ----------
+
+## Phydon
+
+https://github.com/xl0418/Phydon
+Phydon has several essential dependencies, including gRodon2, ape, Biostrings, picante, etc. 
+
+2025-05-07
+https://pubmed.ncbi.nlm.nih.gov/40335538/
+Nat Commun
+. 2025 May 7;16(1):4256. doi: 10.1038/s41467-025-59558-9.
+Improved maximum growth rate prediction from microbial genomes by integrating phylogenetic information
+Liang Xu 1, Emily Zakem 2, J L Weissman 3 4
+https://www.nature.com/articles/s41467-025-59558-9
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12059116/
+
 ## gRodon
 
 https://github.com/jlw-ecoevo/gRodon2
