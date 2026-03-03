@@ -112,7 +112,7 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC12059116/
 
 https://github.com/jlw-ecoevo/gRodon2
 
-http://microbialgamut.com/gRodon-vignette
+https://www.microbialgamut.com/gRodon-vignette
 Predicting maximal growth rates with gRodon
 
 2022-10-26
@@ -124,10 +124,6 @@ J L Weissman 1, Marie Peras 2, Tyler P Barnum 2, Jed A Fuhrman 1
 https://journals.asm.org/doi/10.1128/msystems.00745-22
 https://pmc.ncbi.nlm.nih.gov/articles/PMC9600850/
 Code for all analyses presented can be found at: https://github.com/jlw-ecoevo/gRodon2-benchmarking. The R package gRodon with MMv2 implemented can be found at https://github.com/jlw-ecoevo/gRodon2.
-
-https://colil.dbcls.jp/browse/papers/33723043/1/100/year
-    is cited by the following papers.
- 合計: 15, 
 
 2021-03-23
 https://pubmed.ncbi.nlm.nih.gov/33723043/
@@ -146,13 +142,13 @@ All scripts used to generate figures and analysis, as well as predicted growth r
 http://bioconductor.org/packages/coRdon/
 Tool for analysis of codon usage in various unannotated or KEGG/COG annotated DNA sequences. Calculates different measures of CU bias and CU-based predictors of gene expressivity, and performs gene set enrichment analysis for annotated sequences. Implements several methods for visualization of CU and enrichment analysis results.
 
-Elek A, Kuzman M, Vlahovicek K (2022). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. R package version 1.14.0, https://github.com/BioinfoHR/coRdon.
+Elek A, Kuzman M, Vlahovicek K (2025). coRdon: Codon Usage Analysis and Prediction of Gene Expressivity. doi:10.18129/B9.bioc.coRdon, R package version 1.28.0, https://bioconductor.org/packages/coRdon.
 
 HTML	R Script	coRdon
-http://bioconductor.org/packages/release/bioc/vignettes/coRdon/inst/doc/coRdon.html
+https://bioconductor.org/packages/release/bioc/vignettes/coRdon/inst/doc/coRdon.html
 Codon usage (CU) analysis in R
 Anamaria Elek
-2022-11-01
+2025-10-29
 
 2018-09-28
 https://zir.nsk.hr/en/islandora/object/pmf%3A4815
@@ -215,7 +211,6 @@ Warning message:
   Sequences do not have the same length. Adding as many n as necessary.
 ```
 
-
 ----------
 ## vhcub
 
@@ -245,7 +240,7 @@ F1000Res
 vhcub: Virus-host codon usage co-adaptation analysis
 Ali Mostafa Anwar 1, Mohamed Soudy 2, Radwa Mohamed 1
 https://f1000research.com/articles/8-2137/v1
-https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7104870/
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7104870/
 
 ----------
 ## SADEG
