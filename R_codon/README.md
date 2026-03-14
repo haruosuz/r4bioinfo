@@ -78,19 +78,25 @@ Felix G.M. Ernst
 ----------
 ## sscu
 https://www.bioconductor.org/packages/sscu/
-Sun Y (2021). sscu: Strength of Selected Codon Usage. R package version 2.22.0.
 
-the strength of selected codon usage bias (sscu, also named as s_index) based on Paul Sharp's method.
+Bioconductor version: Release (3.22)
+
+The package calculates the indexes for selective stength in codon usage in bacteria species. (1) The package can calculate the strength of selected codon usage bias (sscu, also named as s_index) based on Paul Sharp's method. The method take into account of background mutation rate, and focus only on four pairs of codons with universal translational advantages in all bacterial species. Thus the sscu index is comparable among different species. (2) The package can detect the strength of translational accuracy selection by Akashi's test. The test tabulating all codons into four categories with the feature as conserved/variable amino acids and optimal/non-optimal codons. (3) Optimal codon lists (selected codons) can be calculated by either op_highly function (by using the highly expressed genes compared with all genes to identify optimal codons), or op_corre_CodonW/op_corre_NCprime function (by correlative method developed by Hershberg & Petrov). Users will have a list of optimal codons for further analysis, such as input to the Akashi's test. (4) The detailed codon usage information, such as RSCU value, number of optimal codons in the highly/all gene set, as well as the genomic gc3 value, can be calculate by the optimal_codon_statistics and genomic_gc3 function. (5) Furthermore, we added one test function low_frequency_op in the package. The function try to find the low frequency optimal codons, among all the optimal codons identified by the op_highly function.
+
+Citation (from within R, enter citation("sscu")):
+Sun Y (2025). sscu: Strength of Selected Codon Usage. doi:10.18129/B9.bioc.sscu, R package version 2.40.0, https://bioconductor.org/packages/sscu.
 
 22 Aug 2018
 https://arxiv.org/abs/1808.07259
 [1808.07259] SSCU: an R/Bioconductor package for analyzing selective profile in synonymous codon usage
-https://arxiv.org/pdf/1808.07259.pdf
+https://arxiv.org/pdf/1808.07259
+Additional files
+Supplementary File 1. The user manual for SSCU package.
 
-http://www.imsbio.co.jp/RGM-files/R_BC/download/sscu/vignettes/sscu.html
-sscu user manual (0.99.3)
-Yu Sun
-2016-03-10
+https://rdrr.io/bioc/sscu/f/vignettes/sscu.Rmd
+sscu user manual (2.4.0)
+In sscu: Strength of Selected Codon Usage
+sscu documentation built on Nov. 8, 2020, 5:48 p.m.
 
 ----------
 
