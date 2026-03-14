@@ -77,6 +77,8 @@ Felix G.M. Ernst
 
 ----------
 ## sscu
+https://github.com/haruosuz/codon/blob/master/README.md#sscu
+
 https://www.bioconductor.org/packages/sscu/
 
 Bioconductor version: Release (3.22)
