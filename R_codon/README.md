@@ -77,7 +77,6 @@ Felix G.M. Ernst
 
 ----------
 ## sscu
-https://github.com/haruosuz/codon/blob/master/README.md#sscu
 
 https://www.bioconductor.org/packages/sscu/
 
@@ -95,6 +94,9 @@ Supplementary File 1. The user manual for SSCU package.
 Nov. 8, 2020
 https://rdrr.io/bioc/sscu/f/vignettes/sscu.Rmd
 sscu user manual (2.4.0)
+
+Literature
+https://github.com/haruosuz/codon/blob/master/README.md#sscu
 
 ----------
 
