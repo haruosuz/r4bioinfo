@@ -83,7 +83,7 @@ https://www.bioconductor.org/packages/sscu/
 
 The package calculates the indexes for selective stength in codon usage in bacteria species. (1) The package can calculate the strength of selected codon usage bias (sscu, also named as s_index) based on Paul Sharp's method.
 
-Sun Y (2025). sscu: Strength of Selected Codon Usage. doi:10.18129/B9.bioc.sscu, R package version 2.40.0, https://bioconductor.org/packages/sscu.
+Sun Y (2025). sscu: Strength of Selected Codon Usage. doi:10.18129/B9.bioc.sscu, R package version 2.40.0, 
 
 22 Aug 2018
 https://arxiv.org/abs/1808.07259
